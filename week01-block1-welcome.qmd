@@ -1,0 +1,255 @@
+---
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 1"
+    transition: fade
+mermaid:
+  theme: dark
+---
+
+## Hello! 👋 {.center}
+
+Please turn on your camera if you can 🎥
+
+::: notes
+0–10 min. Short personal intro: data engineer, bioinformatics MSc, teaching at KSE.
+Tell ONE concrete story where code saved you hours of manual work with biological data.
+:::
+
+## Who am I?
+
+:::: {.columns}
+::: {.column width="50%"}
+**Official** 🎓
+
+- Data engineer — Python, SQL, data pipelines
+- MSc in Technical Physics 🇵🇱
+- MSc in Bioinformatics 🇦🇹
+- I started with **zero** programming too
+:::
+
+::: {.column width="50%"}
+**Less official** 🎪
+
+- Lived in Kyiv 2023–2024, still visiting regularly
+- TEDxGdansk speaker
+- Founder of **Cyrkarium**, an NGO promoting aerial arts in Poland
+:::
+::::
+
+::: notes
+Keep it light — the "less official" part helps students see you as a person, not just a lecturer.
+Good hook: ask them to guess what "aerial arts" means before explaining.
+:::
+
+---
+
+
+
+## Why does a biologist need code?
+
+:::: {.columns}
+::: {.column width="50%"}
+**By hand**
+
+- 1 FASTA file → OK
+- 500 FASTA files → a week of copy & paste
+- "Which version of the table did I use?" 🤯
+:::
+::: {.column width="50%"}
+**With code**
+
+- 500 files → one script, a few seconds
+- Same result every time
+- Full history of every change
+:::
+::::
+
+::: notes
+Keep it short. The goal is motivation, not a lecture.
+:::
+
+# Getting to know each other
+
+## Survey 📱 — grab your phone
+
+:::: {.columns}
+::: {.column width="45%"}
+![](mentimeter-qr.png){width="90%"}
+:::
+::: {.column width="55%"}
+Scan the QR code
+
+or go to **menti.com** and use the link in the chat:
+
+[menti.com/alk33hyab8sr](https://www.menti.com/alk33hyab8sr)
+:::
+::::
+
+::: notes
+10–20 min. Paste the link in the chat too — not everyone has a phone at hand.
+Suggested questions: experience scale 1–5, tools used before, one-word feeling, favourite organism, worries, expectations.
+:::
+
+## Your answers 💬 {.center}
+
+Let's look at them together.
+
+::: notes
+20–30 min. Discuss results live, right after the survey, while students are curious.
+If a worry is about grading or AI — say "great question, we'll get there in 15 minutes" and come back to it in the rules part.
+:::
+
+## Interview your partner 🎤
+
+Breakout rooms · 2 people · **5 minutes**
+
+1. What's your name and what do you study?
+2. Your favourite organism / field of biology?
+3. One thing you are afraid of in this course?
+4. One thing you would like to be able to do after this course?
+
+. . .
+
+Back in the main room: introduce **your partner** in one sentence.
+
+::: notes
+30–45 min. Paste the 4 questions in the chat BEFORE opening the rooms (slides are not visible in breakout rooms).
+Random pairs. With a big group: introductions in the chat instead of speaking, then read a few aloud.
+:::
+
+# How this course works
+
+## What we will learn
+
+| Weeks | Topic |
+|---|---|
+| 1 | **Git** & GitHub — from day one |
+| 2 | Terminal & Bash |
+| 3–7 | Python basics |
+| 8 | Git in teams |
+| 9–11 | Python + Bash together, mini-project |
+| 12–13 | R basics |
+| 14 | Oral exams — talking about your project 💬 |
+
+::: notes
+45–65 min: course rules (incl. short Q&A at the end).
+:::
+
+## How a typical class looks
+
+| Time | What happens |
+|---|---|
+| 10 min | Warm-up task |
+| 15 min | Something new (short!) |
+| 10 min | Live coding — you tell me in the chat what to type |
+| 35 min | **You** code in pairs (breakout rooms) |
+| 10 min | Discussion + `git commit` + `git push` |
+
+. . .
+
+**Less listening, more coding.**
+
+## Rules of our online room
+
+- 🎥 Camera on during pair work, if you can
+- 👥 Pairs: one **shares the screen**, the other guides — switch every 10 min
+- ✅ Reaction = *"it works"* · ✋ Raise hand = *"I need help"*
+- ⏱️ Stuck for **more than 5 minutes**? Write in the chat
+- ❌ Errors are normal — reading them is a skill we will learn
+- 💾 Every class ends with a **commit**
+
+::: notes
+Stress the 5-minute rule: online, beginners get stuck silently.
+:::
+
+## Assessment
+
+| Component | When | Weight |
+|---|---|---|
+| 📝 Quizzes (7 short online quizzes) | every ~2 weeks | 15% |
+| 👥 Pair assignment (Git teamwork) | week 8 | 25% |
+| 🧬 Final project (individual) + oral exam | week 14 | 60% |
+
+## Oral exam 💬
+
+- **15 minutes** per person, in the last week of classes
+- We talk about **your final project code**
+- Goal: see what **you** have learned
+
+. . .
+
+> This is a **conversation, not an interrogation.** 🙂
+
+. . .
+
+No attendance tracking — but practice in class is where you learn.
+
+::: notes
+Oral exam questions ideas: walk me through your script; why did you use a dictionary here; what would you change; what was the hardest part.
+Timing: week 14 has 160 min → only ~10 students in class time. Plan extra slots if the group is bigger.
+:::
+
+## AI tools (ChatGPT, Copilot, Claude…)
+
+✅ **OK**
+
+- Explaining an error message
+- Explaining what a piece of code does
+
+❌ **Not OK**
+
+- Generating complete solutions to assignments
+- Submitting code you cannot explain
+
+. . .
+
+> Rule of thumb: **if you can't explain it, don't submit it.**
+
+
+
+## Questions? 🙋 {.center}
+
+Chat or unmute 🎙️
+
+::: notes
+Also come back to survey worries you postponed earlier.
+:::
+
+# Getting ready for Block 2
+
+## Create a GitHub account 🐙
+
+Breakout rooms · pairs · help each other
+
+1. Go to **github.com** → *Sign up*
+2. Use an e-mail you check regularly
+3. Choose a **professional** username (e.g. `firstname-lastname`)
+4. Confirm your e-mail
+5. Post your username in the chat 📝
+
+::: notes
+65–80 min. Paste the steps in the chat before opening rooms. Collect usernames from the chat.
+:::
+
+## If you have time left ⏳
+
+Open a terminal and type:
+
+```bash
+git --version
+```
+
+- **Windows:** install *Git for Windows* → use **Git Bash**
+- **macOS:** open *Terminal* (it may ask to install developer tools — say yes)
+- **Linux:** usually already installed
+
+React with ✅ when you see a version number.
+
+## See you in Block 2! {.center}
+
+Next: your **first commit** 🎉
