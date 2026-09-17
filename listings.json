@@ -5,7 +5,13 @@
       "/week01-block1-welcome.html",
       "/week01-block2-git.html",
       "/week02-block1-terminal.html",
-      "/week02-block2-bash.html"
+      "/week02-block2-bash.html",
+      "/week03-block1-python-intro.html",
+      "/week03-block2-strings.html",
+      "/week04-block1-lists.html",
+      "/week04-block2-conditions.html",
+      "/week05-block1-loops.html",
+      "/week05-block2-practice.html"
     ]
   }
 ]

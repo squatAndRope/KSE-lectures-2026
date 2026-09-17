@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://squatAndRope.github.io/KSE-lectures-2026/week04-block1-lists.html</loc>
+    <lastmod>2026-09-17T19:18:54.944Z</lastmod>
+  </url>
+  <url>
     <loc>https://squatAndRope.github.io/KSE-lectures-2026/week01-block1-welcome.html</loc>
     <lastmod>2026-09-17T19:15:50.553Z</lastmod>
   </url>
   <url>
-    <loc>https://squatAndRope.github.io/KSE-lectures-2026/week02-block1-terminal.html</loc>
-    <lastmod>2026-09-17T19:09:02.536Z</lastmod>
+    <loc>https://squatAndRope.github.io/KSE-lectures-2026/index.html</loc>
+    <lastmod>2026-09-17T19:17:37.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://squatAndRope.github.io/KSE-lectures-2026/week05-block1-loops.html</loc>
+    <lastmod>2026-09-17T19:19:01.898Z</lastmod>
+  </url>
+  <url>
+    <loc>https://squatAndRope.github.io/KSE-lectures-2026/week03-block1-python-intro.html</loc>
+    <lastmod>2026-09-17T19:18:47.240Z</lastmod>
   </url>
   <url>
     <loc>https://squatAndRope.github.io/KSE-lectures-2026/week02-block2-bash.html</loc>
@@ -17,7 +29,19 @@
     <lastmod>2026-09-17T19:16:12.828Z</lastmod>
   </url>
   <url>
-    <loc>https://squatAndRope.github.io/KSE-lectures-2026/index.html</loc>
-    <lastmod>2026-09-17T19:17:37.165Z</lastmod>
+    <loc>https://squatAndRope.github.io/KSE-lectures-2026/week02-block1-terminal.html</loc>
+    <lastmod>2026-09-17T19:09:02.536Z</lastmod>
+  </url>
+  <url>
+    <loc>https://squatAndRope.github.io/KSE-lectures-2026/week03-block2-strings.html</loc>
+    <lastmod>2026-09-17T19:18:51.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://squatAndRope.github.io/KSE-lectures-2026/week05-block2-practice.html</loc>
+    <lastmod>2026-09-17T19:19:06.146Z</lastmod>
+  </url>
+  <url>
+    <loc>https://squatAndRope.github.io/KSE-lectures-2026/week04-block2-conditions.html</loc>
+    <lastmod>2026-09-17T19:18:58.424Z</lastmod>
   </url>
 </urlset>

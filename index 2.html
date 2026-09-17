@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-title","listing-author"],
     };
@@ -167,16 +167,6 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
@@ -187,7 +177,7 @@ window.Quarto = {
 <tr>
 
 <th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+Lecture
 </th>
 
 </tr>
@@ -196,70 +186,28 @@ window.Quarto = {
 
 <tr data-index="0" data-listing-file-modified-sort="1789672550553" data-listing-reading-time-sort="5" data-listing-word-count-sort="914" data-listing-title-sort="Week 1 · Block 1 — Welcome!">
 <td>
-<a href="./week01-block1-welcome.html" class="title listing-title">Week 1 · Block 1 — Welcome!</a>
+<span class="listing-subtitle">Programming and Computing Basics · KSE 2026</span>
 </td>
 
 </tr>
 
 <tr data-index="1" data-listing-file-modified-sort="1789672572828" data-listing-reading-time-sort="5" data-listing-word-count-sort="957" data-listing-title-sort="Week 1 · Block 2 — first commit">
 <td>
-<a href="./week01-block2-git.html" class="title listing-title">Week 1 · Block 2 — first commit</a>
+<span class="listing-subtitle">Programming and Computing Basics · KSE 2026</span>
 </td>
 
 </tr>
 
 <tr data-index="2" data-listing-file-modified-sort="1789672142536" data-listing-reading-time-sort="4" data-listing-word-count-sort="759" data-listing-title-sort="Week 2 · Block 1 — The terminal">
 <td>
-<a href="./week02-block1-terminal.html" class="title listing-title">Week 2 · Block 1 — The terminal</a>
+<span class="listing-subtitle">Programming and Computing Basics · KSE 2026</span>
 </td>
 
 </tr>
 
 <tr data-index="3" data-listing-file-modified-sort="1789672158505" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Week 2 · Block 2 — Bash on real data">
 <td>
-<a href="./week02-block2-bash.html" class="title listing-title">Week 2 · Block 2 — Bash on real data</a>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-file-modified-sort="1789672727240" data-listing-reading-time-sort="3" data-listing-word-count-sort="520" data-listing-title-sort="Week 3 · Block 1 — Hello, Python">
-<td>
-<a href="./week03-block1-python-intro.html" class="title listing-title">Week 3 · Block 1 — Hello, Python</a>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-file-modified-sort="1789672731620" data-listing-reading-time-sort="3" data-listing-word-count-sort="533" data-listing-title-sort="Week 3 · Block 2 — Strings are sequences">
-<td>
-<a href="./week03-block2-strings.html" class="title listing-title">Week 3 · Block 2 — Strings are sequences</a>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-file-modified-sort="1789672734944" data-listing-reading-time-sort="3" data-listing-word-count-sort="563" data-listing-title-sort="Week 4 · Block 1 — Lists">
-<td>
-<a href="./week04-block1-lists.html" class="title listing-title">Week 4 · Block 1 — Lists</a>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-file-modified-sort="1789672738424" data-listing-reading-time-sort="3" data-listing-word-count-sort="545" data-listing-title-sort="Week 4 · Block 2 — Making decisions">
-<td>
-<a href="./week04-block2-conditions.html" class="title listing-title">Week 4 · Block 2 — Making decisions</a>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-file-modified-sort="1789672741898" data-listing-reading-time-sort="3" data-listing-word-count-sort="527" data-listing-title-sort="Week 5 · Block 1 — Loops">
-<td>
-<a href="./week05-block1-loops.html" class="title listing-title">Week 5 · Block 1 — Loops</a>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-file-modified-sort="1789672746146" data-listing-reading-time-sort="3" data-listing-word-count-sort="429" data-listing-title-sort="Week 5 · Block 2 — Putting it together">
-<td>
-<a href="./week05-block2-practice.html" class="title listing-title">Week 5 · Block 2 — Putting it together</a>
+<span class="listing-subtitle">Programming and Computing Basics · KSE 2026</span>
 </td>
 
 </tr>

@@ -1,5 +1,68 @@
 [
   {
+    "objectID": "week04-block1-lists.html#warm-up",
+    "href": "week04-block1-lists.html#warm-up",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min\nseq = \"ATGCGCTAGCTT\"\n\nPrint the last 3 bases\nPrint the RNA version\nPrint True if it contains \"TAG\" (hint: in)\n\n\n0–10 min. \"TAG\" in seq is new but guessable — let them try before you show it."
+  },
+  {
+    "objectID": "week04-block1-lists.html#one-sequence-is-never-enough",
+    "href": "week04-block1-lists.html#one-sequence-is-never-enough",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "One sequence is never enough 📋",
+    "text": "One sequence is never enough 📋\nseq1 = \"ATGC\"\nseq2 = \"GGCA\"\nseq3 = \"TTAG\"\n# ... and 500 more? 😱\n\nsequences = [\"ATGC\", \"GGCA\", \"TTAG\"]\n\n10–25 min. Motivation first: real data comes in hundreds of sequences."
+  },
+  {
+    "objectID": "week04-block1-lists.html#working-with-lists",
+    "href": "week04-block1-lists.html#working-with-lists",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "Working with lists",
+    "text": "Working with lists\nsequences = [\"ATGC\", \"GGCA\", \"TTAG\"]\n\nsequences[0]        # 'ATGC' — same indexing as strings!\nsequences[-1]       # 'TTAG'\nlen(sequences)      # 3\nsequences[0:2]      # ['ATGC', 'GGCA'] — slicing works too\n\nLists hold anything: numbers, strings, even other lists."
+  },
+  {
+    "objectID": "week04-block1-lists.html#changing-lists",
+    "href": "week04-block1-lists.html#changing-lists",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "Changing lists ✏️",
+    "text": "Changing lists ✏️\nsequences.append(\"CCGG\")     # add at the end\nsequences.insert(0, \"AAAA\")  # add at a position\nsequences.remove(\"GGCA\")     # remove by value\nlast = sequences.pop()       # remove and return the last one\nsequences[0] = \"TTTT\"        # replace\n\n\n\n\n\n\n\nNote\n\n\nStrings cannot be changed, lists can. seq[0] = \"G\" → error 🚫"
+  },
+  {
+    "objectID": "week04-block1-lists.html#useful-list-tools",
+    "href": "week04-block1-lists.html#useful-list-tools",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "Useful list tools",
+    "text": "Useful list tools\nlengths = [120, 85, 300, 42]\n\nsum(lengths)          # 547\nmax(lengths)          # 300\nmin(lengths)          # 42\nsorted(lengths)       # [42, 85, 120, 300]\nlen(lengths)          # 4\nsum(lengths) / len(lengths)   # average 🧮"
+  },
+  {
+    "objectID": "week04-block1-lists.html#from-string-to-list-and-back",
+    "href": "week04-block1-lists.html#from-string-to-list-and-back",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "From string to list and back",
+    "text": "From string to list and back\nheader = \"&gt;seq1 Homo sapiens BRCA1\"\nparts = header.split()        # ['&gt;seq1', 'Homo', 'sapiens', 'BRCA1']\nparts[1]                      # 'Homo'\n\n\"-\".join([\"ATG\", \"CGC\"])      # 'ATG-CGC'\nlist(\"ATGC\")                  # ['A', 'T', 'G', 'C']\n\nsplit() is how you will parse every data file 📄\n\nShow splitting a CSV line: \"seq1,120,0.42\".split(\",\"). This is the bridge to real files."
+  },
+  {
+    "objectID": "week04-block1-lists.html#exercise-1-predict-then-run",
+    "href": "week04-block1-lists.html#exercise-1-predict-then-run",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "Exercise 1: Predict, then run 🔮",
+    "text": "Exercise 1: Predict, then run 🔮\n⏱️ 10 min · chat first\nseqs = [\"ATG\", \"GGC\"]\nseqs.append(\"TTA\")\nprint(len(seqs))\nprint(seqs[1])\nprint(seqs[1][0])      # 🤔\nprint(sorted(seqs))\n\n25–35 min. seqs[1][0] is the key idea: indexing a list, then indexing the string inside it."
+  },
+  {
+    "objectID": "week04-block1-lists.html#exercise-2-sequence-statistics",
+    "href": "week04-block1-lists.html#exercise-2-sequence-statistics",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "Exercise 2: Sequence statistics 📊",
+    "text": "Exercise 2: Sequence statistics 📊\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/seq_stats.py:\nsequences = [\"ATGCGC\", \"GGCATTAGC\", \"TTA\", \"ATGGGCCCTA\"]\n\nHow many sequences are there?\nPrint the first and the last one\nAdd one more sequence of your own\nMake a list of their lengths (by hand is fine — 5 values)\nPrint the longest, shortest and average length\nSplit this header and print the species: \"&gt;seq1 Homo sapiens BRCA1\"\n\n💡 Bonus: print the sequences sorted alphabetically\n\n35–70 min. Point 4 by hand is intentional — next block’s loops will feel like a relief."
+  },
+  {
+    "objectID": "week04-block1-lists.html#wrap-up",
+    "href": "week04-block1-lists.html#wrap-up",
+    "title": "Week 4 · Block 1 — Lists",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\nLists hold many values: [\"ATG\", \"GGC\"]\nSame indexing and slicing as strings\nappend remove sorted sum max min\nsplit() turns text into a list 📄\n\nHomework 🏠 Commit seq_stats.py.\n\nNext block: decisions — if 🚦\n\n70–80 min. Tease: “next time your script can decide what to do — e.g. skip short sequences”."
+  },
+  {
     "objectID": "week01-block1-welcome.html#hello",
     "href": "week01-block1-welcome.html#hello",
     "title": "Week 1 · Block 1 — Welcome!",
@@ -112,67 +175,144 @@
     "text": "See you in Block 2!\nNext: your first commit 🎉"
   },
   {
-    "objectID": "week02-block1-terminal.html#warm-up",
-    "href": "week02-block1-terminal.html#warm-up",
-    "title": "Week 2 · Block 1 — The terminal",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programming and Computing Basics",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nWeek 1 · Block 1 — Welcome!\n\n\n\n\n\n\nWeek 1 · Block 2 — first commit\n\n\n\n\n\n\nWeek 2 · Block 1 — The terminal\n\n\n\n\n\n\nWeek 2 · Block 2 — Bash on real data\n\n\n\n\n\n\nWeek 3 · Block 1 — Hello, Python\n\n\n\n\n\n\nWeek 3 · Block 2 — Strings are sequences\n\n\n\n\n\n\nWeek 4 · Block 1 — Lists\n\n\n\n\n\n\nWeek 4 · Block 2 — Making decisions\n\n\n\n\n\n\nWeek 5 · Block 1 — Loops\n\n\n\n\n\n\nWeek 5 · Block 2 — Putting it together\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "week05-block1-loops.html#warm-up",
+    "href": "week05-block1-loops.html#warm-up",
+    "title": "Week 5 · Block 1 — Loops",
     "section": "Warm-up 🔥",
-    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\n\nOpen your terminal and go into your programming-basics folder\nRun:\n\ngit log --oneline\n\nHow many commits do you have? Write the number in the chat 🔢\n\n\n0–10 min. Quick check who managed the homework. If someone has 0 commits — pair them with someone who has 2."
+    "text": "Warm-up 🔥\n⏱️ 10 min\nseq = \"ATGCCCTAAGGG\"\nWrite an if that prints \"start codon found\" when the sequence starts with ATG and is longer than 6 bases.\n\n0–10 min. Two students share their screen with different solutions."
   },
   {
-    "objectID": "week02-block1-terminal.html#why-the-terminal",
-    "href": "week02-block1-terminal.html#why-the-terminal",
-    "title": "Week 2 · Block 1 — The terminal",
-    "section": "Why the terminal? 💻",
-    "text": "Why the terminal? 💻\n\n\nClicking\n\nRename 300 files → 300 × click\n“Which files did I already process?”\nImpossible to repeat exactly\n\n\nTerminal\n\nOne line for 300 files\nThe command is the record of what you did\nRuns on the server where your data lives 🧬\n\n\n\n10–25 min: new material. Mention: sequencing data lives on remote servers — there is no mouse there."
+    "objectID": "week05-block1-loops.html#the-problem",
+    "href": "week05-block1-loops.html#the-problem",
+    "title": "Week 5 · Block 1 — Loops",
+    "section": "The problem 😩",
+    "text": "The problem 😩\nprint(len(sequences[0]))\nprint(len(sequences[1]))\nprint(len(sequences[2]))\n# ... 497 more lines\n\n\nCopy-paste is a smell. Computers are good at repeating things. 🔁\n\n\n10–25 min. Reference last week’s exercise where they wrote lengths by hand."
   },
   {
-    "objectID": "week02-block1-terminal.html#where-am-i",
-    "href": "week02-block1-terminal.html#where-am-i",
-    "title": "Week 2 · Block 1 — The terminal",
-    "section": "Where am I? 🗺️",
-    "text": "Where am I? 🗺️\nThe file system is a tree — you are always standing somewhere in it.\npwd          # print working directory — where am I?\nls           # list — what is here?\nls -l        # long: size, date\nls -a        # all: also hidden files (.git!)\n\nShow that .git is a hidden folder — that’s where the whole history lives."
+    "objectID": "week05-block1-loops.html#the-for-loop",
+    "href": "week05-block1-loops.html#the-for-loop",
+    "title": "Week 5 · Block 1 — Loops",
+    "section": "The for loop",
+    "text": "The for loop\nsequences = [\"ATGC\", \"GGCATT\", \"TTA\"]\n\nfor seq in sequences:\n    print(seq, len(seq))\n\nRead it as: for each seq in sequences, do this.\nseq is just a name — you choose it."
   },
   {
-    "objectID": "week02-block1-terminal.html#moving-around",
-    "href": "week02-block1-terminal.html#moving-around",
-    "title": "Week 2 · Block 1 — The terminal",
-    "section": "Moving around 🚶",
-    "text": "Moving around 🚶\ncd kse           # go into a folder\ncd ..            # one level UP\ncd ~             # go home\ncd -             # back to where I was\n\nTab ⇥ completes names · ↑ repeats the last command\n\nInsist on Tab — it is the single biggest quality-of-life improvement for beginners, and it prevents typos."
+    "objectID": "week05-block1-loops.html#looping-over-a-string-too",
+    "href": "week05-block1-loops.html#looping-over-a-string-too",
+    "title": "Week 5 · Block 1 — Loops",
+    "section": "Looping over a string too 🧬",
+    "text": "Looping over a string too 🧬\nfor base in \"ATGC\":\n    print(base)\n\ncount = 0\nfor base in \"ATGCGC\":\n    if base == \"G\":\n        count = count + 1\nprint(count)\n\nThe accumulator pattern (start at 0, add inside the loop) is the single most important pattern this week."
   },
   {
-    "objectID": "week02-block1-terminal.html#exercise-1-find-your-way",
-    "href": "week02-block1-terminal.html#exercise-1-find-your-way",
-    "title": "Week 2 · Block 1 — The terminal",
-    "section": "Exercise 1: Find your way 🧭",
-    "text": "Exercise 1: Find your way 🧭\n⏱️ 10 min · your own screen · react ✅ when done\n\npwd — where are you now?\nGo home: cd ~\nls — what folders do you see?\nGo into your programming-basics folder\nls -a — can you find the .git folder?\nGo one level up, then back — using Tab at least once\n\n💡 Bonus: what does ls -lh show that ls -l doesn’t?\n\n25–35 min. Paste steps in the chat. Watch reactions; anyone with ✋ shares their screen."
+    "objectID": "week05-block1-loops.html#collecting-results",
+    "href": "week05-block1-loops.html#collecting-results",
+    "title": "Week 5 · Block 1 — Loops",
+    "section": "Collecting results 📋",
+    "text": "Collecting results 📋\nlengths = []                    # start empty\n\nfor seq in sequences:\n    lengths.append(len(seq))    # add one result per sequence\n\nprint(lengths)\nprint(sum(lengths) / len(lengths))\n\nEmpty list → loop → append. You will write this a hundred times."
   },
   {
-    "objectID": "week02-block1-terminal.html#making-and-moving-things",
-    "href": "week02-block1-terminal.html#making-and-moving-things",
-    "title": "Week 2 · Block 1 — The terminal",
-    "section": "Making and moving things 🧰",
-    "text": "Making and moving things 🧰\nmkdir data              # make a folder\ntouch notes.txt         # make an empty file\ncp notes.txt backup.txt # copy\nmv notes.txt data/      # move (also = rename!)\nrm backup.txt           # delete\n\n\n\n\n\n\n\nWarning\n\n\nrm does not use a trash bin. Deleted is deleted. 💀\n\n\n\n\nTell a short real story about deleting something important. Then: this is exactly why we use Git."
+    "objectID": "week05-block1-loops.html#range-and-while",
+    "href": "week05-block1-loops.html#range-and-while",
+    "title": "Week 5 · Block 1 — Loops",
+    "section": "range() and while",
+    "text": "range() and while\nfor i in range(5):        # 0,1,2,3,4\n    print(i)\n\nfor i in range(0, 9, 3):  # 0,3,6 — codon positions!\n    print(seq[i:i+3])\n\nwhile len(seq) &gt; 3:       # repeat while the condition holds\n    seq = seq[1:]\n\n\n\n\n\n\nWarning\n\n\nForget to change the condition → infinite loop. Ctrl+C stops it. 🛑\n\n\n\n\nTeach Ctrl+C explicitly — online, a student with a runaway loop will panic silently."
   },
   {
-    "objectID": "week02-block1-terminal.html#looking-inside-files",
-    "href": "week02-block1-terminal.html#looking-inside-files",
-    "title": "Week 2 · Block 1 — The terminal",
-    "section": "Looking inside files 👀",
-    "text": "Looking inside files 👀\nhead sequences.fasta      # first 10 lines\nhead -n 3 sequences.fasta # first 3 lines\ntail sequences.fasta      # last 10 lines\nless sequences.fasta      # scroll (q = quit!)\nwc -l sequences.fasta     # count lines\n\nIn less: space = next page, q = quit 🙂\n\nEveryone gets stuck in less at least once. Say “q” twice."
+    "objectID": "week05-block1-loops.html#exercise-1-predict-then-run",
+    "href": "week05-block1-loops.html#exercise-1-predict-then-run",
+    "title": "Week 5 · Block 1 — Loops",
+    "section": "Exercise 1: Predict, then run 🔮",
+    "text": "Exercise 1: Predict, then run 🔮\n⏱️ 10 min · chat first\ntotal = 0\nfor n in [1, 2, 3, 4]:\n    total = total + n\nprint(total)\n\nfor base in \"ATG\":\n    print(base * 2)\n\n25–35 min. If they get the accumulator, the rest of the semester is much easier."
   },
   {
-    "objectID": "week02-block1-terminal.html#exercise-2-build-a-project",
-    "href": "week02-block1-terminal.html#exercise-2-build-a-project",
-    "title": "Week 2 · Block 1 — The terminal",
-    "section": "Exercise 2: Build a project 🏗️",
-    "text": "Exercise 2: Build a project 🏗️\n⏱️ 25 min · breakout rooms · one shares the screen, switch after 10 min\nInside programming-basics:\n\nCreate folders: data, scripts, results\nIn data, create a file sample.txt and put 3 lines of text in it (use nano sample.txt, then Ctrl+O, Enter, Ctrl+X)\nCheck with head and wc -l that it has 3 lines\nCopy it to results/sample_copy.txt\nRename the copy to results/backup.txt\ngit add → git commit → git push\n\n💡 Bonus: what happens in Git with the empty scripts folder? Why?\n\n35–70 min. The bonus is a great discussion: Git tracks files, not folders — empty folders never appear on GitHub. Plan B for nano trouble: create the file in VS Code / any editor."
+    "objectID": "week05-block1-loops.html#exercise-2-analyse-them-all",
+    "href": "week05-block1-loops.html#exercise-2-analyse-them-all",
+    "title": "Week 5 · Block 1 — Loops",
+    "section": "Exercise 2: Analyse them all 🧬",
+    "text": "Exercise 2: Analyse them all 🧬\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/analyse_all.py:\nsequences = [\"ATGCGC\", \"GGCATTAGC\", \"TTA\", \"ATGGGCCCTA\", \"ATGNNNCGC\"]\n\nPrint each sequence with its length\nBuild a list of lengths, then print the average\nCount how many sequences start with ATG\nPrint only the sequences longer than 5 bases\nFor each sequence print its GC content (loop inside a loop!)\n\n💡 Bonus: print the codons of the longest sequence, one per line\n\n35–70 min. Point 5 is the hard one — a loop over sequences containing a loop over bases. Hint to give if a room is stuck: solve it for ONE sequence first, then wrap it in the outer loop."
   },
   {
-    "objectID": "week02-block1-terminal.html#what-we-learned",
-    "href": "week02-block1-terminal.html#what-we-learned",
-    "title": "Week 2 · Block 1 — The terminal",
-    "section": "What we learned ✅",
-    "text": "What we learned ✅\n\n\n\nCommand\nWhat it does\n\n\n\n\npwd ls cd\nWhere am I, what’s here, move\n\n\nmkdir touch\nMake folders and files\n\n\ncp mv rm\nCopy, move/rename, delete\n\n\nhead tail less wc\nLook inside, count\n\n\n\n\nNext block: making these commands work together on real DNA data 🧬\n\n70–80 min. Two students share their screen and show their folder structure on GitHub."
+    "objectID": "week05-block1-loops.html#wrap-up",
+    "href": "week05-block1-loops.html#wrap-up",
+    "title": "Week 5 · Block 1 — Loops",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\nresults = []\nfor item in things:\n    if condition:\n        results.append(something)\n\nfor x in y: repeats for each element\nEmpty list → loop → append 📋\nrange() for numbers · while for “until”\n\nHomework 🏠 Commit analyse_all.py.\n\n70–80 min. Exit ticket: name one thing from their own studies they would now loop over."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#warm-up",
+    "href": "week03-block1-python-intro.html#warm-up",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\nIn your repo, using one line each:\n\nHow many sequences are in data/sequences.fasta?\nSave the headers into results/headers.txt\n\n\nStuck? Ask your partner first, then the chat 💬\n\n0–10 min. Recall last week. If many struggle, redo the grep pipeline live — it is the base for everything later."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#bash-vs-python",
+    "href": "week03-block1-python-intro.html#bash-vs-python",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Bash vs Python 🐍",
+    "text": "Bash vs Python 🐍\n\n\nBash is great for\n\nMoving and filtering files\nGluing tools together\nOne-liners\n\n\nPython is great for\n\nLogic and calculations\nReusable analysis\nAnything longer than 2 lines 🙂\n\n\n\n10–25 min: new material. Do not oppose them — biologists use both, daily."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#two-ways-to-run-python",
+    "href": "week03-block1-python-intro.html#two-ways-to-run-python",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Two ways to run Python",
+    "text": "Two ways to run Python\npython3                 # interactive — try things out (exit())\npython3 my_script.py    # run a saved script\n\nWe use scripts, because a script can be committed, shared and re-run. 💾\n\nCheck that everyone actually has python3. Windows users may need python instead."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#your-first-script",
+    "href": "week03-block1-python-intro.html#your-first-script",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Your first script",
+    "text": "Your first script\n# hello.py\nprint(\"Hello, bioinformatics!\")\nprint(2 + 2)\npython3 hello.py\n\n# starts a comment — Python ignores it, humans read it."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#variables",
+    "href": "week03-block1-python-intro.html#variables",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Variables 📦",
+    "text": "Variables 📦\norganism = \"Homo sapiens\"\ngene_length = 1520\ngc_content = 0.42\nis_coding = True\n\nprint(organism, gene_length)\n\nA variable is a label on a value, not a box you must declare."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#four-basic-types",
+    "href": "week03-block1-python-intro.html#four-basic-types",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Four basic types",
+    "text": "Four basic types\n\n\n\nType\nExample\nUsed for\n\n\n\n\nstr\n\"ATGC\"\ntext, sequences\n\n\nint\n1520\ncounts, positions\n\n\nfloat\n0.42\nratios, p-values\n\n\nbool\nTrue / False\nyes/no answers\n\n\n\ntype(gc_content)   # &lt;class 'float'&gt;\n\nShow a classic error: “ATG” + 5 → TypeError. Read the error message together, slowly."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#exercise-1-predict-then-run",
+    "href": "week03-block1-python-intro.html#exercise-1-predict-then-run",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Exercise 1: Predict, then run 🔮",
+    "text": "Exercise 1: Predict, then run 🔮\n⏱️ 10 min · answer in the chat before running\na = 5\nb = \"5\"\nprint(a + a)\nprint(b + b)\nprint(a + b)\n💡 Which line fails? What exactly does the error say?\n\n25–35 min. This is the single most useful habit: read the error, don’t panic."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#input-and-conversion",
+    "href": "week03-block1-python-intro.html#input-and-conversion",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Input and conversion",
+    "text": "Input and conversion\nlength = input(\"Sequence length: \")   # always a STRING\nlength = int(length)                  # convert to number\nprint(length * 3)\n\nint() · float() · str() convert between types."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#exercise-2-your-first-analysis",
+    "href": "week03-block1-python-intro.html#exercise-2-your-first-analysis",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Exercise 2: Your first analysis 🧬",
+    "text": "Exercise 2: Your first analysis 🧬\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/dna_info.py:\n\nStore a DNA sequence in a variable (at least 20 letters)\nPrint its length using len(sequence)\nCount the G letters: sequence.count(\"G\")\nCount the C letters\nCalculate and print the GC content as a percentage\ngit add → commit → push\n\n💡 Bonus: print the result rounded: round(value, 2)\n\n35–70 min. Paste in the chat. Common bug: integer division confusion — remind them / gives a float."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#wrap-up",
+    "href": "week03-block1-python-intro.html#wrap-up",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\nA script is a file you can re-run and commit 💾\nVariables hold values; values have types\nlen() count() already do real biology work\n\nHomework 🏠 Commit dna_info.py with a comment at the top explaining what it does.\n\nNext block: strings — sequences are just text 🧬\n\n70–80 min. Two students share their GC result — compare numbers, discuss why they differ."
   },
   {
     "objectID": "week02-block2-bash.html#warm-up",
@@ -322,10 +462,234 @@
     "text": "Before next week 🏠\n\nMake one more commit: add a file expectations.md — what do you want to be able to do in 14 weeks?\nMake sure your terminal works on your laptop\n\n\nNext week: terminal & Bash — working with real FASTA files 🧬\n\n70–80 min. Ask 2 students to share their screen and show their repo. Exit question in the chat: “Write the Git cycle from memory.”"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programming and Computing Basics",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nWeek 1 · Block 1 — Welcome!\n\n\n\n\n\n\nWeek 1 · Block 2 — first commit\n\n\n\n\n\n\nWeek 2 · Block 1 — The terminal\n\n\n\n\n\n\nWeek 2 · Block 2 — Bash on real data\n\n\n\n\n\n\nNo matching items"
+    "objectID": "week02-block1-terminal.html#warm-up",
+    "href": "week02-block1-terminal.html#warm-up",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\n\nOpen your terminal and go into your programming-basics folder\nRun:\n\ngit log --oneline\n\nHow many commits do you have? Write the number in the chat 🔢\n\n\n0–10 min. Quick check who managed the homework. If someone has 0 commits — pair them with someone who has 2."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#why-the-terminal",
+    "href": "week02-block1-terminal.html#why-the-terminal",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Why the terminal? 💻",
+    "text": "Why the terminal? 💻\n\n\nClicking\n\nRename 300 files → 300 × click\n“Which files did I already process?”\nImpossible to repeat exactly\n\n\nTerminal\n\nOne line for 300 files\nThe command is the record of what you did\nRuns on the server where your data lives 🧬\n\n\n\n10–25 min: new material. Mention: sequencing data lives on remote servers — there is no mouse there."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#where-am-i",
+    "href": "week02-block1-terminal.html#where-am-i",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Where am I? 🗺️",
+    "text": "Where am I? 🗺️\nThe file system is a tree — you are always standing somewhere in it.\npwd          # print working directory — where am I?\nls           # list — what is here?\nls -l        # long: size, date\nls -a        # all: also hidden files (.git!)\n\nShow that .git is a hidden folder — that’s where the whole history lives."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#moving-around",
+    "href": "week02-block1-terminal.html#moving-around",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Moving around 🚶",
+    "text": "Moving around 🚶\ncd kse           # go into a folder\ncd ..            # one level UP\ncd ~             # go home\ncd -             # back to where I was\n\nTab ⇥ completes names · ↑ repeats the last command\n\nInsist on Tab — it is the single biggest quality-of-life improvement for beginners, and it prevents typos."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#exercise-1-find-your-way",
+    "href": "week02-block1-terminal.html#exercise-1-find-your-way",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Exercise 1: Find your way 🧭",
+    "text": "Exercise 1: Find your way 🧭\n⏱️ 10 min · your own screen · react ✅ when done\n\npwd — where are you now?\nGo home: cd ~\nls — what folders do you see?\nGo into your programming-basics folder\nls -a — can you find the .git folder?\nGo one level up, then back — using Tab at least once\n\n💡 Bonus: what does ls -lh show that ls -l doesn’t?\n\n25–35 min. Paste steps in the chat. Watch reactions; anyone with ✋ shares their screen."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#making-and-moving-things",
+    "href": "week02-block1-terminal.html#making-and-moving-things",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Making and moving things 🧰",
+    "text": "Making and moving things 🧰\nmkdir data              # make a folder\ntouch notes.txt         # make an empty file\ncp notes.txt backup.txt # copy\nmv notes.txt data/      # move (also = rename!)\nrm backup.txt           # delete\n\n\n\n\n\n\n\nWarning\n\n\nrm does not use a trash bin. Deleted is deleted. 💀\n\n\n\n\nTell a short real story about deleting something important. Then: this is exactly why we use Git."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#looking-inside-files",
+    "href": "week02-block1-terminal.html#looking-inside-files",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Looking inside files 👀",
+    "text": "Looking inside files 👀\nhead sequences.fasta      # first 10 lines\nhead -n 3 sequences.fasta # first 3 lines\ntail sequences.fasta      # last 10 lines\nless sequences.fasta      # scroll (q = quit!)\nwc -l sequences.fasta     # count lines\n\nIn less: space = next page, q = quit 🙂\n\nEveryone gets stuck in less at least once. Say “q” twice."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#exercise-2-build-a-project",
+    "href": "week02-block1-terminal.html#exercise-2-build-a-project",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Exercise 2: Build a project 🏗️",
+    "text": "Exercise 2: Build a project 🏗️\n⏱️ 25 min · breakout rooms · one shares the screen, switch after 10 min\nInside programming-basics:\n\nCreate folders: data, scripts, results\nIn data, create a file sample.txt and put 3 lines of text in it (use nano sample.txt, then Ctrl+O, Enter, Ctrl+X)\nCheck with head and wc -l that it has 3 lines\nCopy it to results/sample_copy.txt\nRename the copy to results/backup.txt\ngit add → git commit → git push\n\n💡 Bonus: what happens in Git with the empty scripts folder? Why?\n\n35–70 min. The bonus is a great discussion: Git tracks files, not folders — empty folders never appear on GitHub. Plan B for nano trouble: create the file in VS Code / any editor."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#what-we-learned",
+    "href": "week02-block1-terminal.html#what-we-learned",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "What we learned ✅",
+    "text": "What we learned ✅\n\n\n\nCommand\nWhat it does\n\n\n\n\npwd ls cd\nWhere am I, what’s here, move\n\n\nmkdir touch\nMake folders and files\n\n\ncp mv rm\nCopy, move/rename, delete\n\n\nhead tail less wc\nLook inside, count\n\n\n\n\nNext block: making these commands work together on real DNA data 🧬\n\n70–80 min. Two students share their screen and show their folder structure on GitHub."
+  },
+  {
+    "objectID": "week03-block2-strings.html#warm-up",
+    "href": "week03-block2-strings.html#warm-up",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min\nseq = \"ATGCGCTA\"\nprint(len(seq))\nprint(seq.count(\"A\"))\nprint(seq.count(\"AT\"))\nWhat will each line print? Chat first, run second 💬\n\n0–10 min. The third line surprises people — counting pairs, not letters."
+  },
+  {
+    "objectID": "week03-block2-strings.html#indexing-counting-from-0",
+    "href": "week03-block2-strings.html#indexing-counting-from-0",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Indexing: counting from 0 🔢",
+    "text": "Indexing: counting from 0 🔢\nseq = \"ATGCGC\"\nseq[0]    # 'A'  — the FIRST letter\nseq[1]    # 'T'\nseq[-1]   # 'C'  — the last one\n\n\n\n\n\n\n\nNote\n\n\nBiologists count bases from 1, Python counts from 0. This causes real bugs in real papers. 🐛\n\n\n\n\n10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF)."
+  },
+  {
+    "objectID": "week03-block2-strings.html#slicing",
+    "href": "week03-block2-strings.html#slicing",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Slicing ✂️",
+    "text": "Slicing ✂️\nseq = \"ATGCGCTAGC\"\nseq[0:3]    # 'ATG'  — from 0 up to (not including) 3\nseq[3:]     # from 3 to the end\nseq[:3]     # from the start to 3\nseq[::-1]   # reversed!\n\nseq[start:stop] — stop is not included 🙂"
+  },
+  {
+    "objectID": "week03-block2-strings.html#useful-string-methods",
+    "href": "week03-block2-strings.html#useful-string-methods",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Useful string methods",
+    "text": "Useful string methods\nseq.upper()              # 'ATGC'\nseq.lower()              # 'atgc'\nseq.replace(\"T\", \"U\")    # DNA → RNA!\nseq.count(\"GC\")\nseq.find(\"ATG\")          # position of the first ATG (-1 if absent)\nseq.startswith(\"&gt;\")      # True / False — FASTA headers!\n\nA method does not change the original — it returns a new string.\n\nImportant: seq.upper() alone does nothing unless you assign it. Show the mistake live."
+  },
+  {
+    "objectID": "week03-block2-strings.html#building-strings",
+    "href": "week03-block2-strings.html#building-strings",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Building strings",
+    "text": "Building strings\nname = \"seq1\"\nlength = 42\n\nprint(\"Sequence \" + name + \" has \" + str(length) + \" bases\")\nprint(f\"Sequence {name} has {length} bases\")     # f-string 👑\n\nf-strings are shorter and you don’t need str()."
+  },
+  {
+    "objectID": "week03-block2-strings.html#exercise-1-slice-it",
+    "href": "week03-block2-strings.html#exercise-1-slice-it",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Exercise 1: Slice it 🔪",
+    "text": "Exercise 1: Slice it 🔪\n⏱️ 10 min · your own screen · react ✅ when done\nseq = \"ATGGCCATTGTAATGGGCCGC\"\n\nPrint the first codon (3 letters)\nPrint the last 6 bases\nPrint the sequence reversed\nConvert it to RNA and print it\nAt which position does the second ATG start? 🤔\n\n\n25–35 min. Question 5 is genuinely hard — find has a start argument: seq.find(“ATG”, 1)."
+  },
+  {
+    "objectID": "week03-block2-strings.html#reverse-complement",
+    "href": "week03-block2-strings.html#reverse-complement",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Reverse complement 🧬",
+    "text": "Reverse complement 🧬\nThe classic first real bioinformatics function:\nseq = \"ATGC\"\ncomplement = seq.replace(\"A\", \"t\").replace(\"T\", \"a\")\ncomplement = complement.replace(\"G\", \"c\").replace(\"C\", \"g\")\nrev_comp = complement.upper()[::-1]\nprint(rev_comp)\n\nWhy the temporary lowercase? 🤔 Try it without — what breaks?\n\nGreat discussion: replacing A→T then T→A turns everything into A. The lowercase trick avoids double replacement."
+  },
+  {
+    "objectID": "week03-block2-strings.html#exercise-2-sequence-toolkit",
+    "href": "week03-block2-strings.html#exercise-2-sequence-toolkit",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Exercise 2: Sequence toolkit 🧰",
+    "text": "Exercise 2: Sequence toolkit 🧰\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/seq_tools.py. For a DNA sequence of your choice, print:\n\nIts length and GC content (reuse last block’s code)\nIts first codon and last codon\nThe RNA version\nThe reverse complement\nWhether it starts with a start codon (ATG) — print True/False\n\n💡 Bonus: print all three reading frames: seq[0:], seq[1:], seq[2:]\n\n35–70 min. Paste in the chat. Encourage f-strings for nice output — makes results readable."
+  },
+  {
+    "objectID": "week03-block2-strings.html#wrap-up",
+    "href": "week03-block2-strings.html#wrap-up",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\n\n\nTool\nExample\n\n\n\n\nIndex\nseq[0] seq[-1]\n\n\nSlice\nseq[0:3] seq[::-1]\n\n\nMethods\n.upper() .replace() .find()\n\n\nf-string\nf\"GC = {gc}%\"\n\n\n\nHomework 🏠 Commit seq_tools.py and write in the README what it does.\n\nNext week: lists — many sequences at once 📋\n\n70–80 min. Exit ticket: “Python counts from ___” in the chat."
+  },
+  {
+    "objectID": "week05-block2-practice.html#today-no-new-syntax",
+    "href": "week05-block2-practice.html#today-no-new-syntax",
+    "title": "Week 5 · Block 2 — Putting it together",
+    "section": "Today: no new syntax 🎉",
+    "text": "Today: no new syntax 🎉\nToday we only use what you already know:\n\nvariables and types\nstrings and slicing 🧬\nlists 📋\nif / elif / else 🚦\nfor loops 🔁\n\n\n\nProgramming is not knowing more commands. It is combining few commands well.\n\n\n0–5 min. Say this explicitly — students often think they are “behind” because they know “only” 5 things."
+  },
+  {
+    "objectID": "week05-block2-practice.html#warm-up-find-the-bugs",
+    "href": "week05-block2-practice.html#warm-up-find-the-bugs",
+    "title": "Week 5 · Block 2 — Putting it together",
+    "section": "Warm-up: find the bugs 🐛",
+    "text": "Warm-up: find the bugs 🐛\n⏱️ 15 min · pairs · 3 bugs\nsequences = [\"ATGC\", \"GGCA\", \"TTA\"]\nlengths = []\n\nfor seq in sequences\n    lengths.append(len(seq))\nif len(seq) = 4:\n        print(\"four bases\")\n\nprint(sum(lenghts))\n\n5–20 min. Bugs: missing colon; = instead of ==; typo lenghts; plus the if is outside the loop. Debugging together is where error messages stop being scary."
+  },
+  {
+    "objectID": "week05-block2-practice.html#how-to-attack-a-bigger-task",
+    "href": "week05-block2-practice.html#how-to-attack-a-bigger-task",
+    "title": "Week 5 · Block 2 — Putting it together",
+    "section": "How to attack a bigger task 🧗",
+    "text": "How to attack a bigger task 🧗\n\nSay it in words first: “for each sequence, if it is long enough, keep it”\nWrite it as comments, then fill in the code\nSolve it for one element, then wrap it in a loop\nprint() early and often — see what is actually happening 👀\n\n\n# for each sequence\n#   calculate GC\n#   if GC &gt; 0.5, add to the list\n\n20–30 min. This is the actual skill of the course — the rest is syntax."
+  },
+  {
+    "objectID": "week05-block2-practice.html#exercise-mini-analysis",
+    "href": "week05-block2-practice.html#exercise-mini-analysis",
+    "title": "Week 5 · Block 2 — Putting it together",
+    "section": "Exercise: Mini analysis 🧬",
+    "text": "Exercise: Mini analysis 🧬\n⏱️ 35 min · breakout rooms · switch after 15 min\nsequences = [\"ATGCGCTA\", \"GGC\", \"ATGGGCCCTAAA\", \"TTANNNGC\", \"ATGAAATTTGGG\"]\nWrite scripts/mini_analysis.py that prints a small report:\n\nTotal number of sequences and total number of bases\nFor each sequence: its length, GC content and whether it starts with ATG\nHow many sequences are “usable” (longer than 5 bases and no N)\nThe longest sequence and its codons, one per line\nA final line: \"X of Y sequences passed\"\n\n💡 Bonus: put a # comment above each section explaining what it does\n\n30–65 min. Visit every room. Give hints as questions: “what do you want to have at the end?”. Remind them of the empty-list-append pattern if they freeze."
+  },
+  {
+    "objectID": "week05-block2-practice.html#show-your-work",
+    "href": "week05-block2-practice.html#show-your-work",
+    "title": "Week 5 · Block 2 — Putting it together",
+    "section": "Show your work 👀",
+    "text": "Show your work 👀\n⏱️ 10 min\nTwo or three rooms share their screen:\n\nWhat does your output look like?\nWhere did you get stuck?\nDid anyone solve something differently? 🤔\n\n\n65–75 min. Praise different solutions — there is no single right one. This also shows AI-generated uniformity is not the goal."
+  },
+  {
+    "objectID": "week05-block2-practice.html#wrap-up",
+    "href": "week05-block2-practice.html#wrap-up",
+    "title": "Week 5 · Block 2 — Putting it together",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\nYou can now write a real analysis script 🎉\nHomework 🏠\n\nCommit mini_analysis.py\nAdd 2 sequences of your own and check the report still works\n\n\nNext week: dictionaries and functions — organising data and code 📖\n\n75–80 min. Quiz 3 is around this point in the semester — remind them."
+  },
+  {
+    "objectID": "week04-block2-conditions.html#warm-up",
+    "href": "week04-block2-conditions.html#warm-up",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min\nlengths = [120, 85, 300, 42]\n\nPrint the average length\nPrint the longest\nAdd 500 to the list and print the new average\n\n\n0–10 min. Quick recall of list tools before adding logic on top."
+  },
+  {
+    "objectID": "week04-block2-conditions.html#scripts-that-decide",
+    "href": "week04-block2-conditions.html#scripts-that-decide",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "Scripts that decide 🚦",
+    "text": "Scripts that decide 🚦\n\n“Analyse the sequence only if it is longer than 100 bases.”\n\n\nlength = 120\n\nif length &gt; 100:\n    print(\"Long enough — analysing\")\n\n10–25 min. Start from the biological question, then show the syntax."
+  },
+  {
+    "objectID": "week04-block2-conditions.html#if-elif-else",
+    "href": "week04-block2-conditions.html#if-elif-else",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "if / elif / else",
+    "text": "if / elif / else\ngc = 0.62\n\nif gc &gt; 0.6:\n    print(\"GC rich\")\nelif gc &lt; 0.4:\n    print(\"AT rich\")\nelse:\n    print(\"Balanced\")\n\nPython checks top to bottom and stops at the first true condition."
+  },
+  {
+    "objectID": "week04-block2-conditions.html#indentation-is-the-syntax",
+    "href": "week04-block2-conditions.html#indentation-is-the-syntax",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "Indentation is the syntax ⚠️",
+    "text": "Indentation is the syntax ⚠️\nif length &gt; 100:\n    print(\"inside the if\")   # 4 spaces — belongs to the if\nprint(\"always printed\")      # no spaces — outside\n\n\n\n\n\n\n\nWarning\n\n\nIn Python, indentation is not decoration — it is the structure. IndentationError will be your friend. 🤝\n\n\n\n\nShow the error live. Tell them: every Python programmer sees this error weekly."
+  },
+  {
+    "objectID": "week04-block2-conditions.html#comparing-things",
+    "href": "week04-block2-conditions.html#comparing-things",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "Comparing things",
+    "text": "Comparing things\n\n\n\nOperator\nMeaning\n\n\n\n\n==\nequal (two =!)\n\n\n!=\nnot equal\n\n\n&gt; &lt; &gt;= &lt;=\nbigger / smaller\n\n\nin\ncontains\n\n\n\nseq == \"ATG\"          # comparison\nseq = \"ATG\"           # assignment ⚠️ different thing!\n\"TAG\" in seq          # True / False"
+  },
+  {
+    "objectID": "week04-block2-conditions.html#combining-conditions",
+    "href": "week04-block2-conditions.html#combining-conditions",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "Combining conditions",
+    "text": "Combining conditions\nif length &gt; 100 and gc &gt; 0.5:\n    print(\"Long and GC rich\")\n\nif seq.startswith(\"ATG\") or seq.startswith(\"GTG\"):\n    print(\"Possible start codon\")\n\nif not seq.startswith(\"&gt;\"):\n    print(\"This is a sequence line, not a header\")\n\nand · or · not — they read like English 🙂"
+  },
+  {
+    "objectID": "week04-block2-conditions.html#exercise-1-predict-then-run",
+    "href": "week04-block2-conditions.html#exercise-1-predict-then-run",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "Exercise 1: Predict, then run 🔮",
+    "text": "Exercise 1: Predict, then run 🔮\n⏱️ 10 min · chat first\nseq = \"ATGCCCTAA\"\n\nif len(seq) &gt; 5:\n    print(\"A\")\nelif len(seq) &gt; 3:\n    print(\"B\")\nelse:\n    print(\"C\")\n\nif seq.startswith(\"ATG\") and seq.endswith(\"TAA\"):\n    print(\"D\")\nWhich letters get printed? 🤔\n\n25–35 min. Key insight: only ONE branch of if/elif/else runs, but the second if is independent."
+  },
+  {
+    "objectID": "week04-block2-conditions.html#exercise-2-sequence-quality-check",
+    "href": "week04-block2-conditions.html#exercise-2-sequence-quality-check",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "Exercise 2: Sequence quality check 🔬",
+    "text": "Exercise 2: Sequence quality check 🔬\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/seq_check.py. For one sequence, print a verdict:\n\nIf it is shorter than 30 bases → \"too short\"\nIf it contains an N → \"contains unknown bases\"\nIf its GC content is above 60% → \"GC rich\", below 40% → \"AT rich\", otherwise \"balanced\"\nIf it starts with ATG and its length divides by 3 (len(seq) % 3 == 0) → \"possible ORF\"\n\n💡 Bonus: test your script on 3 different sequences by changing the variable. Does every rule fire?\n\n35–70 min. % (modulo) is new — explain briefly: remainder after division. Ask pairs to swap sequences with another room to test each other’s scripts."
+  },
+  {
+    "objectID": "week04-block2-conditions.html#wrap-up",
+    "href": "week04-block2-conditions.html#wrap-up",
+    "title": "Week 4 · Block 2 — Making decisions",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\nif / elif / else — one branch wins 🚦\nIndentation defines what belongs where\n== compares, = assigns ⚠️\nand or not in\n\nHomework 🏠 Commit seq_check.py.\n\nNext week: loops — do it for all 500 sequences 🔁\n\n70–80 min. Exit ticket: “What is the difference between = and ==?”"
   }
 ]
