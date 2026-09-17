@@ -233,91 +233,91 @@
   {
     "objectID": "week01-block2-git.html#warm-up-5-min",
     "href": "week01-block2-git.html#warm-up-5-min",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Warm-up 🔥 (5 min)",
     "text": "Warm-up 🔥 (5 min)\nHave you ever had files like this?\nthesis.docx\nthesis_final.docx\nthesis_final_v2.docx\nthesis_final_v2_REALLY_FINAL.docx\nthesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx\n\nWrite in the chat: which one is the real one? 🤔\n\n0–10 min. Quick laugh + chat discussion. Lead to the question: how do we keep history without chaos?"
   },
   {
     "objectID": "week01-block2-git.html#git-a-lab-notebook-for-your-files",
     "href": "week01-block2-git.html#git-a-lab-notebook-for-your-files",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Git = a lab notebook for your files 📓",
     "text": "Git = a lab notebook for your files 📓\n\n\nLab notebook\n\nDate of every experiment\nWhat you changed and why\nYou never tear out pages\n\n\nGit\n\nCommit = a dated snapshot\nMessage = what & why\nHistory is never lost"
   },
   {
     "objectID": "week01-block2-git.html#three-words-for-today",
     "href": "week01-block2-git.html#three-words-for-today",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Three words for today",
     "text": "Three words for today\n\n\n\nWord\nMeaning\n\n\n\n\nRepository (repo)\nA project folder with its whole history\n\n\nCommit\nA saved snapshot + a message\n\n\nGitHub\nA website that stores your repo online\n\n\n\n\nGit ≠ GitHub. Git is the tool, GitHub is where we keep the copy.\n\n10–25 min block of “something new”. Keep it under 15 min total."
   },
   {
     "objectID": "week01-block2-git.html#exercise-1-first-repository",
     "href": "week01-block2-git.html#exercise-1-first-repository",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Exercise 1: First repository 🐙",
     "text": "Exercise 1: First repository 🐙\n⏱️ 15 min\n\nOn GitHub click New repository → name it programming-basics\n✅ Add a README file → Create repository\nClick ✏️ on README.md and add:\n\n   # Programming Basics\n   My name is ... and I study ...\n\nWrite a message → Commit changes\nClick History 🕒 — what do you see?\n\n✅ React when you see your commit · 💡 Bonus: make a second change and compare\n\n25–40 min. Everyone works on their own screen, you watch the reactions; ask anyone with ✋ to share their screen."
   },
   {
     "objectID": "week01-block2-git.html#opening-the-terminal",
     "href": "week01-block2-git.html#opening-the-terminal",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Opening the terminal 💻",
     "text": "Opening the terminal 💻\n\nWindows: Git Bash\nmacOS: Terminal\nLinux: Terminal\n\npwd        # where am I?\nls         # what is here?\ncd Desktop # go into a folder\ncd ..      # go one level up\nmkdir kse  # make a new folder\n\nLive coding: students tell you in the chat what to type. Zoom in the terminal font (Ctrl/Cmd +). Show that typos give errors and that’s fine."
   },
   {
     "objectID": "week01-block2-git.html#exercise-2-find-your-way-5-min",
     "href": "week01-block2-git.html#exercise-2-find-your-way-5-min",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Exercise 2: Find your way (5 min)",
     "text": "Exercise 2: Find your way (5 min)\n\nCheck where you are: pwd\nList files: ls\nGo to your Desktop (or Documents)\nCreate a folder kse and go inside it\nCheck with pwd that you are there ✅"
   },
   {
     "objectID": "week01-block2-git.html#one-time-setup",
     "href": "week01-block2-git.html#one-time-setup",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "One-time setup ⚙️",
     "text": "One-time setup ⚙️\nTell Git who you are:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"\n\nUse the same e-mail as on GitHub.\n\nAuthentication for push: decide beforehand! Options: - GitHub CLI: gh auth login (easiest if installed) - Git Credential Manager (comes with Git for Windows — browser login pops up) - Personal Access Token This step can easily eat 15+ minutes — have a helper or a plan B (web upload)."
   },
   {
     "objectID": "week01-block2-git.html#the-git-cycle",
     "href": "week01-block2-git.html#the-git-cycle",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "The Git cycle 🔄",
     "text": "The Git cycle 🔄\n\n  git clone\n  →\n  ✏️ edit files\n  →\n  git add\n  →\n  git commit\n  →\n  git push\n\n\n  ↩️ then back to edit files — again and again\n\n\n  git clone only once · the blue part every time you work"
   },
   {
     "objectID": "week01-block2-git.html#the-commands",
     "href": "week01-block2-git.html#the-commands",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "The commands",
     "text": "The commands\n# 1. Copy your repo to your laptop (once)\ngit clone https://github.com/&lt;username&gt;/programming-basics.git\ncd programming-basics\n\n# 2. After changing files\ngit status                     # what changed?\ngit add about_me.md            # choose what to save\ngit commit -m \"Add about me\"   # take the snapshot\ngit push                       # send it to GitHub"
   },
   {
     "objectID": "week01-block2-git.html#exercise-3-about-me",
     "href": "week01-block2-git.html#exercise-3-about-me",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Exercise 3: About me 🎉",
     "text": "Exercise 3: About me 🎉\n⏱️ 20 min · Breakout rooms · one shares the screen and types, one guides — then switch\n\nIn the folder kse: git clone your repo, then cd programming-basics\nCreate about_me.md with: your name, favourite organism 🦠, one thing you want to learn\ngit status → git add → git commit → git push\nRefresh GitHub — is your file there? Post your repo link in the chat 🔗\n\n💡 Bonus: change the file again, make a second commit and look at git log\n\n40–70 min (incl. setup + cycle slides). Paste the steps in the chat before opening rooms. Visit rooms one by one. Biggest risks: authentication on push, cloning into the wrong folder. Plan B for anyone stuck: upload the file via the GitHub website so they still leave with a commit. Plan C if many laptops fail: GitHub Codespaces (terminal in the browser, Git already logged in)."
   },
   {
     "objectID": "week01-block2-git.html#what-we-did-today",
     "href": "week01-block2-git.html#what-we-did-today",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "What we did today ✅",
     "text": "What we did today ✅\n\nCreated a repository on GitHub\nUsed the terminal: pwd, ls, cd, mkdir\nMade our first commit and push\n\n\n\nFrom now on, every class ends with a commit."
   },
   {
     "objectID": "week01-block2-git.html#cheat-sheet",
     "href": "week01-block2-git.html#cheat-sheet",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Cheat sheet 📌",
     "text": "Cheat sheet 📌\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit clone &lt;url&gt;\nCopy a repo to your laptop\n\n\ngit status\nShow what changed\n\n\ngit add &lt;file&gt;\nChoose files to save\n\n\ngit commit -m \"...\"\nSave a snapshot\n\n\ngit push\nSend commits to GitHub\n\n\ngit log\nShow history"
   },
   {
     "objectID": "week01-block2-git.html#before-next-week",
     "href": "week01-block2-git.html#before-next-week",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 2 — first commit",
     "section": "Before next week 🏠",
     "text": "Before next week 🏠\n\nMake one more commit: add a file expectations.md — what do you want to be able to do in 14 weeks?\nMake sure your terminal works on your laptop\n\n\nNext week: terminal & Bash — working with real FASTA files 🧬\n\n70–80 min. Ask 2 students to share their screen and show their repo. Exit question in the chat: “Write the Git cycle from memory.”"
   },
@@ -326,6 +326,6 @@
     "href": "index.html",
     "title": "Programming and Computing Basics",
     "section": "",
-    "text": "Lecture\n\n\n\n\n\n\n\n\nWeek 1 · Block 1 — Get know each other\n\n\n\n\n\n\nWeek 1 · Block 2 — Your first commit\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Lecture\n\n\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nNo matching items"
   }
 ]
