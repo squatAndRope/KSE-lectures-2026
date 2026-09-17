@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Klaudia Brzezińska">
-  <title>Programming and Computing Basics – Week 1 · Block 2 — First commit</title>
+  <title>Programming and Computing Basics – Week 4 · Block 2 — Making decisions</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,7 +193,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 1 · Block 2 — First commit</h1>
+  <h1 class="title">Week 4 · Block 2 — Making decisions</h1>
   <p class="subtitle">Programming and Computing Basics · KSE 2026</p>
 
 <div class="quarto-title-authors">
@@ -205,18 +205,41 @@ Klaudia Brzezińska
 </div>
 
 </section>
-<section id="warm-up-5-min" class="slide level2">
-<h2>Warm-up 🔥 (5 min)</h2>
-<p>Have you ever had files like this?</p>
-<pre><code>thesis.docx
-thesis_final.docx
-thesis_final_v2.docx
-thesis_final_v2_REALLY_FINAL.docx
-thesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx</code></pre>
-<div class="fragment">
-<p>Write in the chat: <strong>which one is the real one?</strong> 🤔</p>
+<section id="warm-up" class="slide level2 smaller">
+<h2>Warm-up 🔥</h2>
+<p>⏱️ 10 min</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>lengths <span class="op">=</span> [<span class="dv">120</span>, <span class="dv">85</span>, <span class="dv">300</span>, <span class="dv">42</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>Print the average length</li>
+<li>Print the longest</li>
+<li>Add <code>500</code> to the list and print the new average</li>
+</ol>
 <aside class="notes">
-<p>0–10 min. Quick laugh + chat discussion. Lead to the question: how do we keep history without chaos?</p>
+<p>0–10 min. Quick recall of list tools before adding logic on top.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="scripts-that-decide" class="slide level2">
+<h2>Scripts that decide 🚦</h2>
+<blockquote>
+<p>“Analyse the sequence <strong>only if</strong> it is longer than 100 bases.”</p>
+</blockquote>
+<div class="fragment">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>length <span class="op">=</span> <span class="dv">120</span></span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a><span class="cf">if</span> length <span class="op">&gt;</span> <span class="dv">100</span>:</span>
+<span id="cb2-4"><a></a>    <span class="bu">print</span>(<span class="st">"Long enough — analysing"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>10–25 min. Start from the biological question, then show the syntax.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -230,88 +253,117 @@ thesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx</code></pre>
       }</style></aside>
 </div>
 </section>
-<section>
-<section id="what-is-version-control" class="title-slide slide level1 center">
-<h1>What is version control?</h1>
-
+<section id="if-elif-else" class="slide level2 smaller">
+<h2>if / elif / else</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>gc <span class="op">=</span> <span class="fl">0.62</span></span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a><span class="cf">if</span> gc <span class="op">&gt;</span> <span class="fl">0.6</span>:</span>
+<span id="cb3-4"><a></a>    <span class="bu">print</span>(<span class="st">"GC rich"</span>)</span>
+<span id="cb3-5"><a></a><span class="cf">elif</span> gc <span class="op">&lt;</span> <span class="fl">0.4</span>:</span>
+<span id="cb3-6"><a></a>    <span class="bu">print</span>(<span class="st">"AT rich"</span>)</span>
+<span id="cb3-7"><a></a><span class="cf">else</span>:</span>
+<span id="cb3-8"><a></a>    <span class="bu">print</span>(<span class="st">"Balanced"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>Python checks top to bottom and stops at the <strong>first</strong> true condition.</p>
+</div>
 </section>
-<section id="git-a-lab-notebook-for-your-files" class="slide level2">
-<h2>Git = a lab notebook for your files 📓</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Lab notebook</strong></p>
-<ul>
-<li>Date of every experiment</li>
-<li>What you changed and why</li>
-<li>You never tear out pages</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Git</strong></p>
-<ul>
-<li><strong>Commit</strong> = a dated snapshot</li>
-<li><strong>Message</strong> = what &amp; why</li>
-<li>History is never lost</li>
-</ul>
-</div></div>
+<section id="indentation-is-the-syntax" class="slide level2 smaller">
+<h2>Indentation is the syntax ⚠️</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="cf">if</span> length <span class="op">&gt;</span> <span class="dv">100</span>:</span>
+<span id="cb4-2"><a></a>    <span class="bu">print</span>(<span class="st">"inside the if"</span>)   <span class="co"># 4 spaces — belongs to the if</span></span>
+<span id="cb4-3"><a></a><span class="bu">print</span>(<span class="st">"always printed"</span>)      <span class="co"># no spaces — outside</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>In Python, indentation is not decoration — it <strong>is</strong> the structure. <code>IndentationError</code> will be your friend. 🤝</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Show the error live. Tell them: every Python programmer sees this error weekly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
 </section>
-<section id="three-words-for-today" class="slide level2">
-<h2>Three words for today</h2>
+<section id="comparing-things" class="slide level2 smaller">
+<h2>Comparing things</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Word</th>
+<th>Operator</th>
 <th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Repository</strong> (repo)</td>
-<td>A project folder with its whole history</td>
+<td><code>==</code></td>
+<td>equal (two <code>=</code>!)</td>
 </tr>
 <tr class="even">
-<td><strong>Commit</strong></td>
-<td>A saved snapshot + a message</td>
+<td><code>!=</code></td>
+<td>not equal</td>
 </tr>
 <tr class="odd">
-<td><strong>GitHub</strong></td>
-<td>A website that stores your repo online</td>
+<td><code>&gt;</code> <code>&lt;</code> <code>&gt;=</code> <code>&lt;=</code></td>
+<td>bigger / smaller</td>
+</tr>
+<tr class="even">
+<td><code>in</code></td>
+<td>contains</td>
 </tr>
 </tbody>
 </table>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>seq <span class="op">==</span> <span class="st">"ATG"</span>          <span class="co"># comparison</span></span>
+<span id="cb5-2"><a></a>seq <span class="op">=</span> <span class="st">"ATG"</span>           <span class="co"># assignment ⚠️ different thing!</span></span>
+<span id="cb5-3"><a></a><span class="co">"TAG"</span> <span class="kw">in</span> seq          <span class="co"># True / False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="combining-conditions" class="slide level2 smaller">
+<h2>Combining conditions</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="cf">if</span> length <span class="op">&gt;</span> <span class="dv">100</span> <span class="kw">and</span> gc <span class="op">&gt;</span> <span class="fl">0.5</span>:</span>
+<span id="cb6-2"><a></a>    <span class="bu">print</span>(<span class="st">"Long and GC rich"</span>)</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="cf">if</span> seq.startswith(<span class="st">"ATG"</span>) <span class="kw">or</span> seq.startswith(<span class="st">"GTG"</span>):</span>
+<span id="cb6-5"><a></a>    <span class="bu">print</span>(<span class="st">"Possible start codon"</span>)</span>
+<span id="cb6-6"><a></a></span>
+<span id="cb6-7"><a></a><span class="cf">if</span> <span class="kw">not</span> seq.startswith(<span class="st">"&gt;"</span>):</span>
+<span id="cb6-8"><a></a>    <span class="bu">print</span>(<span class="st">"This is a sequence line, not a header"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>Git ≠ GitHub. <strong>Git</strong> is the tool, <strong>GitHub</strong> is where we keep the copy.</p>
-<aside class="notes">
-<p>10–25 min block of “something new”. Keep it under 15 min total.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><code>and</code> · <code>or</code> · <code>not</code> — they read like English 🙂</p>
 </div>
 </section>
-<section id="exercise-1-first-repository" class="slide level2 smaller">
-<h2>Exercise 1: First repository 🐙</h2>
-<p>⏱️ 15 min</p>
-<ol type="1">
-<li>On GitHub click <strong>New repository</strong> → name it <code>programming-basics</code></li>
-<li>✅ <em>Add a README file</em> → <strong>Create repository</strong></li>
-<li>Click ✏️ on <code>README.md</code> and add:</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a>   # Programming Basics</span>
-<span id="cb2-2"><a></a>   My name is ... and I study ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="1">
-<li>Write a message → <strong>Commit changes</strong></li>
-<li>Click <strong>History</strong> 🕒 — what do you see?</li>
-</ol>
-<p>✅ React when you see your commit · 💡 <strong>Bonus:</strong> make a second change and compare</p>
+<section id="exercise-1-predict-then-run" class="slide level2 smaller">
+<h2>Exercise 1: Predict, then run 🔮</h2>
+<p>⏱️ 10 min · chat first</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCCCTAA"</span></span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="cf">if</span> <span class="bu">len</span>(seq) <span class="op">&gt;</span> <span class="dv">5</span>:</span>
+<span id="cb7-4"><a></a>    <span class="bu">print</span>(<span class="st">"A"</span>)</span>
+<span id="cb7-5"><a></a><span class="cf">elif</span> <span class="bu">len</span>(seq) <span class="op">&gt;</span> <span class="dv">3</span>:</span>
+<span id="cb7-6"><a></a>    <span class="bu">print</span>(<span class="st">"B"</span>)</span>
+<span id="cb7-7"><a></a><span class="cf">else</span>:</span>
+<span id="cb7-8"><a></a>    <span class="bu">print</span>(<span class="st">"C"</span>)</span>
+<span id="cb7-9"><a></a></span>
+<span id="cb7-10"><a></a><span class="cf">if</span> seq.startswith(<span class="st">"ATG"</span>) <span class="kw">and</span> seq.endswith(<span class="st">"TAA"</span>):</span>
+<span id="cb7-11"><a></a>    <span class="bu">print</span>(<span class="st">"D"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Which letters get printed? 🤔</p>
 <aside class="notes">
-<p>25–40 min. Everyone works on their own screen, you watch the reactions; ask anyone with ✋ to share their screen.</p>
+<p>25–35 min. Key insight: only ONE branch of if/elif/else runs, but the second if is independent.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -323,196 +375,45 @@ thesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx</code></pre>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section></section>
-<section>
-<section id="the-terminal-the-bare-minimum" class="title-slide slide level1 center">
-<h1>The terminal — the bare minimum</h1>
-
 </section>
-<section id="opening-the-terminal" class="slide level2">
-<h2>Opening the terminal 💻</h2>
+<section id="exercise-2-sequence-quality-check" class="slide level2 smaller">
+<h2>Exercise 2: Sequence quality check 🔬</h2>
+<p>⏱️ 25 min · breakout rooms · switch after 10 min</p>
+<p>Create <code>scripts/seq_check.py</code>. For one sequence, print a verdict:</p>
+<ol type="1">
+<li>If it is shorter than 30 bases → <code>"too short"</code></li>
+<li>If it contains an <code>N</code> → <code>"contains unknown bases"</code></li>
+<li>If its GC content is above 60% → <code>"GC rich"</code>, below 40% → <code>"AT rich"</code>, otherwise <code>"balanced"</code></li>
+<li>If it starts with <code>ATG</code> <strong>and</strong> its length divides by 3 (<code>len(seq) % 3 == 0</code>) → <code>"possible ORF"</code></li>
+</ol>
+<p>💡 <strong>Bonus:</strong> test your script on 3 different sequences by changing the variable. Does every rule fire?</p>
+<aside class="notes">
+<p>35–70 min. <code>%</code> (modulo) is new — explain briefly: remainder after division. Ask pairs to swap sequences with another room to test each other’s scripts.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="wrap-up" class="slide level2 smaller">
+<h2>Wrap-up ✅</h2>
 <ul>
-<li><strong>Windows:</strong> <em>Git Bash</em></li>
-<li><strong>macOS:</strong> <em>Terminal</em></li>
-<li><strong>Linux:</strong> <em>Terminal</em></li>
+<li><code>if</code> / <code>elif</code> / <code>else</code> — one branch wins 🚦</li>
+<li>Indentation defines what belongs where</li>
+<li><code>==</code> compares, <code>=</code> assigns ⚠️</li>
+<li><code>and</code> <code>or</code> <code>not</code> <code>in</code></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="bu">pwd</span>        <span class="co"># where am I?</span></span>
-<span id="cb3-2"><a></a><span class="fu">ls</span>         <span class="co"># what is here?</span></span>
-<span id="cb3-3"><a></a><span class="bu">cd</span> Desktop <span class="co"># go into a folder</span></span>
-<span id="cb3-4"><a></a><span class="bu">cd</span> ..      <span class="co"># go one level up</span></span>
-<span id="cb3-5"><a></a><span class="fu">mkdir</span> kse  <span class="co"># make a new folder</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
-<p>Live coding: students tell you in the chat what to type. Zoom in the terminal font (Ctrl/Cmd +). Show that typos give errors and that’s fine.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="exercise-2-find-your-way-5-min" class="slide level2">
-<h2>Exercise 2: Find your way (5 min)</h2>
-<ol type="1">
-<li>Check where you are: <code>pwd</code></li>
-<li>List files: <code>ls</code></li>
-<li>Go to your Desktop (or Documents)</li>
-<li>Create a folder <code>kse</code> and go inside it</li>
-<li>Check with <code>pwd</code> that you are there ✅</li>
-</ol>
-</section></section>
-<section>
-<section id="from-your-laptop-to-github" class="title-slide slide level1 center">
-<h1>From your laptop to GitHub</h1>
-
-</section>
-<section id="one-time-setup" class="slide level2">
-<h2>One-time setup ⚙️</h2>
-<p>Tell Git who you are:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb4-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Homework</strong> 🏠 Commit <code>seq_check.py</code>.</p>
 <div class="fragment">
-<p>Use the <strong>same e-mail</strong> as on GitHub.</p>
+<p>Next week: <strong>loops</strong> — do it for all 500 sequences 🔁</p>
 <aside class="notes">
-<p>Authentication for push: decide beforehand! Options: - GitHub CLI: <code>gh auth login</code> (easiest if installed) - Git Credential Manager (comes with Git for Windows — browser login pops up) - Personal Access Token This step can easily eat 15+ minutes — have a helper or a plan B (web upload).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="the-git-cycle" class="slide level2">
-<h2>The Git cycle 🔄</h2>
-<div style="display:flex; align-items:center; justify-content:center; gap:0.5em; flex-wrap:wrap; margin-top:1.5em; font-family:monospace; font-size:0.9em;">
-  <div style="border:2px solid #888; border-radius:10px; padding:0.4em 0.7em;">git clone</div>
-  <span>→</span>
-  <div style="border:2px solid #42affa; border-radius:10px; padding:0.4em 0.7em;">✏️ edit files</div>
-  <span>→</span>
-  <div style="border:2px solid #42affa; border-radius:10px; padding:0.4em 0.7em;">git add</div>
-  <span>→</span>
-  <div style="border:2px solid #42affa; border-radius:10px; padding:0.4em 0.7em;">git commit</div>
-  <span>→</span>
-  <div style="border:2px solid #42affa; border-radius:10px; padding:0.4em 0.7em;">git push</div>
-</div>
-<p style="text-align:center; margin-top:1em; font-size:0.8em;">
-  ↩️ <span style="color:#42affa;">then back to <b>edit files</b> — again and again</span>
-</p>
-<p style="text-align:center; margin-top:1.5em; font-size:0.6em; color:#aaa;">
-  <code>git clone</code> only once · the blue part every time you work
-</p>
-</section>
-<section id="the-commands" class="slide level2">
-<h2>The commands</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="co"># 1. Copy your repo to your laptop (once)</span></span>
-<span id="cb5-2"><a></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>username<span class="op">&gt;</span>/programming-basics.git</span>
-<span id="cb5-3"><a></a><span class="bu">cd</span> programming-basics</span>
-<span id="cb5-4"><a></a></span>
-<span id="cb5-5"><a></a><span class="co"># 2. After changing files</span></span>
-<span id="cb5-6"><a></a><span class="fu">git</span> status                     <span class="co"># what changed?</span></span>
-<span id="cb5-7"><a></a><span class="fu">git</span> add about_me.md            <span class="co"># choose what to save</span></span>
-<span id="cb5-8"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add about me"</span>   <span class="co"># take the snapshot</span></span>
-<span id="cb5-9"><a></a><span class="fu">git</span> push                       <span class="co"># send it to GitHub</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="exercise-3-about-me" class="slide level2 smaller">
-<h2>Exercise 3: About me 🎉</h2>
-<p>⏱️ 20 min · Breakout rooms · one <strong>shares the screen</strong> and types, one guides — <strong>then switch</strong></p>
-<ol type="1">
-<li>In the folder <code>kse</code>: <code>git clone</code> your repo, then <code>cd programming-basics</code></li>
-<li>Create <code>about_me.md</code> with: your name, favourite organism 🦠, one thing you want to learn</li>
-<li><code>git status</code> → <code>git add</code> → <code>git commit</code> → <code>git push</code></li>
-<li>Refresh GitHub — is your file there? Post your repo link in the chat 🔗</li>
-</ol>
-<p>💡 <strong>Bonus:</strong> change the file again, make a second commit and look at <code>git log</code></p>
-<aside class="notes">
-<p>40–70 min (incl.&nbsp;setup + cycle slides). Paste the steps in the chat before opening rooms. Visit rooms one by one. Biggest risks: authentication on push, cloning into the wrong folder. Plan B for anyone stuck: upload the file via the GitHub website so they still leave with a commit. Plan C if many laptops fail: GitHub Codespaces (terminal in the browser, Git already logged in).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section>
-<section id="wrap-up" class="title-slide slide level1 center">
-<h1>Wrap-up</h1>
-
-</section>
-<section id="what-we-did-today" class="slide level2">
-<h2>What we did today ✅</h2>
-<ul>
-<li>Created a <strong>repository</strong> on GitHub</li>
-<li>Used the <strong>terminal</strong>: <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code></li>
-<li>Made our first <strong>commit</strong> and <strong>push</strong></li>
-</ul>
-<div class="fragment">
-<blockquote>
-<p>From now on, <strong>every class ends with a commit.</strong></p>
-</blockquote>
-</div>
-</section>
-<section id="cheat-sheet" class="slide level2">
-<h2>Cheat sheet 📌</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git clone &lt;url&gt;</code></td>
-<td>Copy a repo to your laptop</td>
-</tr>
-<tr class="even">
-<td><code>git status</code></td>
-<td>Show what changed</td>
-</tr>
-<tr class="odd">
-<td><code>git add &lt;file&gt;</code></td>
-<td>Choose files to save</td>
-</tr>
-<tr class="even">
-<td><code>git commit -m "..."</code></td>
-<td>Save a snapshot</td>
-</tr>
-<tr class="odd">
-<td><code>git push</code></td>
-<td>Send commits to GitHub</td>
-</tr>
-<tr class="even">
-<td><code>git log</code></td>
-<td>Show history</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="before-next-week" class="slide level2">
-<h2>Before next week 🏠</h2>
-<ol type="1">
-<li>Make <strong>one more commit</strong>: add a file <code>expectations.md</code> — what do you want to be able to do in 14 weeks?</li>
-<li>Make sure your terminal works on your laptop</li>
-</ol>
-<div class="fragment">
-<p><strong>Next week:</strong> terminal &amp; Bash — working with real FASTA files 🧬</p>
-<aside class="notes">
-<p>70–80 min. Ask 2 students to share their screen and show their repo. Exit question in the chat: “Write the Git cycle from memory.”</p>
+<p>70–80 min. Exit ticket: “What is the difference between = and ==?”</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -527,11 +428,11 @@ thesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx</code></pre>
 
 
 </div>
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Programming and Computing Basics · Week 1</p>
+<p>Programming and Computing Basics · Week 4</p>
 </div>
 </div></div>
 
