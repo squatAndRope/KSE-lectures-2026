@@ -9,8 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d329e753491efaeac79c98c4b193a686.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.33">
 
-  <meta name="author" content="Klaudia Brzezińska">
-  <title>Programming and Computing Basics</title>
+  <title>Programming and Computing Basics – week01-block1-welcome</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -192,31 +191,148 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Programming and Computing Basics</h1>
-  <p class="subtitle">Week 1 · Block 2 — Your first commit</p>
 
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Klaudia Brzezińska 
-</div>
-</div>
-</div>
+<section id="hello" class="slide level2 center">
+<h2>Hello! 👋</h2>
+<p>Please turn on your camera if you can 🎥</p>
+<aside class="notes">
+<p>0–10 min. Short personal intro: data engineer, bioinformatics MSc, teaching at KSE. Tell ONE concrete story where code saved you hours of manual work with biological data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="who-am-i" class="slide level2">
+<h2>Who am I?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Official</strong> 🎓</p>
+<ul>
+<li>Data engineer — Python, SQL, data pipelines</li>
+<li>MSc in Technical Physics 🇵🇱</li>
+<li>MSc in Bioinformatics 🇦🇹</li>
+<li>I started with <strong>zero</strong> programming too</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Less official</strong> 🎪</p>
+<ul>
+<li>Lived in Kyiv 2023–2024, still visiting regularly</li>
+<li>TEDxGdansk speaker</li>
+<li>Founder of <strong>Cyrkarium</strong>, an NGO promoting aerial arts in Poland</li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Keep it light — the “less official” part helps students see you as a person, not just a lecturer. Good hook: ask them to guess what “aerial arts” means before explaining.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="why-does-a-biologist-need-code" class="slide level2">
+<h2>Why does a biologist need code?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>By hand</strong></p>
+<ul>
+<li>1 FASTA file → OK</li>
+<li>500 FASTA files → a week of copy &amp; paste</li>
+<li>“Which version of the table did I use?” 🤯</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>With code</strong></p>
+<ul>
+<li>500 files → one script, a few seconds</li>
+<li>Same result every time</li>
+<li>Full history of every change</li>
+</ul>
+</div></div>
+<aside class="notes">
+<p>Keep it short. The goal is motivation, not a lecture.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="getting-to-know-each-other" class="title-slide slide level1 center">
+<h1>Getting to know each other</h1>
 
 </section>
-<section id="warm-up-5-min" class="slide level2">
-<h2>Warm-up 🔥 (5 min)</h2>
-<p>Have you ever had files like this?</p>
-<pre><code>thesis.docx
-thesis_final.docx
-thesis_final_v2.docx
-thesis_final_v2_REALLY_FINAL.docx
-thesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx</code></pre>
-<div class="fragment">
-<p>Write in the chat: <strong>which one is the real one?</strong> 🤔</p>
+<section id="survey-grab-your-phone" class="slide level2">
+<h2>Survey 📱 — grab your phone</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><img data-src="mentimeter-qr.png" style="width:90.0%"></p>
+</div><div class="column" style="width:55%;">
+<p>Scan the QR code</p>
+<p>or go to <strong>menti.com</strong> and use the link in the chat:</p>
+<p><a href="https://www.menti.com/alk33hyab8sr">menti.com/alk33hyab8sr</a></p>
+</div></div>
 <aside class="notes">
-<p>0–10 min. Quick laugh + chat discussion. Lead to the question: how do we keep history without chaos?</p>
+<p>10–20 min. Paste the link in the chat too — not everyone has a phone at hand. Suggested questions: experience scale 1–5, tools used before, one-word feeling, favourite organism, worries, expectations.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="your-answers" class="slide level2 center">
+<h2>Your answers 💬</h2>
+<p>Let’s look at them together.</p>
+<aside class="notes">
+<p>20–30 min. Discuss results live, right after the survey, while students are curious. If a worry is about grading or AI — say “great question, we’ll get there in 15 minutes” and come back to it in the rules part.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="interview-your-partner" class="slide level2">
+<h2>Interview your partner 🎤</h2>
+<p>Breakout rooms · 2 people · <strong>5 minutes</strong></p>
+<ol type="1">
+<li>What’s your name and what do you study?</li>
+<li>Your favourite organism / field of biology?</li>
+<li>One thing you are afraid of in this course?</li>
+<li>One thing you would like to be able to do after this course?</li>
+</ol>
+<div class="fragment">
+<p>Back in the main room: introduce <strong>your partner</strong> in one sentence.</p>
+<aside class="notes">
+<p>30–45 min. Paste the 4 questions in the chat BEFORE opening the rooms (slides are not visible in breakout rooms). Random pairs. With a big group: introductions in the chat instead of speaking, then read a few aloud.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -229,120 +345,114 @@ thesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx</code></pre>
           display:block!important;
       }</style></aside>
 </div>
-</section>
+</section></section>
 <section>
-<section id="what-is-version-control" class="title-slide slide level1 center">
-<h1>What is version control?</h1>
+<section id="how-this-course-works" class="title-slide slide level1 center">
+<h1>How this course works</h1>
 
 </section>
-<section id="git-a-lab-notebook-for-your-files" class="slide level2">
-<h2>Git = a lab notebook for your files 📓</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Lab notebook</strong></p>
-<ul>
-<li>Date of every experiment</li>
-<li>What you changed and why</li>
-<li>You never tear out pages</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Git</strong></p>
-<ul>
-<li><strong>Commit</strong> = a dated snapshot</li>
-<li><strong>Message</strong> = what &amp; why</li>
-<li>History is never lost</li>
-</ul>
-</div></div>
-</section>
-<section id="three-words-for-today" class="slide level2">
-<h2>Three words for today</h2>
+<section id="what-we-will-learn" class="slide level2">
+<h2>What we will learn</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Word</th>
-<th>Meaning</th>
+<th>Weeks</th>
+<th>Topic</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Repository</strong> (repo)</td>
-<td>A project folder with its whole history</td>
+<td>1</td>
+<td><strong>Git</strong> &amp; GitHub — from day one</td>
 </tr>
 <tr class="even">
-<td><strong>Commit</strong></td>
-<td>A saved snapshot + a message</td>
+<td>2</td>
+<td>Terminal &amp; Bash</td>
 </tr>
 <tr class="odd">
-<td><strong>GitHub</strong></td>
-<td>A website that stores your repo online</td>
+<td>3–7</td>
+<td>Python basics</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Git in teams</td>
+</tr>
+<tr class="odd">
+<td>9–11</td>
+<td>Python + Bash together, mini-project</td>
+</tr>
+<tr class="even">
+<td>12–13</td>
+<td>R basics</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>Oral exams — talking about your project 💬</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>45–65 min: course rules (incl.&nbsp;short Q&amp;A at the end).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-a-typical-class-looks" class="slide level2">
+<h2>How a typical class looks</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 min</td>
+<td>Warm-up task</td>
+</tr>
+<tr class="even">
+<td>15 min</td>
+<td>Something new (short!)</td>
+</tr>
+<tr class="odd">
+<td>10 min</td>
+<td>Live coding — you tell me in the chat what to type</td>
+</tr>
+<tr class="even">
+<td>35 min</td>
+<td><strong>You</strong> code in pairs (breakout rooms)</td>
+</tr>
+<tr class="odd">
+<td>10 min</td>
+<td>Discussion + <code>git commit</code> + <code>git push</code></td>
 </tr>
 </tbody>
 </table>
 <div class="fragment">
-<p>Git ≠ GitHub. <strong>Git</strong> is the tool, <strong>GitHub</strong> is where we keep the copy.</p>
-<aside class="notes">
-<p>10–25 min block of “something new”. Keep it under 15 min total.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><strong>Less listening, more coding.</strong></p>
 </div>
 </section>
-<section id="exercise-1-first-repository" class="slide level2 smaller">
-<h2>Exercise 1: First repository 🐙</h2>
-<p>⏱️ 15 min</p>
-<ol type="1">
-<li>On GitHub click <strong>New repository</strong> → name it <code>programming-basics</code></li>
-<li>✅ <em>Add a README file</em> → <strong>Create repository</strong></li>
-<li>Click ✏️ on <code>README.md</code> and add:</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a>   # Programming Basics</span>
-<span id="cb2-2"><a></a>   My name is ... and I study ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="1">
-<li>Write a message → <strong>Commit changes</strong></li>
-<li>Click <strong>History</strong> 🕒 — what do you see?</li>
-</ol>
-<p>✅ React when you see your commit · 💡 <strong>Bonus:</strong> make a second change and compare</p>
-<aside class="notes">
-<p>25–40 min. Everyone works on their own screen, you watch the reactions; ask anyone with ✋ to share their screen.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section>
-<section id="the-terminal-the-bare-minimum" class="title-slide slide level1 center">
-<h1>The terminal — the bare minimum</h1>
-
-</section>
-<section id="opening-the-terminal" class="slide level2">
-<h2>Opening the terminal 💻</h2>
+<section id="rules-of-our-online-room" class="slide level2">
+<h2>Rules of our online room</h2>
 <ul>
-<li><strong>Windows:</strong> <em>Git Bash</em></li>
-<li><strong>macOS:</strong> <em>Terminal</em></li>
-<li><strong>Linux:</strong> <em>Terminal</em></li>
+<li>🎥 Camera on during pair work, if you can</li>
+<li>👥 Pairs: one <strong>shares the screen</strong>, the other guides — switch every 10 min</li>
+<li>✅ Reaction = <em>“it works”</em> · ✋ Raise hand = <em>“I need help”</em></li>
+<li>⏱️ Stuck for <strong>more than 5 minutes</strong>? Write in the chat</li>
+<li>❌ Errors are normal — reading them is a skill we will learn</li>
+<li>💾 Every class ends with a <strong>commit</strong></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="bu">pwd</span>        <span class="co"># where am I?</span></span>
-<span id="cb3-2"><a></a><span class="fu">ls</span>         <span class="co"># what is here?</span></span>
-<span id="cb3-3"><a></a><span class="bu">cd</span> Desktop <span class="co"># go into a folder</span></span>
-<span id="cb3-4"><a></a><span class="bu">cd</span> ..      <span class="co"># go one level up</span></span>
-<span id="cb3-5"><a></a><span class="fu">mkdir</span> kse  <span class="co"># make a new folder</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
-<p>Live coding: students tell you in the chat what to type. Zoom in the terminal font (Ctrl/Cmd +). Show that typos give errors and that’s fine.</p>
+<p>Stress the 5-minute rule: online, beginners get stuck silently.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -355,164 +465,51 @@ thesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx</code></pre>
           display:block!important;
       }</style></aside>
 </section>
-<section id="exercise-2-find-your-way-5-min" class="slide level2">
-<h2>Exercise 2: Find your way (5 min)</h2>
-<ol type="1">
-<li>Check where you are: <code>pwd</code></li>
-<li>List files: <code>ls</code></li>
-<li>Go to your Desktop (or Documents)</li>
-<li>Create a folder <code>kse</code> and go inside it</li>
-<li>Check with <code>pwd</code> that you are there ✅</li>
-</ol>
-</section></section>
-<section>
-<section id="from-your-laptop-to-github" class="title-slide slide level1 center">
-<h1>From your laptop to GitHub</h1>
-
+<section id="assessment" class="slide level2">
+<h2>Assessment</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>When</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>📝 Quizzes (7 short online quizzes)</td>
+<td>every ~2 weeks</td>
+<td>15%</td>
+</tr>
+<tr class="even">
+<td>👥 Pair assignment (Git teamwork)</td>
+<td>week 8</td>
+<td>25%</td>
+</tr>
+<tr class="odd">
+<td>🧬 Final project (individual) + oral exam</td>
+<td>week 14</td>
+<td>60%</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="one-time-setup" class="slide level2">
-<h2>One-time setup ⚙️</h2>
-<p>Tell Git who you are:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb4-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>Use the <strong>same e-mail</strong> as on GitHub.</p>
-<aside class="notes">
-<p>Authentication for push: decide beforehand! Options: - GitHub CLI: <code>gh auth login</code> (easiest if installed) - Git Credential Manager (comes with Git for Windows — browser login pops up) - Personal Access Token This step can easily eat 15+ minutes — have a helper or a plan B (web upload).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="the-git-cycle" class="slide level2">
-<h2>The Git cycle 🔄</h2>
-<div style="display:flex; align-items:center; justify-content:center; gap:0.5em; flex-wrap:wrap; margin-top:1.5em; font-family:monospace; font-size:0.9em;">
-  <div style="border:2px solid #888; border-radius:10px; padding:0.4em 0.7em;">git clone</div>
-  <span>→</span>
-  <div style="border:2px solid #42affa; border-radius:10px; padding:0.4em 0.7em;">✏️ edit files</div>
-  <span>→</span>
-  <div style="border:2px solid #42affa; border-radius:10px; padding:0.4em 0.7em;">git add</div>
-  <span>→</span>
-  <div style="border:2px solid #42affa; border-radius:10px; padding:0.4em 0.7em;">git commit</div>
-  <span>→</span>
-  <div style="border:2px solid #42affa; border-radius:10px; padding:0.4em 0.7em;">git push</div>
-</div>
-<p style="text-align:center; margin-top:1em; font-size:0.8em;">
-  ↩️ <span style="color:#42affa;">then back to <b>edit files</b> — again and again</span>
-</p>
-<p style="text-align:center; margin-top:1.5em; font-size:0.6em; color:#aaa;">
-  <code>git clone</code> only once · the blue part every time you work
-</p>
-</section>
-<section id="the-commands" class="slide level2">
-<h2>The commands</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="co"># 1. Copy your repo to your laptop (once)</span></span>
-<span id="cb5-2"><a></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>username<span class="op">&gt;</span>/programming-basics.git</span>
-<span id="cb5-3"><a></a><span class="bu">cd</span> programming-basics</span>
-<span id="cb5-4"><a></a></span>
-<span id="cb5-5"><a></a><span class="co"># 2. After changing files</span></span>
-<span id="cb5-6"><a></a><span class="fu">git</span> status                     <span class="co"># what changed?</span></span>
-<span id="cb5-7"><a></a><span class="fu">git</span> add about_me.md            <span class="co"># choose what to save</span></span>
-<span id="cb5-8"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add about me"</span>   <span class="co"># take the snapshot</span></span>
-<span id="cb5-9"><a></a><span class="fu">git</span> push                       <span class="co"># send it to GitHub</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="exercise-3-about-me" class="slide level2 smaller">
-<h2>Exercise 3: About me 🎉</h2>
-<p>⏱️ 20 min · Breakout rooms · one <strong>shares the screen</strong> and types, one guides — <strong>then switch</strong></p>
-<ol type="1">
-<li>In the folder <code>kse</code>: <code>git clone</code> your repo, then <code>cd programming-basics</code></li>
-<li>Create <code>about_me.md</code> with: your name, favourite organism 🦠, one thing you want to learn</li>
-<li><code>git status</code> → <code>git add</code> → <code>git commit</code> → <code>git push</code></li>
-<li>Refresh GitHub — is your file there? Post your repo link in the chat 🔗</li>
-</ol>
-<p>💡 <strong>Bonus:</strong> change the file again, make a second commit and look at <code>git log</code></p>
-<aside class="notes">
-<p>40–70 min (incl.&nbsp;setup + cycle slides). Paste the steps in the chat before opening rooms. Visit rooms one by one. Biggest risks: authentication on push, cloning into the wrong folder. Plan B for anyone stuck: upload the file via the GitHub website so they still leave with a commit. Plan C if many laptops fail: GitHub Codespaces (terminal in the browser, Git already logged in).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
-<section>
-<section id="wrap-up" class="title-slide slide level1 center">
-<h1>Wrap-up</h1>
-
-</section>
-<section id="what-we-did-today" class="slide level2">
-<h2>What we did today ✅</h2>
+<section id="oral-exam" class="slide level2">
+<h2>Oral exam 💬</h2>
 <ul>
-<li>Created a <strong>repository</strong> on GitHub</li>
-<li>Used the <strong>terminal</strong>: <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code></li>
-<li>Made our first <strong>commit</strong> and <strong>push</strong></li>
+<li><strong>15 minutes</strong> per person, in the last week of classes</li>
+<li>We talk about <strong>your final project code</strong></li>
+<li>Goal: see what <strong>you</strong> have learned</li>
 </ul>
 <div class="fragment">
 <blockquote>
-<p>From now on, <strong>every class ends with a commit.</strong></p>
+<p>This is a <strong>conversation, not an interrogation.</strong> 🙂</p>
 </blockquote>
 </div>
-</section>
-<section id="cheat-sheet" class="slide level2">
-<h2>Cheat sheet 📌</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git clone &lt;url&gt;</code></td>
-<td>Copy a repo to your laptop</td>
-</tr>
-<tr class="even">
-<td><code>git status</code></td>
-<td>Show what changed</td>
-</tr>
-<tr class="odd">
-<td><code>git add &lt;file&gt;</code></td>
-<td>Choose files to save</td>
-</tr>
-<tr class="even">
-<td><code>git commit -m "..."</code></td>
-<td>Save a snapshot</td>
-</tr>
-<tr class="odd">
-<td><code>git push</code></td>
-<td>Send commits to GitHub</td>
-</tr>
-<tr class="even">
-<td><code>git log</code></td>
-<td>Show history</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="before-next-week" class="slide level2">
-<h2>Before next week 🏠</h2>
-<ol type="1">
-<li>Make <strong>one more commit</strong>: add a file <code>expectations.md</code> — what do you want to be able to do in 14 weeks?</li>
-<li>Make sure your terminal works on your laptop</li>
-</ol>
 <div class="fragment">
-<p><strong>Next week:</strong> terminal &amp; Bash — working with real FASTA files 🧬</p>
+<p>No attendance tracking — but practice in class is where you learn.</p>
 <aside class="notes">
-<p>70–80 min. Ask 2 students to share their screen and show their repo. Exit question in the chat: “Write the Git cycle from memory.”</p>
+<p>Oral exam questions ideas: walk me through your script; why did you use a dictionary here; what would you change; what was the hardest part. Timing: week 14 has 160 min → only ~10 students in class time. Plan extra slots if the group is bigger.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -524,9 +521,88 @@ thesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx</code></pre>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-
-
 </div>
+</section>
+<section id="ai-tools-chatgpt-copilot-claude" class="slide level2">
+<h2>AI tools (ChatGPT, Copilot, Claude…)</h2>
+<p>✅ <strong>OK</strong></p>
+<ul>
+<li>Explaining an error message</li>
+<li>Explaining what a piece of code does</li>
+</ul>
+<p>❌ <strong>Not OK</strong></p>
+<ul>
+<li>Generating complete solutions to assignments</li>
+<li>Submitting code you cannot explain</li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>Rule of thumb: <strong>if you can’t explain it, don’t submit it.</strong></p>
+</blockquote>
+</div>
+</section>
+<section id="questions" class="slide level2 center">
+<h2>Questions? 🙋</h2>
+<p>Chat or unmute 🎙️</p>
+<aside class="notes">
+<p>Also come back to survey worries you postponed earlier.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="getting-ready-for-block-2" class="title-slide slide level1 center">
+<h1>Getting ready for Block 2</h1>
+
+</section>
+<section id="create-a-github-account" class="slide level2">
+<h2>Create a GitHub account 🐙</h2>
+<p>Breakout rooms · pairs · help each other</p>
+<ol type="1">
+<li>Go to <strong>github.com</strong> → <em>Sign up</em></li>
+<li>Use an e-mail you check regularly</li>
+<li>Choose a <strong>professional</strong> username (e.g.&nbsp;<code>firstname-lastname</code>)</li>
+<li>Confirm your e-mail</li>
+<li>Post your username in the chat 📝</li>
+</ol>
+<aside class="notes">
+<p>65–80 min. Paste the steps in the chat before opening rooms. Collect usernames from the chat.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="if-you-have-time-left" class="slide level2">
+<h2>If you have time left ⏳</h2>
+<p>Open a terminal and type:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>Windows:</strong> install <em>Git for Windows</em> → use <strong>Git Bash</strong></li>
+<li><strong>macOS:</strong> open <em>Terminal</em> (it may ask to install developer tools — say yes)</li>
+<li><strong>Linux:</strong> usually already installed</li>
+</ul>
+<p>React with ✅ when you see a version number.</p>
+</section>
+<section id="see-you-in-block-2" class="slide level2 center">
+<h2>See you in Block 2!</h2>
+<p>Next: your <strong>first commit</strong> 🎉</p>
+
+
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

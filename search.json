@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "week01-block1-welcome.html#hello",
+    "href": "week01-block1-welcome.html#hello",
+    "title": "Programming and Computing Basics",
+    "section": "Hello! 👋",
+    "text": "Hello! 👋\nPlease turn on your camera if you can 🎥\n\n0–10 min. Short personal intro: data engineer, bioinformatics MSc, teaching at KSE. Tell ONE concrete story where code saved you hours of manual work with biological data."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#who-am-i",
+    "href": "week01-block1-welcome.html#who-am-i",
+    "title": "Programming and Computing Basics",
+    "section": "Who am I?",
+    "text": "Who am I?\n\n\nOfficial 🎓\n\nData engineer — Python, SQL, data pipelines\nMSc in Technical Physics 🇵🇱\nMSc in Bioinformatics 🇦🇹\nI started with zero programming too\n\n\nLess official 🎪\n\nLived in Kyiv 2023–2024, still visiting regularly\nTEDxGdansk speaker\nFounder of Cyrkarium, an NGO promoting aerial arts in Poland\n\n\n\nKeep it light — the “less official” part helps students see you as a person, not just a lecturer. Good hook: ask them to guess what “aerial arts” means before explaining."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#why-does-a-biologist-need-code",
+    "href": "week01-block1-welcome.html#why-does-a-biologist-need-code",
+    "title": "Programming and Computing Basics",
+    "section": "Why does a biologist need code?",
+    "text": "Why does a biologist need code?\n\n\nBy hand\n\n1 FASTA file → OK\n500 FASTA files → a week of copy & paste\n“Which version of the table did I use?” 🤯\n\n\nWith code\n\n500 files → one script, a few seconds\nSame result every time\nFull history of every change\n\n\n\nKeep it short. The goal is motivation, not a lecture."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#survey-grab-your-phone",
+    "href": "week01-block1-welcome.html#survey-grab-your-phone",
+    "title": "Programming and Computing Basics",
+    "section": "Survey 📱 — grab your phone",
+    "text": "Survey 📱 — grab your phone\n\n\n\n\nScan the QR code\nor go to menti.com and use the link in the chat:\nmenti.com/alk33hyab8sr\n\n\n10–20 min. Paste the link in the chat too — not everyone has a phone at hand. Suggested questions: experience scale 1–5, tools used before, one-word feeling, favourite organism, worries, expectations."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#your-answers",
+    "href": "week01-block1-welcome.html#your-answers",
+    "title": "Programming and Computing Basics",
+    "section": "Your answers 💬",
+    "text": "Your answers 💬\nLet’s look at them together.\n\n20–30 min. Discuss results live, right after the survey, while students are curious. If a worry is about grading or AI — say “great question, we’ll get there in 15 minutes” and come back to it in the rules part."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#interview-your-partner",
+    "href": "week01-block1-welcome.html#interview-your-partner",
+    "title": "Programming and Computing Basics",
+    "section": "Interview your partner 🎤",
+    "text": "Interview your partner 🎤\nBreakout rooms · 2 people · 5 minutes\n\nWhat’s your name and what do you study?\nYour favourite organism / field of biology?\nOne thing you are afraid of in this course?\nOne thing you would like to be able to do after this course?\n\n\nBack in the main room: introduce your partner in one sentence.\n\n30–45 min. Paste the 4 questions in the chat BEFORE opening the rooms (slides are not visible in breakout rooms). Random pairs. With a big group: introductions in the chat instead of speaking, then read a few aloud."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#what-we-will-learn",
+    "href": "week01-block1-welcome.html#what-we-will-learn",
+    "title": "Programming and Computing Basics",
+    "section": "What we will learn",
+    "text": "What we will learn\n\n\n\nWeeks\nTopic\n\n\n\n\n1\nGit & GitHub — from day one\n\n\n2\nTerminal & Bash\n\n\n3–7\nPython basics\n\n\n8\nGit in teams\n\n\n9–11\nPython + Bash together, mini-project\n\n\n12–13\nR basics\n\n\n14\nOral exams — talking about your project 💬\n\n\n\n\n45–65 min: course rules (incl. short Q&A at the end)."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#how-a-typical-class-looks",
+    "href": "week01-block1-welcome.html#how-a-typical-class-looks",
+    "title": "Programming and Computing Basics",
+    "section": "How a typical class looks",
+    "text": "How a typical class looks\n\n\n\nTime\nWhat happens\n\n\n\n\n10 min\nWarm-up task\n\n\n15 min\nSomething new (short!)\n\n\n10 min\nLive coding — you tell me in the chat what to type\n\n\n35 min\nYou code in pairs (breakout rooms)\n\n\n10 min\nDiscussion + git commit + git push\n\n\n\n\nLess listening, more coding."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#rules-of-our-online-room",
+    "href": "week01-block1-welcome.html#rules-of-our-online-room",
+    "title": "Programming and Computing Basics",
+    "section": "Rules of our online room",
+    "text": "Rules of our online room\n\n🎥 Camera on during pair work, if you can\n👥 Pairs: one shares the screen, the other guides — switch every 10 min\n✅ Reaction = “it works” · ✋ Raise hand = “I need help”\n⏱️ Stuck for more than 5 minutes? Write in the chat\n❌ Errors are normal — reading them is a skill we will learn\n💾 Every class ends with a commit\n\n\nStress the 5-minute rule: online, beginners get stuck silently."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#assessment",
+    "href": "week01-block1-welcome.html#assessment",
+    "title": "Programming and Computing Basics",
+    "section": "Assessment",
+    "text": "Assessment\n\n\n\nComponent\nWhen\nWeight\n\n\n\n\n📝 Quizzes (7 short online quizzes)\nevery ~2 weeks\n15%\n\n\n👥 Pair assignment (Git teamwork)\nweek 8\n25%\n\n\n🧬 Final project (individual) + oral exam\nweek 14\n60%"
+  },
+  {
+    "objectID": "week01-block1-welcome.html#oral-exam",
+    "href": "week01-block1-welcome.html#oral-exam",
+    "title": "Programming and Computing Basics",
+    "section": "Oral exam 💬",
+    "text": "Oral exam 💬\n\n15 minutes per person, in the last week of classes\nWe talk about your final project code\nGoal: see what you have learned\n\n\n\nThis is a conversation, not an interrogation. 🙂\n\n\n\nNo attendance tracking — but practice in class is where you learn.\n\nOral exam questions ideas: walk me through your script; why did you use a dictionary here; what would you change; what was the hardest part. Timing: week 14 has 160 min → only ~10 students in class time. Plan extra slots if the group is bigger."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#ai-tools-chatgpt-copilot-claude",
+    "href": "week01-block1-welcome.html#ai-tools-chatgpt-copilot-claude",
+    "title": "Programming and Computing Basics",
+    "section": "AI tools (ChatGPT, Copilot, Claude…)",
+    "text": "AI tools (ChatGPT, Copilot, Claude…)\n✅ OK\n\nExplaining an error message\nExplaining what a piece of code does\n\n❌ Not OK\n\nGenerating complete solutions to assignments\nSubmitting code you cannot explain\n\n\n\nRule of thumb: if you can’t explain it, don’t submit it."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#questions",
+    "href": "week01-block1-welcome.html#questions",
+    "title": "Programming and Computing Basics",
+    "section": "Questions? 🙋",
+    "text": "Questions? 🙋\nChat or unmute 🎙️\n\nAlso come back to survey worries you postponed earlier."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#create-a-github-account",
+    "href": "week01-block1-welcome.html#create-a-github-account",
+    "title": "Programming and Computing Basics",
+    "section": "Create a GitHub account 🐙",
+    "text": "Create a GitHub account 🐙\nBreakout rooms · pairs · help each other\n\nGo to github.com → Sign up\nUse an e-mail you check regularly\nChoose a professional username (e.g. firstname-lastname)\nConfirm your e-mail\nPost your username in the chat 📝\n\n\n65–80 min. Paste the steps in the chat before opening rooms. Collect usernames from the chat."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#if-you-have-time-left",
+    "href": "week01-block1-welcome.html#if-you-have-time-left",
+    "title": "Programming and Computing Basics",
+    "section": "If you have time left ⏳",
+    "text": "If you have time left ⏳\nOpen a terminal and type:\ngit --version\n\nWindows: install Git for Windows → use Git Bash\nmacOS: open Terminal (it may ask to install developer tools — say yes)\nLinux: usually already installed\n\nReact with ✅ when you see a version number."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#see-you-in-block-2",
+    "href": "week01-block1-welcome.html#see-you-in-block-2",
+    "title": "Programming and Computing Basics",
+    "section": "See you in Block 2!",
+    "text": "See you in Block 2!\nNext: your first commit 🎉"
+  },
+  {
+    "objectID": "week01-block2-git.html#warm-up-5-min",
+    "href": "week01-block2-git.html#warm-up-5-min",
+    "title": "Programming and Computing Basics",
+    "section": "Warm-up 🔥 (5 min)",
+    "text": "Warm-up 🔥 (5 min)\nHave you ever had files like this?\nthesis.docx\nthesis_final.docx\nthesis_final_v2.docx\nthesis_final_v2_REALLY_FINAL.docx\nthesis_final_v2_REALLY_FINAL_fixed_by_supervisor.docx\n\nWrite in the chat: which one is the real one? 🤔\n\n0–10 min. Quick laugh + chat discussion. Lead to the question: how do we keep history without chaos?"
+  },
+  {
+    "objectID": "week01-block2-git.html#git-a-lab-notebook-for-your-files",
+    "href": "week01-block2-git.html#git-a-lab-notebook-for-your-files",
+    "title": "Programming and Computing Basics",
+    "section": "Git = a lab notebook for your files 📓",
+    "text": "Git = a lab notebook for your files 📓\n\n\nLab notebook\n\nDate of every experiment\nWhat you changed and why\nYou never tear out pages\n\n\nGit\n\nCommit = a dated snapshot\nMessage = what & why\nHistory is never lost"
+  },
+  {
+    "objectID": "week01-block2-git.html#three-words-for-today",
+    "href": "week01-block2-git.html#three-words-for-today",
+    "title": "Programming and Computing Basics",
+    "section": "Three words for today",
+    "text": "Three words for today\n\n\n\nWord\nMeaning\n\n\n\n\nRepository (repo)\nA project folder with its whole history\n\n\nCommit\nA saved snapshot + a message\n\n\nGitHub\nA website that stores your repo online\n\n\n\n\nGit ≠ GitHub. Git is the tool, GitHub is where we keep the copy.\n\n10–25 min block of “something new”. Keep it under 15 min total."
+  },
+  {
+    "objectID": "week01-block2-git.html#exercise-1-first-repository",
+    "href": "week01-block2-git.html#exercise-1-first-repository",
+    "title": "Programming and Computing Basics",
+    "section": "Exercise 1: First repository 🐙",
+    "text": "Exercise 1: First repository 🐙\n⏱️ 15 min\n\nOn GitHub click New repository → name it programming-basics\n✅ Add a README file → Create repository\nClick ✏️ on README.md and add:\n\n   # Programming Basics\n   My name is ... and I study ...\n\nWrite a message → Commit changes\nClick History 🕒 — what do you see?\n\n✅ React when you see your commit · 💡 Bonus: make a second change and compare\n\n25–40 min. Everyone works on their own screen, you watch the reactions; ask anyone with ✋ to share their screen."
+  },
+  {
+    "objectID": "week01-block2-git.html#opening-the-terminal",
+    "href": "week01-block2-git.html#opening-the-terminal",
+    "title": "Programming and Computing Basics",
+    "section": "Opening the terminal 💻",
+    "text": "Opening the terminal 💻\n\nWindows: Git Bash\nmacOS: Terminal\nLinux: Terminal\n\npwd        # where am I?\nls         # what is here?\ncd Desktop # go into a folder\ncd ..      # go one level up\nmkdir kse  # make a new folder\n\nLive coding: students tell you in the chat what to type. Zoom in the terminal font (Ctrl/Cmd +). Show that typos give errors and that’s fine."
+  },
+  {
+    "objectID": "week01-block2-git.html#exercise-2-find-your-way-5-min",
+    "href": "week01-block2-git.html#exercise-2-find-your-way-5-min",
+    "title": "Programming and Computing Basics",
+    "section": "Exercise 2: Find your way (5 min)",
+    "text": "Exercise 2: Find your way (5 min)\n\nCheck where you are: pwd\nList files: ls\nGo to your Desktop (or Documents)\nCreate a folder kse and go inside it\nCheck with pwd that you are there ✅"
+  },
+  {
+    "objectID": "week01-block2-git.html#one-time-setup",
+    "href": "week01-block2-git.html#one-time-setup",
+    "title": "Programming and Computing Basics",
+    "section": "One-time setup ⚙️",
+    "text": "One-time setup ⚙️\nTell Git who you are:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"\n\nUse the same e-mail as on GitHub.\n\nAuthentication for push: decide beforehand! Options: - GitHub CLI: gh auth login (easiest if installed) - Git Credential Manager (comes with Git for Windows — browser login pops up) - Personal Access Token This step can easily eat 15+ minutes — have a helper or a plan B (web upload)."
+  },
+  {
+    "objectID": "week01-block2-git.html#the-git-cycle",
+    "href": "week01-block2-git.html#the-git-cycle",
+    "title": "Programming and Computing Basics",
+    "section": "The Git cycle 🔄",
+    "text": "The Git cycle 🔄\n\n  git clone\n  →\n  ✏️ edit files\n  →\n  git add\n  →\n  git commit\n  →\n  git push\n\n\n  ↩️ then back to edit files — again and again\n\n\n  git clone only once · the blue part every time you work"
+  },
+  {
+    "objectID": "week01-block2-git.html#the-commands",
+    "href": "week01-block2-git.html#the-commands",
+    "title": "Programming and Computing Basics",
+    "section": "The commands",
+    "text": "The commands\n# 1. Copy your repo to your laptop (once)\ngit clone https://github.com/&lt;username&gt;/programming-basics.git\ncd programming-basics\n\n# 2. After changing files\ngit status                     # what changed?\ngit add about_me.md            # choose what to save\ngit commit -m \"Add about me\"   # take the snapshot\ngit push                       # send it to GitHub"
+  },
+  {
+    "objectID": "week01-block2-git.html#exercise-3-about-me",
+    "href": "week01-block2-git.html#exercise-3-about-me",
+    "title": "Programming and Computing Basics",
+    "section": "Exercise 3: About me 🎉",
+    "text": "Exercise 3: About me 🎉\n⏱️ 20 min · Breakout rooms · one shares the screen and types, one guides — then switch\n\nIn the folder kse: git clone your repo, then cd programming-basics\nCreate about_me.md with: your name, favourite organism 🦠, one thing you want to learn\ngit status → git add → git commit → git push\nRefresh GitHub — is your file there? Post your repo link in the chat 🔗\n\n💡 Bonus: change the file again, make a second commit and look at git log\n\n40–70 min (incl. setup + cycle slides). Paste the steps in the chat before opening rooms. Visit rooms one by one. Biggest risks: authentication on push, cloning into the wrong folder. Plan B for anyone stuck: upload the file via the GitHub website so they still leave with a commit. Plan C if many laptops fail: GitHub Codespaces (terminal in the browser, Git already logged in)."
+  },
+  {
+    "objectID": "week01-block2-git.html#what-we-did-today",
+    "href": "week01-block2-git.html#what-we-did-today",
+    "title": "Programming and Computing Basics",
+    "section": "What we did today ✅",
+    "text": "What we did today ✅\n\nCreated a repository on GitHub\nUsed the terminal: pwd, ls, cd, mkdir\nMade our first commit and push\n\n\n\nFrom now on, every class ends with a commit."
+  },
+  {
+    "objectID": "week01-block2-git.html#cheat-sheet",
+    "href": "week01-block2-git.html#cheat-sheet",
+    "title": "Programming and Computing Basics",
+    "section": "Cheat sheet 📌",
+    "text": "Cheat sheet 📌\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit clone &lt;url&gt;\nCopy a repo to your laptop\n\n\ngit status\nShow what changed\n\n\ngit add &lt;file&gt;\nChoose files to save\n\n\ngit commit -m \"...\"\nSave a snapshot\n\n\ngit push\nSend commits to GitHub\n\n\ngit log\nShow history"
+  },
+  {
+    "objectID": "week01-block2-git.html#before-next-week",
+    "href": "week01-block2-git.html#before-next-week",
+    "title": "Programming and Computing Basics",
+    "section": "Before next week 🏠",
+    "text": "Before next week 🏠\n\nMake one more commit: add a file expectations.md — what do you want to be able to do in 14 weeks?\nMake sure your terminal works on your laptop\n\n\nNext week: terminal & Bash — working with real FASTA files 🧬\n\n70–80 min. Ask 2 students to share their screen and show their repo. Exit question in the chat: “Write the Git cycle from memory.”"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programming and Computing Basics",
+    "section": "",
+    "text": "Lecture\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\nWeek 1 · Block 2 — Your first commit\n\n\n\n\n\n\nNo matching items"
+  }
+]
