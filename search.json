@@ -2,112 +2,112 @@
   {
     "objectID": "week01-block1-welcome.html#hello",
     "href": "week01-block1-welcome.html#hello",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Hello! 👋",
     "text": "Hello! 👋\nPlease turn on your camera if you can 🎥\n\n0–10 min. Short personal intro: data engineer, bioinformatics MSc, teaching at KSE. Tell ONE concrete story where code saved you hours of manual work with biological data."
   },
   {
     "objectID": "week01-block1-welcome.html#who-am-i",
     "href": "week01-block1-welcome.html#who-am-i",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Who am I?",
     "text": "Who am I?\n\n\nOfficial 🎓\n\nData engineer — Python, SQL, data pipelines\nMSc in Technical Physics 🇵🇱\nMSc in Bioinformatics 🇦🇹\nI started with zero programming too\n\n\nLess official 🎪\n\nLived in Kyiv 2023–2024, still visiting regularly\nTEDxGdansk speaker\nFounder of Cyrkarium, an NGO promoting aerial arts in Poland\n\n\n\nKeep it light — the “less official” part helps students see you as a person, not just a lecturer. Good hook: ask them to guess what “aerial arts” means before explaining."
   },
   {
     "objectID": "week01-block1-welcome.html#why-does-a-biologist-need-code",
     "href": "week01-block1-welcome.html#why-does-a-biologist-need-code",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Why does a biologist need code?",
     "text": "Why does a biologist need code?\n\n\nBy hand\n\n1 FASTA file → OK\n500 FASTA files → a week of copy & paste\n“Which version of the table did I use?” 🤯\n\n\nWith code\n\n500 files → one script, a few seconds\nSame result every time\nFull history of every change\n\n\n\nKeep it short. The goal is motivation, not a lecture."
   },
   {
     "objectID": "week01-block1-welcome.html#survey-grab-your-phone",
     "href": "week01-block1-welcome.html#survey-grab-your-phone",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Survey 📱 — grab your phone",
     "text": "Survey 📱 — grab your phone\n\n\n\n\nScan the QR code\nor go to menti.com and use the link in the chat:\nmenti.com/alk33hyab8sr\n\n\n10–20 min. Paste the link in the chat too — not everyone has a phone at hand. Suggested questions: experience scale 1–5, tools used before, one-word feeling, favourite organism, worries, expectations."
   },
   {
     "objectID": "week01-block1-welcome.html#your-answers",
     "href": "week01-block1-welcome.html#your-answers",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Your answers 💬",
     "text": "Your answers 💬\nLet’s look at them together.\n\n20–30 min. Discuss results live, right after the survey, while students are curious. If a worry is about grading or AI — say “great question, we’ll get there in 15 minutes” and come back to it in the rules part."
   },
   {
     "objectID": "week01-block1-welcome.html#interview-your-partner",
     "href": "week01-block1-welcome.html#interview-your-partner",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Interview your partner 🎤",
     "text": "Interview your partner 🎤\nBreakout rooms · 2 people · 5 minutes\n\nWhat’s your name and what do you study?\nYour favourite organism / field of biology?\nOne thing you are afraid of in this course?\nOne thing you would like to be able to do after this course?\n\n\nBack in the main room: introduce your partner in one sentence.\n\n30–45 min. Paste the 4 questions in the chat BEFORE opening the rooms (slides are not visible in breakout rooms). Random pairs. With a big group: introductions in the chat instead of speaking, then read a few aloud."
   },
   {
     "objectID": "week01-block1-welcome.html#what-we-will-learn",
     "href": "week01-block1-welcome.html#what-we-will-learn",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "What we will learn",
     "text": "What we will learn\n\n\n\nWeeks\nTopic\n\n\n\n\n1\nGit & GitHub — from day one\n\n\n2\nTerminal & Bash\n\n\n3–7\nPython basics\n\n\n8\nGit in teams\n\n\n9–11\nPython + Bash together, mini-project\n\n\n12–13\nR basics\n\n\n14\nOral exams — talking about your project 💬\n\n\n\n\n45–65 min: course rules (incl. short Q&A at the end)."
   },
   {
     "objectID": "week01-block1-welcome.html#how-a-typical-class-looks",
     "href": "week01-block1-welcome.html#how-a-typical-class-looks",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "How a typical class looks",
     "text": "How a typical class looks\n\n\n\nTime\nWhat happens\n\n\n\n\n10 min\nWarm-up task\n\n\n15 min\nSomething new (short!)\n\n\n10 min\nLive coding — you tell me in the chat what to type\n\n\n35 min\nYou code in pairs (breakout rooms)\n\n\n10 min\nDiscussion + git commit + git push\n\n\n\n\nLess listening, more coding."
   },
   {
     "objectID": "week01-block1-welcome.html#rules-of-our-online-room",
     "href": "week01-block1-welcome.html#rules-of-our-online-room",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Rules of our online room",
     "text": "Rules of our online room\n\n🎥 Camera on during pair work, if you can\n👥 Pairs: one shares the screen, the other guides — switch every 10 min\n✅ Reaction = “it works” · ✋ Raise hand = “I need help”\n⏱️ Stuck for more than 5 minutes? Write in the chat\n❌ Errors are normal — reading them is a skill we will learn\n💾 Every class ends with a commit\n\n\nStress the 5-minute rule: online, beginners get stuck silently."
   },
   {
     "objectID": "week01-block1-welcome.html#assessment",
     "href": "week01-block1-welcome.html#assessment",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Assessment",
     "text": "Assessment\n\n\n\nComponent\nWhen\nWeight\n\n\n\n\n📝 Quizzes (7 short online quizzes)\nevery ~2 weeks\n15%\n\n\n👥 Pair assignment (Git teamwork)\nweek 8\n25%\n\n\n🧬 Final project (individual) + oral exam\nweek 14\n60%"
   },
   {
     "objectID": "week01-block1-welcome.html#oral-exam",
     "href": "week01-block1-welcome.html#oral-exam",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Oral exam 💬",
     "text": "Oral exam 💬\n\n15 minutes per person, in the last week of classes\nWe talk about your final project code\nGoal: see what you have learned\n\n\n\nThis is a conversation, not an interrogation. 🙂\n\n\n\nNo attendance tracking — but practice in class is where you learn.\n\nOral exam questions ideas: walk me through your script; why did you use a dictionary here; what would you change; what was the hardest part. Timing: week 14 has 160 min → only ~10 students in class time. Plan extra slots if the group is bigger."
   },
   {
     "objectID": "week01-block1-welcome.html#ai-tools-chatgpt-copilot-claude",
     "href": "week01-block1-welcome.html#ai-tools-chatgpt-copilot-claude",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "AI tools (ChatGPT, Copilot, Claude…)",
     "text": "AI tools (ChatGPT, Copilot, Claude…)\n✅ OK\n\nExplaining an error message\nExplaining what a piece of code does\n\n❌ Not OK\n\nGenerating complete solutions to assignments\nSubmitting code you cannot explain\n\n\n\nRule of thumb: if you can’t explain it, don’t submit it."
   },
   {
     "objectID": "week01-block1-welcome.html#questions",
     "href": "week01-block1-welcome.html#questions",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Questions? 🙋",
     "text": "Questions? 🙋\nChat or unmute 🎙️\n\nAlso come back to survey worries you postponed earlier."
   },
   {
     "objectID": "week01-block1-welcome.html#create-a-github-account",
     "href": "week01-block1-welcome.html#create-a-github-account",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "Create a GitHub account 🐙",
     "text": "Create a GitHub account 🐙\nBreakout rooms · pairs · help each other\n\nGo to github.com → Sign up\nUse an e-mail you check regularly\nChoose a professional username (e.g. firstname-lastname)\nConfirm your e-mail\nPost your username in the chat 📝\n\n\n65–80 min. Paste the steps in the chat before opening rooms. Collect usernames from the chat."
   },
   {
     "objectID": "week01-block1-welcome.html#if-you-have-time-left",
     "href": "week01-block1-welcome.html#if-you-have-time-left",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "If you have time left ⏳",
     "text": "If you have time left ⏳\nOpen a terminal and type:\ngit --version\n\nWindows: install Git for Windows → use Git Bash\nmacOS: open Terminal (it may ask to install developer tools — say yes)\nLinux: usually already installed\n\nReact with ✅ when you see a version number."
   },
   {
     "objectID": "week01-block1-welcome.html#see-you-in-block-2",
     "href": "week01-block1-welcome.html#see-you-in-block-2",
-    "title": "Programming and Computing Basics",
+    "title": "Week 1 · Block 1 — Welcome!",
     "section": "See you in Block 2!",
     "text": "See you in Block 2!\nNext: your first commit 🎉"
   },
@@ -207,6 +207,6 @@
     "href": "index.html",
     "title": "Programming and Computing Basics",
     "section": "",
-    "text": "Lecture\n\n\n\n\n\n\n\n\nWeek 1 · Block 1 — Welcome!\n\n\n\n\n\n\nWeek 1 · Block 2 — Your first commit\n\n\n\n\n\n\nNo matching items"
+    "text": "Lecture\n\n\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nWeek 1 · Block 2 — Your first commit\n\n\n\n\n\n\nNo matching items"
   }
 ]
