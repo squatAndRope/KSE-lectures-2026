@@ -63,6 +63,55 @@
     "text": "Wrap-up ✅\nwith open(path) as f:\n    for line in f:\n        line = line.strip()\n\nstrip() every line ⚠️\n\"w\" writes, \"a\" appends\nYour script now works on real data 🧬\n\nHomework 🏠 Commit the script. Do not commit big data files — .gitignore!\n\n75–80 min. Two rooms share their report.txt on screen."
   },
   {
+    "objectID": "week13-block2-final-stretch.html#one-week-to-go",
+    "href": "week13-block2-final-stretch.html#one-week-to-go",
+    "title": "Week 13 · Block 2 — Final stretch",
+    "section": "One week to go 📅",
+    "text": "One week to go 📅\nNext week: your 15 minutes with me 💬\nToday:\n\nhow the exam will look 🎓\nlast checks on your project ✅\nwork time, I am here 🛟\n\n\n0–5 min. Calm, practical tone. Exam anxiety peaks now."
+  },
+  {
+    "objectID": "week13-block2-final-stretch.html#how-the-15-minutes-will-go",
+    "href": "week13-block2-final-stretch.html#how-the-15-minutes-will-go",
+    "title": "Week 13 · Block 2 — Final stretch",
+    "section": "How the 15 minutes will go 💬",
+    "text": "How the 15 minutes will go 💬\n\n\n\nMinutes\nWhat happens\n\n\n\n\n1–3\nYou share your screen and run your tool ⚙️\n\n\n3–8\nYou walk me through the code 🚶\n\n\n8–13\nI ask questions about your choices 🤔\n\n\n13–15\nWhat was hardest, what would you change 💭\n\n\n\n\nNo memorising. No trick questions. Your code is open in front of you 📖\n\n5–15 min. Being explicit about the structure removes most of the fear."
+  },
+  {
+    "objectID": "week13-block2-final-stretch.html#questions-i-will-probably-ask",
+    "href": "week13-block2-final-stretch.html#questions-i-will-probably-ask",
+    "title": "Week 13 · Block 2 — Final stretch",
+    "section": "Questions I will probably ask 🤔",
+    "text": "Questions I will probably ask 🤔\n\nWalk me through what happens when I run this command ⚙️\nWhy a dictionary here and a list there?\nWhat happens if the input file is empty? 🛡️\nWhich part took you longest? 😅\nIf you had another week, what would you add?\nWhere did you get stuck, and how did you get unstuck? 🔍\n\n\n“I don’t know, but here is how I would find out” is a good answer 💛\n\n15–25 min. The last line matters — reward honesty over performance."
+  },
+  {
+    "objectID": "week13-block2-final-stretch.html#final-checklist",
+    "href": "week13-block2-final-stretch.html#final-checklist",
+    "title": "Week 13 · Block 2 — Final stretch",
+    "section": "Final checklist ✅",
+    "text": "Final checklist ✅\n\nRuns from the terminal with an argument ⚙️\nAt least 3 functions with clear names 🧩\nReads a real file 📄\nPrints or saves output 💾\nFriendly message when input is missing 🛡️\nREADME with an example command 📖\nCommits spread over several days 📈\nYou can explain every line 🗣️\n\n\n25–30 min. Ask them to tick these live and put the count in the chat — instant picture of readiness."
+  },
+  {
+    "objectID": "week13-block2-final-stretch.html#two-honest-reminders",
+    "href": "week13-block2-final-stretch.html#two-honest-reminders",
+    "title": "Week 13 · Block 2 — Final stretch",
+    "section": "Two honest reminders 💛",
+    "text": "Two honest reminders 💛\nSmall and working &gt; big and broken 🌱\nIf something is half-finished, say so in the README. Honesty is not a penalty.\n\nIf you used AI, that’s allowed for explaining and debugging — but next week you explain the code yourself. So go through it now, line by line. 📖\n\n30–40 min. Non-accusatory framing. The message is “protect yourself”, not “I’m watching you”."
+  },
+  {
+    "objectID": "week13-block2-final-stretch.html#work-time",
+    "href": "week13-block2-final-stretch.html#work-time",
+    "title": "Week 13 · Block 2 — Final stretch",
+    "section": "Work time 🛠️",
+    "text": "Work time 🛠️\n⏱️ Rest of the block\n\n✋ Raise your hand — I join your room\n👥 Rooms open for pair debugging\n💬 Chat for quick questions\n\nPractice tip: explain your code out loud to your partner. If you can explain it, you’re ready. 🗣️\n\n40–75 min. Rubber-duck explaining is the single best exam preparation."
+  },
+  {
+    "objectID": "week13-block2-final-stretch.html#before-you-go",
+    "href": "week13-block2-final-stretch.html#before-you-go",
+    "title": "Week 13 · Block 2 — Final stretch",
+    "section": "Before you go 📌",
+    "text": "Before you go 📌\n\nPush everything 💾\nSign up for an exam slot: [link] 📅\nCheck your tool runs on a clean clone of your repo:\n\ngit clone &lt;your repo&gt; test-clone\ncd test-clone\npython3 scripts/my_tool.py data/sequences.fasta\n\nSee you next week 💛\n\n75–80 min. The clean-clone test catches missing files — a very common exam-day surprise. TODO: add the booking link."
+  },
+  {
     "objectID": "week04-block2-conditions.html#warm-up",
     "href": "week04-block2-conditions.html#warm-up",
     "title": "Week 4 · Block 2 — Making decisions",
@@ -126,6 +175,118 @@
     "text": "Wrap-up ✅\n\nif / elif / else — one branch wins 🚦\nIndentation defines what belongs where\n== compares, = assigns ⚠️\nand or not in\n\nHomework 🏠 Commit seq_check.py.\n\nNext week: loops — do it for all 500 sequences 🔁\n\n70–80 min. Exit ticket: “What is the difference between = and ==?”"
   },
   {
+    "objectID": "week01-block1-welcome.html#hello",
+    "href": "week01-block1-welcome.html#hello",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Hello! 👋",
+    "text": "Hello! 👋\nPlease turn on your camera if you can 🎥\n\n0–10 min. Short personal intro: data engineer, bioinformatics MSc, teaching at KSE. Tell ONE concrete story where code saved you hours of manual work with biological data."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#who-am-i",
+    "href": "week01-block1-welcome.html#who-am-i",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Who am I?",
+    "text": "Who am I?\n\n\nOfficial 🎓\n\nData engineer — Python, SQL, data pipelines\nMSc in Technical Physics 🇵🇱\nMSc in Bioinformatics 🇦🇹\nI started with zero programming too\n\n\nLess official 🎪\n\nLived in Kyiv 2023–2024, still visiting regularly\nTEDxGdansk speaker\nFounder of Cyrkarium, an NGO promoting aerial arts in Poland\n\n\n\nKeep it light — the “less official” part helps students see you as a person, not just a lecturer. Good hook: ask them to guess what “aerial arts” means before explaining."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#why-does-a-biologist-need-code",
+    "href": "week01-block1-welcome.html#why-does-a-biologist-need-code",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Why does a biologist need code?",
+    "text": "Why does a biologist need code?\n\n\nBy hand\n\n1 FASTA file → OK\n500 FASTA files → a week of copy & paste\n“Which version of the table did I use?” 🤯\n\n\nWith code\n\n500 files → one script, a few seconds\nSame result every time\nFull history of every change\n\n\n\nKeep it short. The goal is motivation, not a lecture."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#survey-grab-your-phone",
+    "href": "week01-block1-welcome.html#survey-grab-your-phone",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Survey 📱 — grab your phone",
+    "text": "Survey 📱 — grab your phone\n\n\n\n\nScan the QR code\nor go to menti.com and use the link in the chat:\nmenti.com/alk33hyab8sr\n\n\n10–20 min. Paste the link in the chat too — not everyone has a phone at hand. Suggested questions: experience scale 1–5, tools used before, one-word feeling, favourite organism, worries, expectations."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#your-answers",
+    "href": "week01-block1-welcome.html#your-answers",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Your answers 💬",
+    "text": "Your answers 💬\nLet’s look at them together.\n\n20–30 min. Discuss results live, right after the survey, while students are curious. If a worry is about grading or AI — say “great question, we’ll get there in 15 minutes” and come back to it in the rules part."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#interview-your-partner",
+    "href": "week01-block1-welcome.html#interview-your-partner",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Interview your partner 🎤",
+    "text": "Interview your partner 🎤\nBreakout rooms · 2 people · 5 minutes\n\nWhat’s your name and what do you study?\nYour favourite organism / field of biology?\nOne thing you are afraid of in this course?\nOne thing you would like to be able to do after this course?\n\n\nBack in the main room: introduce your partner in one sentence.\n\n30–45 min. Paste the 4 questions in the chat BEFORE opening the rooms (slides are not visible in breakout rooms). Random pairs. With a big group: introductions in the chat instead of speaking, then read a few aloud."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#what-we-will-learn",
+    "href": "week01-block1-welcome.html#what-we-will-learn",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "What we will learn",
+    "text": "What we will learn\n\n\n\nWeeks\nTopic\n\n\n\n\n1\nGit & GitHub — from day one\n\n\n2\nTerminal & Bash\n\n\n3–7\nPython basics\n\n\n8\nGit in teams\n\n\n9–11\nPython + Bash together, mini-project\n\n\n12–13\nR basics\n\n\n14\nOral exams — talking about your project 💬\n\n\n\n\n45–65 min: course rules (incl. short Q&A at the end)."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#how-a-typical-class-looks",
+    "href": "week01-block1-welcome.html#how-a-typical-class-looks",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "How a typical class looks",
+    "text": "How a typical class looks\n\n\n\nTime\nWhat happens\n\n\n\n\n10 min\nWarm-up task\n\n\n15 min\nSomething new (short!)\n\n\n10 min\nLive coding — you tell me in the chat what to type\n\n\n35 min\nYou code in pairs (breakout rooms)\n\n\n10 min\nDiscussion + git commit + git push\n\n\n\n\nLess listening, more coding."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#rules-of-our-online-room",
+    "href": "week01-block1-welcome.html#rules-of-our-online-room",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Rules of our online room",
+    "text": "Rules of our online room\n\n🎥 Camera on during pair work, if you can\n👥 Pairs: one shares the screen, the other guides — switch every 10 min\n✅ Reaction = “it works” · ✋ Raise hand = “I need help”\n⏱️ Stuck for more than 5 minutes? Write in the chat\n❌ Errors are normal — reading them is a skill we will learn\n💾 Every class ends with a commit\n\n\nStress the 5-minute rule: online, beginners get stuck silently."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#assessment",
+    "href": "week01-block1-welcome.html#assessment",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Assessment",
+    "text": "Assessment\n\n\n\nComponent\nWhen\nWeight\n\n\n\n\n📝 Quizzes (7 short online quizzes)\nevery ~2 weeks\n15%\n\n\n👥 Pair assignment (Git teamwork)\nweek 8\n25%\n\n\n🧬 Final project (individual) + oral exam\nweek 14\n60%"
+  },
+  {
+    "objectID": "week01-block1-welcome.html#oral-exam",
+    "href": "week01-block1-welcome.html#oral-exam",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Oral exam 💬",
+    "text": "Oral exam 💬\n\n15 minutes per person, in the last week of classes\nWe talk about your final project code\nGoal: see what you have learned\n\n\n\nThis is a conversation, not an interrogation. 🙂\n\n\n\nNo attendance tracking — but practice in class is where you learn.\n\nOral exam questions ideas: walk me through your script; why did you use a dictionary here; what would you change; what was the hardest part. Timing: week 14 has 160 min → only ~10 students in class time. Plan extra slots if the group is bigger."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#ai-tools-chatgpt-copilot-claude",
+    "href": "week01-block1-welcome.html#ai-tools-chatgpt-copilot-claude",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "AI tools (ChatGPT, Copilot, Claude…)",
+    "text": "AI tools (ChatGPT, Copilot, Claude…)\n✅ OK\n\nExplaining an error message\nExplaining what a piece of code does\n\n❌ Not OK\n\nGenerating complete solutions to assignments\nSubmitting code you cannot explain\n\n\n\nRule of thumb: if you can’t explain it, don’t submit it."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#questions",
+    "href": "week01-block1-welcome.html#questions",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Questions? 🙋",
+    "text": "Questions? 🙋\nChat or unmute 🎙️\n\nAlso come back to survey worries you postponed earlier."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#create-a-github-account",
+    "href": "week01-block1-welcome.html#create-a-github-account",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "Create a GitHub account 🐙",
+    "text": "Create a GitHub account 🐙\nBreakout rooms · pairs · help each other\n\nGo to github.com → Sign up\nUse an e-mail you check regularly\nChoose a professional username (e.g. firstname-lastname)\nConfirm your e-mail\nPost your username in the chat 📝\n\n\n65–80 min. Paste the steps in the chat before opening rooms. Collect usernames from the chat."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#if-you-have-time-left",
+    "href": "week01-block1-welcome.html#if-you-have-time-left",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "If you have time left ⏳",
+    "text": "If you have time left ⏳\nOpen a terminal and type:\ngit --version\n\nWindows: install Git for Windows → use Git Bash\nmacOS: open Terminal (it may ask to install developer tools — say yes)\nLinux: usually already installed\n\nReact with ✅ when you see a version number."
+  },
+  {
+    "objectID": "week01-block1-welcome.html#see-you-in-block-2",
+    "href": "week01-block1-welcome.html#see-you-in-block-2",
+    "title": "Week 1 · Block 1 — Welcome!",
+    "section": "See you in Block 2!",
+    "text": "See you in Block 2!\nNext: your first commit 🎉"
+  },
+  {
     "objectID": "week05-block2-practice.html#today-no-new-syntax",
     "href": "week05-block2-practice.html#today-no-new-syntax",
     "title": "Week 5 · Block 2 — Putting it together",
@@ -168,130 +329,256 @@
     "text": "Wrap-up ✅\nYou can now write a real analysis script 🎉\nHomework 🏠\n\nCommit mini_analysis.py\nAdd 2 sequences of your own and check the report still works\n\n\nNext week: dictionaries and functions — organising data and code 📖\n\n75–80 min. Quiz 3 is around this point in the semester — remind them."
   },
   {
-    "objectID": "week06-block2-functions.html#warm-up",
-    "href": "week06-block2-functions.html#warm-up",
-    "title": "Week 6 · Block 2 — Functions",
+    "objectID": "week07-block2-debugging.html#warm-up",
+    "href": "week07-block2-debugging.html#warm-up",
+    "title": "Week 7 · Block 2 — Errors & debugging",
     "section": "Warm-up 🔥",
-    "text": "Warm-up 🔥\n⏱️ 10 min\nseq = \"ATGCGCATG\"\nCount each base using a dictionary and print the result.\n\nDid you write this code before? Where? 🤔\n\n0–10 min. The point: they have written GC content at least three times by now."
+    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\nWhat error would you expect from each line?\nopen(\"data/sequenses.fasta\")\nint(\"ATG\")\ncounts[\"X\"]\n\"ATG\" + 5\n\n0–10 min. They have met all four already. Naming them out loud removes the fear."
   },
   {
-    "objectID": "week06-block2-functions.html#you-keep-writing-the-same-thing",
-    "href": "week06-block2-functions.html#you-keep-writing-the-same-thing",
-    "title": "Week 6 · Block 2 — Functions",
-    "section": "You keep writing the same thing 🔁",
-    "text": "You keep writing the same thing 🔁\ngc1 = (seq1.count(\"G\") + seq1.count(\"C\")) / len(seq1)\ngc2 = (seq2.count(\"G\") + seq2.count(\"C\")) / len(seq2)\ngc3 = (seq3.count(\"G\") + seq3.count(\"C\")) / len(seq3)\n\nChange the formula → change it in three places. Forget one → silent bug 🐛\n\n10–25 min. Silent bugs are worse than crashes — you get a wrong number, not an error."
+    "objectID": "week07-block2-debugging.html#errors-are-messages-not-failures",
+    "href": "week07-block2-debugging.html#errors-are-messages-not-failures",
+    "title": "Week 7 · Block 2 — Errors & debugging",
+    "section": "Errors are messages, not failures 💌",
+    "text": "Errors are messages, not failures 💌\n\nNobody writes code that works the first time. Not me, not your supervisor, not anyone. 🙂\n\n\nThe skill is not avoiding errors. The skill is reading them.\n\n10–25 min. Say this sincerely — online, beginners often feel alone with a red screen."
   },
   {
-    "objectID": "week06-block2-functions.html#defining-a-function",
-    "href": "week06-block2-functions.html#defining-a-function",
-    "title": "Week 6 · Block 2 — Functions",
-    "section": "Defining a function",
-    "text": "Defining a function\ndef gc_content(sequence):\n    gc = sequence.count(\"G\") + sequence.count(\"C\")\n    return gc / len(sequence)\nprint(gc_content(\"ATGCGC\"))\nprint(gc_content(seq2))\n\ndef name(input) → return output 📦"
+    "objectID": "week07-block2-debugging.html#how-to-read-a-traceback",
+    "href": "week07-block2-debugging.html#how-to-read-a-traceback",
+    "title": "Week 7 · Block 2 — Errors & debugging",
+    "section": "How to read a traceback 🔍",
+    "text": "How to read a traceback 🔍\nTraceback (most recent call last):\n  File \"fasta_report.py\", line 14, in &lt;module&gt;\n    gc = gc_content(seq)\n  File \"seq_functions.py\", line 3, in gc_content\n    return gc / len(sequence)\nZeroDivisionError: division by zero\n\n\nBottom line = what went wrong 🎯\nAbove it = where, and how you got there\nRead from the bottom up"
   },
   {
-    "objectID": "week06-block2-functions.html#anatomy-of-a-function",
-    "href": "week06-block2-functions.html#anatomy-of-a-function",
-    "title": "Week 6 · Block 2 — Functions",
-    "section": "Anatomy of a function",
-    "text": "Anatomy of a function\ndef gc_content(sequence, as_percent=False):   # parameters\n    gc = sequence.count(\"G\") + sequence.count(\"C\")\n    result = gc / len(sequence)\n    if as_percent:\n        result = result * 100\n    return result                              # gives the value back\ngc_content(\"ATGC\")                  # 0.5\ngc_content(\"ATGC\", as_percent=True) # 50.0\n\nDefault arguments are optional to teach — but students love them once they see them."
+    "objectID": "week07-block2-debugging.html#the-usual-suspects",
+    "href": "week07-block2-debugging.html#the-usual-suspects",
+    "title": "Week 7 · Block 2 — Errors & debugging",
+    "section": "The usual suspects",
+    "text": "The usual suspects\n\n\n\nError\nUsually means\n\n\n\n\nSyntaxError\nMissing : ) or quote\n\n\nIndentationError\nWrong number of spaces\n\n\nNameError\nTypo, or variable not defined yet\n\n\nTypeError\nMixing text and numbers\n\n\nKeyError\nThat key is not in the dictionary\n\n\nIndexError\nPosition beyond the end of the list\n\n\nFileNotFoundError\nWrong path — run pwd 📍"
   },
   {
-    "objectID": "week06-block2-functions.html#return-is-not-print",
-    "href": "week06-block2-functions.html#return-is-not-print",
-    "title": "Week 6 · Block 2 — Functions",
-    "section": "return is not print ⚠️",
-    "text": "return is not print ⚠️\ndef bad(seq):\n    print(len(seq))      # shows it, gives nothing back\n\ndef good(seq):\n    return len(seq)      # gives a value you can USE\n\ntotal = good(\"ATGC\") + good(\"GGC\")   # works ✅\ntotal = bad(\"ATGC\") + bad(\"GGC\")     # TypeError 🚫\n\nThis is THE function misconception. Show the TypeError live and read it together."
+    "objectID": "week07-block2-debugging.html#debugging-with-print",
+    "href": "week07-block2-debugging.html#debugging-with-print",
+    "title": "Week 7 · Block 2 — Errors & debugging",
+    "section": "Debugging with print() 🖨️",
+    "text": "Debugging with print() 🖨️\nfor line in f:\n    line = line.strip()\n    print(\"DEBUG:\", repr(line))    # what is REALLY in there?\n    if line.startswith(\"&gt;\"):\n        ...\n\nrepr() shows the invisible: 'ATGC\\n' vs 'ATGC' 👀\n\nProfessional debuggers exist — but print() is what everyone actually uses first."
   },
   {
-    "objectID": "week06-block2-functions.html#why-functions",
-    "href": "week06-block2-functions.html#why-functions",
-    "title": "Week 6 · Block 2 — Functions",
-    "section": "Why functions? 🧰",
-    "text": "Why functions? 🧰\n\nWrite once, use everywhere\nName the idea: gc_content() explains itself 📖\nTest one small thing instead of a 100-line script\nFix a bug in one place\n\n\n\nA good function does one thing and has a clear name."
+    "objectID": "week07-block2-debugging.html#silent-bugs",
+    "href": "week07-block2-debugging.html#silent-bugs",
+    "title": "Week 7 · Block 2 — Errors & debugging",
+    "section": "Silent bugs 🤫",
+    "text": "Silent bugs 🤫\ngc = (seq.count(\"G\") + seq.count(\"C\")) / len(seq) * 100\nNo error. Result: 4200.0 🤨\n\nAsk yourself: does this number make biological sense?\n\n25–35 min. Most dangerous class of bug: wrong results that look fine. Tie back to the AI policy — this is what you cannot catch if you did not write the code."
   },
   {
-    "objectID": "week06-block2-functions.html#exercise-1-predict-then-run",
-    "href": "week06-block2-functions.html#exercise-1-predict-then-run",
-    "title": "Week 6 · Block 2 — Functions",
-    "section": "Exercise 1: Predict, then run 🔮",
-    "text": "Exercise 1: Predict, then run 🔮\n⏱️ 10 min · chat first\ndef double(x):\n    return x * 2\n\ndef shout(text):\n    print(text.upper())\n\nprint(double(5))\nprint(double(\"AT\"))\nresult = shout(\"atg\")\nprint(result)        # 🤔\n\n25–35 min. The last line printing None is the lesson of the day."
+    "objectID": "week07-block2-debugging.html#exercise-1-fix-the-script",
+    "href": "week07-block2-debugging.html#exercise-1-fix-the-script",
+    "title": "Week 7 · Block 2 — Errors & debugging",
+    "section": "Exercise 1: Fix the script 🔧",
+    "text": "Exercise 1: Fix the script 🔧\n⏱️ 20 min · breakout rooms · 5 bugs\nI will paste scripts/broken_report.py in the chat 📋\n\nRun it and read the first error only\nFix it, run again, repeat\nWrite in the chat which error types you met\n\n💡 Bonus: one bug produces no error at all. Can you find it? 🤫\n\n35–55 min. Prepare broken_report.py beforehand: missing colon, wrong variable name, missing strip(), KeyError, and one silent maths bug."
   },
   {
-    "objectID": "week06-block2-functions.html#exercise-2-your-own-toolkit",
-    "href": "week06-block2-functions.html#exercise-2-your-own-toolkit",
-    "title": "Week 6 · Block 2 — Functions",
-    "section": "Exercise 2: Your own toolkit 🧰",
-    "text": "Exercise 2: Your own toolkit 🧰\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/seq_functions.py with four functions:\n\ngc_content(seq) → returns GC as a percentage, rounded to 2 decimals\nreverse_complement(seq) → returns the reverse complement\ncount_bases(seq) → returns a dictionary of base counts\nis_usable(seq, min_length=30) → returns True/False (long enough and no N)\n\nThen test all four on 3 different sequences and print the results.\n💡 Bonus: write longest_orf_start(seq) returning the position of the first ATG, or -1\n\n35–70 min. Most rooms will reuse code from weeks 3–5 — that is exactly the point. Praise copy-from-your-own-repo."
+    "objectID": "week07-block2-debugging.html#defensive-coding",
+    "href": "week07-block2-debugging.html#defensive-coding",
+    "title": "Week 7 · Block 2 — Errors & debugging",
+    "section": "Defensive coding 🛡️",
+    "text": "Defensive coding 🛡️\nif len(sequence) == 0:\n    print(\"Warning: empty sequence, skipping\")\n    continue\n\nvalue = counts.get(\"N\", 0)     # safe lookup\n\nCheck your assumptions before the data surprises you."
   },
   {
-    "objectID": "week06-block2-functions.html#wrap-up",
-    "href": "week06-block2-functions.html#wrap-up",
-    "title": "Week 6 · Block 2 — Functions",
+    "objectID": "week07-block2-debugging.html#exercise-2-make-it-robust",
+    "href": "week07-block2-debugging.html#exercise-2-make-it-robust",
+    "title": "Week 7 · Block 2 — Errors & debugging",
+    "section": "Exercise 2: Make it robust 🧪",
+    "text": "Exercise 2: Make it robust 🧪\n⏱️ 20 min · pairs\nTake your own fasta_report.py and break-proof it:\n\nWhat happens if the file does not exist? Print a friendly message\nWhat if a sequence is empty? Skip it, don’t crash\nWhat if a sequence contains N? Report how many\nSwap scripts with another room and try to break theirs 😈\n\n\n55–75 min. The swap is the fun part — testing someone else’s code is a real skill."
+  },
+  {
+    "objectID": "week07-block2-debugging.html#wrap-up",
+    "href": "week07-block2-debugging.html#wrap-up",
+    "title": "Week 7 · Block 2 — Errors & debugging",
     "section": "Wrap-up ✅",
-    "text": "Wrap-up ✅\ndef name(input):\n    ...\n    return output\n\nreturn gives a value back, print only shows it ⚠️\nOne function = one job, with a clear name\nYour repo is now a small toolkit 🧰\n\nHomework 🏠 Commit seq_functions.py.\n\nNext week: files — real data from disk 📄\n\n70–80 min. Tell them next week they will finally read the FASTA file from week 2 with Python."
+    "text": "Wrap-up ✅\n\nRead tracebacks bottom up 🔍\nprint() and repr() are your debugger\nAsk: does this number make sense? 🤨\nErrors are normal — being stuck silently is not 💬\n\nHomework 🏠 Commit your robust version.\n\nNext week: Git in teams — and your pair assignment 👥\n\n75–80 min. Announce the pair assignment explicitly: 25% of the grade, starts next week."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programming and Computing Basics",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nWeek 1 · Block 1 — Welcome!\n\n\n\n\n\n\nWeek 1 · Block 2 — first commit\n\n\n\n\n\n\nWeek 2 · Block 1 — The terminal\n\n\n\n\n\n\nWeek 2 · Block 2 — Bash on real data\n\n\n\n\n\n\nWeek 3 · Block 1 — Hello, Python\n\n\n\n\n\n\nWeek 3 · Block 2 — Strings are sequences\n\n\n\n\n\n\nWeek 4 · Block 1 — Lists\n\n\n\n\n\n\nWeek 4 · Block 2 — Making decisions\n\n\n\n\n\n\nWeek 5 · Block 1 — Loops\n\n\n\n\n\n\nWeek 5 · Block 2 — Putting it together\n\n\n\n\n\n\nWeek 6 · Block 1 — Dictionaries\n\n\n\n\n\n\nWeek 6 · Block 2 — Functions\n\n\n\n\n\n\nWeek 7 · Block 1 — Files\n\n\n\n\n\n\nWeek 7 · Block 2 — Errors & debugging\n\n\n\n\n\n\nWeek 8 · Block 1 — Git in teams\n\n\n\n\n\n\nWeek 8 · Block 2 — Conflicts & the pair assignment\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "week08-block1-git-teams.html#warm-up",
-    "href": "week08-block1-git-teams.html#warm-up",
-    "title": "Week 8 · Block 1 — Git in teams",
+    "objectID": "week08-block2-conflicts.html#warm-up",
+    "href": "week08-block2-conflicts.html#warm-up",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
     "section": "Warm-up 🔥",
-    "text": "Warm-up 🔥\n⏱️ 10 min\ngit status\ngit log --oneline\nHow many commits do you have now? Chat the number 🔢\n\nSeven weeks ago this was your first command. 🙂\n\n0–10 min. Celebrate the progress — most will have 15+ commits."
+    "text": "Warm-up 🔥\n⏱️ 10 min\nIn your pair-assignment repo:\ngit switch main\ngit pull\nls\nDo you see your partner’s file? React ✅\n\n0–10 min. This confirms yesterday’s merges actually landed in main."
   },
   {
-    "objectID": "week08-block1-git-teams.html#two-people-one-repository",
-    "href": "week08-block1-git-teams.html#two-people-one-repository",
-    "title": "Week 8 · Block 1 — Git in teams",
-    "section": "Two people, one repository 😬",
-    "text": "Two people, one repository 😬\n\nYou edit seq_functions.py. Your partner edits seq_functions.py. Who wins?\n\n\nAnswer: nobody has to lose — that is what branches are for 🌿\n\n10–25 min. This block is the foundation of the pair assignment."
+    "objectID": "week08-block2-conflicts.html#the-moment-of-truth",
+    "href": "week08-block2-conflicts.html#the-moment-of-truth",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "section": "The moment of truth 💥",
+    "text": "The moment of truth 💥\nYou both edited the same line.\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\ngc = round(value, 2)\n=======\ngc = round(value, 3)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; partner-branch\n\nGit does not guess. You decide. 🧑‍⚖️\n\n10–25 min. Reassure: a conflict is not damage, nothing is lost."
   },
   {
-    "objectID": "week08-block1-git-teams.html#branches",
-    "href": "week08-block1-git-teams.html#branches",
-    "title": "Week 8 · Block 1 — Git in teams",
-    "section": "Branches 🌿",
-    "text": "Branches 🌿\ngit branch                    # where am I?\ngit switch -c add-gc-function # create and go to a new branch\n# ... work, add, commit ...\ngit switch main               # back to the main line\n\nA branch is a parallel version of your project. Experiment freely — main stays safe. 🛟"
+    "objectID": "week08-block2-conflicts.html#resolving-a-conflict",
+    "href": "week08-block2-conflicts.html#resolving-a-conflict",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "section": "Resolving a conflict 🧑‍⚖️",
+    "text": "Resolving a conflict 🧑‍⚖️\n\ngit status — which files are in conflict?\nOpen the file, find the &lt;&lt;&lt;&lt;&lt;&lt;&lt; markers\nKeep what should stay — delete all markers ✂️\nSave, then:\n\ngit add &lt;file&gt;\ngit commit -m \"Resolve conflict in seq_functions.py\"\ngit push\n\nVS Code shows buttons: Accept Current / Incoming / Both 🖱️"
   },
   {
-    "objectID": "week08-block1-git-teams.html#sharing-a-repository",
-    "href": "week08-block1-git-teams.html#sharing-a-repository",
-    "title": "Week 8 · Block 1 — Git in teams",
-    "section": "Sharing a repository 🤝",
-    "text": "Sharing a repository 🤝\nOne of you owns the repo, the other becomes a collaborator:\nRepo → Settings → Collaborators → Add people\n\ngit clone &lt;url&gt;        # the partner clones it\ngit pull               # get the newest changes 📥\n\n\n\n\n\n\nNote\n\n\nGolden rule: git pull before you start working. Every time. 🌅"
+    "objectID": "week08-block2-conflicts.html#how-to-avoid-conflicts",
+    "href": "week08-block2-conflicts.html#how-to-avoid-conflicts",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "section": "How to avoid conflicts 🛡️",
+    "text": "How to avoid conflicts 🛡️\n\ngit pull before you start working 🌅\nSmall, frequent commits, not one giant one\nAgree who works on which file ✋\nTalk to each other 💬\n\n\n\nConflicts are a communication problem more than a Git problem."
   },
   {
-    "objectID": "week08-block1-git-teams.html#pull-requests",
-    "href": "week08-block1-git-teams.html#pull-requests",
-    "title": "Week 8 · Block 1 — Git in teams",
-    "section": "Pull requests 📬",
-    "text": "Pull requests 📬\ngit push -u origin add-gc-function\nThen on GitHub: Compare & pull request\n\nA pull request is a proposal: “here is my change, please look at it before it goes into main” 👀\n\nEmphasise: this is exactly how professional teams work, including at my job."
+    "objectID": "week08-block2-conflicts.html#exercise-1-make-a-conflict-on-purpose",
+    "href": "week08-block2-conflicts.html#exercise-1-make-a-conflict-on-purpose",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "section": "Exercise 1: Make a conflict on purpose 😈",
+    "text": "Exercise 1: Make a conflict on purpose 😈\n⏱️ 25 min · breakout rooms · pairs\n\nBoth of you: git switch main and git pull\nBoth edit the same line of the same file — differently\nBoth commit. A pushes first ✅\nB pushes → rejected → git pull → 💥 conflict\nResolve it together, commit, push\nBoth run git log --oneline — do you see the same history?\n\n\n25–50 min. Doing it deliberately in class is much better than meeting it in panic at 2 a.m."
   },
   {
-    "objectID": "week08-block1-git-teams.html#code-review",
-    "href": "week08-block1-git-teams.html#code-review",
-    "title": "Week 8 · Block 1 — Git in teams",
-    "section": "Code review 👀",
-    "text": "Code review 👀\nOn the Files changed tab you can comment on any line.\nGood review comments:\n\n“What happens here if the sequence is empty?” 🤔\n“Could this be a function? It repeats below”\n“Nice — I didn’t know about .get()” 🎉\n\n\nReview is about the code, never about the person. 💛\n\nModel one good and one bad comment. Online, tone in writing matters even more."
+    "objectID": "week08-block2-conflicts.html#pair-assignment",
+    "href": "week08-block2-conflicts.html#pair-assignment",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "section": "Pair assignment 📋",
+    "text": "Pair assignment 📋\n25% of your grade · due in 2 weeks · in pairs\nBuild a small FASTA analysis tool together, in one repository:\n\nAt least 4 functions, each written by one of you\nEach function on its own branch, merged via a pull request\nEach of you reviews at least 2 of your partner’s pull requests 👀\nA README.md explaining what it does and how to run it\nAt least one resolved conflict in the history 😈\n\n\n50–65 min. Walk through each point. Stress: I grade the collaboration, not only the code."
   },
   {
-    "objectID": "week08-block1-git-teams.html#exercise-your-first-pull-request",
-    "href": "week08-block1-git-teams.html#exercise-your-first-pull-request",
-    "title": "Week 8 · Block 1 — Git in teams",
-    "section": "Exercise: Your first pull request 📬",
-    "text": "Exercise: Your first pull request 📬\n⏱️ 35 min · breakout rooms · pairs\n\nA creates a repo pair-assignment and adds B as collaborator\nB clones it\nEach creates their own branch: git switch -c &lt;yourname&gt;-function\nEach writes one small function in a separate file and pushes it\nEach opens a pull request and reviews the partner’s one 👀\nMerge both pull requests on GitHub\n\n\n25–65 min. Paste the steps in the chat. Expect authentication issues for B — have the token/gh login plan ready. Visit every room; PR merging is where people get lost."
+    "objectID": "week08-block2-conflicts.html#what-i-will-look-at",
+    "href": "week08-block2-conflicts.html#what-i-will-look-at",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "section": "What I will look at 🔍",
+    "text": "What I will look at 🔍\n\n\n\nPart\nWhat I check\n\n\n\n\nCode\nDoes it run? Are functions small and named clearly?\n\n\nGit\nBranches, pull requests, meaningful commit messages\n\n\nReview\nAre the comments useful and kind? 💛\n\n\nREADME\nCould a stranger run your tool?\n\n\nBalance\nDid both of you contribute? 👥\n\n\n\n\nDeadline: [date] · Submit: paste your repo link in [Moodle]\n\nTODO: fill in the date and submission channel."
   },
   {
-    "objectID": "week08-block1-git-teams.html#wrap-up",
-    "href": "week08-block1-git-teams.html#wrap-up",
-    "title": "Week 8 · Block 1 — Git in teams",
+    "objectID": "week08-block2-conflicts.html#exercise-2-plan-it",
+    "href": "week08-block2-conflicts.html#exercise-2-plan-it",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "section": "Exercise 2: Plan it 🗺️",
+    "text": "Exercise 2: Plan it 🗺️\n⏱️ 15 min · breakout rooms · with your partner\nBefore you leave today, write it in your README.md:\n\nWhich 4 functions will your tool have?\nWho writes which one? ✋\nWhen will you meet during the next two weeks? 📅\n\nCommit the README and push it.\n\n65–80 min. Forcing a written plan now prevents the classic “we did nothing for 13 days” panic."
+  },
+  {
+    "objectID": "week08-block2-conflicts.html#wrap-up",
+    "href": "week08-block2-conflicts.html#wrap-up",
+    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
     "section": "Wrap-up ✅",
-    "text": "Wrap-up ✅\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit switch -c name\nNew branch 🌿\n\n\ngit switch main\nGo back\n\n\ngit pull\nGet partner’s changes 📥\n\n\ngit push -u origin name\nPublish your branch\n\n\n\nNext block: what happens when you both edit the same line 💥\n\n65–80 min. Leave them curious about conflicts — it is the best part of week 8."
+    "text": "Wrap-up ✅\n\nConflicts: keep what should stay, delete the markers ✂️\ngit pull before starting, always 🌅\nYour assignment starts now 📋\n\n\nNext week: scripts as tools — running your code from the terminal ⚙️\n\n80 min. Remind: quiz 4 this week."
+  },
+  {
+    "objectID": "week03-block2-strings.html#warm-up",
+    "href": "week03-block2-strings.html#warm-up",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min\nseq = \"ATGCGCTA\"\nprint(len(seq))\nprint(seq.count(\"A\"))\nprint(seq.count(\"AT\"))\nWhat will each line print? Chat first, run second 💬\n\n0–10 min. The third line surprises people — counting pairs, not letters."
+  },
+  {
+    "objectID": "week03-block2-strings.html#indexing-counting-from-0",
+    "href": "week03-block2-strings.html#indexing-counting-from-0",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Indexing: counting from 0 🔢",
+    "text": "Indexing: counting from 0 🔢\nseq = \"ATGCGC\"\nseq[0]    # 'A'  — the FIRST letter\nseq[1]    # 'T'\nseq[-1]   # 'C'  — the last one\n\n\n\n\n\n\n\nNote\n\n\nBiologists count bases from 1, Python counts from 0. This causes real bugs in real papers. 🐛\n\n\n\n\n10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF)."
+  },
+  {
+    "objectID": "week03-block2-strings.html#slicing",
+    "href": "week03-block2-strings.html#slicing",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Slicing ✂️",
+    "text": "Slicing ✂️\nseq = \"ATGCGCTAGC\"\nseq[0:3]    # 'ATG'  — from 0 up to (not including) 3\nseq[3:]     # from 3 to the end\nseq[:3]     # from the start to 3\nseq[::-1]   # reversed!\n\nseq[start:stop] — stop is not included 🙂"
+  },
+  {
+    "objectID": "week03-block2-strings.html#useful-string-methods",
+    "href": "week03-block2-strings.html#useful-string-methods",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Useful string methods",
+    "text": "Useful string methods\nseq.upper()              # 'ATGC'\nseq.lower()              # 'atgc'\nseq.replace(\"T\", \"U\")    # DNA → RNA!\nseq.count(\"GC\")\nseq.find(\"ATG\")          # position of the first ATG (-1 if absent)\nseq.startswith(\"&gt;\")      # True / False — FASTA headers!\n\nA method does not change the original — it returns a new string.\n\nImportant: seq.upper() alone does nothing unless you assign it. Show the mistake live."
+  },
+  {
+    "objectID": "week03-block2-strings.html#building-strings",
+    "href": "week03-block2-strings.html#building-strings",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Building strings",
+    "text": "Building strings\nname = \"seq1\"\nlength = 42\n\nprint(\"Sequence \" + name + \" has \" + str(length) + \" bases\")\nprint(f\"Sequence {name} has {length} bases\")     # f-string 👑\n\nf-strings are shorter and you don’t need str()."
+  },
+  {
+    "objectID": "week03-block2-strings.html#exercise-1-slice-it",
+    "href": "week03-block2-strings.html#exercise-1-slice-it",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Exercise 1: Slice it 🔪",
+    "text": "Exercise 1: Slice it 🔪\n⏱️ 10 min · your own screen · react ✅ when done\nseq = \"ATGGCCATTGTAATGGGCCGC\"\n\nPrint the first codon (3 letters)\nPrint the last 6 bases\nPrint the sequence reversed\nConvert it to RNA and print it\nAt which position does the second ATG start? 🤔\n\n\n25–35 min. Question 5 is genuinely hard — find has a start argument: seq.find(“ATG”, 1)."
+  },
+  {
+    "objectID": "week03-block2-strings.html#reverse-complement",
+    "href": "week03-block2-strings.html#reverse-complement",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Reverse complement 🧬",
+    "text": "Reverse complement 🧬\nThe classic first real bioinformatics function:\nseq = \"ATGC\"\ncomplement = seq.replace(\"A\", \"t\").replace(\"T\", \"a\")\ncomplement = complement.replace(\"G\", \"c\").replace(\"C\", \"g\")\nrev_comp = complement.upper()[::-1]\nprint(rev_comp)\n\nWhy the temporary lowercase? 🤔 Try it without — what breaks?\n\nGreat discussion: replacing A→T then T→A turns everything into A. The lowercase trick avoids double replacement."
+  },
+  {
+    "objectID": "week03-block2-strings.html#exercise-2-sequence-toolkit",
+    "href": "week03-block2-strings.html#exercise-2-sequence-toolkit",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Exercise 2: Sequence toolkit 🧰",
+    "text": "Exercise 2: Sequence toolkit 🧰\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/seq_tools.py. For a DNA sequence of your choice, print:\n\nIts length and GC content (reuse last block’s code)\nIts first codon and last codon\nThe RNA version\nThe reverse complement\nWhether it starts with a start codon (ATG) — print True/False\n\n💡 Bonus: print all three reading frames: seq[0:], seq[1:], seq[2:]\n\n35–70 min. Paste in the chat. Encourage f-strings for nice output — makes results readable."
+  },
+  {
+    "objectID": "week03-block2-strings.html#wrap-up",
+    "href": "week03-block2-strings.html#wrap-up",
+    "title": "Week 3 · Block 2 — Strings are sequences",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\n\n\nTool\nExample\n\n\n\n\nIndex\nseq[0] seq[-1]\n\n\nSlice\nseq[0:3] seq[::-1]\n\n\nMethods\n.upper() .replace() .find()\n\n\nf-string\nf\"GC = {gc}%\"\n\n\n\nHomework 🏠 Commit seq_tools.py and write in the README what it does.\n\nNext week: lists — many sequences at once 📋\n\n70–80 min. Exit ticket: “Python counts from ___” in the chat."
+  },
+  {
+    "objectID": "week09-block2-cli.html#warm-up",
+    "href": "week09-block2-cli.html#warm-up",
+    "title": "Week 9 · Block 2 — Scripts as tools",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min\nfrom collections import Counter\nprint(Counter(\"ATGCGCATG\"))\nNow do the same with your own count_bases(). Same result? React ✅ or ✋\n\n0–10 min. Nice confidence boost: their hand-written function matches the library."
+  },
+  {
+    "objectID": "week09-block2-cli.html#the-hardcoded-filename-problem",
+    "href": "week09-block2-cli.html#the-hardcoded-filename-problem",
+    "title": "Week 9 · Block 2 — Scripts as tools",
+    "section": "The hardcoded filename problem 😩",
+    "text": "The hardcoded filename problem 😩\nfilename = \"data/sequences.fasta\"\nNew file? Edit the script. 😖 Colleague wants to use it? They edit the script. 😖\n\nReal tools take their input from the command line ⚙️\n\n10–25 min. Connect to week 2: grep, wc, head all take a filename as an argument."
+  },
+  {
+    "objectID": "week09-block2-cli.html#sys.argv",
+    "href": "week09-block2-cli.html#sys.argv",
+    "title": "Week 9 · Block 2 — Scripts as tools",
+    "section": "sys.argv",
+    "text": "sys.argv\nimport sys\n\nprint(sys.argv)\npython3 report.py data/sequences.fasta 30\n# ['report.py', 'data/sequences.fasta', '30']\n\nsys.argv[0] is the script · [1], [2], … are your arguments Everything is a string ⚠️ → int(sys.argv[2])"
+  },
+  {
+    "objectID": "week09-block2-cli.html#being-a-good-tool",
+    "href": "week09-block2-cli.html#being-a-good-tool",
+    "title": "Week 9 · Block 2 — Scripts as tools",
+    "section": "Being a good tool 🛡️",
+    "text": "Being a good tool 🛡️\nimport sys\n\nif len(sys.argv) &lt; 2:\n    print(\"Usage: python3 report.py &lt;fasta_file&gt; [min_length]\")\n    sys.exit(1)\n\nfilename = sys.argv[1]\nmin_length = int(sys.argv[2]) if len(sys.argv) &gt; 2 else 0\n\nA tool that explains itself when misused is a kind tool 💛\n\n25–35 min. sys.exit(1) — non-zero means “something went wrong”, used by pipelines."
+  },
+  {
+    "objectID": "week09-block2-cli.html#printing-for-pipes",
+    "href": "week09-block2-cli.html#printing-for-pipes",
+    "title": "Week 9 · Block 2 — Scripts as tools",
+    "section": "Printing for pipes 🔗",
+    "text": "Printing for pipes 🔗\npython3 report.py data/sequences.fasta | sort -k2 -n | head -5\n\n\nResults → print() (goes to stdout, can be piped) ✅\nWarnings and progress → print(..., file=sys.stderr) ⚠️\n\n\n\nYour Python script is now just another Unix tool 🐍🤝🐚\n\nThis is the moment bash and Python finally meet. Show a real pipe live."
+  },
+  {
+    "objectID": "week09-block2-cli.html#exercise-1-add-arguments",
+    "href": "week09-block2-cli.html#exercise-1-add-arguments",
+    "title": "Week 9 · Block 2 — Scripts as tools",
+    "section": "Exercise 1: Add arguments ⚙️",
+    "text": "Exercise 1: Add arguments ⚙️\n⏱️ 20 min · your own screen · react ✅\nTurn fasta_report.py into a proper tool:\n\nTake the FASTA path from sys.argv[1]\nPrint a usage message if it is missing\nAdd an optional min_length argument — skip shorter sequences\nTest it:\n\npython3 scripts/fasta_report.py data/sequences.fasta\npython3 scripts/fasta_report.py data/sequences.fasta 50\npython3 scripts/fasta_report.py\n\n35–55 min. The third command must NOT crash with IndexError — that is the point."
+  },
+  {
+    "objectID": "week09-block2-cli.html#exercise-2-build-a-pipeline",
+    "href": "week09-block2-cli.html#exercise-2-build-a-pipeline",
+    "title": "Week 9 · Block 2 — Scripts as tools",
+    "section": "Exercise 2: Build a pipeline 🔗",
+    "text": "Exercise 2: Build a pipeline 🔗\n⏱️ 20 min · breakout rooms\n\nMake your script print one sequence per line: name&lt;TAB&gt;length&lt;TAB&gt;GC\nNow combine it with bash:\n\npython3 scripts/fasta_report.py data/sequences.fasta | sort -k3 -n | tail -3\npython3 scripts/fasta_report.py data/sequences.fasta | grep \"Homo\" | wc -l\n\nSave the top 3 GC-richest sequences into results/top_gc.txt\n\n💡 Bonus: which is easier for each task — Python or bash? Discuss 🤔\n\n55–75 min. The bonus discussion is the real learning: the right tool for the right job."
+  },
+  {
+    "objectID": "week09-block2-cli.html#wrap-up",
+    "href": "week09-block2-cli.html#wrap-up",
+    "title": "Week 9 · Block 2 — Scripts as tools",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\nsys.argv makes your script reusable ⚙️\nAlways handle the “no arguments” case 🛡️\nprint() results, pipe them onwards 🔗\n\nHomework 🏠 Commit your tool. Add usage instructions to the README.\n\nNext week: mini-project — you build something of your own 🚀\n\n75–80 min. Tease the project: they now have every piece they need."
   },
   {
     "objectID": "week02-block1-terminal.html#warm-up",
@@ -355,6 +642,132 @@
     "title": "Week 2 · Block 1 — The terminal",
     "section": "What we learned ✅",
     "text": "What we learned ✅\n\n\n\nCommand\nWhat it does\n\n\n\n\npwd ls cd\nWhere am I, what’s here, move\n\n\nmkdir touch\nMake folders and files\n\n\ncp mv rm\nCopy, move/rename, delete\n\n\nhead tail less wc\nLook inside, count\n\n\n\n\nNext block: making these commands work together on real DNA data 🧬\n\n70–80 min. Two students share their screen and show their folder structure on GitHub."
+  },
+  {
+    "objectID": "week10-block1-bash-scripts.html#warm-up",
+    "href": "week10-block1-bash-scripts.html#warm-up",
+    "title": "Week 10 · Block 1 — Bash scripts",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min\npython3 scripts/fasta_report.py data/sequences.fasta | head -3\nDoes your tool still work? React ✅ or ✋\n\nPair assignment is due this week 📋 Questions in the chat 💬\n\n0–10 min. Reserve a few minutes for assignment questions — better now than by e-mail at midnight."
+  },
+  {
+    "objectID": "week10-block1-bash-scripts.html#one-file-is-never-enough",
+    "href": "week10-block1-bash-scripts.html#one-file-is-never-enough",
+    "title": "Week 10 · Block 1 — Bash scripts",
+    "section": "One file is never enough 📁📁📁",
+    "text": "One file is never enough 📁📁📁\npython3 scripts/fasta_report.py data/sample1.fasta\npython3 scripts/fasta_report.py data/sample2.fasta\npython3 scripts/fasta_report.py data/sample3.fasta\n# ... 47 more 😫\n\nSame problem as in week 5 — now we solve it in bash 🔁\n\n10–25 min. Deliberate echo of the Python loops lesson: the pattern transfers."
+  },
+  {
+    "objectID": "week10-block1-bash-scripts.html#loops-in-bash",
+    "href": "week10-block1-bash-scripts.html#loops-in-bash",
+    "title": "Week 10 · Block 1 — Bash scripts",
+    "section": "Loops in bash 🔁",
+    "text": "Loops in bash 🔁\nfor file in data/*.fasta\ndo\n    echo \"Processing $file\"\n    python3 scripts/fasta_report.py \"$file\"\ndone\n. . |\n\n*.fasta — the shell expands it into a list 🌟\n$file — the variable · always in quotes ⚠️\n\n\nQuotes matter: file names with spaces break everything without them."
+  },
+  {
+    "objectID": "week10-block1-bash-scripts.html#variables-in-bash",
+    "href": "week10-block1-bash-scripts.html#variables-in-bash",
+    "title": "Week 10 · Block 1 — Bash scripts",
+    "section": "Variables in bash",
+    "text": "Variables in bash\nDATA_DIR=\"data\"\nMIN_LENGTH=50\n\necho \"Looking in $DATA_DIR\"\npython3 scripts/fasta_report.py \"$DATA_DIR/sequences.fasta\" $MIN_LENGTH\n\n\n\n\n\n\n\nWarning\n\n\nNo spaces around = — X = 5 is an error, X=5 is correct. 🤨"
+  },
+  {
+    "objectID": "week10-block1-bash-scripts.html#a-real-script-file",
+    "href": "week10-block1-bash-scripts.html#a-real-script-file",
+    "title": "Week 10 · Block 1 — Bash scripts",
+    "section": "A real script file 📜",
+    "text": "A real script file 📜\n#!/bin/bash\n# run_all.sh — analyse every FASTA file in data/\n\nfor file in data/*.fasta\ndo\n    name=$(basename \"$file\" .fasta)\n    python3 scripts/fasta_report.py \"$file\" &gt; \"results/${name}_report.txt\"\n    echo \"Done: $name\"\ndone\nbash run_all.sh        # simplest way to run it\n\n$(...) captures a command’s output — mention briefly, don’t dwell. chmod +x and ./run_all.sh can be a bonus for the curious."
+  },
+  {
+    "objectID": "week10-block1-bash-scripts.html#exercise-1-loop-over-files",
+    "href": "week10-block1-bash-scripts.html#exercise-1-loop-over-files",
+    "title": "Week 10 · Block 1 — Bash scripts",
+    "section": "Exercise 1: Loop over files 🔁",
+    "text": "Exercise 1: Loop over files 🔁\n⏱️ 20 min · your own screen · react ✅\n\nMake 3 copies of your FASTA with different names in data/\nWrite a loop that prints the name and line count of each\nNow run your Python tool on each of them\nSave each result to results/&lt;name&gt;_report.txt\n\n💡 Bonus: print a count at the end: “Processed N files”\n\n25–45 min. Copying the file 3 times is a cheap way to simulate a real dataset."
+  },
+  {
+    "objectID": "week10-block1-bash-scripts.html#exercise-2-your-first-pipeline",
+    "href": "week10-block1-bash-scripts.html#exercise-2-your-first-pipeline",
+    "title": "Week 10 · Block 1 — Bash scripts",
+    "section": "Exercise 2: Your first pipeline 🚀",
+    "text": "Exercise 2: Your first pipeline 🚀\n⏱️ 30 min · breakout rooms · switch after 15 min\nWrite run_all.sh that does the whole analysis in one command:\n\nCreate the results/ folder if it does not exist (mkdir -p results)\nLoop over every .fasta file in data/\nRun your Python tool on each one, saving a report per file\nPrint a summary line: how many files were processed\nCommit it — and add results/ to .gitignore 🙈\n\n💡 Bonus: make the script accept the data folder as $1\n\n45–75 min. This is the “aha” of the course: one command reproduces the whole analysis."
+  },
+  {
+    "objectID": "week10-block1-bash-scripts.html#wrap-up",
+    "href": "week10-block1-bash-scripts.html#wrap-up",
+    "title": "Week 10 · Block 1 — Bash scripts",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\nfor file in data/*.fasta\ndo\n    python3 scripts/tool.py \"$file\"\ndone\n\nBash loops over files, Python works inside them 🧬\nQuote your variables ⚠️\nOne script = a reproducible analysis 🔁\n\nHomework 🏠 Commit run_all.sh.\n\n75–80 min. Remind: pair assignment due — check the deadline."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#warm-up",
+    "href": "week03-block1-python-intro.html#warm-up",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\nIn your repo, using one line each:\n\nHow many sequences are in data/sequences.fasta?\nSave the headers into results/headers.txt\n\n\nStuck? Ask your partner first, then the chat 💬\n\n0–10 min. Recall last week. If many struggle, redo the grep pipeline live — it is the base for everything later."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#bash-vs-python",
+    "href": "week03-block1-python-intro.html#bash-vs-python",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Bash vs Python 🐍",
+    "text": "Bash vs Python 🐍\n\n\nBash is great for\n\nMoving and filtering files\nGluing tools together\nOne-liners\n\n\nPython is great for\n\nLogic and calculations\nReusable analysis\nAnything longer than 2 lines 🙂\n\n\n\n10–25 min: new material. Do not oppose them — biologists use both, daily."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#two-ways-to-run-python",
+    "href": "week03-block1-python-intro.html#two-ways-to-run-python",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Two ways to run Python",
+    "text": "Two ways to run Python\npython3                 # interactive — try things out (exit())\npython3 my_script.py    # run a saved script\n\nWe use scripts, because a script can be committed, shared and re-run. 💾\n\nCheck that everyone actually has python3. Windows users may need python instead."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#your-first-script",
+    "href": "week03-block1-python-intro.html#your-first-script",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Your first script",
+    "text": "Your first script\n# hello.py\nprint(\"Hello, bioinformatics!\")\nprint(2 + 2)\npython3 hello.py\n\n# starts a comment — Python ignores it, humans read it."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#variables",
+    "href": "week03-block1-python-intro.html#variables",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Variables 📦",
+    "text": "Variables 📦\norganism = \"Homo sapiens\"\ngene_length = 1520\ngc_content = 0.42\nis_coding = True\n\nprint(organism, gene_length)\n\nA variable is a label on a value, not a box you must declare."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#four-basic-types",
+    "href": "week03-block1-python-intro.html#four-basic-types",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Four basic types",
+    "text": "Four basic types\n\n\n\nType\nExample\nUsed for\n\n\n\n\nstr\n\"ATGC\"\ntext, sequences\n\n\nint\n1520\ncounts, positions\n\n\nfloat\n0.42\nratios, p-values\n\n\nbool\nTrue / False\nyes/no answers\n\n\n\ntype(gc_content)   # &lt;class 'float'&gt;\n\nShow a classic error: “ATG” + 5 → TypeError. Read the error message together, slowly."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#exercise-1-predict-then-run",
+    "href": "week03-block1-python-intro.html#exercise-1-predict-then-run",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Exercise 1: Predict, then run 🔮",
+    "text": "Exercise 1: Predict, then run 🔮\n⏱️ 10 min · answer in the chat before running\na = 5\nb = \"5\"\nprint(a + a)\nprint(b + b)\nprint(a + b)\n💡 Which line fails? What exactly does the error say?\n\n25–35 min. This is the single most useful habit: read the error, don’t panic."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#input-and-conversion",
+    "href": "week03-block1-python-intro.html#input-and-conversion",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Input and conversion",
+    "text": "Input and conversion\nlength = input(\"Sequence length: \")   # always a STRING\nlength = int(length)                  # convert to number\nprint(length * 3)\n\nint() · float() · str() convert between types."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#exercise-2-your-first-analysis",
+    "href": "week03-block1-python-intro.html#exercise-2-your-first-analysis",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Exercise 2: Your first analysis 🧬",
+    "text": "Exercise 2: Your first analysis 🧬\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/dna_info.py:\n\nStore a DNA sequence in a variable (at least 20 letters)\nPrint its length using len(sequence)\nCount the G letters: sequence.count(\"G\")\nCount the C letters\nCalculate and print the GC content as a percentage\ngit add → commit → push\n\n💡 Bonus: print the result rounded: round(value, 2)\n\n35–70 min. Paste in the chat. Common bug: integer division confusion — remind them / gives a float."
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#wrap-up",
+    "href": "week03-block1-python-intro.html#wrap-up",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\nA script is a file you can re-run and commit 💾\nVariables hold values; values have types\nlen() count() already do real biology work\n\nHomework 🏠 Commit dna_info.py with a comment at the top explaining what it does.\n\nNext block: strings — sequences are just text 🧬\n\n70–80 min. Two students share their GC result — compare numbers, discuss why they differ."
   },
   {
     "objectID": "week01-block2-git.html#warm-up-5-min",
@@ -504,6 +917,69 @@
     "text": "Wrap-up ✅\n\n\n\nCommand\nWhat it does\n\n\n\n\ngrep \"x\" file\nFind lines containing x\n\n\ngrep -c -i -v\nCount · ignore case · invert\n\n\ncmd1 \\| cmd2\nPipe: output → input\n\n\n&gt; file &gt;&gt; file\nSave · append\n\n\n\nHomework 🏠 Add .gitignore to your repo, commit and push.\n\nNext week: Python 🐍\n\n70–80 min. Ask 2 students to share their screen with the answer to question 4. Exit ticket in the chat: one command they will actually use again."
   },
   {
+    "objectID": "week12-block1-r-intro.html#why-another-language",
+    "href": "week12-block1-r-intro.html#why-another-language",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "Why another language? 🤔",
+    "text": "Why another language? 🤔\n\n\nPython 🐍\n\nGeneral purpose\nFiles, pipelines, automation\nSequences and text 🧬\n\n\nR 🇷\n\nBuilt by statisticians, for data\nTables, statistics, plots 📊\nBioconductor: RNA-seq, microarrays\n\n\n\nYou will meet R in almost every biology lab. 💛\n\n0–10 min. Honest framing: not better or worse, different default job."
+  },
+  {
+    "objectID": "week12-block1-r-intro.html#good-news-you-already-know-this",
+    "href": "week12-block1-r-intro.html#good-news-you-already-know-this",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "Good news: you already know this",
+    "text": "Good news: you already know this\n\n\n\nConcept\nPython\nR\n\n\n\n\nAssign\nx = 5\nx &lt;- 5\n\n\nComment\n# note\n# note\n\n\nFunction\nlen(x)\nlength(x)\n\n\nCondition\nif x &gt; 5:\nif (x &gt; 5) {\n\n\nLoop\nfor s in seqs:\nfor (s in seqs) {\n\n\n\n\nNew syntax, same thinking. 🧠\n\n10–25 min. This is the core message of the R weeks: transfer, not restart."
+  },
+  {
+    "objectID": "week12-block1-r-intro.html#rstudio",
+    "href": "week12-block1-r-intro.html#rstudio",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "RStudio 🖥️",
+    "text": "RStudio 🖥️\nFour panels:\n\nConsole — try things out (like python3 interactive)\nScript — your saved code 💾\nEnvironment — what variables exist right now 👀\nPlots / Files 📊\n\n\nRun a line: Ctrl/Cmd + Enter ⏎\n\nScreen share and point at each panel. The Environment panel is something Python beginners never get — highlight it."
+  },
+  {
+    "objectID": "week12-block1-r-intro.html#vectors-rs-superpower",
+    "href": "week12-block1-r-intro.html#vectors-rs-superpower",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "Vectors: R’s superpower ⚡",
+    "text": "Vectors: R’s superpower ⚡\nlengths &lt;- c(120, 85, 300, 42)\n\nlength(lengths)     # 4\nmean(lengths)       # 136.75\nmax(lengths)\nsort(lengths)\n\nlengths * 2         # every element doubled — no loop! 🤯\nlengths &gt; 100       # TRUE FALSE TRUE FALSE\n\nIn R, operations work on whole vectors at once.\n\nThe no-loop vectorisation is the genuine “wow” moment. Compare with the Python loop they wrote in week 5."
+  },
+  {
+    "objectID": "week12-block1-r-intro.html#indexing",
+    "href": "week12-block1-r-intro.html#indexing",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "Indexing ⚠️",
+    "text": "Indexing ⚠️\nlengths[1]              # the FIRST element — R counts from 1! 🤨\nlengths[c(1, 3)]        # first and third\nlengths[lengths &gt; 100]  # filtering by condition 🎯\n\n\n\n\n\n\n\nWarning\n\n\nPython counts from 0, R counts from 1. This will bite you. 🐛"
+  },
+  {
+    "objectID": "week12-block1-r-intro.html#data-frames-tables",
+    "href": "week12-block1-r-intro.html#data-frames-tables",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "Data frames: tables 📊",
+    "text": "Data frames: tables 📊\nseqs &lt;- data.frame(\n  name   = c(\"seq1\", \"seq2\", \"seq3\"),\n  length = c(120, 85, 300),\n  gc     = c(0.55, 0.41, 0.62)\n)\n\nhead(seqs)          # first rows\nnrow(seqs)          # number of rows\nseqs$length         # one column as a vector\nmean(seqs$gc)\n\nA data frame is a spreadsheet you can compute with 🧮"
+  },
+  {
+    "objectID": "week12-block1-r-intro.html#filtering-rows",
+    "href": "week12-block1-r-intro.html#filtering-rows",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "Filtering rows 🎯",
+    "text": "Filtering rows 🎯\nseqs[seqs$length &gt; 100, ]          # rows where length &gt; 100\nseqs[seqs$gc &gt; 0.5, \"name\"]        # just the names\nseqs$gc_percent &lt;- seqs$gc * 100   # add a new column ➕\n\nThe comma matters: [rows, columns] 📐"
+  },
+  {
+    "objectID": "week12-block1-r-intro.html#exercise-first-steps-in-r",
+    "href": "week12-block1-r-intro.html#exercise-first-steps-in-r",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "Exercise: First steps in R 🇷",
+    "text": "Exercise: First steps in R 🇷\n⏱️ 30 min · breakout rooms · switch after 15 min\nIn RStudio, create scripts/first_analysis.R:\n\nMake a vector of 6 sequence lengths\nPrint the mean, max and sorted values\nPrint only the lengths above 100\nBuild a data frame with name, length, gc (6 rows)\nAdd a gc_percent column\nPrint only rows with GC above 50% 🎯\n\n💡 Bonus: summary(seqs) — what does it give you?\n\n25–65 min. Paste in the chat. Expect &lt;- vs = confusion and the missing comma in [rows, ]."
+  },
+  {
+    "objectID": "week12-block1-r-intro.html#wrap-up",
+    "href": "week12-block1-r-intro.html#wrap-up",
+    "title": "Week 12 · Block 1 — Hello, R",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\n\n\nR\nWhat it does\n\n\n\n\nx &lt;- c(1,2,3)\nvector\n\n\nmean() max() sort()\nstats, no loop needed ⚡\n\n\ndf$column\none column\n\n\ndf[df$x &gt; 5, ]\nfilter rows 🎯\n\n\n\nRemember: R counts from 1 ⚠️\n\nNext block: reading real data and plots 📈\n\n65–80 min. Two students share their data frame output."
+  },
+  {
     "objectID": "week06-block1-dictionaries.html#warm-up",
     "href": "week06-block1-dictionaries.html#warm-up",
     "title": "Week 6 · Block 1 — Dictionaries",
@@ -560,74 +1036,137 @@
     "text": "Wrap-up ✅\n\n\n\nList 📋\nDictionary 📖\n\n\n\n\nOrdered, by position\nBy key\n\n\nseqs[0]\nlengths[\"seq1\"]\n\n\nGood for: many similar items\nGood for: named values, counting\n\n\n\nHomework 🏠 Commit codon_count.py.\n\nNext block: functions — stop repeating yourself 🔁\n\n70–80 min. Exit ticket: one thing from their studies that is naturally a key → value pair."
   },
   {
-    "objectID": "week03-block1-python-intro.html#warm-up",
-    "href": "week03-block1-python-intro.html#warm-up",
-    "title": "Week 3 · Block 1 — Hello, Python",
+    "objectID": "week11-block1-project-lab.html#today-you-build-i-help",
+    "href": "week11-block1-project-lab.html#today-you-build-i-help",
+    "title": "Week 11 · Block 1 — Project lab",
+    "section": "Today: you build, I help 🛠️",
+    "text": "Today: you build, I help 🛠️\nNo lecture. Both blocks are your project time.\n\nI am in the main room the whole time 🎧\nBreakout rooms for focused work\n✋ any time you want me to look at something\n\n\n0–5 min. Keep it short — every minute of talking is a minute they are not coding."
+  },
+  {
+    "objectID": "week11-block1-project-lab.html#feedback-on-your-proposals",
+    "href": "week11-block1-project-lab.html#feedback-on-your-proposals",
+    "title": "Week 11 · Block 1 — Project lab",
+    "section": "Feedback on your proposals 💬",
+    "text": "Feedback on your proposals 💬\n⏱️ 10 min\nThree things I saw in your PROJECT.md files:\n\n[most common strength] 🌟\n[most common risk — usually: too ambitious] ⚠️\n[most common gap — usually: no real input file] 📄\n\n\nIf your scope feels big: cut it in half. Then cut it again. ✂️\n\n5–15 min. Fill these in after reading their proposals. Concrete, anonymous, kind."
+  },
+  {
+    "objectID": "week11-block1-project-lab.html#how-to-start-when-you-are-stuck",
+    "href": "week11-block1-project-lab.html#how-to-start-when-you-are-stuck",
+    "title": "Week 11 · Block 1 — Project lab",
+    "section": "How to start when you are stuck 🧗",
+    "text": "How to start when you are stuck 🧗\n\nWrite the steps in comments first 📝\nMake the smallest version run — even printing “hello” from your tool\nOne function at a time, test it, commit it 💾\nprint() everything while you work 👀\n\n\n\nWorking and ugly beats elegant and unfinished. Always. 🌱\n\n\n15–25 min. This is the only “teaching” today. Then get out of the way."
+  },
+  {
+    "objectID": "week11-block1-project-lab.html#todays-goal",
+    "href": "week11-block1-project-lab.html#todays-goal",
+    "title": "Week 11 · Block 1 — Project lab",
+    "section": "Today’s goal 🎯",
+    "text": "Today’s goal 🎯\nBy the end of the second block:\n\n✅ Your repo has a PROJECT.md and a script that runs\n✅ It reads your input file — even if it only prints the first line\n✅ At least one function written and committed\n\n\nThat is a real milestone. The rest is iteration 🔁\n\n25–30 min. A concrete finish line prevents the “I’ll start at home” drift."
+  },
+  {
+    "objectID": "week11-block1-project-lab.html#work-time",
+    "href": "week11-block1-project-lab.html#work-time",
+    "title": "Week 11 · Block 1 — Project lab",
+    "section": "Work time 🛠️",
+    "text": "Work time 🛠️\n⏱️ Rest of the block\nHow to get help\n\n✋ Raise your hand — I will join your room\n💬 Chat for quick questions\n👥 Room 1 = “quiet focus”, Room 2 = “talk while working”\n\n\nBefore you leave: commit and push. 💾\n\n30–80 min. Visit rooms in rotation. Keep a list of who you have checked on — online it is easy to miss the quiet ones. Note recurring problems to address in block 2."
+  },
+  {
+    "objectID": "week14-oral-exams.html#today",
+    "href": "week14-oral-exams.html#today",
+    "title": "Week 14 · Oral exams & goodbye",
+    "section": "Today 📅",
+    "text": "Today 📅\nBoth blocks: oral exams 💬\n\n15 minutes each, by the slots you booked 📅\nJoin the main room at your time\nHave your repo open and your tool ready to run ⚙️\n\n\nWaiting for your turn? You are free to log off and come back 🙂\n\nOpening slide — show for the first few minutes, then start the first exam. Timing: 160 min total ≈ 9–10 students with short breaks. Extra slots outside class if the group is bigger."
+  },
+  {
+    "objectID": "week14-oral-exams.html#while-you-wait",
+    "href": "week14-oral-exams.html#while-you-wait",
+    "title": "Week 14 · Oral exams & goodbye",
+    "section": "While you wait ⏳",
+    "text": "While you wait ⏳\nOptional, if you like:\n\nReread your own README 📖\nRun your tool once more on a clean clone 🧪\nExplain one function out loud to yourself 🗣️\n\n\nYou have already done the work. Today you just talk about it. 💛\n\nKeep this on screen between exams as a holding slide."
+  },
+  {
+    "objectID": "week14-oral-exams.html#exam-structure-reminder",
+    "href": "week14-oral-exams.html#exam-structure-reminder",
+    "title": "Week 14 · Oral exams & goodbye",
+    "section": "Exam structure (reminder) 💬",
+    "text": "Exam structure (reminder) 💬\n\n\n\nMinutes\nWhat happens\n\n\n\n\n1–3\nRun your tool ⚙️\n\n\n3–8\nWalk me through the code 🚶\n\n\n8–13\nQuestions about your choices 🤔\n\n\n13–15\nHardest part, what you’d change 💭\n\n\n\n\nYour code stays open. This is a conversation. 🙂\n\nShow briefly at the start of each exam if the student seems nervous."
+  },
+  {
+    "objectID": "week14-oral-exams.html#fourteen-weeks-ago",
+    "href": "week14-oral-exams.html#fourteen-weeks-ago",
+    "title": "Week 14 · Oral exams & goodbye",
+    "section": "Fourteen weeks ago",
+    "text": "Fourteen weeks ago\n\n“I have never opened a terminal”\n\nToday you can:\n\nwork in the terminal and write bash loops 🐚\nwrite Python: strings, lists, dictionaries, loops, functions 🐍\nread and write real biological data 🧬\ndebug your own code 🔍\ncollaborate with Git, branches and pull requests 👥\nanalyse and plot data in R 📊\n\n\nYou built a working tool from nothing. That is real. 🎉\n\nClosing block, last 15–20 min. Optionally invite everyone back for this."
+  },
+  {
+    "objectID": "week14-oral-exams.html#what-to-do-next",
+    "href": "week14-oral-exams.html#what-to-do-next",
+    "title": "Week 14 · Oral exams & goodbye",
+    "section": "What to do next 🌱",
+    "text": "What to do next 🌱\n\nUse it. The next time you would open Excel, try a script 💪\nPut one small analysis from your own studies into code 🧬\nRosalind.info for practice puzzles 🧩\nThe Carpentries lessons, free and biology-focused 🎓\nKeep your GitHub — it is your portfolio now 📁\n\n\nSkills fade without use. One tiny script a month keeps them alive. ⚡"
+  },
+  {
+    "objectID": "week14-oral-exams.html#thank-you",
+    "href": "week14-oral-exams.html#thank-you",
+    "title": "Week 14 · Oral exams & goodbye",
+    "section": "Thank you 💛",
+    "text": "Thank you 💛\nIt was a pleasure.\nStay in touch: [your contact] 📬\n\nFinal feedback survey: [link] 📱\n\nTODO: add contact and the feedback survey link. Ask for honest feedback — it shapes next year’s course."
+  },
+  {
+    "objectID": "week12-block2-r-plots.html#warm-up",
+    "href": "week12-block2-r-plots.html#warm-up",
+    "title": "Week 12 · Block 2 — Data & plots in R",
     "section": "Warm-up 🔥",
-    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\nIn your repo, using one line each:\n\nHow many sequences are in data/sequences.fasta?\nSave the headers into results/headers.txt\n\n\nStuck? Ask your partner first, then the chat 💬\n\n0–10 min. Recall last week. If many struggle, redo the grep pipeline live — it is the base for everything later."
+    "text": "Warm-up 🔥\n⏱️ 10 min\ngc &lt;- c(0.55, 0.41, 0.62, 0.38, 0.71)\n\nPrint the mean\nPrint only values above 0.5\nHow many are above 0.5? (hint: sum(gc &gt; 0.5)) 🤔\n\n\n0–10 min. Point 3 is a lovely R trick: TRUE counts as 1."
   },
   {
-    "objectID": "week03-block1-python-intro.html#bash-vs-python",
-    "href": "week03-block1-python-intro.html#bash-vs-python",
-    "title": "Week 3 · Block 1 — Hello, Python",
-    "section": "Bash vs Python 🐍",
-    "text": "Bash vs Python 🐍\n\n\nBash is great for\n\nMoving and filtering files\nGluing tools together\nOne-liners\n\n\nPython is great for\n\nLogic and calculations\nReusable analysis\nAnything longer than 2 lines 🙂\n\n\n\n10–25 min: new material. Do not oppose them — biologists use both, daily."
+    "objectID": "week12-block2-r-plots.html#reading-real-data",
+    "href": "week12-block2-r-plots.html#reading-real-data",
+    "title": "Week 12 · Block 2 — Data & plots in R",
+    "section": "Reading real data 📄",
+    "text": "Reading real data 📄\nRemember results/report.txt from your Python tool? Let’s analyse it in R.\nseqs &lt;- read.csv(\"results/report.txt\", sep = \"\\t\")\n\nhead(seqs)\nstr(seqs)        # structure: columns and their types 🔍\nsummary(seqs)    # min, max, mean per column 📊\nnrow(seqs)\n\nPython produced the data. R analyses it. 🐍🤝🇷\n\n10–25 min. This is the payoff: their own pipeline now spans two languages. Make sure their report has a header row — otherwise read.csv guesses wrong."
   },
   {
-    "objectID": "week03-block1-python-intro.html#two-ways-to-run-python",
-    "href": "week03-block1-python-intro.html#two-ways-to-run-python",
-    "title": "Week 3 · Block 1 — Hello, Python",
-    "section": "Two ways to run Python",
-    "text": "Two ways to run Python\npython3                 # interactive — try things out (exit())\npython3 my_script.py    # run a saved script\n\nWe use scripts, because a script can be committed, shared and re-run. 💾\n\nCheck that everyone actually has python3. Windows users may need python instead."
+    "objectID": "week12-block2-r-plots.html#your-first-plot",
+    "href": "week12-block2-r-plots.html#your-first-plot",
+    "title": "Week 12 · Block 2 — Data & plots in R",
+    "section": "Your first plot 📈",
+    "text": "Your first plot 📈\nhist(seqs$length,\n     main = \"Sequence length distribution\",\n     xlab = \"Length (bp)\",\n     col  = \"steelblue\")\n\nOne line, and you have a figure 🎉\n\nThe instant plot is R’s best first impression. Show it live."
   },
   {
-    "objectID": "week03-block1-python-intro.html#your-first-script",
-    "href": "week03-block1-python-intro.html#your-first-script",
-    "title": "Week 3 · Block 1 — Hello, Python",
-    "section": "Your first script",
-    "text": "Your first script\n# hello.py\nprint(\"Hello, bioinformatics!\")\nprint(2 + 2)\npython3 hello.py\n\n# starts a comment — Python ignores it, humans read it."
+    "objectID": "week12-block2-r-plots.html#three-plots-you-will-actually-use",
+    "href": "week12-block2-r-plots.html#three-plots-you-will-actually-use",
+    "title": "Week 12 · Block 2 — Data & plots in R",
+    "section": "Three plots you will actually use",
+    "text": "Three plots you will actually use\nhist(seqs$gc)                       # distribution 📊\n\nplot(seqs$length, seqs$gc,          # relationship 🔗\n     xlab = \"Length\", ylab = \"GC\",\n     pch = 19, col = \"darkgreen\")\n\nboxplot(gc ~ species, data = seqs)  # compare groups 📦\n\nmain xlab ylab col work almost everywhere."
   },
   {
-    "objectID": "week03-block1-python-intro.html#variables",
-    "href": "week03-block1-python-intro.html#variables",
-    "title": "Week 3 · Block 1 — Hello, Python",
-    "section": "Variables 📦",
-    "text": "Variables 📦\norganism = \"Homo sapiens\"\ngene_length = 1520\ngc_content = 0.42\nis_coding = True\n\nprint(organism, gene_length)\n\nA variable is a label on a value, not a box you must declare."
+    "objectID": "week12-block2-r-plots.html#saving-a-figure",
+    "href": "week12-block2-r-plots.html#saving-a-figure",
+    "title": "Week 12 · Block 2 — Data & plots in R",
+    "section": "Saving a figure 💾",
+    "text": "Saving a figure 💾\npng(\"results/gc_plot.png\", width = 800, height = 600)\nhist(seqs$gc, main = \"GC content\", col = \"steelblue\")\ndev.off()          # ⚠️ don't forget this — it closes the file!\n\nNow your figure is a file you can put in a report or a thesis 📄\n\n25–35 min. dev.off() is the classic forgotten line — the file stays empty without it."
   },
   {
-    "objectID": "week03-block1-python-intro.html#four-basic-types",
-    "href": "week03-block1-python-intro.html#four-basic-types",
-    "title": "Week 3 · Block 1 — Hello, Python",
-    "section": "Four basic types",
-    "text": "Four basic types\n\n\n\nType\nExample\nUsed for\n\n\n\n\nstr\n\"ATGC\"\ntext, sequences\n\n\nint\n1520\ncounts, positions\n\n\nfloat\n0.42\nratios, p-values\n\n\nbool\nTrue / False\nyes/no answers\n\n\n\ntype(gc_content)   # &lt;class 'float'&gt;\n\nShow a classic error: “ATG” + 5 → TypeError. Read the error message together, slowly."
+    "objectID": "week12-block2-r-plots.html#a-word-on-ggplot2",
+    "href": "week12-block2-r-plots.html#a-word-on-ggplot2",
+    "title": "Week 12 · Block 2 — Data & plots in R",
+    "section": "A word on ggplot2 🎨",
+    "text": "A word on ggplot2 🎨\nlibrary(ggplot2)\n\nggplot(seqs, aes(x = length, y = gc)) +\n  geom_point() +\n  labs(title = \"GC vs length\")\n\nPrettier, more powerful, and a whole language of its own. Base R plots are enough for today — ggplot2 is your next step 🌱\n\nMention only. Going deeper needs a full block; point them to resources instead."
   },
   {
-    "objectID": "week03-block1-python-intro.html#exercise-1-predict-then-run",
-    "href": "week03-block1-python-intro.html#exercise-1-predict-then-run",
-    "title": "Week 3 · Block 1 — Hello, Python",
-    "section": "Exercise 1: Predict, then run 🔮",
-    "text": "Exercise 1: Predict, then run 🔮\n⏱️ 10 min · answer in the chat before running\na = 5\nb = \"5\"\nprint(a + a)\nprint(b + b)\nprint(a + b)\n💡 Which line fails? What exactly does the error say?\n\n25–35 min. This is the single most useful habit: read the error, don’t panic."
+    "objectID": "week12-block2-r-plots.html#exercise-analyse-your-own-data",
+    "href": "week12-block2-r-plots.html#exercise-analyse-your-own-data",
+    "title": "Week 12 · Block 2 — Data & plots in R",
+    "section": "Exercise: Analyse your own data 🧬",
+    "text": "Exercise: Analyse your own data 🧬\n⏱️ 30 min · breakout rooms · switch after 15 min\nCreate scripts/plot_report.R:\n\nRun your Python tool to produce a tab-separated report 🐍\nRead it into R with read.csv(..., sep = \"\\t\")\nPrint summary() and the number of rows\nMake a histogram of lengths 📊\nMake a scatter plot of length vs GC 🔗\nSave one figure into results/ and commit the script (not the PNG 🙈)\n\n💡 Bonus: colour the points by whether GC is above 50%\n\n35–75 min. Most common failure: wrong path or missing header. Have a ready CSV in the chat as plan B."
   },
   {
-    "objectID": "week03-block1-python-intro.html#input-and-conversion",
-    "href": "week03-block1-python-intro.html#input-and-conversion",
-    "title": "Week 3 · Block 1 — Hello, Python",
-    "section": "Input and conversion",
-    "text": "Input and conversion\nlength = input(\"Sequence length: \")   # always a STRING\nlength = int(length)                  # convert to number\nprint(length * 3)\n\nint() · float() · str() convert between types."
-  },
-  {
-    "objectID": "week03-block1-python-intro.html#exercise-2-your-first-analysis",
-    "href": "week03-block1-python-intro.html#exercise-2-your-first-analysis",
-    "title": "Week 3 · Block 1 — Hello, Python",
-    "section": "Exercise 2: Your first analysis 🧬",
-    "text": "Exercise 2: Your first analysis 🧬\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/dna_info.py:\n\nStore a DNA sequence in a variable (at least 20 letters)\nPrint its length using len(sequence)\nCount the G letters: sequence.count(\"G\")\nCount the C letters\nCalculate and print the GC content as a percentage\ngit add → commit → push\n\n💡 Bonus: print the result rounded: round(value, 2)\n\n35–70 min. Paste in the chat. Common bug: integer division confusion — remind them / gives a float."
-  },
-  {
-    "objectID": "week03-block1-python-intro.html#wrap-up",
-    "href": "week03-block1-python-intro.html#wrap-up",
-    "title": "Week 3 · Block 1 — Hello, Python",
+    "objectID": "week12-block2-r-plots.html#wrap-up",
+    "href": "week12-block2-r-plots.html#wrap-up",
+    "title": "Week 12 · Block 2 — Data & plots in R",
     "section": "Wrap-up ✅",
-    "text": "Wrap-up ✅\n\nA script is a file you can re-run and commit 💾\nVariables hold values; values have types\nlen() count() already do real biology work\n\nHomework 🏠 Commit dna_info.py with a comment at the top explaining what it does.\n\nNext block: strings — sequences are just text 🧬\n\n70–80 min. Two students share their GC result — compare numbers, discuss why they differ."
+    "text": "Wrap-up ✅\n\nread.csv() brings data in 📄\nsummary() and str() before anything else 🔍\nhist() plot() boxplot() — one line each 📊\npng() … dev.off() to save 💾\n\nHomework 🏠 Commit your R script.\n\nNext week: Python vs R side by side, and last project help 🛟\n\n75–80 min. Two students share their plot — first figures always get a nice reaction."
   },
   {
     "objectID": "week05-block1-loops.html#warm-up",
@@ -693,312 +1232,270 @@
     "text": "Wrap-up ✅\nresults = []\nfor item in things:\n    if condition:\n        results.append(something)\n\nfor x in y: repeats for each element\nEmpty list → loop → append 📋\nrange() for numbers · while for “until”\n\nHomework 🏠 Commit analyse_all.py.\n\n70–80 min. Exit ticket: name one thing from their own studies they would now loop over."
   },
   {
-    "objectID": "week03-block2-strings.html#warm-up",
-    "href": "week03-block2-strings.html#warm-up",
-    "title": "Week 3 · Block 2 — Strings are sequences",
+    "objectID": "week08-block1-git-teams.html#warm-up",
+    "href": "week08-block1-git-teams.html#warm-up",
+    "title": "Week 8 · Block 1 — Git in teams",
     "section": "Warm-up 🔥",
-    "text": "Warm-up 🔥\n⏱️ 10 min\nseq = \"ATGCGCTA\"\nprint(len(seq))\nprint(seq.count(\"A\"))\nprint(seq.count(\"AT\"))\nWhat will each line print? Chat first, run second 💬\n\n0–10 min. The third line surprises people — counting pairs, not letters."
+    "text": "Warm-up 🔥\n⏱️ 10 min\ngit status\ngit log --oneline\nHow many commits do you have now? Chat the number 🔢\n\nSeven weeks ago this was your first command. 🙂\n\n0–10 min. Celebrate the progress — most will have 15+ commits."
   },
   {
-    "objectID": "week03-block2-strings.html#indexing-counting-from-0",
-    "href": "week03-block2-strings.html#indexing-counting-from-0",
-    "title": "Week 3 · Block 2 — Strings are sequences",
-    "section": "Indexing: counting from 0 🔢",
-    "text": "Indexing: counting from 0 🔢\nseq = \"ATGCGC\"\nseq[0]    # 'A'  — the FIRST letter\nseq[1]    # 'T'\nseq[-1]   # 'C'  — the last one\n\n\n\n\n\n\n\nNote\n\n\nBiologists count bases from 1, Python counts from 0. This causes real bugs in real papers. 🐛\n\n\n\n\n10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF)."
+    "objectID": "week08-block1-git-teams.html#two-people-one-repository",
+    "href": "week08-block1-git-teams.html#two-people-one-repository",
+    "title": "Week 8 · Block 1 — Git in teams",
+    "section": "Two people, one repository 😬",
+    "text": "Two people, one repository 😬\n\nYou edit seq_functions.py. Your partner edits seq_functions.py. Who wins?\n\n\nAnswer: nobody has to lose — that is what branches are for 🌿\n\n10–25 min. This block is the foundation of the pair assignment."
   },
   {
-    "objectID": "week03-block2-strings.html#slicing",
-    "href": "week03-block2-strings.html#slicing",
-    "title": "Week 3 · Block 2 — Strings are sequences",
-    "section": "Slicing ✂️",
-    "text": "Slicing ✂️\nseq = \"ATGCGCTAGC\"\nseq[0:3]    # 'ATG'  — from 0 up to (not including) 3\nseq[3:]     # from 3 to the end\nseq[:3]     # from the start to 3\nseq[::-1]   # reversed!\n\nseq[start:stop] — stop is not included 🙂"
+    "objectID": "week08-block1-git-teams.html#branches",
+    "href": "week08-block1-git-teams.html#branches",
+    "title": "Week 8 · Block 1 — Git in teams",
+    "section": "Branches 🌿",
+    "text": "Branches 🌿\ngit branch                    # where am I?\ngit switch -c add-gc-function # create and go to a new branch\n# ... work, add, commit ...\ngit switch main               # back to the main line\n\nA branch is a parallel version of your project. Experiment freely — main stays safe. 🛟"
   },
   {
-    "objectID": "week03-block2-strings.html#useful-string-methods",
-    "href": "week03-block2-strings.html#useful-string-methods",
-    "title": "Week 3 · Block 2 — Strings are sequences",
-    "section": "Useful string methods",
-    "text": "Useful string methods\nseq.upper()              # 'ATGC'\nseq.lower()              # 'atgc'\nseq.replace(\"T\", \"U\")    # DNA → RNA!\nseq.count(\"GC\")\nseq.find(\"ATG\")          # position of the first ATG (-1 if absent)\nseq.startswith(\"&gt;\")      # True / False — FASTA headers!\n\nA method does not change the original — it returns a new string.\n\nImportant: seq.upper() alone does nothing unless you assign it. Show the mistake live."
+    "objectID": "week08-block1-git-teams.html#sharing-a-repository",
+    "href": "week08-block1-git-teams.html#sharing-a-repository",
+    "title": "Week 8 · Block 1 — Git in teams",
+    "section": "Sharing a repository 🤝",
+    "text": "Sharing a repository 🤝\nOne of you owns the repo, the other becomes a collaborator:\nRepo → Settings → Collaborators → Add people\n\ngit clone &lt;url&gt;        # the partner clones it\ngit pull               # get the newest changes 📥\n\n\n\n\n\n\nNote\n\n\nGolden rule: git pull before you start working. Every time. 🌅"
   },
   {
-    "objectID": "week03-block2-strings.html#building-strings",
-    "href": "week03-block2-strings.html#building-strings",
-    "title": "Week 3 · Block 2 — Strings are sequences",
-    "section": "Building strings",
-    "text": "Building strings\nname = \"seq1\"\nlength = 42\n\nprint(\"Sequence \" + name + \" has \" + str(length) + \" bases\")\nprint(f\"Sequence {name} has {length} bases\")     # f-string 👑\n\nf-strings are shorter and you don’t need str()."
+    "objectID": "week08-block1-git-teams.html#pull-requests",
+    "href": "week08-block1-git-teams.html#pull-requests",
+    "title": "Week 8 · Block 1 — Git in teams",
+    "section": "Pull requests 📬",
+    "text": "Pull requests 📬\ngit push -u origin add-gc-function\nThen on GitHub: Compare & pull request\n\nA pull request is a proposal: “here is my change, please look at it before it goes into main” 👀\n\nEmphasise: this is exactly how professional teams work, including at my job."
   },
   {
-    "objectID": "week03-block2-strings.html#exercise-1-slice-it",
-    "href": "week03-block2-strings.html#exercise-1-slice-it",
-    "title": "Week 3 · Block 2 — Strings are sequences",
-    "section": "Exercise 1: Slice it 🔪",
-    "text": "Exercise 1: Slice it 🔪\n⏱️ 10 min · your own screen · react ✅ when done\nseq = \"ATGGCCATTGTAATGGGCCGC\"\n\nPrint the first codon (3 letters)\nPrint the last 6 bases\nPrint the sequence reversed\nConvert it to RNA and print it\nAt which position does the second ATG start? 🤔\n\n\n25–35 min. Question 5 is genuinely hard — find has a start argument: seq.find(“ATG”, 1)."
+    "objectID": "week08-block1-git-teams.html#code-review",
+    "href": "week08-block1-git-teams.html#code-review",
+    "title": "Week 8 · Block 1 — Git in teams",
+    "section": "Code review 👀",
+    "text": "Code review 👀\nOn the Files changed tab you can comment on any line.\nGood review comments:\n\n“What happens here if the sequence is empty?” 🤔\n“Could this be a function? It repeats below”\n“Nice — I didn’t know about .get()” 🎉\n\n\nReview is about the code, never about the person. 💛\n\nModel one good and one bad comment. Online, tone in writing matters even more."
   },
   {
-    "objectID": "week03-block2-strings.html#reverse-complement",
-    "href": "week03-block2-strings.html#reverse-complement",
-    "title": "Week 3 · Block 2 — Strings are sequences",
-    "section": "Reverse complement 🧬",
-    "text": "Reverse complement 🧬\nThe classic first real bioinformatics function:\nseq = \"ATGC\"\ncomplement = seq.replace(\"A\", \"t\").replace(\"T\", \"a\")\ncomplement = complement.replace(\"G\", \"c\").replace(\"C\", \"g\")\nrev_comp = complement.upper()[::-1]\nprint(rev_comp)\n\nWhy the temporary lowercase? 🤔 Try it without — what breaks?\n\nGreat discussion: replacing A→T then T→A turns everything into A. The lowercase trick avoids double replacement."
+    "objectID": "week08-block1-git-teams.html#exercise-your-first-pull-request",
+    "href": "week08-block1-git-teams.html#exercise-your-first-pull-request",
+    "title": "Week 8 · Block 1 — Git in teams",
+    "section": "Exercise: Your first pull request 📬",
+    "text": "Exercise: Your first pull request 📬\n⏱️ 35 min · breakout rooms · pairs\n\nA creates a repo pair-assignment and adds B as collaborator\nB clones it\nEach creates their own branch: git switch -c &lt;yourname&gt;-function\nEach writes one small function in a separate file and pushes it\nEach opens a pull request and reviews the partner’s one 👀\nMerge both pull requests on GitHub\n\n\n25–65 min. Paste the steps in the chat. Expect authentication issues for B — have the token/gh login plan ready. Visit every room; PR merging is where people get lost."
   },
   {
-    "objectID": "week03-block2-strings.html#exercise-2-sequence-toolkit",
-    "href": "week03-block2-strings.html#exercise-2-sequence-toolkit",
-    "title": "Week 3 · Block 2 — Strings are sequences",
-    "section": "Exercise 2: Sequence toolkit 🧰",
-    "text": "Exercise 2: Sequence toolkit 🧰\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/seq_tools.py. For a DNA sequence of your choice, print:\n\nIts length and GC content (reuse last block’s code)\nIts first codon and last codon\nThe RNA version\nThe reverse complement\nWhether it starts with a start codon (ATG) — print True/False\n\n💡 Bonus: print all three reading frames: seq[0:], seq[1:], seq[2:]\n\n35–70 min. Paste in the chat. Encourage f-strings for nice output — makes results readable."
-  },
-  {
-    "objectID": "week03-block2-strings.html#wrap-up",
-    "href": "week03-block2-strings.html#wrap-up",
-    "title": "Week 3 · Block 2 — Strings are sequences",
+    "objectID": "week08-block1-git-teams.html#wrap-up",
+    "href": "week08-block1-git-teams.html#wrap-up",
+    "title": "Week 8 · Block 1 — Git in teams",
     "section": "Wrap-up ✅",
-    "text": "Wrap-up ✅\n\n\n\nTool\nExample\n\n\n\n\nIndex\nseq[0] seq[-1]\n\n\nSlice\nseq[0:3] seq[::-1]\n\n\nMethods\n.upper() .replace() .find()\n\n\nf-string\nf\"GC = {gc}%\"\n\n\n\nHomework 🏠 Commit seq_tools.py and write in the README what it does.\n\nNext week: lists — many sequences at once 📋\n\n70–80 min. Exit ticket: “Python counts from ___” in the chat."
+    "text": "Wrap-up ✅\n\n\n\nCommand\nWhat it does\n\n\n\n\ngit switch -c name\nNew branch 🌿\n\n\ngit switch main\nGo back\n\n\ngit pull\nGet partner’s changes 📥\n\n\ngit push -u origin name\nPublish your branch\n\n\n\nNext block: what happens when you both edit the same line 💥\n\n65–80 min. Leave them curious about conflicts — it is the best part of week 8."
   },
   {
-    "objectID": "week08-block2-conflicts.html#warm-up",
-    "href": "week08-block2-conflicts.html#warm-up",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programming and Computing Basics",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\n\n\n\n\n\nWeek 1 · Block 1 — Welcome!\n\n\n\n\n\n\nWeek 1 · Block 2 — first commit\n\n\n\n\n\n\nWeek 2 · Block 1 — The terminal\n\n\n\n\n\n\nWeek 2 · Block 2 — Bash on real data\n\n\n\n\n\n\nWeek 3 · Block 1 — Hello, Python\n\n\n\n\n\n\nWeek 3 · Block 2 — Strings are sequences\n\n\n\n\n\n\nWeek 4 · Block 1 — Lists\n\n\n\n\n\n\nWeek 4 · Block 2 — Making decisions\n\n\n\n\n\n\nWeek 5 · Block 1 — Loops\n\n\n\n\n\n\nWeek 5 · Block 2 — Putting it together\n\n\n\n\n\n\nWeek 6 · Block 1 — Dictionaries\n\n\n\n\n\n\nWeek 6 · Block 2 — Functions\n\n\n\n\n\n\nWeek 7 · Block 1 — Files\n\n\n\n\n\n\nWeek 7 · Block 2 — Errors & debugging\n\n\n\n\n\n\nWeek 8 · Block 1 — Git in teams\n\n\n\n\n\n\nWeek 8 · Block 2 — Conflicts & the pair assignment\n\n\n\n\n\n\nWeek 9 · Block 1 — Modules\n\n\n\n\n\n\nWeek 9 · Block 2 — Scripts as tools\n\n\n\n\n\n\nWeek 10 · Block 1 — Bash scripts\n\n\n\n\n\n\nWeek 10 · Block 2 — Your project\n\n\n\n\n\n\nWeek 11 · Block 1 — Project lab\n\n\n\n\n\n\nWeek 11 · Block 2 — Review & build\n\n\n\n\n\n\nWeek 12 · Block 1 — Hello, R\n\n\n\n\n\n\nWeek 12 · Block 2 — Data & plots in R\n\n\n\n\n\n\nWeek 13 · Block 1 — Python vs R\n\n\n\n\n\n\nWeek 13 · Block 2 — Final stretch\n\n\n\n\n\n\nWeek 14 · Oral exams & goodbye\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "week06-block2-functions.html#warm-up",
+    "href": "week06-block2-functions.html#warm-up",
+    "title": "Week 6 · Block 2 — Functions",
     "section": "Warm-up 🔥",
-    "text": "Warm-up 🔥\n⏱️ 10 min\nIn your pair-assignment repo:\ngit switch main\ngit pull\nls\nDo you see your partner’s file? React ✅\n\n0–10 min. This confirms yesterday’s merges actually landed in main."
+    "text": "Warm-up 🔥\n⏱️ 10 min\nseq = \"ATGCGCATG\"\nCount each base using a dictionary and print the result.\n\nDid you write this code before? Where? 🤔\n\n0–10 min. The point: they have written GC content at least three times by now."
   },
   {
-    "objectID": "week08-block2-conflicts.html#the-moment-of-truth",
-    "href": "week08-block2-conflicts.html#the-moment-of-truth",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
-    "section": "The moment of truth 💥",
-    "text": "The moment of truth 💥\nYou both edited the same line.\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\ngc = round(value, 2)\n=======\ngc = round(value, 3)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; partner-branch\n\nGit does not guess. You decide. 🧑‍⚖️\n\n10–25 min. Reassure: a conflict is not damage, nothing is lost."
+    "objectID": "week06-block2-functions.html#you-keep-writing-the-same-thing",
+    "href": "week06-block2-functions.html#you-keep-writing-the-same-thing",
+    "title": "Week 6 · Block 2 — Functions",
+    "section": "You keep writing the same thing 🔁",
+    "text": "You keep writing the same thing 🔁\ngc1 = (seq1.count(\"G\") + seq1.count(\"C\")) / len(seq1)\ngc2 = (seq2.count(\"G\") + seq2.count(\"C\")) / len(seq2)\ngc3 = (seq3.count(\"G\") + seq3.count(\"C\")) / len(seq3)\n\nChange the formula → change it in three places. Forget one → silent bug 🐛\n\n10–25 min. Silent bugs are worse than crashes — you get a wrong number, not an error."
   },
   {
-    "objectID": "week08-block2-conflicts.html#resolving-a-conflict",
-    "href": "week08-block2-conflicts.html#resolving-a-conflict",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
-    "section": "Resolving a conflict 🧑‍⚖️",
-    "text": "Resolving a conflict 🧑‍⚖️\n\ngit status — which files are in conflict?\nOpen the file, find the &lt;&lt;&lt;&lt;&lt;&lt;&lt; markers\nKeep what should stay — delete all markers ✂️\nSave, then:\n\ngit add &lt;file&gt;\ngit commit -m \"Resolve conflict in seq_functions.py\"\ngit push\n\nVS Code shows buttons: Accept Current / Incoming / Both 🖱️"
+    "objectID": "week06-block2-functions.html#defining-a-function",
+    "href": "week06-block2-functions.html#defining-a-function",
+    "title": "Week 6 · Block 2 — Functions",
+    "section": "Defining a function",
+    "text": "Defining a function\ndef gc_content(sequence):\n    gc = sequence.count(\"G\") + sequence.count(\"C\")\n    return gc / len(sequence)\nprint(gc_content(\"ATGCGC\"))\nprint(gc_content(seq2))\n\ndef name(input) → return output 📦"
   },
   {
-    "objectID": "week08-block2-conflicts.html#how-to-avoid-conflicts",
-    "href": "week08-block2-conflicts.html#how-to-avoid-conflicts",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
-    "section": "How to avoid conflicts 🛡️",
-    "text": "How to avoid conflicts 🛡️\n\ngit pull before you start working 🌅\nSmall, frequent commits, not one giant one\nAgree who works on which file ✋\nTalk to each other 💬\n\n\n\nConflicts are a communication problem more than a Git problem."
+    "objectID": "week06-block2-functions.html#anatomy-of-a-function",
+    "href": "week06-block2-functions.html#anatomy-of-a-function",
+    "title": "Week 6 · Block 2 — Functions",
+    "section": "Anatomy of a function",
+    "text": "Anatomy of a function\ndef gc_content(sequence, as_percent=False):   # parameters\n    gc = sequence.count(\"G\") + sequence.count(\"C\")\n    result = gc / len(sequence)\n    if as_percent:\n        result = result * 100\n    return result                              # gives the value back\ngc_content(\"ATGC\")                  # 0.5\ngc_content(\"ATGC\", as_percent=True) # 50.0\n\nDefault arguments are optional to teach — but students love them once they see them."
   },
   {
-    "objectID": "week08-block2-conflicts.html#exercise-1-make-a-conflict-on-purpose",
-    "href": "week08-block2-conflicts.html#exercise-1-make-a-conflict-on-purpose",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
-    "section": "Exercise 1: Make a conflict on purpose 😈",
-    "text": "Exercise 1: Make a conflict on purpose 😈\n⏱️ 25 min · breakout rooms · pairs\n\nBoth of you: git switch main and git pull\nBoth edit the same line of the same file — differently\nBoth commit. A pushes first ✅\nB pushes → rejected → git pull → 💥 conflict\nResolve it together, commit, push\nBoth run git log --oneline — do you see the same history?\n\n\n25–50 min. Doing it deliberately in class is much better than meeting it in panic at 2 a.m."
+    "objectID": "week06-block2-functions.html#return-is-not-print",
+    "href": "week06-block2-functions.html#return-is-not-print",
+    "title": "Week 6 · Block 2 — Functions",
+    "section": "return is not print ⚠️",
+    "text": "return is not print ⚠️\ndef bad(seq):\n    print(len(seq))      # shows it, gives nothing back\n\ndef good(seq):\n    return len(seq)      # gives a value you can USE\n\ntotal = good(\"ATGC\") + good(\"GGC\")   # works ✅\ntotal = bad(\"ATGC\") + bad(\"GGC\")     # TypeError 🚫\n\nThis is THE function misconception. Show the TypeError live and read it together."
   },
   {
-    "objectID": "week08-block2-conflicts.html#pair-assignment",
-    "href": "week08-block2-conflicts.html#pair-assignment",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
-    "section": "Pair assignment 📋",
-    "text": "Pair assignment 📋\n25% of your grade · due in 2 weeks · in pairs\nBuild a small FASTA analysis tool together, in one repository:\n\nAt least 4 functions, each written by one of you\nEach function on its own branch, merged via a pull request\nEach of you reviews at least 2 of your partner’s pull requests 👀\nA README.md explaining what it does and how to run it\nAt least one resolved conflict in the history 😈\n\n\n50–65 min. Walk through each point. Stress: I grade the collaboration, not only the code."
+    "objectID": "week06-block2-functions.html#why-functions",
+    "href": "week06-block2-functions.html#why-functions",
+    "title": "Week 6 · Block 2 — Functions",
+    "section": "Why functions? 🧰",
+    "text": "Why functions? 🧰\n\nWrite once, use everywhere\nName the idea: gc_content() explains itself 📖\nTest one small thing instead of a 100-line script\nFix a bug in one place\n\n\n\nA good function does one thing and has a clear name."
   },
   {
-    "objectID": "week08-block2-conflicts.html#what-i-will-look-at",
-    "href": "week08-block2-conflicts.html#what-i-will-look-at",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
-    "section": "What I will look at 🔍",
-    "text": "What I will look at 🔍\n\n\n\nPart\nWhat I check\n\n\n\n\nCode\nDoes it run? Are functions small and named clearly?\n\n\nGit\nBranches, pull requests, meaningful commit messages\n\n\nReview\nAre the comments useful and kind? 💛\n\n\nREADME\nCould a stranger run your tool?\n\n\nBalance\nDid both of you contribute? 👥\n\n\n\n\nDeadline: [date] · Submit: paste your repo link in [Moodle]\n\nTODO: fill in the date and submission channel."
+    "objectID": "week06-block2-functions.html#exercise-1-predict-then-run",
+    "href": "week06-block2-functions.html#exercise-1-predict-then-run",
+    "title": "Week 6 · Block 2 — Functions",
+    "section": "Exercise 1: Predict, then run 🔮",
+    "text": "Exercise 1: Predict, then run 🔮\n⏱️ 10 min · chat first\ndef double(x):\n    return x * 2\n\ndef shout(text):\n    print(text.upper())\n\nprint(double(5))\nprint(double(\"AT\"))\nresult = shout(\"atg\")\nprint(result)        # 🤔\n\n25–35 min. The last line printing None is the lesson of the day."
   },
   {
-    "objectID": "week08-block2-conflicts.html#exercise-2-plan-it",
-    "href": "week08-block2-conflicts.html#exercise-2-plan-it",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
-    "section": "Exercise 2: Plan it 🗺️",
-    "text": "Exercise 2: Plan it 🗺️\n⏱️ 15 min · breakout rooms · with your partner\nBefore you leave today, write it in your README.md:\n\nWhich 4 functions will your tool have?\nWho writes which one? ✋\nWhen will you meet during the next two weeks? 📅\n\nCommit the README and push it.\n\n65–80 min. Forcing a written plan now prevents the classic “we did nothing for 13 days” panic."
+    "objectID": "week06-block2-functions.html#exercise-2-your-own-toolkit",
+    "href": "week06-block2-functions.html#exercise-2-your-own-toolkit",
+    "title": "Week 6 · Block 2 — Functions",
+    "section": "Exercise 2: Your own toolkit 🧰",
+    "text": "Exercise 2: Your own toolkit 🧰\n⏱️ 25 min · breakout rooms · switch after 10 min\nCreate scripts/seq_functions.py with four functions:\n\ngc_content(seq) → returns GC as a percentage, rounded to 2 decimals\nreverse_complement(seq) → returns the reverse complement\ncount_bases(seq) → returns a dictionary of base counts\nis_usable(seq, min_length=30) → returns True/False (long enough and no N)\n\nThen test all four on 3 different sequences and print the results.\n💡 Bonus: write longest_orf_start(seq) returning the position of the first ATG, or -1\n\n35–70 min. Most rooms will reuse code from weeks 3–5 — that is exactly the point. Praise copy-from-your-own-repo."
   },
   {
-    "objectID": "week08-block2-conflicts.html#wrap-up",
-    "href": "week08-block2-conflicts.html#wrap-up",
-    "title": "Week 8 · Block 2 — Conflicts & the pair assignment",
+    "objectID": "week06-block2-functions.html#wrap-up",
+    "href": "week06-block2-functions.html#wrap-up",
+    "title": "Week 6 · Block 2 — Functions",
     "section": "Wrap-up ✅",
-    "text": "Wrap-up ✅\n\nConflicts: keep what should stay, delete the markers ✂️\ngit pull before starting, always 🌅\nYour assignment starts now 📋\n\n\nNext week: scripts as tools — running your code from the terminal ⚙️\n\n80 min. Remind: quiz 4 this week."
+    "text": "Wrap-up ✅\ndef name(input):\n    ...\n    return output\n\nreturn gives a value back, print only shows it ⚠️\nOne function = one job, with a clear name\nYour repo is now a small toolkit 🧰\n\nHomework 🏠 Commit seq_functions.py.\n\nNext week: files — real data from disk 📄\n\n70–80 min. Tell them next week they will finally read the FASTA file from week 2 with Python."
   },
   {
-    "objectID": "week07-block2-debugging.html#warm-up",
-    "href": "week07-block2-debugging.html#warm-up",
-    "title": "Week 7 · Block 2 — Errors & debugging",
+    "objectID": "week10-block2-project-brief.html#look-what-you-can-do",
+    "href": "week10-block2-project-brief.html#look-what-you-can-do",
+    "title": "Week 10 · Block 2 — Your project",
+    "section": "Look what you can do 🎉",
+    "text": "Look what you can do 🎉\nTen weeks ago: “I have never opened a terminal”\nToday you can:\n\nnavigate and process files from the terminal 🐚\nwrite Python: strings, lists, dictionaries, loops, functions 🐍\nread and write real data files 🧬\ndebug your own errors 🔍\ncollaborate with Git, branches and pull requests 👥\n\n\nNow you build something of your own 🚀\n\n0–10 min. Say this slowly. Many still feel like impostors — the list is evidence."
+  },
+  {
+    "objectID": "week10-block2-project-brief.html#the-final-project",
+    "href": "week10-block2-project-brief.html#the-final-project",
+    "title": "Week 10 · Block 2 — Your project",
+    "section": "The final project 📋",
+    "text": "The final project 📋\n60% of your grade · individual · presented in week 14\nA small command-line tool that does something useful with biological data.\n\n\n\nRequirement\nDetail\n\n\n\n\nRuns from the terminal\npython3 my_tool.py &lt;input&gt; ⚙️\n\n\nAt least 3 functions\neach doing one thing, with clear names\n\n\nReads a real file\nFASTA, CSV, or another format\n\n\nProduces output\nprinted report or a saved file 💾\n\n\nHandles errors\nmissing file, empty input 🛡️\n\n\nREADME\nwhat it does, how to run it, example output\n\n\nGit history\nregular commits, not one giant one 📈\n\n\n\n\n10–25 min. Walk through each row. Stress: small and working beats ambitious and broken."
+  },
+  {
+    "objectID": "week10-block2-project-brief.html#project-ideas",
+    "href": "week10-block2-project-brief.html#project-ideas",
+    "title": "Week 10 · Block 2 — Your project",
+    "section": "Project ideas 💡",
+    "text": "Project ideas 💡\n\n\n\nFASTA statistics tool 📊\nSequence filter (length, GC, N content)\nCodon usage counter\nMotif finder (ATG, restriction sites) ✂️\nFASTA ↔︎ CSV converter\n\n\n\nPrimer property checker (Tm, GC)\nORF finder in 3 reading frames\nCompare two FASTA files 🔍\nSimple quality report per sequence\nSomething from your own studies 🧬\n\n\n\nThe last one is the best one. 💛\n\n25–35 min. Encourage projects tied to their own lab work or thesis — motivation doubles."
+  },
+  {
+    "objectID": "week10-block2-project-brief.html#what-makes-a-good-project",
+    "href": "week10-block2-project-brief.html#what-makes-a-good-project",
+    "title": "Week 10 · Block 2 — Your project",
+    "section": "What makes a good project 🌟",
+    "text": "What makes a good project 🌟\n\n\nYes ✅\n\nSmall and finished\nYou can explain every line 🗣️\nHonest README\nCommits across several weeks\n\n\nNo 🚫\n\nHuge and half-broken\nCode you cannot explain\nOne commit called “final”\nA copy of the class exercises\n\n\n\n“You can explain every line” ties directly to the oral exam — say it explicitly."
+  },
+  {
+    "objectID": "week10-block2-project-brief.html#the-oral-exam",
+    "href": "week10-block2-project-brief.html#the-oral-exam",
+    "title": "Week 10 · Block 2 — Your project",
+    "section": "The oral exam 💬",
+    "text": "The oral exam 💬\n15 minutes, in week 14. We will talk about your code:\n\nWalk me through your tool 🚶\nWhy did you use a dictionary here?\nWhat was the hardest part? 🤔\nWhat would you change with more time?\n\n\n\nA conversation, not an interrogation. I want to hear what you learned. 💛\n\n\n35–45 min. Repeat the reassurance from week 1. Nervousness about orals is normal and reduces with clarity."
+  },
+  {
+    "objectID": "week10-block2-project-brief.html#exercise-write-your-proposal",
+    "href": "week10-block2-project-brief.html#exercise-write-your-proposal",
+    "title": "Week 10 · Block 2 — Your project",
+    "section": "Exercise: Write your proposal 📝",
+    "text": "Exercise: Write your proposal 📝\n⏱️ 25 min · alone, then share in breakout rooms\nCreate PROJECT.md in your repo:\n\nWhat will your tool do? (2–3 sentences)\nInput — what file, what format? Where will you get it? 📄\nOutput — what will it print or save?\nWhich 3 functions will you need?\nWhat is the smallest working version? 🌱\n\nThen: share it with your room and give each other one question 🤔\n\n45–70 min. The “smallest working version” question saves half the failing projects. Rooms of 3 work well here — more perspectives."
+  },
+  {
+    "objectID": "week10-block2-project-brief.html#wrap-up",
+    "href": "week10-block2-project-brief.html#wrap-up",
+    "title": "Week 10 · Block 2 — Your project",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\nHomework 🏠 Commit PROJECT.md — I will read it and comment 💬\nTimeline\n\n\n\nWeek\nWhat\n\n\n\n\n11\nWork on the project, I am here to help 🛟\n\n\n12–13\nR basics (project work continues at home)\n\n\n14\nOral exams 💬\n\n\n\n\nStart small. A working tiny tool beats a broken big one. 🌱\n\n70–80 min. Commit to actually commenting on every PROJECT.md — this is the highest-leverage feedback of the semester."
+  },
+  {
+    "objectID": "week11-block2-review.html#show-and-tell",
+    "href": "week11-block2-review.html#show-and-tell",
+    "title": "Week 11 · Block 2 — Review & build",
+    "section": "Show and tell 🎤",
+    "text": "Show and tell 🎤\n⏱️ 20 min · breakout rooms of 3\nEach person gets 5 minutes:\n\nShare your screen and run your tool — even if it barely works 🙂\nSay what it does and where you are stuck\nThe others give one question and one suggestion 💡\n\n\nRule: comment on the code, never the person 💛\n\n0–20 min. Rehearsal for the oral exam, in a safe setting. Say that out loud — it lowers exam anxiety."
+  },
+  {
+    "objectID": "week11-block2-review.html#things-i-saw-this-block",
+    "href": "week11-block2-review.html#things-i-saw-this-block",
+    "title": "Week 11 · Block 2 — Review & build",
+    "section": "Things I saw this block 🔍",
+    "text": "Things I saw this block 🔍\nCommon fixable issues:\n\nFunctions that print instead of return ⚠️\nEverything in one long block — no functions yet 🧩\nNo error handling: missing file → crash 💥\nCommits: one giant “final” instead of steps 📈\n\n\nAll four are on the grading list. All four take 10 minutes to fix. ⏱️\n\n20–30 min. Replace with what you actually saw in block 1 — specific beats generic."
+  },
+  {
+    "objectID": "week11-block2-review.html#a-tiny-checklist",
+    "href": "week11-block2-review.html#a-tiny-checklist",
+    "title": "Week 11 · Block 2 — Review & build",
+    "section": "A tiny checklist ✅",
+    "text": "A tiny checklist ✅\nBefore week 14, your project needs:\n\nRuns from the terminal with an argument ⚙️\nAt least 3 functions with clear names\nReads a real file 📄\nPrints or saves output\nFriendly message when something is missing 🛡️\nREADME with an example command\nCommits spread over several days 📈\n\n\n30–35 min. Tell them to copy this into their PROJECT.md as a literal checklist."
+  },
+  {
+    "objectID": "week11-block2-review.html#work-time",
+    "href": "week11-block2-review.html#work-time",
+    "title": "Week 11 · Block 2 — Review & build",
+    "section": "Work time 🛠️",
+    "text": "Work time 🛠️\n⏱️ Rest of the block\n\n✋ Raise your hand and I join your room\n👥 Rooms stay open for pair work\n💬 Chat for quick questions\n\n\nBefore you leave: commit, push, and tick one box on the checklist. 💾\n\n35–75 min. Same rotation as block 1. Prioritise students you did not reach earlier."
+  },
+  {
+    "objectID": "week11-block2-review.html#wrap-up",
+    "href": "week11-block2-review.html#wrap-up",
+    "title": "Week 11 · Block 2 — Review & build",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\nNext two weeks: R 🇷\nProject work continues at home — and I am available:\n\n💬 [chat / e-mail / office hours]\nPush your work regularly, I can look at it any time 👀\n\n\nWeek 14: your 15 minutes 💬\n\n75–80 min. Fill in your actual availability channel. Students rarely ask if they don’t know how."
+  },
+  {
+    "objectID": "week09-block1-modules.html#warm-up",
+    "href": "week09-block1-modules.html#warm-up",
+    "title": "Week 9 · Block 1 — Modules",
     "section": "Warm-up 🔥",
-    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\nWhat error would you expect from each line?\nopen(\"data/sequenses.fasta\")\nint(\"ATG\")\ncounts[\"X\"]\n\"ATG\" + 5\n\n0–10 min. They have met all four already. Naming them out loud removes the fear."
+    "text": "Warm-up 🔥\n⏱️ 10 min\nHow is your pair assignment going?\n\nIn the chat: how many pull requests does your repo have? 🔢\nAny conflict yet? 💥\n\n\n0–10 min. Quick pulse check. Rooms with 0 PRs get a nudge and a concrete next step."
   },
   {
-    "objectID": "week07-block2-debugging.html#errors-are-messages-not-failures",
-    "href": "week07-block2-debugging.html#errors-are-messages-not-failures",
-    "title": "Week 7 · Block 2 — Errors & debugging",
-    "section": "Errors are messages, not failures 💌",
-    "text": "Errors are messages, not failures 💌\n\nNobody writes code that works the first time. Not me, not your supervisor, not anyone. 🙂\n\n\nThe skill is not avoiding errors. The skill is reading them.\n\n10–25 min. Say this sincerely — online, beginners often feel alone with a red screen."
+    "objectID": "week09-block1-modules.html#your-own-module",
+    "href": "week09-block1-modules.html#your-own-module",
+    "title": "Week 9 · Block 1 — Modules",
+    "section": "Your own module 📦",
+    "text": "Your own module 📦\nAny .py file is a module you can import.\n# in analyse.py\nfrom seq_functions import gc_content, reverse_complement\n\nprint(gc_content(\"ATGCGC\"))\n\nimport seq_functions               # whole module\nseq_functions.gc_content(\"ATGC\")   # then use the prefix\n\n10–25 min. They already did this in week 7 — now explain why it worked (same folder)."
   },
   {
-    "objectID": "week07-block2-debugging.html#how-to-read-a-traceback",
-    "href": "week07-block2-debugging.html#how-to-read-a-traceback",
-    "title": "Week 7 · Block 2 — Errors & debugging",
-    "section": "How to read a traceback 🔍",
-    "text": "How to read a traceback 🔍\nTraceback (most recent call last):\n  File \"fasta_report.py\", line 14, in &lt;module&gt;\n    gc = gc_content(seq)\n  File \"seq_functions.py\", line 3, in gc_content\n    return gc / len(sequence)\nZeroDivisionError: division by zero\n\n\nBottom line = what went wrong 🎯\nAbove it = where, and how you got there\nRead from the bottom up"
+    "objectID": "week09-block1-modules.html#the-__main__-trick",
+    "href": "week09-block1-modules.html#the-__main__-trick",
+    "title": "Week 9 · Block 1 — Modules",
+    "section": "The __main__ trick 🎩",
+    "text": "The __main__ trick 🎩\n# seq_functions.py\ndef gc_content(seq):\n    ...\n\nif __name__ == \"__main__\":\n    print(\"Testing:\", gc_content(\"ATGC\"))   # runs ONLY when executed directly\n\nImport it → the test does not run. Run it → it does. 🪄\n\nWithout this, importing a file runs all its top-level prints — confusing and messy."
   },
   {
-    "objectID": "week07-block2-debugging.html#the-usual-suspects",
-    "href": "week07-block2-debugging.html#the-usual-suspects",
-    "title": "Week 7 · Block 2 — Errors & debugging",
-    "section": "The usual suspects",
-    "text": "The usual suspects\n\n\n\nError\nUsually means\n\n\n\n\nSyntaxError\nMissing : ) or quote\n\n\nIndentationError\nWrong number of spaces\n\n\nNameError\nTypo, or variable not defined yet\n\n\nTypeError\nMixing text and numbers\n\n\nKeyError\nThat key is not in the dictionary\n\n\nIndexError\nPosition beyond the end of the list\n\n\nFileNotFoundError\nWrong path — run pwd 📍"
+    "objectID": "week09-block1-modules.html#the-standard-library",
+    "href": "week09-block1-modules.html#the-standard-library",
+    "title": "Week 9 · Block 1 — Modules",
+    "section": "The standard library 🏛️",
+    "text": "The standard library 🏛️\nPython ships with hundreds of ready modules:\nimport os        # files and folders\nimport sys       # the script itself, arguments\nimport random    # random numbers\nimport math      # sqrt, log, ...\nfrom collections import Counter   # counting, done for you 🎁\nCounter(\"ATGCGC\")   # Counter({'G': 2, 'C': 2, 'A': 1, 'T': 1})\n\nShow Counter after they wrote counting by hand for two weeks — the reaction is always good."
   },
   {
-    "objectID": "week07-block2-debugging.html#debugging-with-print",
-    "href": "week07-block2-debugging.html#debugging-with-print",
-    "title": "Week 7 · Block 2 — Errors & debugging",
-    "section": "Debugging with print() 🖨️",
-    "text": "Debugging with print() 🖨️\nfor line in f:\n    line = line.strip()\n    print(\"DEBUG:\", repr(line))    # what is REALLY in there?\n    if line.startswith(\"&gt;\"):\n        ...\n\nrepr() shows the invisible: 'ATGC\\n' vs 'ATGC' 👀\n\nProfessional debuggers exist — but print() is what everyone actually uses first."
+    "objectID": "week09-block1-modules.html#installing-packages",
+    "href": "week09-block1-modules.html#installing-packages",
+    "title": "Week 9 · Block 1 — Modules",
+    "section": "Installing packages 📥",
+    "text": "Installing packages 📥\npip3 install biopython\nfrom Bio.Seq import Seq\n\ns = Seq(\"ATGCGC\")\nprint(s.reverse_complement())   # someone already wrote your function 🙂\n\nBut: you now understand what it does inside. That is the difference. 🧠\n\n25–35 min. Important framing: libraries are not cheating — but blind use is. Biopython install may fail on some laptops; keep it optional, not required for the exercise."
   },
   {
-    "objectID": "week07-block2-debugging.html#silent-bugs",
-    "href": "week07-block2-debugging.html#silent-bugs",
-    "title": "Week 7 · Block 2 — Errors & debugging",
-    "section": "Silent bugs 🤫",
-    "text": "Silent bugs 🤫\ngc = (seq.count(\"G\") + seq.count(\"C\")) / len(seq) * 100\nNo error. Result: 4200.0 🤨\n\nAsk yourself: does this number make biological sense?\n\n25–35 min. Most dangerous class of bug: wrong results that look fine. Tie back to the AI policy — this is what you cannot catch if you did not write the code."
+    "objectID": "week09-block1-modules.html#exercise-1-split-your-code",
+    "href": "week09-block1-modules.html#exercise-1-split-your-code",
+    "title": "Week 9 · Block 1 — Modules",
+    "section": "Exercise 1: Split your code 🧩",
+    "text": "Exercise 1: Split your code 🧩\n⏱️ 15 min · your own screen · react ✅\n\nMake sure scripts/seq_functions.py has your functions only\nCreate scripts/run_analysis.py that imports them\nAdd the if __name__ == \"__main__\": block to seq_functions.py\nRun both files — does each behave as expected?\n\n💡 Bonus: replace your own count_bases with Counter and compare results\n\n35–50 min. Import errors here are almost always about which folder they run python from."
   },
   {
-    "objectID": "week07-block2-debugging.html#exercise-1-fix-the-script",
-    "href": "week07-block2-debugging.html#exercise-1-fix-the-script",
-    "title": "Week 7 · Block 2 — Errors & debugging",
-    "section": "Exercise 1: Fix the script 🔧",
-    "text": "Exercise 1: Fix the script 🔧\n⏱️ 20 min · breakout rooms · 5 bugs\nI will paste scripts/broken_report.py in the chat 📋\n\nRun it and read the first error only\nFix it, run again, repeat\nWrite in the chat which error types you met\n\n💡 Bonus: one bug produces no error at all. Can you find it? 🤫\n\n35–55 min. Prepare broken_report.py beforehand: missing colon, wrong variable name, missing strip(), KeyError, and one silent maths bug."
+    "objectID": "week09-block1-modules.html#exercise-2-explore-a-module",
+    "href": "week09-block1-modules.html#exercise-2-explore-a-module",
+    "title": "Week 9 · Block 1 — Modules",
+    "section": "Exercise 2: Explore a module 🔭",
+    "text": "Exercise 2: Explore a module 🔭\n⏱️ 25 min · breakout rooms\nEach room picks one module: random · math · os · Counter\n\nFind out what it does — read the docs, try it out\nWrite 3 short examples in scripts/explore_&lt;module&gt;.py\nFind one use for it in a biology context 🧬\nBe ready to show your room’s findings in 3 minutes 🎤\n\n\n50–75 min. Assign modules so each is taken. Bring rooms back and let each present briefly — students teaching students."
   },
   {
-    "objectID": "week07-block2-debugging.html#defensive-coding",
-    "href": "week07-block2-debugging.html#defensive-coding",
-    "title": "Week 7 · Block 2 — Errors & debugging",
-    "section": "Defensive coding 🛡️",
-    "text": "Defensive coding 🛡️\nif len(sequence) == 0:\n    print(\"Warning: empty sequence, skipping\")\n    continue\n\nvalue = counts.get(\"N\", 0)     # safe lookup\n\nCheck your assumptions before the data surprises you."
-  },
-  {
-    "objectID": "week07-block2-debugging.html#exercise-2-make-it-robust",
-    "href": "week07-block2-debugging.html#exercise-2-make-it-robust",
-    "title": "Week 7 · Block 2 — Errors & debugging",
-    "section": "Exercise 2: Make it robust 🧪",
-    "text": "Exercise 2: Make it robust 🧪\n⏱️ 20 min · pairs\nTake your own fasta_report.py and break-proof it:\n\nWhat happens if the file does not exist? Print a friendly message\nWhat if a sequence is empty? Skip it, don’t crash\nWhat if a sequence contains N? Report how many\nSwap scripts with another room and try to break theirs 😈\n\n\n55–75 min. The swap is the fun part — testing someone else’s code is a real skill."
-  },
-  {
-    "objectID": "week07-block2-debugging.html#wrap-up",
-    "href": "week07-block2-debugging.html#wrap-up",
-    "title": "Week 7 · Block 2 — Errors & debugging",
+    "objectID": "week09-block1-modules.html#wrap-up",
+    "href": "week09-block1-modules.html#wrap-up",
+    "title": "Week 9 · Block 1 — Modules",
     "section": "Wrap-up ✅",
-    "text": "Wrap-up ✅\n\nRead tracebacks bottom up 🔍\nprint() and repr() are your debugger\nAsk: does this number make sense? 🤨\nErrors are normal — being stuck silently is not 💬\n\nHomework 🏠 Commit your robust version.\n\nNext week: Git in teams — and your pair assignment 👥\n\n75–80 min. Announce the pair assignment explicitly: 25% of the grade, starts next week."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#hello",
-    "href": "week01-block1-welcome.html#hello",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Hello! 👋",
-    "text": "Hello! 👋\nPlease turn on your camera if you can 🎥\n\n0–10 min. Short personal intro: data engineer, bioinformatics MSc, teaching at KSE. Tell ONE concrete story where code saved you hours of manual work with biological data."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#who-am-i",
-    "href": "week01-block1-welcome.html#who-am-i",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Who am I?",
-    "text": "Who am I?\n\n\nOfficial 🎓\n\nData engineer — Python, SQL, data pipelines\nMSc in Technical Physics 🇵🇱\nMSc in Bioinformatics 🇦🇹\nI started with zero programming too\n\n\nLess official 🎪\n\nLived in Kyiv 2023–2024, still visiting regularly\nTEDxGdansk speaker\nFounder of Cyrkarium, an NGO promoting aerial arts in Poland\n\n\n\nKeep it light — the “less official” part helps students see you as a person, not just a lecturer. Good hook: ask them to guess what “aerial arts” means before explaining."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#why-does-a-biologist-need-code",
-    "href": "week01-block1-welcome.html#why-does-a-biologist-need-code",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Why does a biologist need code?",
-    "text": "Why does a biologist need code?\n\n\nBy hand\n\n1 FASTA file → OK\n500 FASTA files → a week of copy & paste\n“Which version of the table did I use?” 🤯\n\n\nWith code\n\n500 files → one script, a few seconds\nSame result every time\nFull history of every change\n\n\n\nKeep it short. The goal is motivation, not a lecture."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#survey-grab-your-phone",
-    "href": "week01-block1-welcome.html#survey-grab-your-phone",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Survey 📱 — grab your phone",
-    "text": "Survey 📱 — grab your phone\n\n\n\n\nScan the QR code\nor go to menti.com and use the link in the chat:\nmenti.com/alk33hyab8sr\n\n\n10–20 min. Paste the link in the chat too — not everyone has a phone at hand. Suggested questions: experience scale 1–5, tools used before, one-word feeling, favourite organism, worries, expectations."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#your-answers",
-    "href": "week01-block1-welcome.html#your-answers",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Your answers 💬",
-    "text": "Your answers 💬\nLet’s look at them together.\n\n20–30 min. Discuss results live, right after the survey, while students are curious. If a worry is about grading or AI — say “great question, we’ll get there in 15 minutes” and come back to it in the rules part."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#interview-your-partner",
-    "href": "week01-block1-welcome.html#interview-your-partner",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Interview your partner 🎤",
-    "text": "Interview your partner 🎤\nBreakout rooms · 2 people · 5 minutes\n\nWhat’s your name and what do you study?\nYour favourite organism / field of biology?\nOne thing you are afraid of in this course?\nOne thing you would like to be able to do after this course?\n\n\nBack in the main room: introduce your partner in one sentence.\n\n30–45 min. Paste the 4 questions in the chat BEFORE opening the rooms (slides are not visible in breakout rooms). Random pairs. With a big group: introductions in the chat instead of speaking, then read a few aloud."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#what-we-will-learn",
-    "href": "week01-block1-welcome.html#what-we-will-learn",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "What we will learn",
-    "text": "What we will learn\n\n\n\nWeeks\nTopic\n\n\n\n\n1\nGit & GitHub — from day one\n\n\n2\nTerminal & Bash\n\n\n3–7\nPython basics\n\n\n8\nGit in teams\n\n\n9–11\nPython + Bash together, mini-project\n\n\n12–13\nR basics\n\n\n14\nOral exams — talking about your project 💬\n\n\n\n\n45–65 min: course rules (incl. short Q&A at the end)."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#how-a-typical-class-looks",
-    "href": "week01-block1-welcome.html#how-a-typical-class-looks",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "How a typical class looks",
-    "text": "How a typical class looks\n\n\n\nTime\nWhat happens\n\n\n\n\n10 min\nWarm-up task\n\n\n15 min\nSomething new (short!)\n\n\n10 min\nLive coding — you tell me in the chat what to type\n\n\n35 min\nYou code in pairs (breakout rooms)\n\n\n10 min\nDiscussion + git commit + git push\n\n\n\n\nLess listening, more coding."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#rules-of-our-online-room",
-    "href": "week01-block1-welcome.html#rules-of-our-online-room",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Rules of our online room",
-    "text": "Rules of our online room\n\n🎥 Camera on during pair work, if you can\n👥 Pairs: one shares the screen, the other guides — switch every 10 min\n✅ Reaction = “it works” · ✋ Raise hand = “I need help”\n⏱️ Stuck for more than 5 minutes? Write in the chat\n❌ Errors are normal — reading them is a skill we will learn\n💾 Every class ends with a commit\n\n\nStress the 5-minute rule: online, beginners get stuck silently."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#assessment",
-    "href": "week01-block1-welcome.html#assessment",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Assessment",
-    "text": "Assessment\n\n\n\nComponent\nWhen\nWeight\n\n\n\n\n📝 Quizzes (7 short online quizzes)\nevery ~2 weeks\n15%\n\n\n👥 Pair assignment (Git teamwork)\nweek 8\n25%\n\n\n🧬 Final project (individual) + oral exam\nweek 14\n60%"
-  },
-  {
-    "objectID": "week01-block1-welcome.html#oral-exam",
-    "href": "week01-block1-welcome.html#oral-exam",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Oral exam 💬",
-    "text": "Oral exam 💬\n\n15 minutes per person, in the last week of classes\nWe talk about your final project code\nGoal: see what you have learned\n\n\n\nThis is a conversation, not an interrogation. 🙂\n\n\n\nNo attendance tracking — but practice in class is where you learn.\n\nOral exam questions ideas: walk me through your script; why did you use a dictionary here; what would you change; what was the hardest part. Timing: week 14 has 160 min → only ~10 students in class time. Plan extra slots if the group is bigger."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#ai-tools-chatgpt-copilot-claude",
-    "href": "week01-block1-welcome.html#ai-tools-chatgpt-copilot-claude",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "AI tools (ChatGPT, Copilot, Claude…)",
-    "text": "AI tools (ChatGPT, Copilot, Claude…)\n✅ OK\n\nExplaining an error message\nExplaining what a piece of code does\n\n❌ Not OK\n\nGenerating complete solutions to assignments\nSubmitting code you cannot explain\n\n\n\nRule of thumb: if you can’t explain it, don’t submit it."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#questions",
-    "href": "week01-block1-welcome.html#questions",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Questions? 🙋",
-    "text": "Questions? 🙋\nChat or unmute 🎙️\n\nAlso come back to survey worries you postponed earlier."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#create-a-github-account",
-    "href": "week01-block1-welcome.html#create-a-github-account",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "Create a GitHub account 🐙",
-    "text": "Create a GitHub account 🐙\nBreakout rooms · pairs · help each other\n\nGo to github.com → Sign up\nUse an e-mail you check regularly\nChoose a professional username (e.g. firstname-lastname)\nConfirm your e-mail\nPost your username in the chat 📝\n\n\n65–80 min. Paste the steps in the chat before opening rooms. Collect usernames from the chat."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#if-you-have-time-left",
-    "href": "week01-block1-welcome.html#if-you-have-time-left",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "If you have time left ⏳",
-    "text": "If you have time left ⏳\nOpen a terminal and type:\ngit --version\n\nWindows: install Git for Windows → use Git Bash\nmacOS: open Terminal (it may ask to install developer tools — say yes)\nLinux: usually already installed\n\nReact with ✅ when you see a version number."
-  },
-  {
-    "objectID": "week01-block1-welcome.html#see-you-in-block-2",
-    "href": "week01-block1-welcome.html#see-you-in-block-2",
-    "title": "Week 1 · Block 1 — Welcome!",
-    "section": "See you in Block 2!",
-    "text": "See you in Block 2!\nNext: your first commit 🎉"
+    "text": "Wrap-up ✅\n\nEvery .py file is a module 📦\nfrom x import y · if __name__ == \"__main__\"\nThe standard library is huge — look before you write 🔭\npip install for everything else\n\nHomework 🏠 Commit your split scripts.\n\nNext block: running your scripts like real tools ⚙️\n\n75–80 min."
   },
   {
     "objectID": "week04-block1-lists.html#warm-up",
@@ -1062,5 +1559,47 @@
     "title": "Week 4 · Block 1 — Lists",
     "section": "Wrap-up ✅",
     "text": "Wrap-up ✅\n\nLists hold many values: [\"ATG\", \"GGC\"]\nSame indexing and slicing as strings\nappend remove sorted sum max min\nsplit() turns text into a list 📄\n\nHomework 🏠 Commit seq_stats.py.\n\nNext block: decisions — if 🚦\n\n70–80 min. Tease: “next time your script can decide what to do — e.g. skip short sequences”."
+  },
+  {
+    "objectID": "week13-block1-python-vs-r.html#warm-up",
+    "href": "week13-block1-python-vs-r.html#warm-up",
+    "title": "Week 13 · Block 1 — Python vs R",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min\nIn R:\nlengths &lt;- c(120, 85, 300, 42, 210)\n\nMean and max\nOnly values above 100\nA histogram 📊\n\n\n0–10 min. Fast recall before comparing languages."
+  },
+  {
+    "objectID": "week13-block1-python-vs-r.html#same-task-two-languages",
+    "href": "week13-block1-python-vs-r.html#same-task-two-languages",
+    "title": "Week 13 · Block 1 — Python vs R",
+    "section": "Same task, two languages",
+    "text": "Same task, two languages\n\n\nPython 🐍\nlengths = [120, 85, 300]\n\ntotal = sum(lengths)\navg = total / len(lengths)\n\nlong = []\nfor x in lengths:\n    if x &gt; 100:\n        long.append(x)\n\nR 🇷\nlengths &lt;- c(120, 85, 300)\n\navg &lt;- mean(lengths)\n\n\n\nlong &lt;- lengths[lengths &gt; 100]\n\n\n10–25 min. Let them see it, don’t over-explain. R wins on tables, Python wins elsewhere."
+  },
+  {
+    "objectID": "week13-block1-python-vs-r.html#where-each-one-shines",
+    "href": "week13-block1-python-vs-r.html#where-each-one-shines",
+    "title": "Week 13 · Block 1 — Python vs R",
+    "section": "Where each one shines ✨",
+    "text": "Where each one shines ✨\n\n\n\nTask\nBetter fit\n\n\n\n\nParsing FASTA, automating files\nPython 🐍\n\n\nStatistics, models, tests\nR 🇷\n\n\nPublication-quality figures\nR (ggplot2) 📊\n\n\nPipelines, servers, big workflows\nPython ⚙️\n\n\nRNA-seq, microarrays (Bioconductor)\nR 🧬\n\n\nMachine learning\nPython 🤖\n\n\n\n\nMost bioinformaticians use both, and that is normal. 💛"
+  },
+  {
+    "objectID": "week13-block1-python-vs-r.html#the-real-skill",
+    "href": "week13-block1-python-vs-r.html#the-real-skill",
+    "title": "Week 13 · Block 1 — Python vs R",
+    "section": "The real skill 🧠",
+    "text": "The real skill 🧠\nWhat transfers between every language:\n\nBreaking a problem into steps 🧩\nVariables, loops, conditions, functions\nReading error messages 🔍\nVersion control 💾\nAsking: does this result make sense? 🤨\n\n\n\nYou did not learn Python. You learned to program — in Python. 🎓\n\n\n25–35 min. This is the closing message of the whole course. Say it warmly."
+  },
+  {
+    "objectID": "week13-block1-python-vs-r.html#exercise-translate-it",
+    "href": "week13-block1-python-vs-r.html#exercise-translate-it",
+    "title": "Week 13 · Block 1 — Python vs R",
+    "section": "Exercise: Translate it 🔄",
+    "text": "Exercise: Translate it 🔄\n⏱️ 30 min · breakout rooms\nTake one of your own Python scripts from weeks 3–7 and rewrite a piece of it in R:\n\nPick something small — GC content, filtering, counting\nWrite the R version in scripts/translated.R\nRun both — do they give the same answer? ✅\nIn the chat: which version was shorter? Which was clearer? 🤔\n\n💡 Bonus: which part was hardest to translate, and why?\n\n35–70 min. The comparison of their own code is far more convincing than my slides. Common trap: indexing from 1, and strsplit() returning a list."
+  },
+  {
+    "objectID": "week13-block1-python-vs-r.html#where-to-go-next",
+    "href": "week13-block1-python-vs-r.html#where-to-go-next",
+    "title": "Week 13 · Block 1 — Python vs R",
+    "section": "Where to go next 🌱",
+    "text": "Where to go next 🌱\n\n\nPython 🐍\n\nBiopython 🧬\npandas (tables)\nRosalind.info (puzzles) 🧩\n\n\nR 🇷\n\nggplot2 📊\nBioconductor\nR for Data Science (free book) 📖\n\n\n\nAnd: The Carpentries lessons, free and biology-focused 🎓\n\n70–80 min. Put the actual links in the chat."
   }
 ]
