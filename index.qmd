@@ -1,0 +1,11 @@
+---
+title: "Programming and Computing Basics"
+subtitle: "KSE · 2026"
+listing:
+  contents: "week*.qmd"
+  type: table
+  sort: "filename"
+  fields: [subtitle]
+  field-display-names:
+    subtitle: "Lecture"
+---
