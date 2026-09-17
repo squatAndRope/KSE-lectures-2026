@@ -112,6 +112,125 @@
     "text": "See you in Block 2!\nNext: your first commit 🎉"
   },
   {
+    "objectID": "week02-block1-terminal.html#warm-up",
+    "href": "week02-block1-terminal.html#warm-up",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\n\nOpen your terminal and go into your programming-basics folder\nRun:\n\ngit log --oneline\n\nHow many commits do you have? Write the number in the chat 🔢\n\n\n0–10 min. Quick check who managed the homework. If someone has 0 commits — pair them with someone who has 2."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#why-the-terminal",
+    "href": "week02-block1-terminal.html#why-the-terminal",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Why the terminal? 💻",
+    "text": "Why the terminal? 💻\n\n\nClicking\n\nRename 300 files → 300 × click\n“Which files did I already process?”\nImpossible to repeat exactly\n\n\nTerminal\n\nOne line for 300 files\nThe command is the record of what you did\nRuns on the server where your data lives 🧬\n\n\n\n10–25 min: new material. Mention: sequencing data lives on remote servers — there is no mouse there."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#where-am-i",
+    "href": "week02-block1-terminal.html#where-am-i",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Where am I? 🗺️",
+    "text": "Where am I? 🗺️\nThe file system is a tree — you are always standing somewhere in it.\npwd          # print working directory — where am I?\nls           # list — what is here?\nls -l        # long: size, date\nls -a        # all: also hidden files (.git!)\n\nShow that .git is a hidden folder — that’s where the whole history lives."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#moving-around",
+    "href": "week02-block1-terminal.html#moving-around",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Moving around 🚶",
+    "text": "Moving around 🚶\ncd kse           # go into a folder\ncd ..            # one level UP\ncd ~             # go home\ncd -             # back to where I was\n\nTab ⇥ completes names · ↑ repeats the last command\n\nInsist on Tab — it is the single biggest quality-of-life improvement for beginners, and it prevents typos."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#exercise-1-find-your-way",
+    "href": "week02-block1-terminal.html#exercise-1-find-your-way",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Exercise 1: Find your way 🧭",
+    "text": "Exercise 1: Find your way 🧭\n⏱️ 10 min · your own screen · react ✅ when done\n\npwd — where are you now?\nGo home: cd ~\nls — what folders do you see?\nGo into your programming-basics folder\nls -a — can you find the .git folder?\nGo one level up, then back — using Tab at least once\n\n💡 Bonus: what does ls -lh show that ls -l doesn’t?\n\n25–35 min. Paste steps in the chat. Watch reactions; anyone with ✋ shares their screen."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#making-and-moving-things",
+    "href": "week02-block1-terminal.html#making-and-moving-things",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Making and moving things 🧰",
+    "text": "Making and moving things 🧰\nmkdir data              # make a folder\ntouch notes.txt         # make an empty file\ncp notes.txt backup.txt # copy\nmv notes.txt data/      # move (also = rename!)\nrm backup.txt           # delete\n\n\n\n\n\n\n\nWarning\n\n\nrm does not use a trash bin. Deleted is deleted. 💀\n\n\n\n\nTell a short real story about deleting something important. Then: this is exactly why we use Git."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#looking-inside-files",
+    "href": "week02-block1-terminal.html#looking-inside-files",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Looking inside files 👀",
+    "text": "Looking inside files 👀\nhead sequences.fasta      # first 10 lines\nhead -n 3 sequences.fasta # first 3 lines\ntail sequences.fasta      # last 10 lines\nless sequences.fasta      # scroll (q = quit!)\nwc -l sequences.fasta     # count lines\n\nIn less: space = next page, q = quit 🙂\n\nEveryone gets stuck in less at least once. Say “q” twice."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#exercise-2-build-a-project",
+    "href": "week02-block1-terminal.html#exercise-2-build-a-project",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "Exercise 2: Build a project 🏗️",
+    "text": "Exercise 2: Build a project 🏗️\n⏱️ 25 min · breakout rooms · one shares the screen, switch after 10 min\nInside programming-basics:\n\nCreate folders: data, scripts, results\nIn data, create a file sample.txt and put 3 lines of text in it (use nano sample.txt, then Ctrl+O, Enter, Ctrl+X)\nCheck with head and wc -l that it has 3 lines\nCopy it to results/sample_copy.txt\nRename the copy to results/backup.txt\ngit add → git commit → git push\n\n💡 Bonus: what happens in Git with the empty scripts folder? Why?\n\n35–70 min. The bonus is a great discussion: Git tracks files, not folders — empty folders never appear on GitHub. Plan B for nano trouble: create the file in VS Code / any editor."
+  },
+  {
+    "objectID": "week02-block1-terminal.html#what-we-learned",
+    "href": "week02-block1-terminal.html#what-we-learned",
+    "title": "Week 2 · Block 1 — The terminal",
+    "section": "What we learned ✅",
+    "text": "What we learned ✅\n\n\n\nCommand\nWhat it does\n\n\n\n\npwd ls cd\nWhere am I, what’s here, move\n\n\nmkdir touch\nMake folders and files\n\n\ncp mv rm\nCopy, move/rename, delete\n\n\nhead tail less wc\nLook inside, count\n\n\n\n\nNext block: making these commands work together on real DNA data 🧬\n\n70–80 min. Two students share their screen and show their folder structure on GitHub."
+  },
+  {
+    "objectID": "week02-block2-bash.html#warm-up",
+    "href": "week02-block2-bash.html#warm-up",
+    "title": "Week 2 · Block 2 — Bash on real data",
+    "section": "Warm-up 🔥",
+    "text": "Warm-up 🔥\n⏱️ 10 min · in the chat\nYou are in programming-basics. What does each command do?\ncd ../..\nls -a\nwc -l data/sample.txt\nrm -r results\n\nCareful with the last one — what would you lose? 💀\n\n0–10 min. Predict-then-run: ask for answers in the chat BEFORE anyone runs them."
+  },
+  {
+    "objectID": "week02-block2-bash.html#our-data-fasta",
+    "href": "week02-block2-bash.html#our-data-fasta",
+    "title": "Week 2 · Block 2 — Bash on real data",
+    "section": "Our data: FASTA 🧬",
+    "text": "Our data: FASTA 🧬\n&gt;seq1 Homo sapiens BRCA1 partial\nATGGATTTATCTGCTCTTCGCGTTGAAGAAGTACAAAATGTCATTAATGC\n&gt;seq2 Mus musculus Brca1 partial\nATGGATTTATCTGCTGTTCGCGTTGAAGAAGTACAAAATGTCATTAATGC\n\nHeader lines start with &gt;\nSequence lines are the DNA itself\n\n\nDownload sequences.fasta into your data/ folder — link in the chat 🔗\n\n10–25 min. Put the raw GitHub link in the chat, e.g. the data/ folder of the course repo. Alternative: curl -O &lt;link&gt; — nice, but only if their network cooperates."
+  },
+  {
+    "objectID": "week02-block2-bash.html#searching-grep",
+    "href": "week02-block2-bash.html#searching-grep",
+    "title": "Week 2 · Block 2 — Bash on real data",
+    "section": "Searching: grep 🔎",
+    "text": "Searching: grep 🔎\ngrep \"&gt;\" sequences.fasta        # only header lines\ngrep -c \"&gt;\" sequences.fasta     # COUNT them = number of sequences\ngrep -i \"brca\" sequences.fasta  # ignore upper/lower case\ngrep -v \"&gt;\" sequences.fasta     # everything EXCEPT headers\n\n-c = count · -i = ignore case · -v = invert\n\ngrep -c \"&gt;\" is the classic “how many sequences do I have” one-liner. Make sure everyone sees it work."
+  },
+  {
+    "objectID": "week02-block2-bash.html#pipes",
+    "href": "week02-block2-bash.html#pipes",
+    "title": "Week 2 · Block 2 — Bash on real data",
+    "section": "Pipes: | 🔗",
+    "text": "Pipes: | 🔗\nThe output of one command becomes the input of the next.\ngrep -v \"&gt;\" sequences.fasta | wc -l    # how many sequence lines?\ngrep \"&gt;\" sequences.fasta | head -n 3   # first 3 headers\n\n\nSmall tools, combined. That is the whole idea of the terminal.\n\n\nAnalogy: a pipeline in the lab — each step passes the sample to the next step."
+  },
+  {
+    "objectID": "week02-block2-bash.html#saving-results",
+    "href": "week02-block2-bash.html#saving-results",
+    "title": "Week 2 · Block 2 — Bash on real data",
+    "section": "Saving results: > 💾",
+    "text": "Saving results: &gt; 💾\ngrep \"&gt;\" sequences.fasta &gt; headers.txt     # write to a file\ngrep \"&gt;\" sequences.fasta &gt;&gt; headers.txt    # ADD to a file\n\n\n\n\n\n\n\nWarning\n\n\n&gt; overwrites the file without asking. &gt;&gt; adds at the end."
+  },
+  {
+    "objectID": "week02-block2-bash.html#exercise-explore-the-data",
+    "href": "week02-block2-bash.html#exercise-explore-the-data",
+    "title": "Week 2 · Block 2 — Bash on real data",
+    "section": "Exercise: Explore the data 🧬",
+    "text": "Exercise: Explore the data 🧬\n⏱️ 25 min · breakout rooms · switch who types after 10 min\n\nHow many sequences are in sequences.fasta?\nSave all headers into results/headers.txt\nHow many lines are not headers?\nFind all sequences from Homo sapiens — how many?\nShow the first 2 headers only (use a pipe)\n\n💡 Bonus: what does this do, and why is the number different from question 1?\ngrep -c \"ATG\" sequences.fasta\n\n25–60 min. Paste the questions in the chat before opening rooms. Bonus discussion: grep counts LINES containing ATG, not occurrences — a classic bioinformatics trap."
+  },
+  {
+    "objectID": "week02-block2-bash.html#back-to-git-.gitignore",
+    "href": "week02-block2-bash.html#back-to-git-.gitignore",
+    "title": "Week 2 · Block 2 — Bash on real data",
+    "section": "Back to Git: .gitignore 🙈",
+    "text": "Back to Git: .gitignore 🙈\nSome files should never go to GitHub:\n\nhuge data files 🐘\nresults you can regenerate\npasswords and tokens 🔑\n\nnano .gitignore\nresults/\n*.fasta\n\nWarning: .gitignore only works on files Git is not tracking yet 😉\n\n60–70 min. Tell them this is exactly the mistake I made with these slides — rendered files ended up on GitHub."
+  },
+  {
+    "objectID": "week02-block2-bash.html#wrap-up",
+    "href": "week02-block2-bash.html#wrap-up",
+    "title": "Week 2 · Block 2 — Bash on real data",
+    "section": "Wrap-up ✅",
+    "text": "Wrap-up ✅\n\n\n\nCommand\nWhat it does\n\n\n\n\ngrep \"x\" file\nFind lines containing x\n\n\ngrep -c -i -v\nCount · ignore case · invert\n\n\ncmd1 \\| cmd2\nPipe: output → input\n\n\n&gt; file &gt;&gt; file\nSave · append\n\n\n\nHomework 🏠 Add .gitignore to your repo, commit and push.\n\nNext week: Python 🐍\n\n70–80 min. Ask 2 students to share their screen with the answer to question 4. Exit ticket in the chat: one command they will actually use again."
+  },
+  {
     "objectID": "week01-block2-git.html#warm-up-5-min",
     "href": "week01-block2-git.html#warm-up-5-min",
     "title": "Programming and Computing Basics",
@@ -207,6 +326,6 @@
     "href": "index.html",
     "title": "Programming and Computing Basics",
     "section": "",
-    "text": "Lecture\n\n\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nWeek 1 · Block 2 — Your first commit\n\n\n\n\n\n\nNo matching items"
+    "text": "Lecture\n\n\n\n\n\n\n\n\nWeek 1 · Block 1 — Get know each other\n\n\n\n\n\n\nWeek 1 · Block 2 — Your first commit\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nProgramming and Computing Basics · KSE 2026\n\n\n\n\n\n\nNo matching items"
   }
 ]
