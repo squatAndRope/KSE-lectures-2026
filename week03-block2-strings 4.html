@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Klaudia Brzezińska">
-  <title>Programming and Computing Basics – Week 2 · Block 1 — The terminal</title>
+  <title>Programming and Computing Basics – Week 3 · Block 2 — Strings are sequences</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -187,17 +187,13 @@
       margin-right: 0; 
     }
   </style>
-  <meta name="mermaid-theme" content="dark">
-  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 2 · Block 1 — The terminal</h1>
+  <h1 class="title">Week 3 · Block 2 — Strings are sequences</h1>
   <p class="subtitle">Programming and Computing Basics · KSE 2026</p>
 
 <div class="quarto-title-authors">
@@ -211,17 +207,14 @@ Klaudia Brzezińska
 </section>
 <section id="warm-up" class="slide level2 smaller">
 <h2>Warm-up 🔥</h2>
-<p>⏱️ 10 min · in the chat</p>
-<ol type="1">
-<li>Open your terminal and go into your <code>programming-basics</code> folder</li>
-<li>Run:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="3" type="1">
-<li>How many commits do you have? Write the number in the chat 🔢</li>
-</ol>
+<p>⏱️ 10 min</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCTA"</span></span>
+<span id="cb1-2"><a></a><span class="bu">print</span>(<span class="bu">len</span>(seq))</span>
+<span id="cb1-3"><a></a><span class="bu">print</span>(seq.count(<span class="st">"A"</span>))</span>
+<span id="cb1-4"><a></a><span class="bu">print</span>(seq.count(<span class="st">"AT"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What will each line print? Chat first, run second 💬</p>
 <aside class="notes">
-<p>0–10 min. Quick check who managed the homework. If someone has 0 commits — pair them with someone who has 2.</p>
+<p>0–10 min. The third line surprises people — counting pairs, not letters.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -234,250 +227,28 @@ Klaudia Brzezińska
           display:block!important;
       }</style></aside>
 </section>
-<section id="why-the-terminal" class="slide level2 smaller">
-<h2>Why the terminal? 💻</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Clicking</strong></p>
-<ul>
-<li>Rename 300 files → 300 × click</li>
-<li>“Which files did I already process?”</li>
-<li>Impossible to repeat exactly</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Terminal</strong></p>
-<ul>
-<li>One line for 300 files</li>
-<li>The command <em>is</em> the record of what you did</li>
-<li>Runs on the server where your data lives 🧬</li>
-</ul>
-</div></div>
-<aside class="notes">
-<p>10–20 min block starts here. Mention: sequencing data lives on remote servers — there is no mouse there. We will log into a real server at the end of today.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="terminal-shell" class="slide level2 smaller">
-<h2>Terminal ≠ shell 🐚</h2>
-<ul>
-<li><strong>Terminal</strong> = the window you type in</li>
-<li><strong>Shell</strong> = the program <em>inside</em> it that understands your commands</li>
-<li>The most common shell: <strong>Bash</strong> (<em>Bourne Again SHell</em>) — macOS uses <strong>zsh</strong>, almost the same for us</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="bu">echo</span> <span class="va">$SHELL</span>      <span class="co"># which shell am I using?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="indexing-counting-from-0" class="slide level2 smaller">
+<h2>Indexing: counting from 0 🔢</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGC"</span></span>
+<span id="cb2-2"><a></a>seq[<span class="dv">0</span>]    <span class="co"># 'A'  — the FIRST letter</span></span>
+<span id="cb2-3"><a></a>seq[<span class="dv">1</span>]    <span class="co"># 'T'</span></span>
+<span id="cb2-4"><a></a>seq[<span class="op">-</span><span class="dv">1</span>]   <span class="co"># 'C'  — the last one</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p><code>echo</code> prints text · <code>$SHELL</code> is a <strong>variable</strong> — a name that stores a value</p>
-<aside class="notes">
-<p>Ask for the answers in the chat: /bin/bash, /bin/zsh, /usr/bin/bash (Git Bash)… Reassure: everything today works the same in all of them.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="anatomy-of-a-command" class="slide level2 smaller">
-<h2>Anatomy of a command 🔬</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="fu">ls</span>   <span class="at">-l</span> <span class="at">-a</span>   data/</span>
-<span id="cb3-2"><a></a><span class="co">#│    │       └── argument: WHAT to work on</span></span>
-<span id="cb3-3"><a></a><span class="co">#│    └────────── options: HOW (start with -)</span></span>
-<span id="cb3-4"><a></a><span class="co">#└─────────────── command: WHAT to do</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><code>ls -l -a</code> = <code>ls -la</code> — short options can be combined</p>
-</div>
-<div class="fragment">
-<p><strong>Reading documentation:</strong> in help pages you will see</p>
-<ul>
-<li><code>&lt;something&gt;</code> → <strong>required</strong>, replace with a real value</li>
-<li><code>[something]</code> → <strong>optional</strong></li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="fu">man</span> ls        <span class="co"># the manual (q = quit)</span></span>
-<span id="cb4-2"><a></a><span class="fu">ls</span> <span class="at">--help</span>     <span class="co"># short help (works also in Git Bash)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
-<p>The &lt;&gt; / [] convention will come back in the SSH part: ssh [-p <port>] <user>@<host>. On Git Bash <code>man</code> is often missing → use –help.</host></user></port></p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="where-am-i" class="slide level2">
-<h2>Where am I? 🗺️</h2>
-<p>The file system is a tree — you are always standing <strong>somewhere</strong> in it.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="bu">pwd</span>          <span class="co"># print working directory — where am I?</span></span>
-<span id="cb5-2"><a></a><span class="fu">ls</span>           <span class="co"># list — what is here?</span></span>
-<span id="cb5-3"><a></a><span class="fu">ls</span> <span class="at">-l</span>        <span class="co"># long: size, date</span></span>
-<span id="cb5-4"><a></a><span class="fu">ls</span> <span class="at">-a</span>        <span class="co"># all: also hidden files (.git!)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
-<p>20–25 min. Show that <code>.git</code> is a hidden folder — that’s where the whole history lives. Hidden = name starts with a dot.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="paths-two-ways-to-say-where" class="slide level2 smaller">
-<h2>Paths: two ways to say where 🧭</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-  H["~ (home)"] --&gt; PB[programming-basics]
-  H --&gt; D[Downloads]
-  PB --&gt; DATA[data]
-  PB --&gt; RES[results]
-  DATA --&gt; S[sample.txt]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Example</th>
-<th>Starts from</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>absolute</strong></td>
-<td><code>/home/anna/programming-basics/data</code></td>
-<td>the root <code>/</code></td>
-</tr>
-<tr class="even">
-<td><strong>relative</strong></td>
-<td><code>data/sample.txt</code> · <code>../Downloads</code></td>
-<td>where you are now</td>
-</tr>
-</tbody>
-</table>
-<p><code>.</code> = here · <code>..</code> = one level up · <code>~</code> = home</p>
-<aside class="notes">
-<p>Ask: I’m in <code>data</code>. What is the relative path to <code>Downloads</code>? (../../Downloads)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="moving-around" class="slide level2">
-<h2>Moving around 🚶</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="bu">cd</span> kse           <span class="co"># go into a folder</span></span>
-<span id="cb6-2"><a></a><span class="bu">cd</span> ..            <span class="co"># one level UP</span></span>
-<span id="cb6-3"><a></a><span class="bu">cd</span> ~             <span class="co"># go home</span></span>
-<span id="cb6-4"><a></a><span class="bu">cd</span> <span class="at">-</span>             <span class="co"># back to where I was</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><strong>Tab</strong> ⇥ completes names · <strong>↑</strong> repeats the last command · <strong>Ctrl+C</strong> stops anything</p>
-<aside class="notes">
-<p>Insist on Tab — it is the single biggest quality-of-life improvement for beginners, and it prevents typos. Ctrl+C = the emergency exit.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="exercise-1-find-your-way" class="slide level2 smaller">
-<h2>Exercise 1: Find your way 🧭</h2>
-<p>⏱️ 10 min · your own screen · react ✅ when done</p>
-<ol type="1">
-<li><code>pwd</code> — where are you now? Is this an absolute or relative path?</li>
-<li>Go home: <code>cd ~</code></li>
-<li><code>ls</code> — what folders do you see?</li>
-<li>Go into your <code>programming-basics</code> folder</li>
-<li><code>ls -a</code> — can you find the <code>.git</code> folder?</li>
-<li>Go one level up, then back — using <strong>Tab</strong> at least once</li>
-</ol>
-<p>💡 <strong>Bonus:</strong> what does <code>ls -lh</code> show that <code>ls -l</code> doesn’t? Find out with <code>ls --help</code>.</p>
-<aside class="notes">
-<p>25–35 min. Paste steps in the chat. Watch reactions; anyone with ✋ shares their screen.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="making-and-moving-things" class="slide level2">
-<h2>Making and moving things 🧰</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a></a><span class="fu">mkdir</span> data              <span class="co"># make a folder</span></span>
-<span id="cb7-2"><a></a><span class="fu">mkdir</span> <span class="at">-p</span> a/b/c          <span class="co"># make nested folders at once</span></span>
-<span id="cb7-3"><a></a><span class="fu">touch</span> notes.txt         <span class="co"># make an empty file</span></span>
-<span id="cb7-4"><a></a><span class="fu">cp</span> notes.txt backup.txt <span class="co"># copy</span></span>
-<span id="cb7-5"><a></a><span class="fu">mv</span> notes.txt data/      <span class="co"># move (also = rename!)</span></span>
-<span id="cb7-6"><a></a><span class="fu">rm</span> backup.txt           <span class="co"># delete a file</span></span>
-<span id="cb7-7"><a></a><span class="fu">rm</span> <span class="at">-r</span> old_folder        <span class="co"># delete a folder with everything inside</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Warning</strong></p>
+<p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p><code>rm</code> does <strong>not</strong> use a trash bin. Deleted is deleted. 💀</p>
+<p>Biologists count bases from 1, Python counts from 0. This causes real bugs in real papers. 🐛</p>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>35–45 min. Tell a short real story about deleting something important. Then: this is exactly why we use Git.</p>
+<p>10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -491,207 +262,162 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="wildcards-many-files-at-once" class="slide level2 smaller">
-<h2>Wildcards: many files at once 🃏</h2>
+<section id="slicing" class="slide level2">
+<h2>Slicing ✂️</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCTAGC"</span></span>
+<span id="cb3-2"><a></a>seq[<span class="dv">0</span>:<span class="dv">3</span>]    <span class="co"># 'ATG'  — from 0 up to (not including) 3</span></span>
+<span id="cb3-3"><a></a>seq[<span class="dv">3</span>:]     <span class="co"># from 3 to the end</span></span>
+<span id="cb3-4"><a></a>seq[:<span class="dv">3</span>]     <span class="co"># from the start to 3</span></span>
+<span id="cb3-5"><a></a>seq[::<span class="op">-</span><span class="dv">1</span>]   <span class="co"># reversed!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p><code>seq[start:stop]</code> — <strong>stop is not included</strong> 🙂</p>
+</div>
+</section>
+<section id="useful-string-methods" class="slide level2 smaller">
+<h2>Useful string methods</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>seq.upper()              <span class="co"># 'ATGC'</span></span>
+<span id="cb4-2"><a></a>seq.lower()              <span class="co"># 'atgc'</span></span>
+<span id="cb4-3"><a></a>seq.replace(<span class="st">"T"</span>, <span class="st">"U"</span>)    <span class="co"># DNA → RNA!</span></span>
+<span id="cb4-4"><a></a>seq.count(<span class="st">"GC"</span>)</span>
+<span id="cb4-5"><a></a>seq.find(<span class="st">"ATG"</span>)          <span class="co"># position of the first ATG (-1 if absent)</span></span>
+<span id="cb4-6"><a></a>seq.startswith(<span class="st">"&gt;"</span>)      <span class="co"># True / False — FASTA headers!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>A method does not change the original — it <strong>returns a new string</strong>.</p>
+<aside class="notes">
+<p>Important: <code>seq.upper()</code> alone does nothing unless you assign it. Show the mistake live.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="building-strings" class="slide level2 smaller">
+<h2>Building strings</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>name <span class="op">=</span> <span class="st">"seq1"</span></span>
+<span id="cb5-2"><a></a>length <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="bu">print</span>(<span class="st">"Sequence "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">" has "</span> <span class="op">+</span> <span class="bu">str</span>(length) <span class="op">+</span> <span class="st">" bases"</span>)</span>
+<span id="cb5-5"><a></a><span class="bu">print</span>(<span class="ss">f"Sequence </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> has </span><span class="sc">{</span>length<span class="sc">}</span><span class="ss"> bases"</span>)     <span class="co"># f-string 👑</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>f-strings are shorter and you don’t need <code>str()</code>.</p>
+</div>
+</section>
+<section id="exercise-1-slice-it" class="slide level2 smaller">
+<h2>Exercise 1: Slice it 🔪</h2>
+<p>⏱️ 10 min · your own screen · react ✅ when done</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGGCCATTGTAATGGGCCGC"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol type="1">
+<li>Print the first codon (3 letters)</li>
+<li>Print the last 6 bases</li>
+<li>Print the sequence reversed</li>
+<li>Convert it to RNA and print it</li>
+<li>At which position does the second <code>ATG</code> start? 🤔</li>
+</ol>
+<aside class="notes">
+<p>25–35 min. Question 5 is genuinely hard — <code>find</code> has a start argument: seq.find(“ATG”, 1).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reverse-complement" class="slide level2">
+<h2>Reverse complement 🧬</h2>
+<p>The classic first real bioinformatics function:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGC"</span></span>
+<span id="cb7-2"><a></a>complement <span class="op">=</span> seq.replace(<span class="st">"A"</span>, <span class="st">"t"</span>).replace(<span class="st">"T"</span>, <span class="st">"a"</span>)</span>
+<span id="cb7-3"><a></a>complement <span class="op">=</span> complement.replace(<span class="st">"G"</span>, <span class="st">"c"</span>).replace(<span class="st">"C"</span>, <span class="st">"g"</span>)</span>
+<span id="cb7-4"><a></a>rev_comp <span class="op">=</span> complement.upper()[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb7-5"><a></a><span class="bu">print</span>(rev_comp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>Why the temporary lowercase? 🤔 Try it without — what breaks?</p>
+<aside class="notes">
+<p>Great discussion: replacing A→T then T→A turns everything into A. The lowercase trick avoids double replacement.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="exercise-2-sequence-toolkit" class="slide level2 smaller">
+<h2>Exercise 2: Sequence toolkit 🧰</h2>
+<p>⏱️ 25 min · breakout rooms · switch after 10 min</p>
+<p>Create <code>scripts/seq_tools.py</code>. For a DNA sequence of your choice, print:</p>
+<ol type="1">
+<li>Its length and GC content (reuse last block’s code)</li>
+<li>Its first codon and last codon</li>
+<li>The RNA version</li>
+<li>The reverse complement</li>
+<li>Whether it starts with a start codon (<code>ATG</code>) — print <code>True</code>/<code>False</code></li>
+</ol>
+<p>💡 <strong>Bonus:</strong> print all three reading frames: <code>seq[0:]</code>, <code>seq[1:]</code>, <code>seq[2:]</code></p>
+<aside class="notes">
+<p>35–70 min. Paste in the chat. Encourage f-strings for nice output — makes results readable.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="wrap-up" class="slide level2 smaller">
+<h2>Wrap-up ✅</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Pattern</th>
-<th>Matches</th>
+<th>Tool</th>
 <th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>*</code></td>
-<td>anything (also nothing)</td>
-<td><code>ls *.txt</code></td>
+<td>Index</td>
+<td><code>seq[0]</code> <code>seq[-1]</code></td>
 </tr>
 <tr class="even">
-<td><code>?</code></td>
-<td>exactly one character</td>
-<td><code>ls sample?.txt</code></td>
+<td>Slice</td>
+<td><code>seq[0:3]</code> <code>seq[::-1]</code></td>
 </tr>
 <tr class="odd">
-<td><code>[12]</code></td>
-<td>one of these characters</td>
-<td><code>ls sample[12].txt</code></td>
+<td>Methods</td>
+<td><code>.upper()</code> <code>.replace()</code> <code>.find()</code></td>
+</tr>
+<tr class="even">
+<td>f-string</td>
+<td><code>f"GC = {gc}%"</code></td>
 </tr>
 </tbody>
 </table>
+<p><strong>Homework</strong> 🏠 Commit <code>seq_tools.py</code> and write in the README what it does.</p>
 <div class="fragment">
-<p><strong>Brace expansion</strong> — the shell writes the list for you:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="fu">mkdir</span> <span class="at">-p</span> project/<span class="dt">{data</span><span class="op">,</span><span class="dt">scripts</span><span class="op">,</span><span class="dt">results}</span>   <span class="co"># 3 folders, 1 line</span></span>
-<span id="cb8-2"><a></a><span class="fu">touch</span> sample<span class="dt">{</span><span class="dv">1</span><span class="dt">..</span><span class="dv">5</span><span class="dt">}</span>.txt                    <span class="co"># sample1.txt … sample5.txt</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>⚠️ <code>rm *</code> — think twice. Check first with <code>ls *</code> 👀</p>
+<p>Next week: <strong>lists</strong> — many sequences at once 📋</p>
 <aside class="notes">
-<p>Key idea: the SHELL expands the pattern before the command even sees it. <code>ls *.txt</code> — ls receives a list of names. Safe habit: run the pattern with <code>ls</code> first, then replace <code>ls</code> with <code>rm</code>.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="looking-inside-files" class="slide level2">
-<h2>Looking inside files 👀</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="fu">cat</span> notes.txt             <span class="co"># print the whole file</span></span>
-<span id="cb9-2"><a></a><span class="fu">head</span> sequences.fasta      <span class="co"># first 10 lines</span></span>
-<span id="cb9-3"><a></a><span class="fu">head</span> <span class="at">-n</span> 3 sequences.fasta <span class="co"># first 3 lines</span></span>
-<span id="cb9-4"><a></a><span class="fu">tail</span> sequences.fasta      <span class="co"># last 10 lines</span></span>
-<span id="cb9-5"><a></a><span class="fu">less</span> sequences.fasta      <span class="co"># scroll (q = quit!)</span></span>
-<span id="cb9-6"><a></a><span class="fu">wc</span> <span class="at">-l</span> sequences.fasta     <span class="co"># count lines</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>In <code>less</code>: <strong>space</strong> = next page, <strong>/word</strong> = search, <strong>q</strong> = quit 🙂</p>
-<aside class="notes">
-<p><code>cat</code> is fine for small files; on a 3 GB FASTA it will flood your screen → Ctrl+C. Everyone gets stuck in <code>less</code> at least once. Say “q” twice.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="exercise-2-build-a-project" class="slide level2 smaller">
-<h2>Exercise 2: Build a project 🏗️</h2>
-<p>⏱️ 20 min · breakout rooms · one shares the screen, switch after 10 min</p>
-<p>Inside <code>programming-basics</code>:</p>
-<ol type="1">
-<li>Create folders <code>data</code>, <code>scripts</code>, <code>results</code> — <strong>in one command</strong></li>
-<li>In <code>data</code>, create <code>sample.txt</code> with 3 lines of text (<code>nano sample.txt</code>, then <strong>Ctrl+O</strong>, <strong>Enter</strong>, <strong>Ctrl+X</strong>)</li>
-<li>Check with <code>head</code> and <code>wc -l</code> that it has 3 lines</li>
-<li>Copy it to <code>results/sample_copy.txt</code>, then rename it to <code>results/backup.txt</code></li>
-<li>Create <code>test1.txt</code> … <code>test5.txt</code> in <code>results</code> with one command, then delete them all with <strong>one</strong> <code>rm</code></li>
-<li><code>git add</code> → <code>git commit</code> → <code>git push</code></li>
-</ol>
-<p>💡 <strong>Bonus:</strong> what happens in Git with the <strong>empty</strong> <code>scripts</code> folder? Why?</p>
-<aside class="notes">
-<p>45–65 min. Steps 1 and 5 practise brace expansion + wildcards. The bonus is a great discussion: Git tracks files, not folders — empty folders never appear on GitHub (convention: put an empty <code>.gitkeep</code> inside). Plan B for nano trouble: create the file in VS Code / any editor.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="servers-computers-without-a-screen" class="slide level2 smaller">
-<h2>Servers: computers without a screen 🖥️</h2>
-<ul>
-<li>Genome data = hundreds of GB → it lives on a <strong>server</strong> (university cluster, cloud)</li>
-<li>You don’t sit in front of it — you <strong>log in remotely</strong> and get a terminal <em>there</em></li>
-<li>The tool: <strong>SSH</strong> (<em>Secure Shell</em>) — an encrypted connection</li>
-</ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="fu">ssh</span> [-p <span class="op">&lt;</span>port<span class="op">&gt;</span>] <span class="op">&lt;</span>user<span class="op">&gt;</span>@<span class="op">&lt;</span>host<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="fu">ssh</span> <span class="at">-p</span> 2220 bandit0@bandit.labs.overthewire.org</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>First time: <em>“Are you sure you want to continue connecting?”</em> → type <code>yes</code></li>
-<li>Typing the password shows <strong>nothing</strong> — no dots, no stars. That’s normal 🙈</li>
-<li><code>exit</code> → back to your own computer</li>
-</ul>
-<aside class="notes">
-<p>65–68 min. Works in macOS/Linux Terminal, Git Bash and Windows PowerShell (OpenSSH is built into Windows 10/11). Point out the prompt change: after login it shows bandit0@bandit — a different computer!</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="exercise-3-your-first-server" class="slide level2 smaller">
-<h2>Exercise 3: Your first server 🔐</h2>
-<p>⏱️ 10 min · together, everyone on their own screen</p>
-<p><strong>OverTheWire Bandit</strong> — a real server, built as a game for learning the terminal</p>
-<ol type="1">
-<li>Log in: <code>ssh -p 2220 bandit0@bandit.labs.overthewire.org</code> (password: <code>bandit0</code>)</li>
-<li><code>whoami</code> · <code>pwd</code> · <code>hostname</code> — where are you now?</li>
-<li><code>ls</code> — there is a file. Read it with <code>cat</code></li>
-<li>That’s the password for the next level (<code>bandit1</code>) 🎉</li>
-<li><code>exit</code></li>
-</ol>
-<div class="fragment">
-<p>🚫 <strong>Don’t post passwords in the chat</strong> — that spoils the game for others</p>
-<aside class="notes">
-<p>68–78 min. Do it live first, then everyone repeats. If the university network blocks port 2220, mobile hotspot usually works; otherwise it becomes homework. Levels 1–4 use exactly today’s commands: <code>cat ./-</code> (strange filename), quotes for spaces, <code>ls -a</code> (hidden file), <code>file ./*</code>.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="what-we-learned" class="slide level2 smaller">
-<h2>What we learned ✅</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>pwd</code> <code>ls</code> <code>cd</code></td>
-<td>Where am I, what’s here, move</td>
-</tr>
-<tr class="even">
-<td><code>mkdir</code> <code>touch</code></td>
-<td>Make folders and files</td>
-</tr>
-<tr class="odd">
-<td><code>cp</code> <code>mv</code> <code>rm</code></td>
-<td>Copy, move/rename, delete</td>
-</tr>
-<tr class="even">
-<td><code>cat</code> <code>head</code> <code>tail</code> <code>less</code> <code>wc</code></td>
-<td>Look inside, count</td>
-</tr>
-<tr class="odd">
-<td><code>*</code> <code>?</code> <code>{a,b}</code></td>
-<td>Many files at once</td>
-</tr>
-<tr class="even">
-<td><code>ssh user@host</code></td>
-<td>Log into another computer</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Optional homework</strong> 🏴‍☠️ Bandit levels 1 → 5 (<a href="https://overthewire.org/wargames/bandit/">overthewire.org/wargames/bandit</a>)</p>
-<div class="fragment">
-<p>Next block: making these commands work <strong>together</strong> on real DNA data 🧬</p>
-<aside class="notes">
-<p>78–80 min. If time: two students share their GitHub folder structure.</p>
+<p>70–80 min. Exit ticket: “Python counts from ___” in the chat.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -710,7 +436,7 @@ Klaudia Brzezińska
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Programming and Computing Basics · Week 2</p>
+<p>Programming and Computing Basics · Week 3</p>
 </div>
 </div></div>
 
