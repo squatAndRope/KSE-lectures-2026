@@ -1,0 +1,330 @@
+---
+title: "Week 2 · Block 1 — The terminal"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 2"
+    transition: fade
+mermaid:
+  theme: dark
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min · in the chat
+
+1. Open your terminal and go into your `programming-basics` folder
+2. Run:
+
+```bash
+git log --oneline
+```
+
+3. How many commits do you have? Write the number in the chat 🔢
+
+::: notes
+0–10 min. Quick check who managed the homework. If someone has 0 commits — pair them with someone who has 2.
+:::
+
+## Why the terminal? 💻 {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Clicking**
+
+- Rename 300 files → 300 × click
+- "Which files did I already process?"
+- Impossible to repeat exactly
+:::
+::: {.column width="50%"}
+**Terminal**
+
+- One line for 300 files
+- The command *is* the record of what you did
+- Runs on the server where your data lives 🧬
+:::
+::::
+
+::: notes
+10–20 min block starts here. Mention: sequencing data lives on remote servers — there is no mouse there. We will log into a real server at the end of today.
+:::
+
+## Terminal ≠ shell 🐚 {.smaller}
+
+- **Terminal** = the window you type in
+- **Shell** = the program *inside* it that understands your commands
+- The most common shell: **Bash** (*Bourne Again SHell*) — macOS uses **zsh**, almost the same for us
+
+```bash
+echo $SHELL      # which shell am I using?
+```
+
+. . .
+
+`echo` prints text · `$SHELL` is a **variable** — a name that stores a value
+
+::: notes
+Ask for the answers in the chat: /bin/bash, /bin/zsh, /usr/bin/bash (Git Bash)… Reassure: everything today works the same in all of them.
+:::
+
+## Anatomy of a command 🔬 {.smaller}
+
+```bash
+ls   -l -a   data/
+#│    │       └── argument: WHAT to work on
+#│    └────────── options: HOW (start with -)
+#└─────────────── command: WHAT to do
+```
+
+. . .
+
+`ls -l -a` = `ls -la` — short options can be combined
+
+. . .
+
+**Reading documentation:** in help pages you will see
+
+- `<something>` → **required**, replace with a real value
+- `[something]` → **optional**
+
+```bash
+man ls        # the manual (q = quit)
+ls --help     # short help (works also in Git Bash)
+```
+
+::: notes
+The <> / [] convention will come back in the SSH part: ssh [-p <port>] <user>@<host>.
+On Git Bash `man` is often missing → use --help.
+:::
+
+## Where am I? 🗺️
+
+The file system is a tree — you are always standing **somewhere** in it.
+
+```bash
+pwd          # print working directory — where am I?
+ls           # list — what is here?
+ls -l        # long: size, date
+ls -a        # all: also hidden files (.git!)
+```
+
+::: notes
+20–25 min. Show that `.git` is a hidden folder — that's where the whole history lives. Hidden = name starts with a dot.
+:::
+
+## Paths: two ways to say where 🧭 {.smaller}
+
+```{mermaid}
+flowchart TD
+  H["~ (home)"] --> PB[programming-basics]
+  H --> D[Downloads]
+  PB --> DATA[data]
+  PB --> RES[results]
+  DATA --> S[sample.txt]
+```
+
+| | Example | Starts from |
+|---|---|---|
+| **absolute** | `/home/anna/programming-basics/data` | the root `/` |
+| **relative** | `data/sample.txt` · `../Downloads` | where you are now |
+
+`.` = here · `..` = one level up · `~` = home
+
+::: notes
+Ask: I'm in `data`. What is the relative path to `Downloads`? (../../Downloads)
+:::
+
+## Moving around 🚶
+
+```bash
+cd kse           # go into a folder
+cd ..            # one level UP
+cd ~             # go home
+cd -             # back to where I was
+```
+
+. . .
+
+**Tab** ⇥ completes names · **↑** repeats the last command · **Ctrl+C** stops anything
+
+::: notes
+Insist on Tab — it is the single biggest quality-of-life improvement for beginners, and it prevents typos. Ctrl+C = the emergency exit.
+:::
+
+## Exercise 1: Find your way 🧭 {.smaller}
+
+⏱️ 10 min · your own screen · react ✅ when done
+
+1. `pwd` — where are you now? Is this an absolute or relative path?
+2. Go home: `cd ~`
+3. `ls` — what folders do you see?
+4. Go into your `programming-basics` folder
+5. `ls -a` — can you find the `.git` folder?
+6. Go one level up, then back — using **Tab** at least once
+
+💡 **Bonus:** what does `ls -lh` show that `ls -l` doesn't? Find out with `ls --help`.
+
+::: notes
+25–35 min. Paste steps in the chat. Watch reactions; anyone with ✋ shares their screen.
+:::
+
+## Making and moving things 🧰
+
+```bash
+mkdir data              # make a folder
+mkdir -p a/b/c          # make nested folders at once
+touch notes.txt         # make an empty file
+cp notes.txt backup.txt # copy
+mv notes.txt data/      # move (also = rename!)
+rm backup.txt           # delete a file
+rm -r old_folder        # delete a folder with everything inside
+```
+
+. . .
+
+::: {.callout-warning}
+`rm` does **not** use a trash bin. Deleted is deleted. 💀
+:::
+
+::: notes
+35–45 min. Tell a short real story about deleting something important. Then: this is exactly why we use Git.
+:::
+
+## Wildcards: many files at once 🃏 {.smaller}
+
+| Pattern | Matches | Example |
+|---|---|---|
+| `*` | anything (also nothing) | `ls *.txt` |
+| `?` | exactly one character | `ls sample?.txt` |
+| `[12]` | one of these characters | `ls sample[12].txt` |
+
+. . .
+
+**Brace expansion** — the shell writes the list for you:
+
+```bash
+mkdir -p project/{data,scripts,results}   # 3 folders, 1 line
+touch sample{1..5}.txt                    # sample1.txt … sample5.txt
+```
+
+. . .
+
+⚠️ `rm *` — think twice. Check first with `ls *` 👀
+
+::: notes
+Key idea: the SHELL expands the pattern before the command even sees it. `ls *.txt` — ls receives a list of names.
+Safe habit: run the pattern with `ls` first, then replace `ls` with `rm`.
+:::
+
+## Looking inside files 👀
+
+```bash
+cat notes.txt             # print the whole file
+head sequences.fasta      # first 10 lines
+head -n 3 sequences.fasta # first 3 lines
+tail sequences.fasta      # last 10 lines
+less sequences.fasta      # scroll (q = quit!)
+wc -l sequences.fasta     # count lines
+```
+
+. . .
+
+In `less`: **space** = next page, **/word** = search, **q** = quit 🙂
+
+::: notes
+`cat` is fine for small files; on a 3 GB FASTA it will flood your screen → Ctrl+C. Everyone gets stuck in `less` at least once. Say "q" twice.
+:::
+
+## Exercise 2: Build a project 🏗️ {.smaller}
+
+⏱️ 20 min · breakout rooms · one shares the screen, switch after 10 min
+
+Inside `programming-basics`:
+
+1. Create folders `data`, `scripts`, `results` — **in one command**
+2. In `data`, create `sample.txt` with 3 lines of text
+   (`nano sample.txt`, then **Ctrl+O**, **Enter**, **Ctrl+X**)
+3. Check with `head` and `wc -l` that it has 3 lines
+4. Copy it to `results/sample_copy.txt`, then rename it to `results/backup.txt`
+5. Create `test1.txt` … `test5.txt` in `results` with one command, then delete them all with **one** `rm`
+6. `git add` → `git commit` → `git push`
+
+💡 **Bonus:** what happens in Git with the **empty** `scripts` folder? Why?
+
+::: notes
+45–65 min. Steps 1 and 5 practise brace expansion + wildcards.
+The bonus is a great discussion: Git tracks files, not folders — empty folders never appear on GitHub (convention: put an empty `.gitkeep` inside).
+Plan B for nano trouble: create the file in VS Code / any editor.
+:::
+
+## Servers: computers without a screen 🖥️ {.smaller}
+
+- Genome data = hundreds of GB → it lives on a **server** (university cluster, cloud)
+- You don't sit in front of it — you **log in remotely** and get a terminal *there*
+- The tool: **SSH** (*Secure Shell*) — an encrypted connection
+
+```bash
+ssh [-p <port>] <user>@<host>
+```
+
+. . .
+
+```bash
+ssh -p 2220 bandit0@bandit.labs.overthewire.org
+```
+
+- First time: *"Are you sure you want to continue connecting?"* → type `yes`
+- Typing the password shows **nothing** — no dots, no stars. That's normal 🙈
+- `exit` → back to your own computer
+
+::: notes
+65–68 min. Works in macOS/Linux Terminal, Git Bash and Windows PowerShell (OpenSSH is built into Windows 10/11).
+Point out the prompt change: after login it shows bandit0@bandit — a different computer!
+:::
+
+## Exercise 3: Your first server 🔐 {.smaller}
+
+⏱️ 10 min · together, everyone on their own screen
+
+**OverTheWire Bandit** — a real server, built as a game for learning the terminal
+
+1. Log in: `ssh -p 2220 bandit0@bandit.labs.overthewire.org` (password: `bandit0`)
+2. `whoami` · `pwd` · `hostname` — where are you now?
+3. `ls` — there is a file. Read it with `cat`
+4. That's the password for the next level (`bandit1`) 🎉
+5. `exit`
+
+. . .
+
+🚫 **Don't post passwords in the chat** — that spoils the game for others
+
+::: notes
+68–78 min. Do it live first, then everyone repeats. If the university network blocks port 2220, mobile hotspot usually works; otherwise it becomes homework.
+Levels 1–4 use exactly today's commands: `cat ./-` (strange filename), quotes for spaces, `ls -a` (hidden file), `file ./*`.
+:::
+
+## What we learned ✅ {.smaller}
+
+| Command | What it does |
+|---|---|
+| `pwd` `ls` `cd` | Where am I, what's here, move |
+| `mkdir` `touch` | Make folders and files |
+| `cp` `mv` `rm` | Copy, move/rename, delete |
+| `cat` `head` `tail` `less` `wc` | Look inside, count |
+| `*` `?` `{a,b}` | Many files at once |
+| `ssh user@host` | Log into another computer |
+
+**Optional homework** 🏴‍☠️ Bandit levels 1 → 5 ([overthewire.org/wargames/bandit](https://overthewire.org/wargames/bandit/))
+
+. . .
+
+Next block: making these commands work **together** on real DNA data 🧬
+
+::: notes
+78–80 min. If time: two students share their GitHub folder structure.
+:::

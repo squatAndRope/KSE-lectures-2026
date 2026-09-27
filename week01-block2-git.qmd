@@ -1,6 +1,6 @@
 ---
-title: "Programming and Computing Basics"
-subtitle: "Week 1 · Block 2 — Your first commit"
+title: "Week 1 · Block 2 — First commit"
+subtitle: "Programming and Computing Basics · KSE 2026"
 author: "Klaudia Brzezińska"
 format:
   revealjs:

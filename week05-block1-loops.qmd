@@ -1,0 +1,182 @@
+---
+title: "Week 5 · Block 1 — Loops"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 5"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+```python
+seq = "ATGCCCTAAGGG"
+```
+
+Write an `if` that prints `"start codon found"` when the sequence
+starts with `ATG` **and** is longer than 6 bases.
+
+::: notes
+0–10 min. Two students share their screen with different solutions.
+:::
+
+## The problem 😩
+
+```python
+print(len(sequences[0]))
+print(len(sequences[1]))
+print(len(sequences[2]))
+# ... 497 more lines
+```
+
+. . .
+
+> Copy-paste is a smell. Computers are good at repeating things. 🔁
+
+::: notes
+10–25 min. Reference last week's exercise where they wrote lengths by hand.
+:::
+
+## The `for` loop
+
+```python
+sequences = ["ATGC", "GGCATT", "TTA"]
+
+for seq in sequences:
+    print(seq, len(seq))
+```
+
+. . .
+
+Read it as: **for each** `seq` **in** `sequences`, do this.
+
+`seq` is just a name — you choose it.
+
+## Looping over a string too 🧬
+
+```python
+for base in "ATGC":
+    print(base)
+```
+
+. . .
+
+```python
+count = 0
+for base in "ATGCGC":
+    if base == "G":
+        count = count + 1
+print(count)
+```
+
+::: notes
+The accumulator pattern (start at 0, add inside the loop) is the single most important pattern this week.
+:::
+
+## Collecting results 📋
+
+```python
+lengths = []                    # start empty
+
+for seq in sequences:
+    lengths.append(len(seq))    # add one result per sequence
+
+print(lengths)
+print(sum(lengths) / len(lengths))
+```
+
+. . .
+
+**Empty list → loop → append.** You will write this a hundred times.
+
+## `range()` and `while` {.smaller}
+
+```python
+for i in range(5):        # 0,1,2,3,4
+    print(i)
+
+for i in range(0, 9, 3):  # 0,3,6 — codon positions!
+    print(seq[i:i+3])
+```
+
+. . .
+
+```python
+while len(seq) > 3:       # repeat while the condition holds
+    seq = seq[1:]
+```
+
+::: {.callout-warning}
+Forget to change the condition → infinite loop. **Ctrl+C** stops it. 🛑
+:::
+
+::: notes
+Teach Ctrl+C explicitly — online, a student with a runaway loop will panic silently.
+:::
+
+## Exercise 1: Predict, then run 🔮 {.smaller}
+
+⏱️ 10 min · chat first
+
+```python
+total = 0
+for n in [1, 2, 3, 4]:
+    total = total + n
+print(total)
+
+for base in "ATG":
+    print(base * 2)
+```
+
+::: notes
+25–35 min. If they get the accumulator, the rest of the semester is much easier.
+:::
+
+## Exercise 2: Analyse them all 🧬 {.smaller}
+
+⏱️ 25 min · breakout rooms · switch after 10 min
+
+Create `scripts/analyse_all.py`:
+
+```python
+sequences = ["ATGCGC", "GGCATTAGC", "TTA", "ATGGGCCCTA", "ATGNNNCGC"]
+```
+
+1. Print each sequence with its length
+2. Build a list of lengths, then print the average
+3. Count how many sequences start with `ATG`
+4. Print only the sequences longer than 5 bases
+5. For each sequence print its GC content (loop inside a loop!)
+
+💡 **Bonus:** print the codons of the longest sequence, one per line
+
+::: notes
+35–70 min. Point 5 is the hard one — a loop over sequences containing a loop over bases.
+Hint to give if a room is stuck: solve it for ONE sequence first, then wrap it in the outer loop.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+```python
+results = []
+for item in things:
+    if condition:
+        results.append(something)
+```
+
+- `for x in y:` repeats for each element
+- Empty list → loop → `append` 📋
+- `range()` for numbers · `while` for "until"
+
+**Homework** 🏠 Commit `analyse_all.py`.
+
+::: notes
+70–80 min. Exit ticket: name one thing from their own studies they would now loop over.
+:::

@@ -1,0 +1,172 @@
+---
+title: "Week 4 · Block 2 — Making decisions"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 4"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+```python
+lengths = [120, 85, 300, 42]
+```
+
+1. Print the average length
+2. Print the longest
+3. Add `500` to the list and print the new average
+
+::: notes
+0–10 min. Quick recall of list tools before adding logic on top.
+:::
+
+## Scripts that decide 🚦
+
+> "Analyse the sequence **only if** it is longer than 100 bases."
+
+. . .
+
+```python
+length = 120
+
+if length > 100:
+    print("Long enough — analysing")
+```
+
+::: notes
+10–25 min. Start from the biological question, then show the syntax.
+:::
+
+## if / elif / else {.smaller}
+
+```python
+gc = 0.62
+
+if gc > 0.6:
+    print("GC rich")
+elif gc < 0.4:
+    print("AT rich")
+else:
+    print("Balanced")
+```
+
+. . .
+
+Python checks top to bottom and stops at the **first** true condition.
+
+## Indentation is the syntax ⚠️ {.smaller}
+
+```python
+if length > 100:
+    print("inside the if")   # 4 spaces — belongs to the if
+print("always printed")      # no spaces — outside
+```
+
+. . .
+
+::: {.callout-warning}
+In Python, indentation is not decoration — it **is** the structure. `IndentationError` will be your friend. 🤝
+:::
+
+::: notes
+Show the error live. Tell them: every Python programmer sees this error weekly.
+:::
+
+## Comparing things {.smaller}
+
+| Operator | Meaning |
+|---|---|
+| `==` | equal (two `=`!) |
+| `!=` | not equal |
+| `>` `<` `>=` `<=` | bigger / smaller |
+| `in` | contains |
+
+```python
+seq == "ATG"          # comparison
+seq = "ATG"           # assignment ⚠️ different thing!
+"TAG" in seq          # True / False
+```
+
+## Combining conditions {.smaller}
+
+```python
+if length > 100 and gc > 0.5:
+    print("Long and GC rich")
+
+if seq.startswith("ATG") or seq.startswith("GTG"):
+    print("Possible start codon")
+
+if not seq.startswith(">"):
+    print("This is a sequence line, not a header")
+```
+
+. . .
+
+`and` · `or` · `not` — they read like English 🙂
+
+## Exercise 1: Predict, then run 🔮 {.smaller}
+
+⏱️ 10 min · chat first
+
+```python
+seq = "ATGCCCTAA"
+
+if len(seq) > 5:
+    print("A")
+elif len(seq) > 3:
+    print("B")
+else:
+    print("C")
+
+if seq.startswith("ATG") and seq.endswith("TAA"):
+    print("D")
+```
+
+Which letters get printed? 🤔
+
+::: notes
+25–35 min. Key insight: only ONE branch of if/elif/else runs, but the second if is independent.
+:::
+
+## Exercise 2: Sequence quality check 🔬 {.smaller}
+
+⏱️ 25 min · breakout rooms · switch after 10 min
+
+Create `scripts/seq_check.py`. For one sequence, print a verdict:
+
+1. If it is shorter than 30 bases → `"too short"`
+2. If it contains an `N` → `"contains unknown bases"`
+3. If its GC content is above 60% → `"GC rich"`, below 40% → `"AT rich"`, otherwise `"balanced"`
+4. If it starts with `ATG` **and** its length divides by 3 (`len(seq) % 3 == 0`) → `"possible ORF"`
+
+💡 **Bonus:** test your script on 3 different sequences by changing the variable. Does every rule fire?
+
+::: notes
+35–70 min. `%` (modulo) is new — explain briefly: remainder after division.
+Ask pairs to swap sequences with another room to test each other's scripts.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+- `if` / `elif` / `else` — one branch wins 🚦
+- Indentation defines what belongs where
+- `==` compares, `=` assigns ⚠️
+- `and` `or` `not` `in`
+
+**Homework** 🏠 Commit `seq_check.py`.
+
+. . .
+
+Next week: **loops** — do it for all 500 sequences 🔁
+
+::: notes
+70–80 min. Exit ticket: "What is the difference between = and ==?"
+:::

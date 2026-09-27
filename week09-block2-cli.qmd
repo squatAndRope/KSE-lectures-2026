@@ -1,0 +1,161 @@
+---
+title: "Week 9 · Block 2 — Scripts as tools"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 9"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+```python
+from collections import Counter
+print(Counter("ATGCGCATG"))
+```
+
+Now do the same with **your own** `count_bases()`.
+Same result? React ✅ or ✋
+
+::: notes
+0–10 min. Nice confidence boost: their hand-written function matches the library.
+:::
+
+## The hardcoded filename problem 😩 {.smaller}
+
+```python
+filename = "data/sequences.fasta"
+```
+
+New file? **Edit the script.** 😖
+Colleague wants to use it? **They edit the script.** 😖
+
+. . .
+
+Real tools take their input from the **command line** ⚙️
+
+::: notes
+10–25 min. Connect to week 2: grep, wc, head all take a filename as an argument.
+:::
+
+## `sys.argv` {.smaller}
+
+```python
+import sys
+
+print(sys.argv)
+```
+
+```bash
+python3 report.py data/sequences.fasta 30
+# ['report.py', 'data/sequences.fasta', '30']
+```
+
+. . .
+
+`sys.argv[0]` is the script · `[1]`, `[2]`, … are your arguments
+**Everything is a string** ⚠️ → `int(sys.argv[2])`
+
+## Being a good tool 🛡️ {.smaller}
+
+```python
+import sys
+
+if len(sys.argv) < 2:
+    print("Usage: python3 report.py <fasta_file> [min_length]")
+    sys.exit(1)
+
+filename = sys.argv[1]
+min_length = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+```
+
+. . .
+
+A tool that explains itself when misused is a **kind** tool 💛
+
+::: notes
+25–35 min. sys.exit(1) — non-zero means "something went wrong", used by pipelines.
+:::
+
+## Printing for pipes 🔗 {.smaller}
+
+```bash
+python3 report.py data/sequences.fasta | sort -k2 -n | head -5
+```
+
+. . .
+
+- Results → `print()` (goes to stdout, can be piped) ✅
+- Warnings and progress → `print(..., file=sys.stderr)` ⚠️
+
+. . .
+
+Your Python script is now just another Unix tool 🐍🤝🐚
+
+::: notes
+This is the moment bash and Python finally meet. Show a real pipe live.
+:::
+
+## Exercise 1: Add arguments ⚙️ {.smaller}
+
+⏱️ 20 min · your own screen · react ✅
+
+Turn `fasta_report.py` into a proper tool:
+
+1. Take the FASTA path from `sys.argv[1]`
+2. Print a usage message if it is missing
+3. Add an optional `min_length` argument — skip shorter sequences
+4. Test it:
+
+```bash
+python3 scripts/fasta_report.py data/sequences.fasta
+python3 scripts/fasta_report.py data/sequences.fasta 50
+python3 scripts/fasta_report.py
+```
+
+::: notes
+35–55 min. The third command must NOT crash with IndexError — that is the point.
+:::
+
+## Exercise 2: Build a pipeline 🔗 {.smaller}
+
+⏱️ 20 min · breakout rooms
+
+1. Make your script print one sequence per line: `name<TAB>length<TAB>GC`
+2. Now combine it with bash:
+
+```bash
+python3 scripts/fasta_report.py data/sequences.fasta | sort -k3 -n | tail -3
+python3 scripts/fasta_report.py data/sequences.fasta | grep "Homo" | wc -l
+```
+
+3. Save the top 3 GC-richest sequences into `results/top_gc.txt`
+
+💡 **Bonus:** which is easier for each task — Python or bash? Discuss 🤔
+
+::: notes
+55–75 min. The bonus discussion is the real learning: the right tool for the right job.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+- `sys.argv` makes your script reusable ⚙️
+- Always handle the "no arguments" case 🛡️
+- `print()` results, pipe them onwards 🔗
+
+**Homework** 🏠 Commit your tool. Add usage instructions to the README.
+
+. . .
+
+Next week: **mini-project** — you build something of your own 🚀
+
+::: notes
+75–80 min. Tease the project: they now have every piece they need.
+:::

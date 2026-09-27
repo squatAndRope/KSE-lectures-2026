@@ -1,0 +1,161 @@
+---
+title: "Week 10 · Block 2 — Your project"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 10"
+    transition: fade
+---
+
+## Look what you can do 🎉 {.smaller}
+
+Ten weeks ago: *"I have never opened a terminal"*
+
+Today you can:
+
+- navigate and process files from the terminal 🐚
+- write Python: strings, lists, dictionaries, loops, functions 🐍
+- read and write real data files 🧬
+- debug your own errors 🔍
+- collaborate with Git, branches and pull requests 👥
+
+. . .
+
+Now you build something **of your own** 🚀
+
+::: notes
+0–10 min. Say this slowly. Many still feel like impostors — the list is evidence.
+:::
+
+## The final project 📋 {.smaller}
+
+**60% of your grade · individual · presented in week 14**
+
+A small command-line tool that does something useful with biological data.
+
+| Requirement | Detail |
+|---|---|
+| Runs from the terminal | `python3 my_tool.py <input>` ⚙️ |
+| At least 3 functions | each doing one thing, with clear names |
+| Reads a real file | FASTA, CSV, or another format |
+| Produces output | printed report or a saved file 💾 |
+| Handles errors | missing file, empty input 🛡️ |
+| README | what it does, how to run it, example output |
+| Git history | regular commits, not one giant one 📈 |
+
+::: notes
+10–25 min. Walk through each row. Stress: small and working beats ambitious and broken.
+:::
+
+## Project ideas 💡 {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+- FASTA statistics tool 📊
+- Sequence filter (length, GC, N content)
+- Codon usage counter
+- Motif finder (`ATG`, restriction sites) ✂️
+- FASTA ↔ CSV converter
+:::
+::: {.column width="50%"}
+- Primer property checker (Tm, GC)
+- ORF finder in 3 reading frames
+- Compare two FASTA files 🔍
+- Simple quality report per sequence
+- Something from **your own** studies 🧬
+:::
+::::
+
+. . .
+
+The last one is the best one. 💛
+
+::: notes
+25–35 min. Encourage projects tied to their own lab work or thesis — motivation doubles.
+:::
+
+## What makes a good project 🌟 {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Yes** ✅
+
+- Small and finished
+- You can explain every line 🗣️
+- Honest README
+- Commits across several weeks
+:::
+::: {.column width="50%"}
+**No** 🚫
+
+- Huge and half-broken
+- Code you cannot explain
+- One commit called "final"
+- A copy of the class exercises
+:::
+::::
+
+::: notes
+"You can explain every line" ties directly to the oral exam — say it explicitly.
+:::
+
+## The oral exam 💬 {.smaller}
+
+15 minutes, in week 14. We will talk about **your** code:
+
+- Walk me through your tool 🚶
+- Why did you use a dictionary here?
+- What was the hardest part? 🤔
+- What would you change with more time?
+
+. . .
+
+> A conversation, not an interrogation. I want to hear what **you** learned. 💛
+
+::: notes
+35–45 min. Repeat the reassurance from week 1. Nervousness about orals is normal and reduces with clarity.
+:::
+
+## Exercise: Write your proposal 📝 {.smaller}
+
+⏱️ 25 min · alone, then share in breakout rooms
+
+Create `PROJECT.md` in your repo:
+
+1. **What** will your tool do? (2–3 sentences)
+2. **Input** — what file, what format? Where will you get it? 📄
+3. **Output** — what will it print or save?
+4. Which **3 functions** will you need?
+5. What is the **smallest working version**? 🌱
+
+Then: share it with your room and give each other one question 🤔
+
+::: notes
+45–70 min. The "smallest working version" question saves half the failing projects.
+Rooms of 3 work well here — more perspectives.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+**Homework** 🏠 Commit `PROJECT.md` — I will read it and comment 💬
+
+**Timeline**
+
+| Week | What |
+|---|---|
+| 11 | Work on the project, I am here to help 🛟 |
+| 12–13 | R basics (project work continues at home) |
+| 14 | Oral exams 💬 |
+
+. . .
+
+Start **small**. A working tiny tool beats a broken big one. 🌱
+
+::: notes
+70–80 min. Commit to actually commenting on every PROJECT.md — this is the highest-leverage feedback of the semester.
+:::

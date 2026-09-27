@@ -1,0 +1,159 @@
+---
+title: "Week 6 · Block 1 — Dictionaries"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 6"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+```python
+sequences = ["ATGC", "GGCATT", "TTA"]
+```
+
+Write a loop that prints only the sequences longer than 3 bases.
+
+::: notes
+0–10 min. Quick recall. Two volunteers share their screen.
+:::
+
+## The problem with lists 😩 {.smaller}
+
+```python
+names   = ["seq1", "seq2", "seq3"]
+lengths = [120, 85, 300]
+```
+
+To find the length of `seq2` you must find its **position** first. 😖
+
+. . .
+
+What if the two lists get out of sync? 💥
+
+::: notes
+10–25 min. This "parallel lists" trap is common in beginner scripts — make the pain visible.
+:::
+
+## Dictionaries: key → value 📖
+
+```python
+lengths = {"seq1": 120, "seq2": 85, "seq3": 300}
+
+lengths["seq2"]           # 85 — look up by NAME, not position
+lengths["seq4"] = 42      # add a new entry
+len(lengths)              # 4
+```
+
+. . .
+
+Keys are unique · values can be anything 🔑
+
+## Looping over a dictionary {.smaller}
+
+```python
+for name in lengths:
+    print(name, lengths[name])
+
+for name, value in lengths.items():
+    print(f"{name} has {value} bases")
+```
+
+. . .
+
+```python
+"seq1" in lengths       # True — checks the KEYS
+lengths.get("seq9", 0)  # 0 instead of an error 🛟
+```
+
+::: notes
+`.get()` saves them from KeyError, the most common dictionary bug.
+:::
+
+## Counting with dictionaries 🧮
+
+The classic bioinformatics pattern:
+
+```python
+seq = "ATGCGCATG"
+counts = {}
+
+for base in seq:
+    if base in counts:
+        counts[base] = counts[base] + 1
+    else:
+        counts[base] = 1
+
+print(counts)   # {'A': 2, 'T': 2, 'G': 3, 'C': 2}
+```
+
+::: notes
+Walk through the first three iterations slowly, on the slide, base by base.
+:::
+
+## Exercise 1: Predict, then run 🔮 {.smaller}
+
+⏱️ 10 min · chat first
+
+```python
+d = {"A": 1, "T": 2}
+d["G"] = 3
+d["A"] = d["A"] + 10
+
+print(len(d))
+print(d["A"])
+print("C" in d)
+print(d.get("C", 0))
+```
+
+::: notes
+25–35 min. Highlight the difference between the last two lines.
+:::
+
+## Exercise 2: Codon counter 🧬 {.smaller}
+
+⏱️ 25 min · breakout rooms · switch after 10 min
+
+Create `scripts/codon_count.py`:
+
+```python
+seq = "ATGCGCATGGGCATGTAACGCATG"
+```
+
+1. Count how many times each **base** appears (dictionary!)
+2. Print the counts nicely: `A: 6`, `T: 4`, …
+3. Now count **codons** (3-letter chunks) — use `range(0, len(seq), 3)`
+4. Which codon appears most often? 🏆
+5. Print how many **different** codons were found
+
+💡 **Bonus:** store sequences as a dictionary `{"seq1": "ATGC", ...}` and print the length of each
+
+::: notes
+35–70 min. Point 4 is genuinely hard — hint: loop over the dictionary keeping a "best so far" variable.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+| List 📋 | Dictionary 📖 |
+|---|---|
+| Ordered, by position | By key |
+| `seqs[0]` | `lengths["seq1"]` |
+| Good for: many similar items | Good for: named values, counting |
+
+**Homework** 🏠 Commit `codon_count.py`.
+
+. . .
+
+Next block: **functions** — stop repeating yourself 🔁
+
+::: notes
+70–80 min. Exit ticket: one thing from their studies that is naturally a key → value pair.
+:::

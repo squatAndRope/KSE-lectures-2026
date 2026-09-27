@@ -1,0 +1,175 @@
+---
+title: "Week 6 · Block 2 — Functions"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 6"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+```python
+seq = "ATGCGCATG"
+```
+
+Count each base using a dictionary and print the result.
+
+. . .
+
+Did you write this code before? Where? 🤔
+
+::: notes
+0–10 min. The point: they have written GC content at least three times by now.
+:::
+
+## You keep writing the same thing 🔁 {.smaller}
+
+```python
+gc1 = (seq1.count("G") + seq1.count("C")) / len(seq1)
+gc2 = (seq2.count("G") + seq2.count("C")) / len(seq2)
+gc3 = (seq3.count("G") + seq3.count("C")) / len(seq3)
+```
+
+. . .
+
+Change the formula → change it in **three** places. Forget one → silent bug 🐛
+
+::: notes
+10–25 min. Silent bugs are worse than crashes — you get a wrong number, not an error.
+:::
+
+## Defining a function
+
+```python
+def gc_content(sequence):
+    gc = sequence.count("G") + sequence.count("C")
+    return gc / len(sequence)
+```
+
+```python
+print(gc_content("ATGCGC"))
+print(gc_content(seq2))
+```
+
+. . .
+
+`def` name(**input**) → `return` **output** 📦
+
+## Anatomy of a function {.smaller}
+
+```python
+def gc_content(sequence, as_percent=False):   # parameters
+    gc = sequence.count("G") + sequence.count("C")
+    result = gc / len(sequence)
+    if as_percent:
+        result = result * 100
+    return result                              # gives the value back
+```
+
+```python
+gc_content("ATGC")                  # 0.5
+gc_content("ATGC", as_percent=True) # 50.0
+```
+
+::: notes
+Default arguments are optional to teach — but students love them once they see them.
+:::
+
+## `return` is not `print` ⚠️ {.smaller}
+
+```python
+def bad(seq):
+    print(len(seq))      # shows it, gives nothing back
+
+def good(seq):
+    return len(seq)      # gives a value you can USE
+
+total = good("ATGC") + good("GGC")   # works ✅
+total = bad("ATGC") + bad("GGC")     # TypeError 🚫
+```
+
+::: notes
+This is THE function misconception. Show the TypeError live and read it together.
+:::
+
+## Why functions? 🧰
+
+- Write once, use everywhere
+- **Name** the idea: `gc_content()` explains itself 📖
+- Test one small thing instead of a 100-line script
+- Fix a bug in **one** place
+
+. . .
+
+> A good function does **one** thing and has a **clear name**.
+
+## Exercise 1: Predict, then run 🔮 {.smaller}
+
+⏱️ 10 min · chat first
+
+```python
+def double(x):
+    return x * 2
+
+def shout(text):
+    print(text.upper())
+
+print(double(5))
+print(double("AT"))
+result = shout("atg")
+print(result)        # 🤔
+```
+
+::: notes
+25–35 min. The last line printing `None` is the lesson of the day.
+:::
+
+## Exercise 2: Your own toolkit 🧰 {.smaller}
+
+⏱️ 25 min · breakout rooms · switch after 10 min
+
+Create `scripts/seq_functions.py` with four functions:
+
+1. `gc_content(seq)` → returns GC as a percentage, rounded to 2 decimals
+2. `reverse_complement(seq)` → returns the reverse complement
+3. `count_bases(seq)` → returns a **dictionary** of base counts
+4. `is_usable(seq, min_length=30)` → returns `True`/`False`
+   (long enough **and** no `N`)
+
+Then test all four on 3 different sequences and print the results.
+
+💡 **Bonus:** write `longest_orf_start(seq)` returning the position of the first `ATG`, or `-1`
+
+::: notes
+35–70 min. Most rooms will reuse code from weeks 3–5 — that is exactly the point. Praise copy-from-your-own-repo.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+```python
+def name(input):
+    ...
+    return output
+```
+
+- `return` gives a value back, `print` only shows it ⚠️
+- One function = one job, with a clear name
+- Your repo is now a small **toolkit** 🧰
+
+**Homework** 🏠 Commit `seq_functions.py`.
+
+. . .
+
+Next week: **files** — real data from disk 📄
+
+::: notes
+70–80 min. Tell them next week they will finally read the FASTA file from week 2 with Python.
+:::

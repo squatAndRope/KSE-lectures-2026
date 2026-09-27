@@ -1,0 +1,113 @@
+---
+title: "Week 14 · Oral exams & goodbye"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 14"
+    transition: fade
+---
+
+## Today 📅 {.smaller}
+
+**Both blocks: oral exams** 💬
+
+- 15 minutes each, by the slots you booked 📅
+- Join the main room at your time
+- Have your repo open and your tool ready to run ⚙️
+
+. . .
+
+Waiting for your turn? You are free to log off and come back 🙂
+
+::: notes
+Opening slide — show for the first few minutes, then start the first exam.
+Timing: 160 min total ≈ 9–10 students with short breaks. Extra slots outside class if the group is bigger.
+:::
+
+## While you wait ⏳ {.smaller}
+
+Optional, if you like:
+
+- Reread your own README 📖
+- Run your tool once more on a clean clone 🧪
+- Explain one function out loud to yourself 🗣️
+
+. . .
+
+You have already done the work. Today you just talk about it. 💛
+
+::: notes
+Keep this on screen between exams as a holding slide.
+:::
+
+## Exam structure (reminder) 💬 {.smaller}
+
+| Minutes | What happens |
+|---|---|
+| 1–3 | Run your tool ⚙️ |
+| 3–8 | Walk me through the code 🚶 |
+| 8–13 | Questions about your choices 🤔 |
+| 13–15 | Hardest part, what you'd change 💭 |
+
+. . .
+
+Your code stays open. This is a conversation. 🙂
+
+::: notes
+Show briefly at the start of each exam if the student seems nervous.
+:::
+
+# Closing 🎓
+
+## Fourteen weeks ago {.smaller}
+
+> "I have never opened a terminal"
+
+Today you can:
+
+- work in the terminal and write bash loops 🐚
+- write Python: strings, lists, dictionaries, loops, functions 🐍
+- read and write real biological data 🧬
+- debug your own code 🔍
+- collaborate with Git, branches and pull requests 👥
+- analyse and plot data in R 📊
+
+. . .
+
+You built a working tool from nothing. That is real. 🎉
+
+::: notes
+Closing block, last 15–20 min. Optionally invite everyone back for this.
+:::
+
+## What to do next 🌱 {.smaller}
+
+- **Use it.** The next time you would open Excel, try a script 💪
+- Put one small analysis from your own studies into code 🧬
+- Rosalind.info for practice puzzles 🧩
+- The Carpentries lessons, free and biology-focused 🎓
+- Keep your GitHub — it is your portfolio now 📁
+
+. . .
+
+Skills fade without use. One tiny script a month keeps them alive. ⚡
+
+## Thank you 💛 {.center}
+
+It was a pleasure.
+
+Stay in touch: [your contact] 📬
+
+. . .
+
+Final feedback survey: [link] 📱
+
+::: notes
+TODO: add contact and the feedback survey link.
+Ask for honest feedback — it shapes next year's course.
+:::

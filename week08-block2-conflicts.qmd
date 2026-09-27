@@ -1,0 +1,158 @@
+---
+title: "Week 8 · Block 2 — Conflicts & the pair assignment"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 8"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+In your `pair-assignment` repo:
+
+```bash
+git switch main
+git pull
+ls
+```
+
+Do you see your partner's file? React ✅
+
+::: notes
+0–10 min. This confirms yesterday's merges actually landed in main.
+:::
+
+## The moment of truth 💥
+
+You both edited **the same line**.
+
+```
+<<<<<<< HEAD
+gc = round(value, 2)
+=======
+gc = round(value, 3)
+>>>>>>> partner-branch
+```
+
+. . .
+
+Git does not guess. **You** decide. 🧑‍⚖️
+
+::: notes
+10–25 min. Reassure: a conflict is not damage, nothing is lost.
+:::
+
+## Resolving a conflict 🧑‍⚖️ {.smaller}
+
+1. `git status` — which files are in conflict?
+2. Open the file, find the `<<<<<<<` markers
+3. Keep what should stay — delete **all** markers ✂️
+4. Save, then:
+
+```bash
+git add <file>
+git commit -m "Resolve conflict in seq_functions.py"
+git push
+```
+
+. . .
+
+VS Code shows buttons: *Accept Current* / *Incoming* / *Both* 🖱️
+
+## How to avoid conflicts 🛡️
+
+- `git pull` **before** you start working 🌅
+- Small, frequent commits, not one giant one
+- Agree **who works on which file** ✋
+- Talk to each other 💬
+
+. . .
+
+> Conflicts are a communication problem more than a Git problem.
+
+## Exercise 1: Make a conflict on purpose 😈 {.smaller}
+
+⏱️ 25 min · breakout rooms · pairs
+
+1. Both of you: `git switch main` and `git pull`
+2. Both edit the **same line** of the same file — differently
+3. Both commit. **A** pushes first ✅
+4. **B** pushes → rejected → `git pull` → 💥 conflict
+5. Resolve it together, commit, push
+6. Both run `git log --oneline` — do you see the same history?
+
+::: notes
+25–50 min. Doing it deliberately in class is much better than meeting it in panic at 2 a.m.
+:::
+
+## Pair assignment 📋 {.smaller}
+
+**25% of your grade · due in 2 weeks · in pairs**
+
+Build a small FASTA analysis tool together, in **one** repository:
+
+- At least **4 functions**, each written by one of you
+- Each function on its **own branch**, merged via a **pull request**
+- Each of you reviews at least **2** of your partner's pull requests 👀
+- A `README.md` explaining what it does and how to run it
+- At least **one resolved conflict** in the history 😈
+
+::: notes
+50–65 min. Walk through each point. Stress: I grade the collaboration, not only the code.
+:::
+
+## What I will look at 🔍 {.smaller}
+
+| Part | What I check |
+|---|---|
+| Code | Does it run? Are functions small and named clearly? |
+| Git | Branches, pull requests, meaningful commit messages |
+| Review | Are the comments useful and kind? 💛 |
+| README | Could a stranger run your tool? |
+| Balance | Did **both** of you contribute? 👥 |
+
+. . .
+
+Deadline: **[date]** · Submit: paste your repo link in [Moodle]
+
+::: notes
+TODO: fill in the date and submission channel.
+:::
+
+## Exercise 2: Plan it 🗺️ {.smaller}
+
+⏱️ 15 min · breakout rooms · with your partner
+
+Before you leave today, write it in your `README.md`:
+
+1. Which 4 functions will your tool have?
+2. Who writes which one? ✋
+3. When will you meet during the next two weeks? 📅
+
+Commit the README and push it.
+
+::: notes
+65–80 min. Forcing a written plan now prevents the classic "we did nothing for 13 days" panic.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+- Conflicts: keep what should stay, delete the markers ✂️
+- `git pull` before starting, always 🌅
+- Your assignment starts **now** 📋
+
+. . .
+
+Next week: **scripts as tools** — running your code from the terminal ⚙️
+
+::: notes
+80 min. Remind: quiz 4 this week.
+:::

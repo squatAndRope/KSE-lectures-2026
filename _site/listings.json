@@ -1,0 +1,34 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/week01-block1-welcome.html",
+      "/week01-block2-git.html",
+      "/week02-block1-terminal.html",
+      "/week02-block2-bash.html",
+      "/week03-block1-python-intro.html",
+      "/week03-block2-strings.html",
+      "/week04-block1-lists.html",
+      "/week04-block2-conditions.html",
+      "/week05-block1-loops.html",
+      "/week05-block2-practice.html",
+      "/week06-block1-dictionaries.html",
+      "/week06-block2-functions.html",
+      "/week07-block1-files.html",
+      "/week07-block2-debugging.html",
+      "/week08-block1-git-teams.html",
+      "/week08-block2-conflicts.html",
+      "/week09-block1-modules.html",
+      "/week09-block2-cli.html",
+      "/week10-block1-bash-scripts.html",
+      "/week10-block2-project-brief.html",
+      "/week11-block1-project-lab.html",
+      "/week11-block2-review.html",
+      "/week12-block1-r-intro.html",
+      "/week12-block2-r-plots.html",
+      "/week13-block1-python-vs-r.html",
+      "/week13-block2-final-stretch.html",
+      "/week14-oral-exams.html"
+    ]
+  }
+]

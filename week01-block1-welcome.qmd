@@ -1,4 +1,7 @@
 ---
+title: "Week 1 · Block 1 — Welcome!"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
 format:
   revealjs:
     theme: dark

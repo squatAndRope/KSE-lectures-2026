@@ -1,0 +1,158 @@
+---
+title: "Week 10 · Block 1 — Bash scripts"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 10"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+```bash
+python3 scripts/fasta_report.py data/sequences.fasta | head -3
+```
+
+Does your tool still work? React ✅ or ✋
+
+. . .
+
+**Pair assignment is due this week** 📋 Questions in the chat 💬
+
+::: notes
+0–10 min. Reserve a few minutes for assignment questions — better now than by e-mail at midnight.
+:::
+
+## One file is never enough 📁📁📁
+
+```bash
+python3 scripts/fasta_report.py data/sample1.fasta
+python3 scripts/fasta_report.py data/sample2.fasta
+python3 scripts/fasta_report.py data/sample3.fasta
+# ... 47 more 😫
+```
+
+. . .
+
+Same problem as in week 5 — now we solve it in **bash** 🔁
+
+::: notes
+10–25 min. Deliberate echo of the Python loops lesson: the pattern transfers.
+:::
+
+## Loops in bash 🔁
+
+```bash
+for file in data/*.fasta
+do
+    echo "Processing $file"
+    python3 scripts/fasta_report.py "$file"
+done
+```
+
+. . |
+
+- `*.fasta` — the shell expands it into a list 🌟
+- `$file` — the variable · always in **quotes** ⚠️
+
+::: notes
+Quotes matter: file names with spaces break everything without them.
+:::
+
+## Variables in bash {.smaller}
+
+```bash
+DATA_DIR="data"
+MIN_LENGTH=50
+
+echo "Looking in $DATA_DIR"
+python3 scripts/fasta_report.py "$DATA_DIR/sequences.fasta" $MIN_LENGTH
+```
+
+. . .
+
+::: {.callout-warning}
+No spaces around `=` — `X = 5` is an error, `X=5` is correct. 🤨
+:::
+
+## A real script file 📜 {.smaller}
+
+```bash
+#!/bin/bash
+# run_all.sh — analyse every FASTA file in data/
+
+for file in data/*.fasta
+do
+    name=$(basename "$file" .fasta)
+    python3 scripts/fasta_report.py "$file" > "results/${name}_report.txt"
+    echo "Done: $name"
+done
+```
+
+```bash
+bash run_all.sh        # simplest way to run it
+```
+
+::: notes
+`$(...)` captures a command's output — mention briefly, don't dwell.
+`chmod +x` and ./run_all.sh can be a bonus for the curious.
+:::
+
+## Exercise 1: Loop over files 🔁 {.smaller}
+
+⏱️ 20 min · your own screen · react ✅
+
+1. Make 3 copies of your FASTA with different names in `data/`
+2. Write a loop that prints the name and line count of each
+3. Now run your Python tool on each of them
+4. Save each result to `results/<name>_report.txt`
+
+💡 **Bonus:** print a count at the end: "Processed N files"
+
+::: notes
+25–45 min. Copying the file 3 times is a cheap way to simulate a real dataset.
+:::
+
+## Exercise 2: Your first pipeline 🚀 {.smaller}
+
+⏱️ 30 min · breakout rooms · switch after 15 min
+
+Write `run_all.sh` that does the whole analysis in one command:
+
+1. Create the `results/` folder if it does not exist (`mkdir -p results`)
+2. Loop over every `.fasta` file in `data/`
+3. Run your Python tool on each one, saving a report per file
+4. Print a summary line: how many files were processed
+5. Commit it — and add `results/` to `.gitignore` 🙈
+
+💡 **Bonus:** make the script accept the data folder as `$1`
+
+::: notes
+45–75 min. This is the "aha" of the course: one command reproduces the whole analysis.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+```bash
+for file in data/*.fasta
+do
+    python3 scripts/tool.py "$file"
+done
+```
+
+- Bash loops over **files**, Python works **inside** them 🧬
+- Quote your variables ⚠️
+- One script = a reproducible analysis 🔁
+
+**Homework** 🏠 Commit `run_all.sh`.
+
+::: notes
+75–80 min. Remind: pair assignment due — check the deadline.
+:::

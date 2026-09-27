@@ -1,0 +1,140 @@
+---
+title: "Week 8 · Block 1 — Git in teams"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 8"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+```bash
+git status
+git log --oneline
+```
+
+How many commits do you have now? Chat the number 🔢
+
+. . .
+
+Seven weeks ago this was your first command. 🙂
+
+::: notes
+0–10 min. Celebrate the progress — most will have 15+ commits.
+:::
+
+## Two people, one repository 😬
+
+> You edit `seq_functions.py`. Your partner edits `seq_functions.py`.
+> Who wins?
+
+. . .
+
+Answer: **nobody has to lose** — that is what branches are for 🌿
+
+::: notes
+10–25 min. This block is the foundation of the pair assignment.
+:::
+
+## Branches 🌿
+
+```bash
+git branch                    # where am I?
+git switch -c add-gc-function # create and go to a new branch
+# ... work, add, commit ...
+git switch main               # back to the main line
+```
+
+. . .
+
+A branch is a **parallel version** of your project. Experiment freely — `main` stays safe. 🛟
+
+## Sharing a repository 🤝 {.smaller}
+
+One of you owns the repo, the other becomes a **collaborator**:
+
+Repo → **Settings** → **Collaborators** → *Add people*
+
+. . .
+
+```bash
+git clone <url>        # the partner clones it
+git pull               # get the newest changes 📥
+```
+
+::: {.callout-note}
+Golden rule: `git pull` **before** you start working. Every time. 🌅
+:::
+
+## Pull requests 📬
+
+```bash
+git push -u origin add-gc-function
+```
+
+Then on GitHub: **Compare & pull request**
+
+. . .
+
+A pull request is a **proposal**: "here is my change, please look at it before it goes into `main`" 👀
+
+::: notes
+Emphasise: this is exactly how professional teams work, including at my job.
+:::
+
+## Code review 👀 {.smaller}
+
+On the **Files changed** tab you can comment on any line.
+
+Good review comments:
+
+- "What happens here if the sequence is empty?" 🤔
+- "Could this be a function? It repeats below"
+- "Nice — I didn't know about `.get()`" 🎉
+
+. . .
+
+Review is about the **code**, never about the person. 💛
+
+::: notes
+Model one good and one bad comment. Online, tone in writing matters even more.
+:::
+
+## Exercise: Your first pull request 📬 {.smaller}
+
+⏱️ 35 min · breakout rooms · pairs
+
+1. **A** creates a repo `pair-assignment` and adds **B** as collaborator
+2. **B** clones it
+3. Each creates their **own branch**: `git switch -c <yourname>-function`
+4. Each writes **one small function** in a separate file and pushes it
+5. Each opens a **pull request** and reviews the partner's one 👀
+6. Merge both pull requests on GitHub
+
+::: notes
+25–65 min. Paste the steps in the chat. Expect authentication issues for B — have the token/gh login plan ready.
+Visit every room; PR merging is where people get lost.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+| Command | What it does |
+|---|---|
+| `git switch -c name` | New branch 🌿 |
+| `git switch main` | Go back |
+| `git pull` | Get partner's changes 📥 |
+| `git push -u origin name` | Publish your branch |
+
+**Next block:** what happens when you both edit the **same line** 💥
+
+::: notes
+65–80 min. Leave them curious about conflicts — it is the best part of week 8.
+:::

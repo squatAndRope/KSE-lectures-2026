@@ -1,0 +1,167 @@
+---
+title: "Week 7 · Block 2 — Errors & debugging"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 7"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min · in the chat
+
+What error would you expect from each line?
+
+```python
+open("data/sequenses.fasta")
+int("ATG")
+counts["X"]
+"ATG" + 5
+```
+
+::: notes
+0–10 min. They have met all four already. Naming them out loud removes the fear.
+:::
+
+## Errors are messages, not failures 💌
+
+> Nobody writes code that works the first time. Not me, not your supervisor, not anyone. 🙂
+
+. . .
+
+The skill is not avoiding errors. The skill is **reading** them.
+
+::: notes
+10–25 min. Say this sincerely — online, beginners often feel alone with a red screen.
+:::
+
+## How to read a traceback 🔍 {.smaller}
+
+```
+Traceback (most recent call last):
+  File "fasta_report.py", line 14, in <module>
+    gc = gc_content(seq)
+  File "seq_functions.py", line 3, in gc_content
+    return gc / len(sequence)
+ZeroDivisionError: division by zero
+```
+
+. . .
+
+- **Bottom line** = what went wrong 🎯
+- **Above it** = where, and how you got there
+- Read from the **bottom up**
+
+## The usual suspects {.smaller}
+
+| Error | Usually means |
+|---|---|
+| `SyntaxError` | Missing `:` `)` or quote |
+| `IndentationError` | Wrong number of spaces |
+| `NameError` | Typo, or variable not defined yet |
+| `TypeError` | Mixing text and numbers |
+| `KeyError` | That key is not in the dictionary |
+| `IndexError` | Position beyond the end of the list |
+| `FileNotFoundError` | Wrong path — run `pwd` 📍 |
+
+## Debugging with `print()` 🖨️ {.smaller}
+
+```python
+for line in f:
+    line = line.strip()
+    print("DEBUG:", repr(line))    # what is REALLY in there?
+    if line.startswith(">"):
+        ...
+```
+
+. . .
+
+`repr()` shows the invisible: `'ATGC\n'` vs `'ATGC'` 👀
+
+::: notes
+Professional debuggers exist — but print() is what everyone actually uses first.
+:::
+
+## Silent bugs 🤫 {.smaller}
+
+```python
+gc = (seq.count("G") + seq.count("C")) / len(seq) * 100
+```
+
+No error. Result: `4200.0` 🤨
+
+. . .
+
+**Ask yourself:** does this number make biological sense?
+
+::: notes
+25–35 min. Most dangerous class of bug: wrong results that look fine. Tie back to the AI policy — this is what you cannot catch if you did not write the code.
+:::
+
+## Exercise 1: Fix the script 🔧 {.smaller}
+
+⏱️ 20 min · breakout rooms · 5 bugs
+
+I will paste `scripts/broken_report.py` in the chat 📋
+
+1. Run it and read the **first** error only
+2. Fix it, run again, repeat
+3. Write in the chat which error types you met
+
+💡 **Bonus:** one bug produces no error at all. Can you find it? 🤫
+
+::: notes
+35–55 min. Prepare broken_report.py beforehand: missing colon, wrong variable name, missing strip(), KeyError, and one silent maths bug.
+:::
+
+## Defensive coding 🛡️ {.smaller}
+
+```python
+if len(sequence) == 0:
+    print("Warning: empty sequence, skipping")
+    continue
+
+value = counts.get("N", 0)     # safe lookup
+```
+
+. . .
+
+Check your assumptions **before** the data surprises you.
+
+## Exercise 2: Make it robust 🧪 {.smaller}
+
+⏱️ 20 min · pairs
+
+Take your own `fasta_report.py` and break-proof it:
+
+1. What happens if the file does not exist? Print a friendly message
+2. What if a sequence is empty? Skip it, don't crash
+3. What if a sequence contains `N`? Report how many
+4. Swap scripts with another room and try to break theirs 😈
+
+::: notes
+55–75 min. The swap is the fun part — testing someone else's code is a real skill.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+- Read tracebacks **bottom up** 🔍
+- `print()` and `repr()` are your debugger
+- Ask: does this number make sense? 🤨
+- Errors are normal — being stuck silently is not 💬
+
+**Homework** 🏠 Commit your robust version.
+
+. . .
+
+Next week: **Git in teams** — and your pair assignment 👥
+
+::: notes
+75–80 min. Announce the pair assignment explicitly: 25% of the grade, starts next week.
+:::

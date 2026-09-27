@@ -1,0 +1,180 @@
+---
+title: "Week 12 · Block 1 — Hello, R"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 12"
+    transition: fade
+---
+
+## Why another language? 🤔 {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Python** 🐍
+
+- General purpose
+- Files, pipelines, automation
+- Sequences and text 🧬
+:::
+::: {.column width="50%"}
+**R** 🇷
+
+- Built by statisticians, for data
+- Tables, statistics, plots 📊
+- Bioconductor: RNA-seq, microarrays
+:::
+::::
+
+. . .
+
+You will meet R in almost every biology lab. 💛
+
+::: notes
+0–10 min. Honest framing: not better or worse, different default job.
+:::
+
+## Good news: you already know this {.smaller}
+
+| Concept | Python | R |
+|---|---|---|
+| Assign | `x = 5` | `x <- 5` |
+| Comment | `# note` | `# note` |
+| Function | `len(x)` | `length(x)` |
+| Condition | `if x > 5:` | `if (x > 5) {` |
+| Loop | `for s in seqs:` | `for (s in seqs) {` |
+
+. . .
+
+New syntax, same **thinking**. 🧠
+
+::: notes
+10–25 min. This is the core message of the R weeks: transfer, not restart.
+:::
+
+## RStudio 🖥️ {.smaller}
+
+Four panels:
+
+- **Console** — try things out (like `python3` interactive)
+- **Script** — your saved code 💾
+- **Environment** — what variables exist right now 👀
+- **Plots / Files** 📊
+
+. . .
+
+Run a line: **Ctrl/Cmd + Enter** ⏎
+
+::: notes
+Screen share and point at each panel. The Environment panel is something Python beginners never get — highlight it.
+:::
+
+## Vectors: R's superpower ⚡ {.smaller}
+
+```r
+lengths <- c(120, 85, 300, 42)
+
+length(lengths)     # 4
+mean(lengths)       # 136.75
+max(lengths)
+sort(lengths)
+
+lengths * 2         # every element doubled — no loop! 🤯
+lengths > 100       # TRUE FALSE TRUE FALSE
+```
+
+. . .
+
+In R, operations work on **whole vectors** at once.
+
+::: notes
+The no-loop vectorisation is the genuine "wow" moment. Compare with the Python loop they wrote in week 5.
+:::
+
+## Indexing ⚠️ {.smaller}
+
+```r
+lengths[1]              # the FIRST element — R counts from 1! 🤨
+lengths[c(1, 3)]        # first and third
+lengths[lengths > 100]  # filtering by condition 🎯
+```
+
+. . .
+
+::: {.callout-warning}
+Python counts from 0, R counts from 1. This will bite you. 🐛
+:::
+
+## Data frames: tables 📊 {.smaller}
+
+```r
+seqs <- data.frame(
+  name   = c("seq1", "seq2", "seq3"),
+  length = c(120, 85, 300),
+  gc     = c(0.55, 0.41, 0.62)
+)
+
+head(seqs)          # first rows
+nrow(seqs)          # number of rows
+seqs$length         # one column as a vector
+mean(seqs$gc)
+```
+
+. . .
+
+A data frame is a spreadsheet you can compute with 🧮
+
+## Filtering rows 🎯
+
+```r
+seqs[seqs$length > 100, ]          # rows where length > 100
+seqs[seqs$gc > 0.5, "name"]        # just the names
+seqs$gc_percent <- seqs$gc * 100   # add a new column ➕
+```
+
+. . .
+
+The comma matters: `[rows, columns]` 📐
+
+## Exercise: First steps in R 🇷 {.smaller}
+
+⏱️ 30 min · breakout rooms · switch after 15 min
+
+In RStudio, create `scripts/first_analysis.R`:
+
+1. Make a vector of 6 sequence lengths
+2. Print the mean, max and sorted values
+3. Print only the lengths above 100
+4. Build a data frame with `name`, `length`, `gc` (6 rows)
+5. Add a `gc_percent` column
+6. Print only rows with GC above 50% 🎯
+
+💡 **Bonus:** `summary(seqs)` — what does it give you?
+
+::: notes
+25–65 min. Paste in the chat. Expect `<-` vs `=` confusion and the missing comma in `[rows, ]`.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+| R | What it does |
+|---|---|
+| `x <- c(1,2,3)` | vector |
+| `mean()` `max()` `sort()` | stats, no loop needed ⚡ |
+| `df$column` | one column |
+| `df[df$x > 5, ]` | filter rows 🎯 |
+
+**Remember:** R counts from **1** ⚠️
+
+. . .
+
+Next block: reading real data and **plots** 📈
+
+::: notes
+65–80 min. Two students share their data frame output.
+:::

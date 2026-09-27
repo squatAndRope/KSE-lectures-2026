@@ -1,0 +1,181 @@
+---
+title: "Week 3 · Block 1 — Hello, Python"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 3"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min · in the chat
+
+In your repo, using **one line** each:
+
+1. How many sequences are in `data/sequences.fasta`?
+2. Save the headers into `results/headers.txt`
+
+. . .
+
+Stuck? Ask your partner first, then the chat 💬
+
+::: notes
+0–10 min. Recall last week. If many struggle, redo the grep pipeline live — it is the base for everything later.
+:::
+
+## Bash vs Python 🐍 {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Bash is great for**
+
+- Moving and filtering files
+- Gluing tools together
+- One-liners
+:::
+::: {.column width="50%"}
+**Python is great for**
+
+- Logic and calculations
+- Reusable analysis
+- Anything longer than 2 lines 🙂
+:::
+::::
+
+::: notes
+10–25 min: new material. Do not oppose them — biologists use both, daily.
+:::
+
+## Two ways to run Python {.smaller}
+
+```bash
+python3                 # interactive — try things out (exit())
+python3 my_script.py    # run a saved script
+```
+
+. . .
+
+We use **scripts**, because a script can be committed, shared and re-run. 💾
+
+::: notes
+Check that everyone actually has python3. Windows users may need `python` instead.
+:::
+
+## Your first script
+
+```python
+# hello.py
+print("Hello, bioinformatics!")
+print(2 + 2)
+```
+
+```bash
+python3 hello.py
+```
+
+. . .
+
+`#` starts a **comment** — Python ignores it, humans read it.
+
+## Variables 📦
+
+```python
+organism = "Homo sapiens"
+gene_length = 1520
+gc_content = 0.42
+is_coding = True
+
+print(organism, gene_length)
+```
+
+. . .
+
+A variable is a **label on a value**, not a box you must declare.
+
+## Four basic types {.smaller}
+
+| Type | Example | Used for |
+|---|---|---|
+| `str` | `"ATGC"` | text, sequences |
+| `int` | `1520` | counts, positions |
+| `float` | `0.42` | ratios, p-values |
+| `bool` | `True` / `False` | yes/no answers |
+
+```python
+type(gc_content)   # <class 'float'>
+```
+
+::: notes
+Show a classic error: "ATG" + 5 → TypeError. Read the error message together, slowly.
+:::
+
+## Exercise 1: Predict, then run 🔮 {.smaller}
+
+⏱️ 10 min · answer in the chat **before** running
+
+```python
+a = 5
+b = "5"
+print(a + a)
+print(b + b)
+print(a + b)
+```
+
+💡 Which line fails? What exactly does the error say?
+
+::: notes
+25–35 min. This is the single most useful habit: read the error, don't panic.
+:::
+
+## Input and conversion {.smaller}
+
+```python
+length = input("Sequence length: ")   # always a STRING
+length = int(length)                  # convert to number
+print(length * 3)
+```
+
+. . .
+
+`int()` · `float()` · `str()` convert between types.
+
+## Exercise 2: Your first analysis 🧬 {.smaller}
+
+⏱️ 25 min · breakout rooms · switch after 10 min
+
+Create `scripts/dna_info.py`:
+
+1. Store a DNA sequence in a variable (at least 20 letters)
+2. Print its length using `len(sequence)`
+3. Count the G letters: `sequence.count("G")`
+4. Count the C letters
+5. Calculate and print the **GC content** as a percentage
+6. `git add` → `commit` → `push`
+
+💡 **Bonus:** print the result rounded: `round(value, 2)`
+
+::: notes
+35–70 min. Paste in the chat. Common bug: integer division confusion — remind them `/` gives a float.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+- A script is a file you can re-run and commit 💾
+- Variables hold values; values have **types**
+- `len()` `count()` already do real biology work
+
+**Homework** 🏠 Commit `dna_info.py` with a comment at the top explaining what it does.
+
+. . .
+
+Next block: **strings** — sequences are just text 🧬
+
+::: notes
+70–80 min. Two students share their GC result — compare numbers, discuss why they differ.
+:::

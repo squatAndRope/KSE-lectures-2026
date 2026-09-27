@@ -1,0 +1,126 @@
+---
+title: "Week 13 · Block 2 — Final stretch"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 13"
+    transition: fade
+---
+
+## One week to go 📅 {.smaller}
+
+Next week: your **15 minutes** with me 💬
+
+Today:
+
+- how the exam will look 🎓
+- last checks on your project ✅
+- work time, I am here 🛟
+
+::: notes
+0–5 min. Calm, practical tone. Exam anxiety peaks now.
+:::
+
+## How the 15 minutes will go 💬 {.smaller}
+
+| Minutes | What happens |
+|---|---|
+| 1–3 | You share your screen and **run** your tool ⚙️ |
+| 3–8 | You walk me through the code 🚶 |
+| 8–13 | I ask questions about your choices 🤔 |
+| 13–15 | What was hardest, what would you change 💭 |
+
+. . .
+
+No memorising. No trick questions. Your code is open in front of you 📖
+
+::: notes
+5–15 min. Being explicit about the structure removes most of the fear.
+:::
+
+## Questions I will probably ask 🤔 {.smaller}
+
+- Walk me through what happens when I run this command ⚙️
+- Why a dictionary here and a list there?
+- What happens if the input file is empty? 🛡️
+- Which part took you longest? 😅
+- If you had another week, what would you add?
+- Where did you get stuck, and how did you get unstuck? 🔍
+
+. . .
+
+"I don't know, but here is how I would find out" is a **good** answer 💛
+
+::: notes
+15–25 min. The last line matters — reward honesty over performance.
+:::
+
+## Final checklist ✅ {.smaller}
+
+- [ ] Runs from the terminal with an argument ⚙️
+- [ ] At least 3 functions with clear names 🧩
+- [ ] Reads a real file 📄
+- [ ] Prints or saves output 💾
+- [ ] Friendly message when input is missing 🛡️
+- [ ] README with an example command 📖
+- [ ] Commits spread over several days 📈
+- [ ] **You can explain every line** 🗣️
+
+::: notes
+25–30 min. Ask them to tick these live and put the count in the chat — instant picture of readiness.
+:::
+
+## Two honest reminders 💛 {.smaller}
+
+**Small and working > big and broken** 🌱
+
+If something is half-finished, say so in the README. Honesty is not a penalty.
+
+. . .
+
+**If you used AI**, that's allowed for explaining and debugging — but next week you explain the code yourself.
+So go through it now, line by line. 📖
+
+::: notes
+30–40 min. Non-accusatory framing. The message is "protect yourself", not "I'm watching you".
+:::
+
+## Work time 🛠️ {.smaller}
+
+⏱️ Rest of the block
+
+- ✋ Raise your hand — I join your room
+- 👥 Rooms open for pair debugging
+- 💬 Chat for quick questions
+
+**Practice tip:** explain your code out loud to your partner. If you can explain it, you're ready. 🗣️
+
+::: notes
+40–75 min. Rubber-duck explaining is the single best exam preparation.
+:::
+
+## Before you go 📌 {.smaller}
+
+1. Push everything 💾
+2. Sign up for an exam slot: [link] 📅
+3. Check your tool runs on a **clean clone** of your repo:
+
+```bash
+git clone <your repo> test-clone
+cd test-clone
+python3 scripts/my_tool.py data/sequences.fasta
+```
+
+. . .
+
+See you next week 💛
+
+::: notes
+75–80 min. The clean-clone test catches missing files — a very common exam-day surprise.
+TODO: add the booking link.
+:::

@@ -1,0 +1,354 @@
+---
+title: "Week 2 · Block 2 — Bash on real data"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 2"
+    transition: fade
+mermaid:
+  theme: dark
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min · in the chat
+
+You are in `programming-basics`. What does each command do?
+
+```bash
+cd ../..
+ls -a
+wc -l data/sample.txt
+rm -r results
+```
+
+. . .
+
+**Careful with the last one** — what would you lose? 💀
+
+. . .
+
+🏴‍☠️ Who got into Bandit? Which level? (no passwords! 🙂)
+
+::: notes
+0–10 min. Predict-then-run: ask for answers in the chat BEFORE anyone runs them.
+:::
+
+## Our data: FASTA 🧬 {.smaller}
+
+```
+>seq1 Homo sapiens BRCA1 partial
+ATGCTAAAGACAATTACATAACATACACGTCAGCACGAAACTTGTTGGCCCAGTGTGAAT
+CGCTTAAGGGTTAAGTAAGTGTGATGCATACGCCTTTACTTGCTGTGTCCA
+>seq2 Mus musculus Brca1 partial
+ATG...
+```
+
+- Header lines start with `>`
+- Sequence lines are the DNA itself — **one sequence can span many lines**
+
+. . .
+
+**Download `sequences.fasta` into your `data/` folder** — link in the chat 🔗
+
+::: notes
+10–15 min. Put the raw GitHub link in the chat.
+Alternative: `curl -O <link>` — nice, but only if their network cooperates.
+Toy file: 12 sequences, 5 species, 30 sequence lines (sequences wrapped at 60 characters).
+:::
+
+## Searching: `grep` 🔎
+
+```bash
+grep ">" sequences.fasta        # only header lines
+grep -c ">" sequences.fasta     # COUNT them = number of sequences
+grep -i "brca" sequences.fasta  # ignore upper/lower case
+grep -v ">" sequences.fasta     # everything EXCEPT headers
+```
+
+. . .
+
+`-c` = count · `-i` = ignore case · `-v` = invert
+
+::: notes
+15–20 min. `grep -c ">"` is the classic "how many sequences do I have" one-liner. Make sure everyone sees it work.
+Always put the pattern in quotes — `>` without quotes means "write to a file" (next slides!).
+:::
+
+## Pipes: `|` 🔗
+
+The output of one command becomes the input of the next.
+
+```bash
+grep -v ">" sequences.fasta | wc -l    # how many sequence lines?
+grep ">" sequences.fasta | head -n 3   # first 3 headers
+```
+
+. . .
+
+> Small tools, combined. That is the whole idea of the terminal.
+
+::: notes
+20–25 min. Analogy: a pipeline in the lab — each step passes the sample to the next step.
+:::
+
+## More small tools: `cut` `sort` `uniq` ✂️ {.smaller}
+
+```bash
+cut -d " " -f 2,3 file   # split lines at spaces, keep fields 2 and 3
+sort file                # sort lines alphabetically   (-n = numbers, -r = reverse)
+uniq -c                  # count repeated neighbouring lines
+```
+
+. . .
+
+**Which species are in my file, and how many sequences each?**
+
+```bash
+grep ">" sequences.fasta | cut -d " " -f 2,3 | sort | uniq -c | sort -nr
+```
+
+```
+      4 Homo sapiens
+      3 Mus musculus
+      2 Gallus gallus
+      2 Danio rerio
+      1 Rattus norvegicus
+```
+
+::: notes
+Build the pipe step by step live: run after every `|` and show what changed.
+Why `sort` before `uniq`? uniq only merges NEIGHBOURING identical lines. Try without sort — ask what happens.
+:::
+
+## Saving results: `>` 💾
+
+```bash
+grep ">" sequences.fasta > headers.txt     # write to a file
+grep ">" sequences.fasta >> headers.txt    # ADD to a file
+```
+
+. . .
+
+::: {.callout-warning}
+`>` overwrites the file without asking. `>>` adds at the end.
+:::
+
+::: notes
+25–28 min. Ask: after both commands, how many lines are in headers.txt? (24)
+:::
+
+## Find & replace: `sed` 🔁 {.smaller}
+
+DNA → RNA: every **T** becomes **U**
+
+```bash
+sed 's/T/U/g' sequences.fasta
+#     │ │ │ └─ g = global: every match in the line, not only the first
+#     │ │ └─── replace with
+#     │ └───── find
+#     └─────── s = substitute
+```
+
+. . .
+
+Look at the headers… 🤔
+
+```
+>seq3 Homo sapiens UP53 partial
+```
+
+. . .
+
+```bash
+sed '/^>/!s/T/U/g' sequences.fasta   # only on lines NOT starting with >
+```
+
+::: notes
+28–32 min. The "UP53" bug is the point: tools do exactly what you say, not what you mean. Always look at your output.
+`^` = start of line (a regular expression) — just a taste, no deep dive.
+`sed` does NOT change the file — it prints the result. Save with `>`.
+:::
+
+## Exercise: Explore the data 🧬 {.smaller}
+
+⏱️ 20 min · breakout rooms · switch who types after 10 min
+
+1. How many sequences are in `sequences.fasta`?
+2. Save all headers into `results/headers.txt`
+3. How many lines are *not* headers? Why is it more than question 1?
+4. How many sequences come from *Homo sapiens*?
+5. Show the first 2 headers only (use a pipe)
+6. Which gene names appear? (hint: `cut` field 4)
+7. Save the RNA version of the file into `results/sequences_rna.fasta`
+
+💡 **Bonus:** what does this do, and why is the number different from question 1?
+
+```bash
+grep -c "ATG" sequences.fasta
+```
+
+::: notes
+32–52 min. Paste the questions in the chat before opening rooms.
+Q3: 30 vs 12 — sequences span several lines.
+Q6: BRCA1 and Brca1 are counted separately — nice link to -i and to "data is messy".
+Bonus: grep counts LINES containing ATG (21), not sequences and not occurrences — and an ATG split across two lines is invisible. A classic bioinformatics trap → reason we'll use Python/Biopython later.
+:::
+
+## Scripts: save your commands 📜 {.smaller}
+
+A script = commands in a file, run with one word. Your analysis becomes **repeatable**.
+
+```bash
+#!/bin/bash
+# count_seqs.sh — how many sequences are in a FASTA file?
+
+file=$1                          # $1 = the first thing after the script name
+n=$(grep -c ">" "$file")         # $( ) = save the output of a command
+echo "$file contains $n sequences"
+```
+
+. . .
+
+```bash
+bash scripts/count_seqs.sh data/sequences.fasta
+```
+```
+data/sequences.fasta contains 12 sequences
+```
+
+::: notes
+52–57 min. Line 1 = shebang: which program should run this file.
+No spaces around `=` in variables! `file = $1` is an error — everyone makes it once.
+Quotes around "$file" protect against file names with spaces (remember Bandit?).
+:::
+
+## Making it executable 🔑 {.smaller}
+
+```bash
+ls -l scripts/count_seqs.sh
+-rw-r--r--  1 anna  staff  180 Oct  7 10:12 count_seqs.sh
+```
+
+`r` = read · `w` = write · `x` = execute — for **owner · group · others**
+
+. . .
+
+```bash
+chmod +x scripts/count_seqs.sh      # add x = allowed to run
+./scripts/count_seqs.sh data/sequences.fasta
+```
+
+. . .
+
+**Loop** — the same thing for every file:
+
+```bash
+for f in data/*; do
+  bash scripts/count_seqs.sh "$f"
+done
+```
+
+::: notes
+57–60 min. Windows / Git Bash: permissions behave differently — `bash script.sh` always works, that's enough.
+The loop is where the terminal beats clicking: 3 files or 3000 files, same line.
+:::
+
+## Exercise: Your first script ✍️ {.smaller}
+
+⏱️ 12 min · on your own · ✅ when done
+
+1. Create `scripts/count_seqs.sh` (in `nano` or VS Code) with the code from the slide
+2. Run it on `data/sequences.fasta`
+3. Add one line: also print how many sequences are from *Homo sapiens*
+4. Run the `for` loop over everything in `data/` — what does it say about `sample.txt`?
+5. `git add scripts/` → `git commit` → `git push`
+
+💡 **Bonus:** what happens if you run the script **without** a file name? Add a check:
+
+```bash
+if [ -z "$1" ]; then
+  echo "Usage: count_seqs.sh <fasta_file>"
+  exit 1
+fi
+```
+
+::: notes
+60–72 min. `-z` = "is empty?". Exit code 1 = "something went wrong" (0 = OK) — link to `echo $?` for the curious.
+:::
+
+## Back to Git: `.gitignore` 🙈 {.smaller}
+
+Some files should **never** go to GitHub:
+
+- huge data files 🐘
+- results you can regenerate
+- passwords and tokens 🔑
+
+```bash
+nano .gitignore
+```
+
+```
+results/
+*.fasta
+```
+
+. . .
+
+**Warning:** `.gitignore` only works on files Git is *not tracking yet* 😉
+
+::: notes
+72–76 min. Tell them this is exactly the mistake I made with these slides — rendered files ended up on GitHub.
+Note the wildcard `*.fasta` — same idea as in the shell.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+| Command | What it does |
+|---|---|
+| `grep "x" file` · `-c` `-i` `-v` | Find lines · count · ignore case · invert |
+| `cmd1 \| cmd2` | Pipe: output → input |
+| `cut` `sort` `uniq -c` | Columns · order · count |
+| `sed 's/a/b/g'` | Find & replace |
+| `> file` `>> file` | Save · append |
+| `bash script.sh` · `$1` · `for` | Scripts, arguments, loops |
+
+. . .
+
+Next week: **Python** 🐍 — and we'll solve the `ATG` problem properly
+
+::: notes
+76–80 min. Exit ticket in the chat: one command they will actually use again.
+:::
+
+## Homework 🏠 {.smaller}
+
+1. Add `.gitignore` to your repo, commit and push
+2. **SSH key for GitHub** — no more typing passwords/tokens:
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"   # press Enter 3×
+cat ~/.ssh/id_ed25519.pub     # the PUBLIC key → copy it
+```
+
+GitHub → Settings → **SSH and GPG keys** → New SSH key → paste
+
+```bash
+ssh -T git@github.com         # "Hi <name>! You've successfully authenticated"
+```
+
+🔒 `id_ed25519.pub` = public, share freely · `id_ed25519` = **private, never share**
+
+3. *Optional:* Bandit levels up to 5 🏴‍☠️
+
+::: notes
+Key pair analogy: public key = a padlock you give to servers; private key = the only key that opens it.
+To switch an existing repo to SSH: `git remote set-url origin git@github.com:<user>/<repo>.git` (check with `git remote -v`).
+Copying files to/from a server (for the curious): `scp -P 2220 bandit0@bandit.labs.overthewire.org:readme .` — note capital -P in scp!
+:::

@@ -1,0 +1,156 @@
+---
+title: "Week 9 · Block 1 — Modules"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 9"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+How is your pair assignment going?
+
+1. In the chat: how many pull requests does your repo have? 🔢
+2. Any conflict yet? 💥
+
+::: notes
+0–10 min. Quick pulse check. Rooms with 0 PRs get a nudge and a concrete next step.
+:::
+
+## Your own module 📦 {.smaller}
+
+Any `.py` file is a module you can import.
+
+```python
+# in analyse.py
+from seq_functions import gc_content, reverse_complement
+
+print(gc_content("ATGCGC"))
+```
+
+. . .
+
+```python
+import seq_functions               # whole module
+seq_functions.gc_content("ATGC")   # then use the prefix
+```
+
+::: notes
+10–25 min. They already did this in week 7 — now explain why it worked (same folder).
+:::
+
+## The `__main__` trick 🎩 {.smaller}
+
+```python
+# seq_functions.py
+def gc_content(seq):
+    ...
+
+if __name__ == "__main__":
+    print("Testing:", gc_content("ATGC"))   # runs ONLY when executed directly
+```
+
+. . .
+
+Import it → the test does not run. Run it → it does. 🪄
+
+::: notes
+Without this, importing a file runs all its top-level prints — confusing and messy.
+:::
+
+## The standard library 🏛️ {.smaller}
+
+Python ships with hundreds of ready modules:
+
+```python
+import os        # files and folders
+import sys       # the script itself, arguments
+import random    # random numbers
+import math      # sqrt, log, ...
+from collections import Counter   # counting, done for you 🎁
+```
+
+```python
+Counter("ATGCGC")   # Counter({'G': 2, 'C': 2, 'A': 1, 'T': 1})
+```
+
+::: notes
+Show Counter after they wrote counting by hand for two weeks — the reaction is always good.
+:::
+
+## Installing packages 📥 {.smaller}
+
+```bash
+pip3 install biopython
+```
+
+```python
+from Bio.Seq import Seq
+
+s = Seq("ATGCGC")
+print(s.reverse_complement())   # someone already wrote your function 🙂
+```
+
+. . .
+
+**But:** you now understand what it does inside. That is the difference. 🧠
+
+::: notes
+25–35 min. Important framing: libraries are not cheating — but blind use is.
+Biopython install may fail on some laptops; keep it optional, not required for the exercise.
+:::
+
+## Exercise 1: Split your code 🧩 {.smaller}
+
+⏱️ 15 min · your own screen · react ✅
+
+1. Make sure `scripts/seq_functions.py` has your functions only
+2. Create `scripts/run_analysis.py` that **imports** them
+3. Add the `if __name__ == "__main__":` block to `seq_functions.py`
+4. Run both files — does each behave as expected?
+
+💡 **Bonus:** replace your own `count_bases` with `Counter` and compare results
+
+::: notes
+35–50 min. Import errors here are almost always about which folder they run python from.
+:::
+
+## Exercise 2: Explore a module 🔭 {.smaller}
+
+⏱️ 25 min · breakout rooms
+
+Each room picks **one** module: `random` · `math` · `os` · `Counter`
+
+1. Find out what it does — read the docs, try it out
+2. Write 3 short examples in `scripts/explore_<module>.py`
+3. Find **one** use for it in a biology context 🧬
+4. Be ready to show your room's findings in 3 minutes 🎤
+
+::: notes
+50–75 min. Assign modules so each is taken. Bring rooms back and let each present briefly — students teaching students.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+- Every `.py` file is a module 📦
+- `from x import y` · `if __name__ == "__main__"`
+- The standard library is huge — look before you write 🔭
+- `pip install` for everything else
+
+**Homework** 🏠 Commit your split scripts.
+
+. . .
+
+Next block: running your scripts like **real tools** ⚙️
+
+::: notes
+75–80 min.
+:::

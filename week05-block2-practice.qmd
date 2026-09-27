@@ -1,0 +1,125 @@
+---
+title: "Week 5 · Block 2 — Putting it together"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 5"
+    transition: fade
+---
+
+## Today: no new syntax 🎉
+
+Today we only **use** what you already know:
+
+- variables and types
+- strings and slicing 🧬
+- lists 📋
+- `if` / `elif` / `else` 🚦
+- `for` loops 🔁
+
+. . .
+
+> Programming is not knowing more commands. It is combining few commands well.
+
+::: notes
+0–5 min. Say this explicitly — students often think they are "behind" because they know "only" 5 things.
+:::
+
+## Warm-up: find the bugs 🐛 {.smaller}
+
+⏱️ 15 min · pairs · 3 bugs
+
+```python
+sequences = ["ATGC", "GGCA", "TTA"]
+lengths = []
+
+for seq in sequences
+    lengths.append(len(seq))
+if len(seq) = 4:
+        print("four bases")
+
+print(sum(lenghts))
+```
+
+::: notes
+5–20 min. Bugs: missing colon; `=` instead of `==`; typo `lenghts`; plus the if is outside the loop.
+Debugging together is where error messages stop being scary.
+:::
+
+## How to attack a bigger task 🧗 {.smaller}
+
+1. **Say it in words** first: "for each sequence, if it is long enough, keep it"
+2. Write it as **comments**, then fill in the code
+3. Solve it for **one** element, then wrap it in a loop
+4. `print()` early and often — see what is actually happening 👀
+
+. . .
+
+```python
+# for each sequence
+#   calculate GC
+#   if GC > 0.5, add to the list
+```
+
+::: notes
+20–30 min. This is the actual skill of the course — the rest is syntax.
+:::
+
+## Exercise: Mini analysis 🧬 {.smaller}
+
+⏱️ 35 min · breakout rooms · switch after 15 min
+
+```python
+sequences = ["ATGCGCTA", "GGC", "ATGGGCCCTAAA", "TTANNNGC", "ATGAAATTTGGG"]
+```
+
+Write `scripts/mini_analysis.py` that prints a small report:
+
+1. Total number of sequences and total number of bases
+2. For each sequence: its length, GC content and whether it starts with `ATG`
+3. How many sequences are "usable" (longer than 5 bases **and** no `N`)
+4. The longest sequence and its codons, one per line
+5. A final line: `"X of Y sequences passed"`
+
+💡 **Bonus:** put a `#` comment above each section explaining what it does
+
+::: notes
+30–65 min. Visit every room. Give hints as questions: "what do you want to have at the end?".
+Remind them of the empty-list-append pattern if they freeze.
+:::
+
+## Show your work 👀 {.smaller}
+
+⏱️ 10 min
+
+Two or three rooms share their screen:
+
+- What does your output look like?
+- Where did you get stuck?
+- Did anyone solve something differently? 🤔
+
+::: notes
+65–75 min. Praise different solutions — there is no single right one. This also shows AI-generated uniformity is not the goal.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+You can now write a real analysis script 🎉
+
+**Homework** 🏠
+
+- Commit `mini_analysis.py`
+- Add 2 sequences of your own and check the report still works
+
+. . .
+
+Next week: **dictionaries and functions** — organising data and code 📖
+
+::: notes
+75–80 min. Quiz 3 is around this point in the semester — remind them.
+:::

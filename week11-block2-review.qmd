@@ -1,0 +1,97 @@
+---
+title: "Week 11 · Block 2 — Review & build"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 11"
+    transition: fade
+---
+
+## Show and tell 🎤 {.smaller}
+
+⏱️ 20 min · breakout rooms of 3
+
+Each person gets **5 minutes**:
+
+1. Share your screen and run your tool — even if it barely works 🙂
+2. Say what it does and where you are stuck
+3. The others give **one** question and **one** suggestion 💡
+
+. . .
+
+Rule: comment on the **code**, never the person 💛
+
+::: notes
+0–20 min. Rehearsal for the oral exam, in a safe setting. Say that out loud — it lowers exam anxiety.
+:::
+
+## Things I saw this block 🔍 {.smaller}
+
+Common fixable issues:
+
+- Functions that `print` instead of `return` ⚠️
+- Everything in one long block — no functions yet 🧩
+- No error handling: missing file → crash 💥
+- Commits: one giant "final" instead of steps 📈
+
+. . .
+
+All four are on the grading list. All four take 10 minutes to fix. ⏱️
+
+::: notes
+20–30 min. Replace with what you actually saw in block 1 — specific beats generic.
+:::
+
+## A tiny checklist ✅ {.smaller}
+
+Before week 14, your project needs:
+
+- [ ] Runs from the terminal with an argument ⚙️
+- [ ] At least 3 functions with clear names
+- [ ] Reads a real file 📄
+- [ ] Prints or saves output
+- [ ] Friendly message when something is missing 🛡️
+- [ ] README with an example command
+- [ ] Commits spread over several days 📈
+
+::: notes
+30–35 min. Tell them to copy this into their PROJECT.md as a literal checklist.
+:::
+
+## Work time 🛠️ {.smaller}
+
+⏱️ Rest of the block
+
+- ✋ Raise your hand and I join your room
+- 👥 Rooms stay open for pair work
+- 💬 Chat for quick questions
+
+. . .
+
+**Before you leave: commit, push, and tick one box on the checklist.** 💾
+
+::: notes
+35–75 min. Same rotation as block 1. Prioritise students you did not reach earlier.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+**Next two weeks: R** 🇷
+
+Project work continues **at home** — and I am available:
+
+- 💬 [chat / e-mail / office hours]
+- Push your work regularly, I can look at it any time 👀
+
+. . .
+
+Week 14: your 15 minutes 💬
+
+::: notes
+75–80 min. Fill in your actual availability channel. Students rarely ask if they don't know how.
+:::

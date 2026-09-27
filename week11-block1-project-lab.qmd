@@ -1,0 +1,93 @@
+---
+title: "Week 11 · Block 1 — Project lab"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 11"
+    transition: fade
+---
+
+## Today: you build, I help 🛠️
+
+No lecture. Both blocks are **your project time**.
+
+- I am in the main room the whole time 🎧
+- Breakout rooms for focused work
+- ✋ any time you want me to look at something
+
+::: notes
+0–5 min. Keep it short — every minute of talking is a minute they are not coding.
+:::
+
+## Feedback on your proposals 💬 {.smaller}
+
+⏱️ 10 min
+
+Three things I saw in your `PROJECT.md` files:
+
+1. [most common strength] 🌟
+2. [most common risk — usually: too ambitious] ⚠️
+3. [most common gap — usually: no real input file] 📄
+
+. . .
+
+If your scope feels big: cut it in half. Then cut it again. ✂️
+
+::: notes
+5–15 min. Fill these in after reading their proposals. Concrete, anonymous, kind.
+:::
+
+## How to start when you are stuck 🧗 {.smaller}
+
+1. Write the **steps in comments** first 📝
+2. Make the smallest version run — even printing "hello" from your tool
+3. One function at a time, test it, commit it 💾
+4. `print()` everything while you work 👀
+
+. . .
+
+> Working and ugly beats elegant and unfinished. Always. 🌱
+
+::: notes
+15–25 min. This is the only "teaching" today. Then get out of the way.
+:::
+
+## Today's goal 🎯 {.smaller}
+
+By the end of the second block:
+
+- ✅ Your repo has a `PROJECT.md` and a script that **runs**
+- ✅ It reads your input file — even if it only prints the first line
+- ✅ At least one function written and committed
+
+. . .
+
+That is a real milestone. The rest is iteration 🔁
+
+::: notes
+25–30 min. A concrete finish line prevents the "I'll start at home" drift.
+:::
+
+## Work time 🛠️ {.smaller}
+
+⏱️ Rest of the block
+
+**How to get help**
+
+- ✋ Raise your hand — I will join your room
+- 💬 Chat for quick questions
+- 👥 Room 1 = "quiet focus", Room 2 = "talk while working"
+
+. . .
+
+**Before you leave: commit and push.** 💾
+
+::: notes
+30–80 min. Visit rooms in rotation. Keep a list of who you have checked on — online it is easy to miss the quiet ones.
+Note recurring problems to address in block 2.
+:::

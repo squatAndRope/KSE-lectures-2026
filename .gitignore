@@ -3,3 +3,5 @@ cat > .gitignore << 'EOF'
 *_files/
 *.html
 EOF_site/
+
+/.quarto/

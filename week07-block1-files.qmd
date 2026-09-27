@@ -1,0 +1,178 @@
+---
+title: "Week 7 · Block 1 — Files"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 7"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+Using your own `seq_functions.py` from last week:
+
+```python
+print(gc_content("ATGCGCGGCC"))
+print(count_bases("ATGCGCATG"))
+```
+
+Do they still work? React ✅ or ✋
+
+::: notes
+0–10 min. Anyone whose functions are broken gets help now — files build directly on them.
+:::
+
+## Data does not live in your script 📄
+
+```python
+sequences = ["ATGC", "GGCA"]   # fine for learning 🙂
+```
+
+. . .
+
+Real data: `sequences.fasta`, 5000 sequences, 400 MB 🐘
+
+. . .
+
+Time to **read files**.
+
+::: notes
+10–25 min. Remind them of week 2: they already explored this file with grep.
+:::
+
+## Reading a file {.smaller}
+
+```python
+with open("data/sequences.fasta") as f:
+    for line in f:
+        print(line)
+```
+
+. . .
+
+- `with` closes the file for you automatically 🚪
+- The loop gives you **one line at a time** — works for huge files too
+
+```python
+line = line.strip()   # removes the invisible newline ⚠️
+```
+
+::: notes
+`strip()` is essential — without it every comparison silently fails.
+:::
+
+## Parsing FASTA 🧬
+
+```python
+with open("data/sequences.fasta") as f:
+    for line in f:
+        line = line.strip()
+        if line.startswith(">"):
+            print("HEADER:", line)
+        else:
+            print("SEQUENCE of length", len(line))
+```
+
+. . .
+
+This is the same logic as `grep ">"` — but now you can **compute** with it.
+
+## Building a dictionary from a file {.smaller}
+
+```python
+sequences = {}
+name = None
+
+with open("data/sequences.fasta") as f:
+    for line in f:
+        line = line.strip()
+        if line.startswith(">"):
+            name = line[1:]          # drop the '>'
+            sequences[name] = ""
+        else:
+            sequences[name] += line  # sequences can span many lines!
+
+print(len(sequences), "sequences loaded")
+```
+
+::: notes
+Walk through it line by line. This is the most complex code so far — take your time.
+:::
+
+## Writing a file 💾
+
+```python
+with open("results/report.txt", "w") as out:
+    out.write("name\tlength\tGC\n")
+    for name, seq in sequences.items():
+        out.write(f"{name}\t{len(seq)}\t{gc_content(seq):.2f}\n")
+```
+
+. . .
+
+`"w"` overwrites · `"a"` appends · `\n` = new line · `\t` = tab
+
+::: {.callout-warning}
+`"w"` destroys the old file without asking. Same rule as `>` in bash.
+:::
+
+## Exercise 1: Read and count 📄 {.smaller}
+
+⏱️ 15 min · your own screen · react ✅
+
+Create `scripts/read_fasta.py`:
+
+1. Open `data/sequences.fasta`
+2. Count how many lines it has
+3. Count how many are headers
+4. Print both numbers
+
+💡 **Bonus:** print the longest header
+
+::: notes
+25–40 min. Expect path errors — remind them `pwd` and that paths are relative to where they RUN python.
+:::
+
+## Exercise 2: Real report 📊 {.smaller}
+
+⏱️ 30 min · breakout rooms · switch after 15 min
+
+Extend it into `scripts/fasta_report.py`:
+
+1. Load the file into a **dictionary** `{name: sequence}`
+2. Import your own functions: `from seq_functions import gc_content, count_bases`
+3. For each sequence compute length and GC content
+4. Write a tab-separated report into `results/report.txt`
+5. Print a summary: how many sequences, average length, highest GC 🏆
+
+💡 **Bonus:** write a second file with **only** the usable sequences (FASTA format!)
+
+::: notes
+40–75 min. The import works only if both files sit in the same folder — a preview of next week's modules.
+Plan B: copy the functions into the script.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+```python
+with open(path) as f:
+    for line in f:
+        line = line.strip()
+```
+
+- `strip()` every line ⚠️
+- `"w"` writes, `"a"` appends
+- Your script now works on **real data** 🧬
+
+**Homework** 🏠 Commit the script. Do **not** commit big data files — `.gitignore`!
+
+::: notes
+75–80 min. Two rooms share their report.txt on screen.
+:::

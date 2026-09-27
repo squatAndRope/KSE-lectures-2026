@@ -1,0 +1,146 @@
+---
+title: "Week 13 · Block 1 — Python vs R"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 13"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+In R:
+
+```r
+lengths <- c(120, 85, 300, 42, 210)
+```
+
+1. Mean and max
+2. Only values above 100
+3. A histogram 📊
+
+::: notes
+0–10 min. Fast recall before comparing languages.
+:::
+
+## Same task, two languages {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Python** 🐍
+
+```python
+lengths = [120, 85, 300]
+
+total = sum(lengths)
+avg = total / len(lengths)
+
+long = []
+for x in lengths:
+    if x > 100:
+        long.append(x)
+```
+:::
+::: {.column width="50%"}
+**R** 🇷
+
+```r
+lengths <- c(120, 85, 300)
+
+avg <- mean(lengths)
+
+
+
+long <- lengths[lengths > 100]
+```
+:::
+::::
+
+::: notes
+10–25 min. Let them see it, don't over-explain. R wins on tables, Python wins elsewhere.
+:::
+
+## Where each one shines ✨ {.smaller}
+
+| Task | Better fit |
+|---|---|
+| Parsing FASTA, automating files | Python 🐍 |
+| Statistics, models, tests | R 🇷 |
+| Publication-quality figures | R (ggplot2) 📊 |
+| Pipelines, servers, big workflows | Python ⚙️ |
+| RNA-seq, microarrays (Bioconductor) | R 🧬 |
+| Machine learning | Python 🤖 |
+
+. . .
+
+Most bioinformaticians use **both**, and that is normal. 💛
+
+## The real skill 🧠 {.smaller}
+
+What transfers between every language:
+
+- Breaking a problem into steps 🧩
+- Variables, loops, conditions, functions
+- Reading error messages 🔍
+- Version control 💾
+- Asking: *does this result make sense?* 🤨
+
+. . .
+
+> You did not learn Python. You learned to program — in Python. 🎓
+
+::: notes
+25–35 min. This is the closing message of the whole course. Say it warmly.
+:::
+
+## Exercise: Translate it 🔄 {.smaller}
+
+⏱️ 30 min · breakout rooms
+
+Take one of your **own** Python scripts from weeks 3–7 and rewrite a piece of it in R:
+
+1. Pick something small — GC content, filtering, counting
+2. Write the R version in `scripts/translated.R`
+3. Run both — do they give the same answer? ✅
+4. In the chat: which version was shorter? Which was clearer? 🤔
+
+💡 **Bonus:** which part was hardest to translate, and why?
+
+::: notes
+35–70 min. The comparison of their own code is far more convincing than my slides.
+Common trap: indexing from 1, and strsplit() returning a list.
+:::
+
+## Where to go next 🌱 {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Python** 🐍
+
+- Biopython 🧬
+- pandas (tables)
+- Rosalind.info (puzzles) 🧩
+:::
+::: {.column width="50%"}
+**R** 🇷
+
+- ggplot2 📊
+- Bioconductor
+- R for Data Science (free book) 📖
+:::
+::::
+
+. . .
+
+And: The Carpentries lessons, free and biology-focused 🎓
+
+::: notes
+70–80 min. Put the actual links in the chat.
+:::

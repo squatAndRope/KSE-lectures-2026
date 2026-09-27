@@ -1,0 +1,169 @@
+---
+title: "Week 4 · Block 1 — Lists"
+subtitle: "Programming and Computing Basics · KSE 2026"
+author: "Klaudia Brzezińska"
+format:
+  revealjs:
+    theme: dark
+    highlight-style: github-dark
+    slide-number: true
+    code-copy: true
+    footer: "Programming and Computing Basics · Week 4"
+    transition: fade
+---
+
+## Warm-up 🔥 {.smaller}
+
+⏱️ 10 min
+
+```python
+seq = "ATGCGCTAGCTT"
+```
+
+1. Print the last 3 bases
+2. Print the RNA version
+3. Print `True` if it contains `"TAG"` (hint: `in`)
+
+::: notes
+0–10 min. `"TAG" in seq` is new but guessable — let them try before you show it.
+:::
+
+## One sequence is never enough 📋
+
+```python
+seq1 = "ATGC"
+seq2 = "GGCA"
+seq3 = "TTAG"
+# ... and 500 more? 😱
+```
+
+. . .
+
+```python
+sequences = ["ATGC", "GGCA", "TTAG"]
+```
+
+::: notes
+10–25 min. Motivation first: real data comes in hundreds of sequences.
+:::
+
+## Working with lists {.smaller}
+
+```python
+sequences = ["ATGC", "GGCA", "TTAG"]
+
+sequences[0]        # 'ATGC' — same indexing as strings!
+sequences[-1]       # 'TTAG'
+len(sequences)      # 3
+sequences[0:2]      # ['ATGC', 'GGCA'] — slicing works too
+```
+
+. . .
+
+Lists hold **anything**: numbers, strings, even other lists.
+
+## Changing lists ✏️ {.smaller}
+
+```python
+sequences.append("CCGG")     # add at the end
+sequences.insert(0, "AAAA")  # add at a position
+sequences.remove("GGCA")     # remove by value
+last = sequences.pop()       # remove and return the last one
+sequences[0] = "TTTT"        # replace
+```
+
+. . .
+
+::: {.callout-note}
+Strings **cannot** be changed, lists **can**. `seq[0] = "G"` → error 🚫
+:::
+
+## Useful list tools {.smaller}
+
+```python
+lengths = [120, 85, 300, 42]
+
+sum(lengths)          # 547
+max(lengths)          # 300
+min(lengths)          # 42
+sorted(lengths)       # [42, 85, 120, 300]
+len(lengths)          # 4
+sum(lengths) / len(lengths)   # average 🧮
+```
+
+## From string to list and back {.smaller}
+
+```python
+header = ">seq1 Homo sapiens BRCA1"
+parts = header.split()        # ['>seq1', 'Homo', 'sapiens', 'BRCA1']
+parts[1]                      # 'Homo'
+
+"-".join(["ATG", "CGC"])      # 'ATG-CGC'
+list("ATGC")                  # ['A', 'T', 'G', 'C']
+```
+
+. . .
+
+`split()` is how you will parse **every** data file 📄
+
+::: notes
+Show splitting a CSV line: `"seq1,120,0.42".split(",")`. This is the bridge to real files.
+:::
+
+## Exercise 1: Predict, then run 🔮 {.smaller}
+
+⏱️ 10 min · chat first
+
+```python
+seqs = ["ATG", "GGC"]
+seqs.append("TTA")
+print(len(seqs))
+print(seqs[1])
+print(seqs[1][0])      # 🤔
+print(sorted(seqs))
+```
+
+::: notes
+25–35 min. `seqs[1][0]` is the key idea: indexing a list, then indexing the string inside it.
+:::
+
+## Exercise 2: Sequence statistics 📊 {.smaller}
+
+⏱️ 25 min · breakout rooms · switch after 10 min
+
+Create `scripts/seq_stats.py`:
+
+```python
+sequences = ["ATGCGC", "GGCATTAGC", "TTA", "ATGGGCCCTA"]
+```
+
+1. How many sequences are there?
+2. Print the first and the last one
+3. Add one more sequence of your own
+4. Make a list of their **lengths** (by hand is fine — 5 values)
+5. Print the longest, shortest and average length
+6. Split this header and print the species:
+   `">seq1 Homo sapiens BRCA1"`
+
+💡 **Bonus:** print the sequences sorted alphabetically
+
+::: notes
+35–70 min. Point 4 by hand is intentional — next block's loops will feel like a relief.
+:::
+
+## Wrap-up ✅ {.smaller}
+
+- Lists hold many values: `["ATG", "GGC"]`
+- Same indexing and slicing as strings
+- `append` `remove` `sorted` `sum` `max` `min`
+- `split()` turns text into a list 📄
+
+**Homework** 🏠 Commit `seq_stats.py`.
+
+. . .
+
+Next block: **decisions** — `if` 🚦
+
+::: notes
+70–80 min. Tease: "next time your script can decide what to do — e.g. skip short sequences".
+:::
