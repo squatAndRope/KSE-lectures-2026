@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Klaudia Brzezińska">
-  <title>Programming and Computing Basics – Week 3 · Block 2 — Strings are sequences</title>
+  <title>Programming and Computing Basics – Week 7 · Block 2 — Errors &amp; debugging</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,7 +193,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 3 · Block 2 — Strings are sequences</h1>
+  <h1 class="title">Week 7 · Block 2 — Errors &amp; debugging</h1>
   <p class="subtitle">Programming and Computing Basics · KSE 2026</p>
 
 <div class="quarto-title-authors">
@@ -207,14 +207,14 @@ Klaudia Brzezińska
 </section>
 <section id="warm-up" class="slide level2 smaller">
 <h2>Warm-up 🔥</h2>
-<p>⏱️ 10 min</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCTA"</span></span>
-<span id="cb1-2"><a></a><span class="bu">print</span>(<span class="bu">len</span>(seq))</span>
-<span id="cb1-3"><a></a><span class="bu">print</span>(seq.count(<span class="st">"A"</span>))</span>
-<span id="cb1-4"><a></a><span class="bu">print</span>(seq.count(<span class="st">"AT"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>What will each line print? Chat first, run second 💬</p>
+<p>⏱️ 10 min · in the chat</p>
+<p>What error would you expect from each line?</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">open</span>(<span class="st">"data/sequenses.fasta"</span>)</span>
+<span id="cb1-2"><a></a><span class="bu">int</span>(<span class="st">"ATG"</span>)</span>
+<span id="cb1-3"><a></a>counts[<span class="st">"X"</span>]</span>
+<span id="cb1-4"><a></a><span class="co">"ATG"</span> <span class="op">+</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
-<p>0–10 min. The third line surprises people — counting pairs, not letters.</p>
+<p>0–10 min. They have met all four already. Naming them out loud removes the fear.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -227,34 +227,15 @@ Klaudia Brzezińska
           display:block!important;
       }</style></aside>
 </section>
-<section id="indexing-counting-from-0" class="slide level2 smaller">
-<h2>Indexing: counting from 0 🔢</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGC"</span></span>
-<span id="cb2-2"><a></a>seq[<span class="dv">0</span>]    <span class="co"># 'A'  — the FIRST letter</span></span>
-<span id="cb2-3"><a></a>seq[<span class="dv">1</span>]    <span class="co"># 'T'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="errors-are-messages-not-failures" class="slide level2">
+<h2>Errors are messages, not failures 💌</h2>
+<blockquote>
+<p>Nobody writes code that works the first time. Not me, not your supervisor, not anyone. 🙂</p>
+</blockquote>
 <div class="fragment">
-<p>❓</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>seq[<span class="op">-</span><span class="dv">1</span>]   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>‘C’ — the last one</p>
-</div>
-<div class="fragment">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Biologists count bases from 1, Python counts from 0. This causes real bugs in real papers. 🐛</p>
-</div>
-</div>
-</div>
+<p>The skill is not avoiding errors. The skill is <strong>reading</strong> them.</p>
 <aside class="notes">
-<p>10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF).</p>
+<p>10–25 min. Say this sincerely — online, beginners often feel alone with a red screen.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -268,25 +249,74 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="slicing" class="slide level2 smaller">
-<h2>Slicing ✂️</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCTAGC"</span></span>
-<span id="cb4-2"><a></a><span class="co">#      A  T  G  C  G  C  T  A  G  C</span></span>
-<span id="cb4-3"><a></a><span class="co">#      0  1  2  3  4  5  6  7  8  9      ← Python counts from 0!</span></span>
-<span id="cb4-4"><a></a></span>
-<span id="cb4-5"><a></a><span class="co"># seq[start:stop:step]</span></span>
-<span id="cb4-6"><a></a>seq[<span class="dv">0</span>:<span class="dv">3</span>]     <span class="co"># 'ATG'         — positions 0, 1, 2 (stop not included)</span></span>
-<span id="cb4-7"><a></a>seq[<span class="dv">3</span>:]      <span class="co"># 'CGCTAGC'     — from 3 to the end</span></span>
-<span id="cb4-8"><a></a>seq[:<span class="dv">3</span>]      <span class="co"># 'ATG'         — same as [0:3]</span></span>
-<span id="cb4-9"><a></a>seq[<span class="op">-</span><span class="dv">3</span>:]     <span class="co"># 'AGC'         — the last 3 letters</span></span>
-<span id="cb4-10"><a></a>seq[::<span class="op">-</span><span class="dv">1</span>]    <span class="co"># 'CGATCGCGTA'  — reversed!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="how-to-read-a-traceback" class="slide level2 smaller">
+<h2>How to read a traceback 🔍</h2>
+<pre><code>Traceback (most recent call last):
+  File "fasta_report.py", line 14, in &lt;module&gt;
+    gc = gc_content(seq)
+  File "seq_functions.py", line 3, in gc_content
+    return gc / len(sequence)
+ZeroDivisionError: division by zero</code></pre>
 <div class="fragment">
-<p><code>seq[start:stop]</code> — <strong>stop is not included</strong> 🙂 · length = <code>stop − start</code></p>
+<ul>
+<li><strong>Bottom line</strong> = what went wrong 🎯</li>
+<li><strong>Above it</strong> = where, and how you got there</li>
+<li>Read from the <strong>bottom up</strong></li>
+</ul>
 </div>
+</section>
+<section id="the-usual-suspects" class="slide level2 smaller">
+<h2>The usual suspects</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Error</th>
+<th>Usually means</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>SyntaxError</code></td>
+<td>Missing <code>:</code> <code>)</code> or quote</td>
+</tr>
+<tr class="even">
+<td><code>IndentationError</code></td>
+<td>Wrong number of spaces</td>
+</tr>
+<tr class="odd">
+<td><code>NameError</code></td>
+<td>Typo, or variable not defined yet</td>
+</tr>
+<tr class="even">
+<td><code>TypeError</code></td>
+<td>Mixing text and numbers</td>
+</tr>
+<tr class="odd">
+<td><code>KeyError</code></td>
+<td>That key is not in the dictionary</td>
+</tr>
+<tr class="even">
+<td><code>IndexError</code></td>
+<td>Position beyond the end of the list</td>
+</tr>
+<tr class="odd">
+<td><code>FileNotFoundError</code></td>
+<td>Wrong path — run <code>pwd</code> 📍</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="debugging-with-print" class="slide level2 smaller">
+<h2>Debugging with <code>print()</code> 🖨️</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb3-2"><a></a>    line <span class="op">=</span> line.strip()</span>
+<span id="cb3-3"><a></a>    <span class="bu">print</span>(<span class="st">"DEBUG:"</span>, <span class="bu">repr</span>(line))    <span class="co"># what is REALLY in there?</span></span>
+<span id="cb3-4"><a></a>    <span class="cf">if</span> line.startswith(<span class="st">"&gt;"</span>):</span>
+<span id="cb3-5"><a></a>        ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>🔮 <strong>Predict:</strong> there is a stop codon <code>TAG</code> hidden in <code>seq</code>. Which slice gives it?</p>
+<p><code>repr()</code> shows the invisible: <code>'ATGC\n'</code> vs <code>'ATGC'</code> 👀</p>
 <aside class="notes">
-<p>Answer: seq[6:9]. Let them count on the position ruler. Why “stop not included”? So that seq[0:3] + seq[3:] glues back to the whole sequence — no overlap, no gap. Don’t show seq[0:3:-1] (returns ’’ silently) — just: to reverse, use [::-1].</p>
+<p>Professional debuggers exist — but print() is what everyone actually uses first.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -300,18 +330,14 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="useful-string-methods" class="slide level2 smaller">
-<h2>Useful string methods</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>seq.upper()              <span class="co"># 'ATGC'</span></span>
-<span id="cb5-2"><a></a>seq.lower()              <span class="co"># 'atgc'</span></span>
-<span id="cb5-3"><a></a>seq.replace(<span class="st">"T"</span>, <span class="st">"U"</span>)    <span class="co"># DNA → RNA!</span></span>
-<span id="cb5-4"><a></a>seq.count(<span class="st">"GC"</span>)</span>
-<span id="cb5-5"><a></a>seq.find(<span class="st">"ATG"</span>)          <span class="co"># position of the first ATG (-1 if absent)</span></span>
-<span id="cb5-6"><a></a>seq.startswith(<span class="st">"&gt;"</span>)      <span class="co"># True / False — FASTA headers!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="silent-bugs" class="slide level2 smaller">
+<h2>Silent bugs 🤫</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>gc <span class="op">=</span> (seq.count(<span class="st">"G"</span>) <span class="op">+</span> seq.count(<span class="st">"C"</span>)) <span class="op">/</span> <span class="bu">len</span>(seq) <span class="op">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>No error. Result: <code>4200.0</code> 🤨</p>
 <div class="fragment">
-<p>A method does not change the original — it <strong>returns a new string</strong>.</p>
+<p><strong>Ask yourself:</strong> does this number make biological sense?</p>
 <aside class="notes">
-<p>Important: <code>seq.upper()</code> alone does nothing unless you assign it. Show the mistake live.</p>
+<p>25–35 min. Most dangerous class of bug: wrong results that look fine. Tie back to the AI policy — this is what you cannot catch if you did not write the code.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -325,81 +351,53 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="building-strings" class="slide level2 smaller">
-<h2>Building strings</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>name <span class="op">=</span> <span class="st">"seq1"</span></span>
-<span id="cb6-2"><a></a>length <span class="op">=</span> <span class="dv">42</span></span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="bu">print</span>(<span class="st">"Sequence "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">" has "</span> <span class="op">+</span> <span class="bu">str</span>(length) <span class="op">+</span> <span class="st">" bases"</span>)</span>
-<span id="cb6-5"><a></a><span class="bu">print</span>(<span class="ss">f"Sequence </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> has </span><span class="sc">{</span>length<span class="sc">}</span><span class="ss"> bases"</span>)     <span class="co"># f-string 👑</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>f-strings are shorter and you don’t need <code>str()</code>.</p>
-</div>
-</section>
-<section id="exercise-1-slice-it" class="slide level2 smaller">
-<h2>Exercise 1: Slice it 🔪</h2>
-<p>⏱️ 10 min · your own screen · react ✅ when done</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGGCCATTGTAATGGGCCGC"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercise-1-fix-the-script" class="slide level2 smaller">
+<h2>Exercise 1: Fix the script 🔧</h2>
+<p>⏱️ 20 min · breakout rooms · 5 bugs</p>
+<p>I will paste <code>scripts/broken_report.py</code> in the chat 📋</p>
 <ol type="1">
-<li>Print the first codon (3 letters)</li>
-<li>Print the last 6 bases</li>
-<li>Print the sequence reversed</li>
-<li>Convert it to RNA and print it</li>
-<li>At which position does the second <code>ATG</code> start? 🤔</li>
+<li>Run it and read the <strong>first</strong> error only</li>
+<li>Fix it, run again, repeat</li>
+<li>Write in the chat which error types you met</li>
+</ol>
+<p>💡 <strong>Bonus:</strong> one bug produces no error at all. Can you find it? 🤫</p>
+<aside class="notes">
+<p>35–55 min. Prepare broken_report.py beforehand: missing colon, wrong variable name, missing strip(), KeyError, and one silent maths bug.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="defensive-coding" class="slide level2 smaller">
+<h2>Defensive coding 🛡️</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="cf">if</span> <span class="bu">len</span>(sequence) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb5-2"><a></a>    <span class="bu">print</span>(<span class="st">"Warning: empty sequence, skipping"</span>)</span>
+<span id="cb5-3"><a></a>    <span class="cf">continue</span></span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a>value <span class="op">=</span> counts.get(<span class="st">"N"</span>, <span class="dv">0</span>)     <span class="co"># safe lookup</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p>Check your assumptions <strong>before</strong> the data surprises you.</p>
+</div>
+</section>
+<section id="exercise-2-make-it-robust" class="slide level2 smaller">
+<h2>Exercise 2: Make it robust 🧪</h2>
+<p>⏱️ 20 min · pairs</p>
+<p>Take your own <code>fasta_report.py</code> and break-proof it:</p>
+<ol type="1">
+<li>What happens if the file does not exist? Print a friendly message</li>
+<li>What if a sequence is empty? Skip it, don’t crash</li>
+<li>What if a sequence contains <code>N</code>? Report how many</li>
+<li>Swap scripts with another room and try to break theirs 😈</li>
 </ol>
 <aside class="notes">
-<p>25–35 min. Question 5 is genuinely hard — <code>find</code> has a start argument: seq.find(“ATG”, 1).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="reverse-complement" class="slide level2">
-<h2>Reverse complement 🧬</h2>
-<p>The classic first real bioinformatics function:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGC"</span></span>
-<span id="cb8-2"><a></a>complement <span class="op">=</span> seq.replace(<span class="st">"A"</span>, <span class="st">"t"</span>).replace(<span class="st">"T"</span>, <span class="st">"a"</span>)</span>
-<span id="cb8-3"><a></a>complement <span class="op">=</span> complement.replace(<span class="st">"G"</span>, <span class="st">"c"</span>).replace(<span class="st">"C"</span>, <span class="st">"g"</span>)</span>
-<span id="cb8-4"><a></a>rev_comp <span class="op">=</span> complement.upper()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb8-5"><a></a><span class="bu">print</span>(rev_comp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>Why the temporary lowercase? 🤔 Try it without — what breaks?</p>
-<aside class="notes">
-<p>Great discussion: replacing A→T then T→A turns everything into A. The lowercase trick avoids double replacement.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="exercise-2-sequence-toolkit" class="slide level2 smaller">
-<h2>Exercise 2: Sequence toolkit 🧰</h2>
-<p>⏱️ 25 min · breakout rooms · switch after 10 min</p>
-<p>Create <code>scripts/seq_tools.py</code>. For a DNA sequence of your choice, print:</p>
-<ol type="1">
-<li>Its length and GC content (reuse last block’s code)</li>
-<li>Its first codon and last codon</li>
-<li>The RNA version</li>
-<li>The reverse complement</li>
-<li>Whether it starts with a start codon (<code>ATG</code>) — print <code>True</code>/<code>False</code></li>
-</ol>
-<p>💡 <strong>Bonus:</strong> print all three reading frames: <code>seq[0:]</code>, <code>seq[1:]</code>, <code>seq[2:]</code></p>
-<aside class="notes">
-<p>35–70 min. Paste in the chat. Encourage f-strings for nice output — makes results readable.</p>
+<p>55–75 min. The swap is the fun part — testing someone else’s code is a real skill.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -414,37 +412,17 @@ Klaudia Brzezińska
 </section>
 <section id="wrap-up" class="slide level2 smaller">
 <h2>Wrap-up ✅</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Index</td>
-<td><code>seq[0]</code> <code>seq[-1]</code></td>
-</tr>
-<tr class="even">
-<td>Slice</td>
-<td><code>seq[0:3]</code> <code>seq[::-1]</code></td>
-</tr>
-<tr class="odd">
-<td>Methods</td>
-<td><code>.upper()</code> <code>.replace()</code> <code>.find()</code></td>
-</tr>
-<tr class="even">
-<td>f-string</td>
-<td><code>f"GC = {gc}%"</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Task</strong> 🔒 Commit <code>seq_tools.py</code> and write in the README what it does.</p>
+<ul>
+<li>Read tracebacks <strong>bottom up</strong> 🔍</li>
+<li><code>print()</code> and <code>repr()</code> are your debugger</li>
+<li>Ask: does this number make sense? 🤨</li>
+<li>Errors are normal — being stuck silently is not 💬</li>
+</ul>
+<p><strong>Homework</strong> 🏠 Commit your robust version.</p>
 <div class="fragment">
-<p>Next week: <strong>lists</strong> — many sequences at once 📋</p>
+<p>Next week: <strong>Git in teams</strong> — and your pair assignment 👥</p>
 <aside class="notes">
-<p>70–80 min. Exit ticket: “Python counts from ___” in the chat.</p>
+<p>75–80 min. Announce the pair assignment explicitly: 25% of the grade, starts next week.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -463,7 +441,7 @@ Klaudia Brzezińska
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Programming and Computing Basics · Week 3</p>
+<p>Programming and Computing Basics · Week 7</p>
 </div>
 </div></div>
 

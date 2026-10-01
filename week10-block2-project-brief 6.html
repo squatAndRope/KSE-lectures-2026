@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Klaudia Brzezińska">
-  <title>Programming and Computing Basics – Week 3 · Block 2 — Strings are sequences</title>
+  <title>Programming and Computing Basics – Week 10 · Block 2 — Your project</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,72 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #e1e4e8; background-color: #24292e; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #e1e4e8; } /* Normal */
-    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
-    code span.an { color: #6a737d; } /* Annotation */
-    code span.at { color: #f97583; } /* Attribute */
-    code span.bn { color: #79b8ff; } /* BaseN */
-    code span.bu { color: #f97583; } /* BuiltIn */
-    code span.cf { color: #f97583; } /* ControlFlow */
-    code span.ch { color: #9ecbff; } /* Char */
-    code span.cn { color: #79b8ff; } /* Constant */
-    code span.co { color: #6a737d; } /* Comment */
-    code span.cv { color: #6a737d; } /* CommentVar */
-    code span.do { color: #6a737d; } /* Documentation */
-    code span.dt { color: #f97583; } /* DataType */
-    code span.dv { color: #79b8ff; } /* DecVal */
-    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
-    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
-    code span.fl { color: #79b8ff; } /* Float */
-    code span.fu { color: #b392f0; } /* Function */
-    code span.im { color: #9ecbff; } /* Import */
-    code span.in { color: #6a737d; } /* Information */
-    code span.kw { color: #f97583; } /* Keyword */
-    code span.op { color: #e1e4e8; } /* Operator */
-    code span.ot { color: #b392f0; } /* Other */
-    code span.pp { color: #f97583; } /* Preprocessor */
-    code span.re { color: #6a737d; } /* RegionMarker */
-    code span.sc { color: #79b8ff; } /* SpecialChar */
-    code span.ss { color: #9ecbff; } /* SpecialString */
-    code span.st { color: #9ecbff; } /* String */
-    code span.va { color: #ffab70; } /* Variable */
-    code span.vs { color: #9ecbff; } /* VerbatimString */
-    code span.wa { color: #ff5555; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-f0c56923daed5cb90211d1948ea5e60b.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -193,7 +127,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 3 · Block 2 — Strings are sequences</h1>
+  <h1 class="title">Week 10 · Block 2 — Your project</h1>
   <p class="subtitle">Programming and Computing Basics · KSE 2026</p>
 
 <div class="quarto-title-authors">
@@ -205,56 +139,21 @@ Klaudia Brzezińska
 </div>
 
 </section>
-<section id="warm-up" class="slide level2 smaller">
-<h2>Warm-up 🔥</h2>
-<p>⏱️ 10 min</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCTA"</span></span>
-<span id="cb1-2"><a></a><span class="bu">print</span>(<span class="bu">len</span>(seq))</span>
-<span id="cb1-3"><a></a><span class="bu">print</span>(seq.count(<span class="st">"A"</span>))</span>
-<span id="cb1-4"><a></a><span class="bu">print</span>(seq.count(<span class="st">"AT"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>What will each line print? Chat first, run second 💬</p>
+<section id="look-what-you-can-do" class="slide level2 smaller">
+<h2>Look what you can do 🎉</h2>
+<p>Ten weeks ago: <em>“I have never opened a terminal”</em></p>
+<p>Today you can:</p>
+<ul>
+<li>navigate and process files from the terminal 🐚</li>
+<li>write Python: strings, lists, dictionaries, loops, functions 🐍</li>
+<li>read and write real data files 🧬</li>
+<li>debug your own errors 🔍</li>
+<li>collaborate with Git, branches and pull requests 👥</li>
+</ul>
+<div class="fragment">
+<p>Now you build something <strong>of your own</strong> 🚀</p>
 <aside class="notes">
-<p>0–10 min. The third line surprises people — counting pairs, not letters.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="indexing-counting-from-0" class="slide level2 smaller">
-<h2>Indexing: counting from 0 🔢</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGC"</span></span>
-<span id="cb2-2"><a></a>seq[<span class="dv">0</span>]    <span class="co"># 'A'  — the FIRST letter</span></span>
-<span id="cb2-3"><a></a>seq[<span class="dv">1</span>]    <span class="co"># 'T'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>❓</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>seq[<span class="op">-</span><span class="dv">1</span>]   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>‘C’ — the last one</p>
-</div>
-<div class="fragment">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Biologists count bases from 1, Python counts from 0. This causes real bugs in real papers. 🐛</p>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF).</p>
+<p>0–10 min. Say this slowly. Many still feel like impostors — the list is evidence.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -268,25 +167,86 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="slicing" class="slide level2 smaller">
-<h2>Slicing ✂️</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCTAGC"</span></span>
-<span id="cb4-2"><a></a><span class="co">#      A  T  G  C  G  C  T  A  G  C</span></span>
-<span id="cb4-3"><a></a><span class="co">#      0  1  2  3  4  5  6  7  8  9      ← Python counts from 0!</span></span>
-<span id="cb4-4"><a></a></span>
-<span id="cb4-5"><a></a><span class="co"># seq[start:stop:step]</span></span>
-<span id="cb4-6"><a></a>seq[<span class="dv">0</span>:<span class="dv">3</span>]     <span class="co"># 'ATG'         — positions 0, 1, 2 (stop not included)</span></span>
-<span id="cb4-7"><a></a>seq[<span class="dv">3</span>:]      <span class="co"># 'CGCTAGC'     — from 3 to the end</span></span>
-<span id="cb4-8"><a></a>seq[:<span class="dv">3</span>]      <span class="co"># 'ATG'         — same as [0:3]</span></span>
-<span id="cb4-9"><a></a>seq[<span class="op">-</span><span class="dv">3</span>:]     <span class="co"># 'AGC'         — the last 3 letters</span></span>
-<span id="cb4-10"><a></a>seq[::<span class="op">-</span><span class="dv">1</span>]    <span class="co"># 'CGATCGCGTA'  — reversed!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><code>seq[start:stop]</code> — <strong>stop is not included</strong> 🙂 · length = <code>stop − start</code></p>
-</div>
-<div class="fragment">
-<p>🔮 <strong>Predict:</strong> there is a stop codon <code>TAG</code> hidden in <code>seq</code>. Which slice gives it?</p>
+<section id="the-final-project" class="slide level2 smaller">
+<h2>The final project 📋</h2>
+<p><strong>60% of your grade · individual · presented in week 14</strong></p>
+<p>A small command-line tool that does something useful with biological data.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Requirement</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Runs from the terminal</td>
+<td><code>python3 my_tool.py &lt;input&gt;</code> ⚙️</td>
+</tr>
+<tr class="even">
+<td>At least 3 functions</td>
+<td>each doing one thing, with clear names</td>
+</tr>
+<tr class="odd">
+<td>Reads a real file</td>
+<td>FASTA, CSV, or another format</td>
+</tr>
+<tr class="even">
+<td>Produces output</td>
+<td>printed report or a saved file 💾</td>
+</tr>
+<tr class="odd">
+<td>Handles errors</td>
+<td>missing file, empty input 🛡️</td>
+</tr>
+<tr class="even">
+<td>README</td>
+<td>what it does, how to run it, example output</td>
+</tr>
+<tr class="odd">
+<td>Git history</td>
+<td>regular commits, not one giant one 📈</td>
+</tr>
+</tbody>
+</table>
 <aside class="notes">
-<p>Answer: seq[6:9]. Let them count on the position ruler. Why “stop not included”? So that seq[0:3] + seq[3:] glues back to the whole sequence — no overlap, no gap. Don’t show seq[0:3:-1] (returns ’’ silently) — just: to reverse, use [::-1].</p>
+<p>10–25 min. Walk through each row. Stress: small and working beats ambitious and broken.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="project-ideas" class="slide level2 smaller">
+<h2>Project ideas 💡</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>FASTA statistics tool 📊</li>
+<li>Sequence filter (length, GC, N content)</li>
+<li>Codon usage counter</li>
+<li>Motif finder (<code>ATG</code>, restriction sites) ✂️</li>
+<li>FASTA ↔︎ CSV converter</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Primer property checker (Tm, GC)</li>
+<li>ORF finder in 3 reading frames</li>
+<li>Compare two FASTA files 🔍</li>
+<li>Simple quality report per sequence</li>
+<li>Something from <strong>your own</strong> studies 🧬</li>
+</ul>
+</div></div>
+<div class="fragment">
+<p>The last one is the best one. 💛</p>
+<aside class="notes">
+<p>25–35 min. Encourage projects tied to their own lab work or thesis — motivation doubles.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -300,18 +260,55 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="useful-string-methods" class="slide level2 smaller">
-<h2>Useful string methods</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>seq.upper()              <span class="co"># 'ATGC'</span></span>
-<span id="cb5-2"><a></a>seq.lower()              <span class="co"># 'atgc'</span></span>
-<span id="cb5-3"><a></a>seq.replace(<span class="st">"T"</span>, <span class="st">"U"</span>)    <span class="co"># DNA → RNA!</span></span>
-<span id="cb5-4"><a></a>seq.count(<span class="st">"GC"</span>)</span>
-<span id="cb5-5"><a></a>seq.find(<span class="st">"ATG"</span>)          <span class="co"># position of the first ATG (-1 if absent)</span></span>
-<span id="cb5-6"><a></a>seq.startswith(<span class="st">"&gt;"</span>)      <span class="co"># True / False — FASTA headers!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>A method does not change the original — it <strong>returns a new string</strong>.</p>
+<section id="what-makes-a-good-project" class="slide level2 smaller">
+<h2>What makes a good project 🌟</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Yes</strong> ✅</p>
+<ul>
+<li>Small and finished</li>
+<li>You can explain every line 🗣️</li>
+<li>Honest README</li>
+<li>Commits across several weeks</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>No</strong> 🚫</p>
+<ul>
+<li>Huge and half-broken</li>
+<li>Code you cannot explain</li>
+<li>One commit called “final”</li>
+<li>A copy of the class exercises</li>
+</ul>
+</div></div>
 <aside class="notes">
-<p>Important: <code>seq.upper()</code> alone does nothing unless you assign it. Show the mistake live.</p>
+<p>“You can explain every line” ties directly to the oral exam — say it explicitly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-oral-exam" class="slide level2 smaller">
+<h2>The oral exam 💬</h2>
+<p>15 minutes, in week 14. We will talk about <strong>your</strong> code:</p>
+<ul>
+<li>Walk me through your tool 🚶</li>
+<li>Why did you use a dictionary here?</li>
+<li>What was the hardest part? 🤔</li>
+<li>What would you change with more time?</li>
+</ul>
+<div class="fragment">
+<blockquote>
+<p>A conversation, not an interrogation. I want to hear what <strong>you</strong> learned. 💛</p>
+</blockquote>
+<aside class="notes">
+<p>35–45 min. Repeat the reassurance from week 1. Nervousness about orals is normal and reduces with clarity.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -325,81 +322,20 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="building-strings" class="slide level2 smaller">
-<h2>Building strings</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>name <span class="op">=</span> <span class="st">"seq1"</span></span>
-<span id="cb6-2"><a></a>length <span class="op">=</span> <span class="dv">42</span></span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="bu">print</span>(<span class="st">"Sequence "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">" has "</span> <span class="op">+</span> <span class="bu">str</span>(length) <span class="op">+</span> <span class="st">" bases"</span>)</span>
-<span id="cb6-5"><a></a><span class="bu">print</span>(<span class="ss">f"Sequence </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> has </span><span class="sc">{</span>length<span class="sc">}</span><span class="ss"> bases"</span>)     <span class="co"># f-string 👑</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>f-strings are shorter and you don’t need <code>str()</code>.</p>
-</div>
-</section>
-<section id="exercise-1-slice-it" class="slide level2 smaller">
-<h2>Exercise 1: Slice it 🔪</h2>
-<p>⏱️ 10 min · your own screen · react ✅ when done</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGGCCATTGTAATGGGCCGC"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="exercise-write-your-proposal" class="slide level2 smaller">
+<h2>Exercise: Write your proposal 📝</h2>
+<p>⏱️ 25 min · alone, then share in breakout rooms</p>
+<p>Create <code>PROJECT.md</code> in your repo:</p>
 <ol type="1">
-<li>Print the first codon (3 letters)</li>
-<li>Print the last 6 bases</li>
-<li>Print the sequence reversed</li>
-<li>Convert it to RNA and print it</li>
-<li>At which position does the second <code>ATG</code> start? 🤔</li>
+<li><strong>What</strong> will your tool do? (2–3 sentences)</li>
+<li><strong>Input</strong> — what file, what format? Where will you get it? 📄</li>
+<li><strong>Output</strong> — what will it print or save?</li>
+<li>Which <strong>3 functions</strong> will you need?</li>
+<li>What is the <strong>smallest working version</strong>? 🌱</li>
 </ol>
+<p>Then: share it with your room and give each other one question 🤔</p>
 <aside class="notes">
-<p>25–35 min. Question 5 is genuinely hard — <code>find</code> has a start argument: seq.find(“ATG”, 1).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="reverse-complement" class="slide level2">
-<h2>Reverse complement 🧬</h2>
-<p>The classic first real bioinformatics function:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGC"</span></span>
-<span id="cb8-2"><a></a>complement <span class="op">=</span> seq.replace(<span class="st">"A"</span>, <span class="st">"t"</span>).replace(<span class="st">"T"</span>, <span class="st">"a"</span>)</span>
-<span id="cb8-3"><a></a>complement <span class="op">=</span> complement.replace(<span class="st">"G"</span>, <span class="st">"c"</span>).replace(<span class="st">"C"</span>, <span class="st">"g"</span>)</span>
-<span id="cb8-4"><a></a>rev_comp <span class="op">=</span> complement.upper()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb8-5"><a></a><span class="bu">print</span>(rev_comp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>Why the temporary lowercase? 🤔 Try it without — what breaks?</p>
-<aside class="notes">
-<p>Great discussion: replacing A→T then T→A turns everything into A. The lowercase trick avoids double replacement.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="exercise-2-sequence-toolkit" class="slide level2 smaller">
-<h2>Exercise 2: Sequence toolkit 🧰</h2>
-<p>⏱️ 25 min · breakout rooms · switch after 10 min</p>
-<p>Create <code>scripts/seq_tools.py</code>. For a DNA sequence of your choice, print:</p>
-<ol type="1">
-<li>Its length and GC content (reuse last block’s code)</li>
-<li>Its first codon and last codon</li>
-<li>The RNA version</li>
-<li>The reverse complement</li>
-<li>Whether it starts with a start codon (<code>ATG</code>) — print <code>True</code>/<code>False</code></li>
-</ol>
-<p>💡 <strong>Bonus:</strong> print all three reading frames: <code>seq[0:]</code>, <code>seq[1:]</code>, <code>seq[2:]</code></p>
-<aside class="notes">
-<p>35–70 min. Paste in the chat. Encourage f-strings for nice output — makes results readable.</p>
+<p>45–70 min. The “smallest working version” question saves half the failing projects. Rooms of 3 work well here — more perspectives.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -414,37 +350,34 @@ Klaudia Brzezińska
 </section>
 <section id="wrap-up" class="slide level2 smaller">
 <h2>Wrap-up ✅</h2>
+<p><strong>Homework</strong> 🏠 Commit <code>PROJECT.md</code> — I will read it and comment 💬</p>
+<p><strong>Timeline</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Tool</th>
-<th>Example</th>
+<th>Week</th>
+<th>What</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Index</td>
-<td><code>seq[0]</code> <code>seq[-1]</code></td>
+<td>11</td>
+<td>Work on the project, I am here to help 🛟</td>
 </tr>
 <tr class="even">
-<td>Slice</td>
-<td><code>seq[0:3]</code> <code>seq[::-1]</code></td>
+<td>12–13</td>
+<td>R basics (project work continues at home)</td>
 </tr>
 <tr class="odd">
-<td>Methods</td>
-<td><code>.upper()</code> <code>.replace()</code> <code>.find()</code></td>
-</tr>
-<tr class="even">
-<td>f-string</td>
-<td><code>f"GC = {gc}%"</code></td>
+<td>14</td>
+<td>Oral exams 💬</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Task</strong> 🔒 Commit <code>seq_tools.py</code> and write in the README what it does.</p>
 <div class="fragment">
-<p>Next week: <strong>lists</strong> — many sequences at once 📋</p>
+<p>Start <strong>small</strong>. A working tiny tool beats a broken big one. 🌱</p>
 <aside class="notes">
-<p>70–80 min. Exit ticket: “Python counts from ___” in the chat.</p>
+<p>70–80 min. Commit to actually commenting on every PROJECT.md — this is the highest-leverage feedback of the semester.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -463,7 +396,7 @@ Klaudia Brzezińska
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Programming and Computing Basics · Week 3</p>
+<p>Programming and Computing Basics · Week 10</p>
 </div>
 </div></div>
 

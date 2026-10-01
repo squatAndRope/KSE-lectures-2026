@@ -231,14 +231,8 @@ Klaudia Brzezińska
 <h2>Indexing: counting from 0 🔢</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGC"</span></span>
 <span id="cb2-2"><a></a>seq[<span class="dv">0</span>]    <span class="co"># 'A'  — the FIRST letter</span></span>
-<span id="cb2-3"><a></a>seq[<span class="dv">1</span>]    <span class="co"># 'T'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>❓</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>seq[<span class="op">-</span><span class="dv">1</span>]   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<p>‘C’ — the last one</p>
-</div>
+<span id="cb2-3"><a></a>seq[<span class="dv">1</span>]    <span class="co"># 'T'</span></span>
+<span id="cb2-4"><a></a>seq[<span class="op">-</span><span class="dv">1</span>]   <span class="co"># 'C'  — the last one</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -268,46 +262,25 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="slicing" class="slide level2 smaller">
+<section id="slicing" class="slide level2">
 <h2>Slicing ✂️</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCTAGC"</span></span>
-<span id="cb4-2"><a></a><span class="co">#      A  T  G  C  G  C  T  A  G  C</span></span>
-<span id="cb4-3"><a></a><span class="co">#      0  1  2  3  4  5  6  7  8  9      ← Python counts from 0!</span></span>
-<span id="cb4-4"><a></a></span>
-<span id="cb4-5"><a></a><span class="co"># seq[start:stop:step]</span></span>
-<span id="cb4-6"><a></a>seq[<span class="dv">0</span>:<span class="dv">3</span>]     <span class="co"># 'ATG'         — positions 0, 1, 2 (stop not included)</span></span>
-<span id="cb4-7"><a></a>seq[<span class="dv">3</span>:]      <span class="co"># 'CGCTAGC'     — from 3 to the end</span></span>
-<span id="cb4-8"><a></a>seq[:<span class="dv">3</span>]      <span class="co"># 'ATG'         — same as [0:3]</span></span>
-<span id="cb4-9"><a></a>seq[<span class="op">-</span><span class="dv">3</span>:]     <span class="co"># 'AGC'         — the last 3 letters</span></span>
-<span id="cb4-10"><a></a>seq[::<span class="op">-</span><span class="dv">1</span>]    <span class="co"># 'CGATCGCGTA'  — reversed!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCTAGC"</span></span>
+<span id="cb3-2"><a></a>seq[<span class="dv">0</span>:<span class="dv">3</span>]    <span class="co"># 'ATG'  — from 0 up to (not including) 3</span></span>
+<span id="cb3-3"><a></a>seq[<span class="dv">3</span>:]     <span class="co"># from 3 to the end</span></span>
+<span id="cb3-4"><a></a>seq[:<span class="dv">3</span>]     <span class="co"># from the start to 3</span></span>
+<span id="cb3-5"><a></a>seq[::<span class="op">-</span><span class="dv">1</span>]   <span class="co"># reversed!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p><code>seq[start:stop]</code> — <strong>stop is not included</strong> 🙂 · length = <code>stop − start</code></p>
-</div>
-<div class="fragment">
-<p>🔮 <strong>Predict:</strong> there is a stop codon <code>TAG</code> hidden in <code>seq</code>. Which slice gives it?</p>
-<aside class="notes">
-<p>Answer: seq[6:9]. Let them count on the position ruler. Why “stop not included”? So that seq[0:3] + seq[3:] glues back to the whole sequence — no overlap, no gap. Don’t show seq[0:3:-1] (returns ’’ silently) — just: to reverse, use [::-1].</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><code>seq[start:stop]</code> — <strong>stop is not included</strong> 🙂</p>
 </div>
 </section>
 <section id="useful-string-methods" class="slide level2 smaller">
 <h2>Useful string methods</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>seq.upper()              <span class="co"># 'ATGC'</span></span>
-<span id="cb5-2"><a></a>seq.lower()              <span class="co"># 'atgc'</span></span>
-<span id="cb5-3"><a></a>seq.replace(<span class="st">"T"</span>, <span class="st">"U"</span>)    <span class="co"># DNA → RNA!</span></span>
-<span id="cb5-4"><a></a>seq.count(<span class="st">"GC"</span>)</span>
-<span id="cb5-5"><a></a>seq.find(<span class="st">"ATG"</span>)          <span class="co"># position of the first ATG (-1 if absent)</span></span>
-<span id="cb5-6"><a></a>seq.startswith(<span class="st">"&gt;"</span>)      <span class="co"># True / False — FASTA headers!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>seq.upper()              <span class="co"># 'ATGC'</span></span>
+<span id="cb4-2"><a></a>seq.lower()              <span class="co"># 'atgc'</span></span>
+<span id="cb4-3"><a></a>seq.replace(<span class="st">"T"</span>, <span class="st">"U"</span>)    <span class="co"># DNA → RNA!</span></span>
+<span id="cb4-4"><a></a>seq.count(<span class="st">"GC"</span>)</span>
+<span id="cb4-5"><a></a>seq.find(<span class="st">"ATG"</span>)          <span class="co"># position of the first ATG (-1 if absent)</span></span>
+<span id="cb4-6"><a></a>seq.startswith(<span class="st">"&gt;"</span>)      <span class="co"># True / False — FASTA headers!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>A method does not change the original — it <strong>returns a new string</strong>.</p>
 <aside class="notes">
@@ -327,11 +300,11 @@ Klaudia Brzezińska
 </section>
 <section id="building-strings" class="slide level2 smaller">
 <h2>Building strings</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>name <span class="op">=</span> <span class="st">"seq1"</span></span>
-<span id="cb6-2"><a></a>length <span class="op">=</span> <span class="dv">42</span></span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="bu">print</span>(<span class="st">"Sequence "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">" has "</span> <span class="op">+</span> <span class="bu">str</span>(length) <span class="op">+</span> <span class="st">" bases"</span>)</span>
-<span id="cb6-5"><a></a><span class="bu">print</span>(<span class="ss">f"Sequence </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> has </span><span class="sc">{</span>length<span class="sc">}</span><span class="ss"> bases"</span>)     <span class="co"># f-string 👑</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>name <span class="op">=</span> <span class="st">"seq1"</span></span>
+<span id="cb5-2"><a></a>length <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="bu">print</span>(<span class="st">"Sequence "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">" has "</span> <span class="op">+</span> <span class="bu">str</span>(length) <span class="op">+</span> <span class="st">" bases"</span>)</span>
+<span id="cb5-5"><a></a><span class="bu">print</span>(<span class="ss">f"Sequence </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> has </span><span class="sc">{</span>length<span class="sc">}</span><span class="ss"> bases"</span>)     <span class="co"># f-string 👑</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>f-strings are shorter and you don’t need <code>str()</code>.</p>
 </div>
@@ -339,7 +312,7 @@ Klaudia Brzezińska
 <section id="exercise-1-slice-it" class="slide level2 smaller">
 <h2>Exercise 1: Slice it 🔪</h2>
 <p>⏱️ 10 min · your own screen · react ✅ when done</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGGCCATTGTAATGGGCCGC"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGGCCATTGTAATGGGCCGC"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
 <li>Print the first codon (3 letters)</li>
 <li>Print the last 6 bases</li>
@@ -364,11 +337,11 @@ Klaudia Brzezińska
 <section id="reverse-complement" class="slide level2">
 <h2>Reverse complement 🧬</h2>
 <p>The classic first real bioinformatics function:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGC"</span></span>
-<span id="cb8-2"><a></a>complement <span class="op">=</span> seq.replace(<span class="st">"A"</span>, <span class="st">"t"</span>).replace(<span class="st">"T"</span>, <span class="st">"a"</span>)</span>
-<span id="cb8-3"><a></a>complement <span class="op">=</span> complement.replace(<span class="st">"G"</span>, <span class="st">"c"</span>).replace(<span class="st">"C"</span>, <span class="st">"g"</span>)</span>
-<span id="cb8-4"><a></a>rev_comp <span class="op">=</span> complement.upper()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb8-5"><a></a><span class="bu">print</span>(rev_comp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGC"</span></span>
+<span id="cb7-2"><a></a>complement <span class="op">=</span> seq.replace(<span class="st">"A"</span>, <span class="st">"t"</span>).replace(<span class="st">"T"</span>, <span class="st">"a"</span>)</span>
+<span id="cb7-3"><a></a>complement <span class="op">=</span> complement.replace(<span class="st">"G"</span>, <span class="st">"c"</span>).replace(<span class="st">"C"</span>, <span class="st">"g"</span>)</span>
+<span id="cb7-4"><a></a>rev_comp <span class="op">=</span> complement.upper()[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb7-5"><a></a><span class="bu">print</span>(rev_comp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>Why the temporary lowercase? 🤔 Try it without — what breaks?</p>
 <aside class="notes">
@@ -440,7 +413,7 @@ Klaudia Brzezińska
 </tr>
 </tbody>
 </table>
-<p><strong>Task</strong> 🔒 Commit <code>seq_tools.py</code> and write in the README what it does.</p>
+<p><strong>Homework</strong> 🏠 Commit <code>seq_tools.py</code> and write in the README what it does.</p>
 <div class="fragment">
 <p>Next week: <strong>lists</strong> — many sequences at once 📋</p>
 <aside class="notes">
