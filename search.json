@@ -914,7 +914,7 @@
     "href": "week02-block2-bash.html#our-data-fasta",
     "title": "Week 2 · Block 2 — Bash on real data",
     "section": "Our data: FASTA 🧬",
-    "text": "Our data: FASTA 🧬\n&gt;seq1 Homo sapiens BRCA1 partial\nATGCTAAAGACAATTACATAACATACACGTCAGCACGAAACTTGTTGGCCCAGTGTGAAT\nCGCTTAAGGGTTAAGTAAGTGTGATGCATACGCCTTTACTTGCTGTGTCCA\n&gt;seq2 Mus musculus Brca1 partial\nATG...\n\nHeader lines start with &gt;\nSequence lines are the DNA itself — one sequence can span many lines\n\n\nDownload sequences.fasta into your data/ folder — link in the chat 🔗\n\n10–15 min. Put the raw GitHub link in the chat. Alternative: curl -O &lt;link&gt; — nice, but only if their network cooperates. Toy file: 12 sequences, 5 species, 30 sequence lines (sequences wrapped at 60 characters)."
+    "text": "Our data: FASTA 🧬\n&gt;seq1 Homo sapiens BRCA1 partial\nATGCTAAAGACAATTACATAACATACACGTCAGCACGAAACTTGTTGGCCCAGTGTGAAT\nCGCTTAAGGGTTAAGTAAGTGTGATGCATACGCCTTTACTTGCTGTGTCCA\n&gt;seq2 Mus musculus Brca1 partial\nATG...\n\nHeader lines start with &gt;\nSequence lines are the DNA itself — one sequence can span many lines\n\n\nDownload sequences.fasta into your data/ folder — data in the chat 🔗\n\n10–15 min. Put the raw GitHub link in the chat. Alternative: curl -O &lt;link&gt; — nice, but only if their network cooperates. Toy file: 12 sequences, 5 species, 30 sequence lines (sequences wrapped at 60 characters)."
   },
   {
     "objectID": "week02-block2-bash.html#searching-grep",

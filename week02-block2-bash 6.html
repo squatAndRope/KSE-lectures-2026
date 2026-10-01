@@ -245,7 +245,7 @@ ATG...</code></pre>
 <li>Sequence lines are the DNA itself — <strong>one sequence can span many lines</strong></li>
 </ul>
 <div class="fragment">
-<p><strong>Download <code>sequences.fasta</code> into your <code>data/</code> folder</strong> — data in the chat 🔗</p>
+<p><strong>Download <code>sequences.fasta</code> into your <code>data/</code> folder</strong> — link in the chat 🔗</p>
 <aside class="notes">
 <p>10–15 min. Put the raw GitHub link in the chat. Alternative: <code>curl -O &lt;link&gt;</code> — nice, but only if their network cooperates. Toy file: 12 sequences, 5 species, 30 sequence lines (sequences wrapped at 60 characters).</p>
 <style type="text/css">
@@ -910,7 +910,7 @@ ATG...</code></pre>
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/squatAndRope\.github\.io\/KSE-lectures-2026\/");
+            var filterRegex = new RegExp('/' + window.location.host + '/');
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
