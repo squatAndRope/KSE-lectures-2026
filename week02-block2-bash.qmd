@@ -219,7 +219,7 @@ echo "$file contains $n sequences"
 bash scripts/count_seqs.sh data/sequences.fasta
 ```
 ```
-data/sequences.fasta contains 12 sequences
+data/sequences.fasta contains 6 sequences
 ```
 
 ::: notes
@@ -232,7 +232,7 @@ Quotes around "$file" protect against file names with spaces (remember Bandit?).
 
 ```bash
 ls -l scripts/count_seqs.sh
--rw-r--r--  1 anna  staff  180 Oct  7 10:12 count_seqs.sh
+-rw-r--r--  1 anna  staff  180 Oct  7 10:12 scripts/count_seqs.sh
 ```
 
 `r` = read · `w` = write · `x` = execute — for **owner · group · others**
@@ -249,7 +249,7 @@ chmod +x scripts/count_seqs.sh      # add x = allowed to run
 **Loop** — the same thing for every file:
 
 ```bash
-for f in data/*; do
+for f in data/*fasta; do
   bash scripts/count_seqs.sh "$f"
 done
 ```
@@ -327,7 +327,7 @@ Next week: **Python** 🐍 — and we'll solve the `ATG` problem properly
 76–80 min. Exit ticket in the chat: one command they will actually use again.
 :::
 
-## Homework 🏠 {.smaller}
+## Exercise 🎯 {.smaller}
 
 1. Add `.gitignore` to your repo, commit and push
 2. **SSH key for GitHub** — no more typing passwords/tokens:
