@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Klaudia Brzezińska">
-  <title>Programming and Computing Basics – Week 3 · Block 1 — Hello, Python</title>
+  <title>Programming and Computing Basics – Week 12 · Block 2 — Data &amp; plots in R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,7 +193,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 3 · Block 1 — Hello, Python</h1>
+  <h1 class="title">Week 12 · Block 2 — Data &amp; plots in R</h1>
   <p class="subtitle">Programming and Computing Basics · KSE 2026</p>
 
 <div class="quarto-title-authors">
@@ -207,16 +207,40 @@ Klaudia Brzezińska
 </section>
 <section id="warm-up" class="slide level2 smaller">
 <h2>Warm-up 🔥</h2>
-<p>⏱️ 10 min · in the chat</p>
-<p>In your repo, using <strong>one line</strong> each:</p>
+<p>⏱️ 10 min</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>gc <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.55</span>, <span class="fl">0.41</span>, <span class="fl">0.62</span>, <span class="fl">0.38</span>, <span class="fl">0.71</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
-<li>How many sequences are in <code>data/sequences.fasta</code>?</li>
-<li>Save the headers into <code>results/headers.txt</code></li>
+<li>Print the mean</li>
+<li>Print only values above 0.5</li>
+<li>How many are above 0.5? (hint: <code>sum(gc &gt; 0.5)</code>) 🤔</li>
 </ol>
-<div class="fragment">
-<p>Stuck? Ask your partner first, then the chat 💬</p>
 <aside class="notes">
-<p>0–10 min. Recall last week. If many struggle, redo the grep pipeline live — it is the base for everything later.</p>
+<p>0–10 min. Point 3 is a lovely R trick: TRUE counts as 1.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="reading-real-data" class="slide level2 smaller">
+<h2>Reading real data 📄</h2>
+<p>Remember <code>results/report.txt</code> from your Python tool? Let’s analyse it in R.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>seqs <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"results/report.txt"</span>, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a><span class="fu">head</span>(seqs)</span>
+<span id="cb2-4"><a></a><span class="fu">str</span>(seqs)        <span class="co"># structure: columns and their types 🔍</span></span>
+<span id="cb2-5"><a></a><span class="fu">summary</span>(seqs)    <span class="co"># min, max, mean per column 📊</span></span>
+<span id="cb2-6"><a></a><span class="fu">nrow</span>(seqs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p><strong>Python produced the data. R analyses it.</strong> 🐍🤝🇷</p>
+<aside class="notes">
+<p>10–25 min. This is the payoff: their own pipeline now spans two languages. Make sure their report has a header row — otherwise read.csv guesses wrong.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -230,46 +254,16 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="bash-vs-python" class="slide level2 smaller">
-<h2>Bash vs Python 🐍</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Bash is great for</strong></p>
-<ul>
-<li>Moving and filtering files</li>
-<li>Gluing tools together</li>
-<li>One-liners</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Python is great for</strong></p>
-<ul>
-<li>Logic and calculations</li>
-<li>Reusable analysis</li>
-<li>Anything longer than 2 lines 🙂</li>
-</ul>
-</div></div>
-<aside class="notes">
-<p>10–25 min: new material (this slide → “Labels, not boxes”). Keep it brisk. Do not oppose them — biologists use both, daily.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="two-ways-to-run-python" class="slide level2 smaller">
-<h2>Two ways to run Python</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">python3</span>                 <span class="co"># interactive — try things out (exit())</span></span>
-<span id="cb1-2"><a></a><span class="ex">python3</span> my_script.py    <span class="co"># run a saved script</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="your-first-plot" class="slide level2">
+<h2>Your first plot 📈</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">hist</span>(seqs<span class="sc">$</span>length,</span>
+<span id="cb3-2"><a></a>     <span class="at">main =</span> <span class="st">"Sequence length distribution"</span>,</span>
+<span id="cb3-3"><a></a>     <span class="at">xlab =</span> <span class="st">"Length (bp)"</span>,</span>
+<span id="cb3-4"><a></a>     <span class="at">col  =</span> <span class="st">"steelblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>We use <strong>scripts</strong>, because a script can be committed, shared and re-run. 💾</p>
+<p>One line, and you have a figure 🎉</p>
 <aside class="notes">
-<p>Check that everyone actually has python3. Windows users may need <code>python</code> instead.</p>
+<p>The instant plot is R’s best first impression. Show it live.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -283,39 +277,28 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="your-first-script" class="slide level2">
-<h2>Your first script</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># hello.py</span></span>
-<span id="cb2-2"><a></a><span class="bu">print</span>(<span class="st">"Hello, bioinformatics!"</span>)</span>
-<span id="cb2-3"><a></a><span class="bu">print</span>(<span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">python3</span> hello.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="three-plots-you-will-actually-use" class="slide level2 smaller">
+<h2>Three plots you will actually use</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">hist</span>(seqs<span class="sc">$</span>gc)                       <span class="co"># distribution 📊</span></span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a><span class="fu">plot</span>(seqs<span class="sc">$</span>length, seqs<span class="sc">$</span>gc,          <span class="co"># relationship 🔗</span></span>
+<span id="cb4-4"><a></a>     <span class="at">xlab =</span> <span class="st">"Length"</span>, <span class="at">ylab =</span> <span class="st">"GC"</span>,</span>
+<span id="cb4-5"><a></a>     <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"darkgreen"</span>)</span>
+<span id="cb4-6"><a></a></span>
+<span id="cb4-7"><a></a><span class="fu">boxplot</span>(gc <span class="sc">~</span> species, <span class="at">data =</span> seqs)  <span class="co"># compare groups 📦</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p><code>#</code> starts a <strong>comment</strong> — Python ignores it, humans read it.</p>
+<p><code>main</code> <code>xlab</code> <code>ylab</code> <code>col</code> work almost everywhere.</p>
 </div>
 </section>
-<section id="variables" class="slide level2">
-<h2>Variables 📦</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>organism <span class="op">=</span> <span class="st">"Homo sapiens"</span></span>
-<span id="cb4-2"><a></a>gene_length <span class="op">=</span> <span class="dv">1520</span></span>
-<span id="cb4-3"><a></a>gc_content <span class="op">=</span> <span class="fl">0.42</span></span>
-<span id="cb4-4"><a></a>is_coding <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="bu">print</span>(organism, gene_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="saving-a-figure" class="slide level2">
+<h2>Saving a figure 💾</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">png</span>(<span class="st">"results/gc_plot.png"</span>, <span class="at">width =</span> <span class="dv">800</span>, <span class="at">height =</span> <span class="dv">600</span>)</span>
+<span id="cb5-2"><a></a><span class="fu">hist</span>(seqs<span class="sc">$</span>gc, <span class="at">main =</span> <span class="st">"GC content"</span>, <span class="at">col =</span> <span class="st">"steelblue"</span>)</span>
+<span id="cb5-3"><a></a><span class="fu">dev.off</span>()          <span class="co"># ⚠️ don't forget this — it closes the file!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>A variable is a <strong>label on a value</strong>, not a box you must declare.</p>
-</div>
-</section>
-<section id="labels-not-boxes" class="slide level2 smaller">
-<h2>Labels, not boxes 🏷️</h2>
-<p>Predict in the chat — what does this print?</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>x <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb5-2"><a></a>y <span class="op">=</span> x</span>
-<span id="cb5-3"><a></a>x <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb5-4"><a></a><span class="bu">print</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><code>5</code> — <code>y = x</code> sticks a second label on the <strong>value</strong> <code>5</code>. <code>x = 10</code> moves only the <code>x</code> label to a new value.</p>
+<p>Now your figure is a file you can put in a report or a thesis 📄</p>
 <aside class="notes">
-<p>~2 min. Show it in Python Tutor (pythontutor.com) — the arrows from names to values make the “label” idea visible. Do NOT go into copying/mutability yet: with int and str nothing surprising happens. Come back to this picture in the lists week: “remember the labels? now watch what happens with a list.”</p>
+<p>25–35 min. dev.off() is the classic forgotten line — the file stays empty without it.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -329,88 +312,17 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="four-basic-types" class="slide level2 smaller">
-<h2>Four basic types</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Type</th>
-<th>Example</th>
-<th>Used for</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>str</code></td>
-<td><code>"ATGC"</code></td>
-<td>text, sequences</td>
-</tr>
-<tr class="even">
-<td><code>int</code></td>
-<td><code>1520</code></td>
-<td>counts, positions</td>
-</tr>
-<tr class="odd">
-<td><code>float</code></td>
-<td><code>0.42</code></td>
-<td>ratios, p-values</td>
-</tr>
-<tr class="even">
-<td><code>bool</code></td>
-<td><code>True</code> / <code>False</code></td>
-<td>yes/no answers</td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">type</span>(<span class="fl">0.42</span>)   <span class="co"># &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
-<p>Ask: what would type(“0.42”) be? Keep the TypeError demo for AFTER Exercise 1 — don’t spoil it.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="exercise-1-predict-then-run" class="slide level2 smaller">
-<h2>Exercise 1: Predict, then run 🔮</h2>
-<p>⏱️ 10 min · answer in the chat <strong>before</strong> running</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb7-2"><a></a>b <span class="op">=</span> <span class="st">"5"</span></span>
-<span id="cb7-3"><a></a><span class="bu">print</span>(a <span class="op">+</span> a)</span>
-<span id="cb7-4"><a></a><span class="bu">print</span>(b <span class="op">+</span> b)</span>
-<span id="cb7-5"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>💡 Which line fails? What exactly does the error say?</p>
-<aside class="notes">
-<p>25–35 min. Run it in the interactive python3 (or as a script — then ask: what if the failing line were first?). Afterwards: read the TypeError together, slowly. Then show “ATG” + 5 as a second example. This is the single most useful habit: read the error, don’t panic.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="input-and-conversion" class="slide level2 smaller">
-<h2>Input and conversion</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>length <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Sequence length: "</span>)   <span class="co"># always a STRING</span></span>
-<span id="cb8-2"><a></a><span class="bu">print</span>(length <span class="op">*</span> <span class="dv">3</span>)                     <span class="co"># predict! (type 100)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="a-word-on-ggplot2" class="slide level2 smaller">
+<h2>A word on ggplot2 🎨</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a><span class="fu">ggplot</span>(seqs, <span class="fu">aes</span>(<span class="at">x =</span> length, <span class="at">y =</span> gc)) <span class="sc">+</span></span>
+<span id="cb6-4"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"GC vs length"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p><code>"100100100"</code> 😱 — same as <code>b + b</code>: text gets <strong>repeated</strong>, not multiplied.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>length <span class="op">=</span> <span class="bu">int</span>(length)                  <span class="co"># convert to number</span></span>
-<span id="cb9-2"><a></a><span class="bu">print</span>(length <span class="op">*</span> <span class="dv">3</span>)                     <span class="co"># 300</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>int()</code> · <code>float()</code> · <code>str()</code> convert between types.</p>
+<p>Prettier, more powerful, and a whole language of its own. Base R plots are enough for today — ggplot2 is your next step 🌱</p>
 <aside class="notes">
-<p>35–40 min. Quick predict, links straight back to Exercise 1. input() comes back as a bonus in Exercise 2.</p>
+<p>Mention only. Going deeper needs a full block; point them to resources instead.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -424,47 +336,21 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="asking-a-sequence-questions" class="slide level2 smaller">
-<h2>Asking a sequence questions 🔍</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCAT"</span></span>
-<span id="cb10-2"><a></a><span class="bu">len</span>(seq)            <span class="co"># 8    → a function:  len( thing )</span></span>
-<span id="cb10-3"><a></a>seq.count(<span class="st">"A"</span>)      <span class="co"># 2    → a method:    thing.count( ... )</span></span>
-<span id="cb10-4"><a></a><span class="dv">2</span> <span class="op">/</span> <span class="dv">8</span> <span class="op">*</span> <span class="dv">100</span>         <span class="co"># 25.0 → / always gives a float</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><strong>AT content</strong> = (A + T) / length × 100</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>at <span class="op">=</span> seq.count(<span class="st">"A"</span>) <span class="op">+</span> seq.count(<span class="st">"T"</span>)</span>
-<span id="cb11-2"><a></a><span class="bu">print</span>(at <span class="op">/</span> <span class="bu">len</span>(seq) <span class="op">*</span> <span class="dv">100</span>)   <span class="co"># 50.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Your turn: <strong>GC content</strong> 🧬</p>
-<aside class="notes">
-<p>40–45 min. Live-code this, don’t just show it. Function vs method: just name the two shapes, no theory yet.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="exercise-2-your-first-analysis" class="slide level2 smaller">
-<h2>Exercise 2: Your first analysis 🧬</h2>
-<p>⏱️ 25 min · breakout rooms · switch after 10 min</p>
-<p>Create <code>scripts/dna_info.py</code>:</p>
+<section id="exercise-analyse-your-own-data" class="slide level2 smaller">
+<h2>Exercise: Analyse your own data 🧬</h2>
+<p>⏱️ 30 min · breakout rooms · switch after 15 min</p>
+<p>Create <code>scripts/plot_report.R</code>:</p>
 <ol type="1">
-<li>Store a DNA sequence in a variable (at least 20 letters)</li>
-<li>Print its length using <code>len(sequence)</code></li>
-<li>Count the G letters: <code>sequence.count("G")</code></li>
-<li>Count the C letters</li>
-<li>Calculate and print the <strong>GC content</strong> as a percentage — e.g.&nbsp;<code>print("GC:", gc, "%")</code></li>
-<li><code>git add</code> → <code>commit</code> → <code>push</code></li>
+<li>Run your Python tool to produce a tab-separated report 🐍</li>
+<li>Read it into R with <code>read.csv(..., sep = "\t")</code></li>
+<li>Print <code>summary()</code> and the number of rows</li>
+<li>Make a histogram of lengths 📊</li>
+<li>Make a scatter plot of length vs GC 🔗</li>
+<li>Save one figure into <code>results/</code> and commit the <strong>script</strong> (not the PNG 🙈)</li>
 </ol>
-<p>💡 <strong>Bonus:</strong> round the result with <code>round(value, 2)</code> · ask the user for the sequence with <code>input()</code></p>
+<p>💡 <strong>Bonus:</strong> colour the points by whether GC is above 50%</p>
 <aside class="notes">
-<p>45–70 min. Paste results in the chat. Common bug: integer division confusion — remind them <code>/</code> gives a float. If someone finds f-strings online — fine, but not required yet.</p>
+<p>35–75 min. Most common failure: wrong path or missing header. Have a ready CSV in the chat as plan B.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -480,15 +366,16 @@ Klaudia Brzezińska
 <section id="wrap-up" class="slide level2 smaller">
 <h2>Wrap-up ✅</h2>
 <ul>
-<li>A script is a file you can re-run and commit 💾</li>
-<li>Variables are <strong>labels</strong> on values; values have <strong>types</strong></li>
-<li><code>len()</code> <code>count()</code> already do real biology work</li>
+<li><code>read.csv()</code> brings data in 📄</li>
+<li><code>summary()</code> and <code>str()</code> before anything else 🔍</li>
+<li><code>hist()</code> <code>plot()</code> <code>boxplot()</code> — one line each 📊</li>
+<li><code>png()</code> … <code>dev.off()</code> to save 💾</li>
 </ul>
-<p><strong>Homework</strong> 🏠 Commit <code>dna_info.py</code> with a comment at the top explaining what it does.</p>
+<p><strong>Homework</strong> 🏠 Commit your R script.</p>
 <div class="fragment">
-<p>Next block: <strong>strings</strong> — sequences are just text 🧬</p>
+<p>Next week: Python vs R side by side, and last project help 🛟</p>
 <aside class="notes">
-<p>70–80 min. Two students share their GC result — compare numbers, discuss why they differ.</p>
+<p>75–80 min. Two students share their plot — first figures always get a nice reaction.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -507,7 +394,7 @@ Klaudia Brzezińska
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Programming and Computing Basics · Week 3</p>
+<p>Programming and Computing Basics · Week 12</p>
 </div>
 </div></div>
 

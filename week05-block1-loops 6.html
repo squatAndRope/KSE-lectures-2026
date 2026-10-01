@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Klaudia Brzezińska">
-  <title>Programming and Computing Basics – Week 3 · Block 1 — Hello, Python</title>
+  <title>Programming and Computing Basics – Week 5 · Block 1 — Loops</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,7 +193,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 3 · Block 1 — Hello, Python</h1>
+  <h1 class="title">Week 5 · Block 1 — Loops</h1>
   <p class="subtitle">Programming and Computing Basics · KSE 2026</p>
 
 <div class="quarto-title-authors">
@@ -207,16 +207,35 @@ Klaudia Brzezińska
 </section>
 <section id="warm-up" class="slide level2 smaller">
 <h2>Warm-up 🔥</h2>
-<p>⏱️ 10 min · in the chat</p>
-<p>In your repo, using <strong>one line</strong> each:</p>
-<ol type="1">
-<li>How many sequences are in <code>data/sequences.fasta</code>?</li>
-<li>Save the headers into <code>results/headers.txt</code></li>
-</ol>
-<div class="fragment">
-<p>Stuck? Ask your partner first, then the chat 💬</p>
+<p>⏱️ 10 min</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCCCTAAGGG"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Write an <code>if</code> that prints <code>"start codon found"</code> when the sequence starts with <code>ATG</code> <strong>and</strong> is longer than 6 bases.</p>
 <aside class="notes">
-<p>0–10 min. Recall last week. If many struggle, redo the grep pipeline live — it is the base for everything later.</p>
+<p>0–10 min. Two students share their screen with different solutions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-problem" class="slide level2">
+<h2>The problem 😩</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="bu">print</span>(<span class="bu">len</span>(sequences[<span class="dv">0</span>]))</span>
+<span id="cb2-2"><a></a><span class="bu">print</span>(<span class="bu">len</span>(sequences[<span class="dv">1</span>]))</span>
+<span id="cb2-3"><a></a><span class="bu">print</span>(<span class="bu">len</span>(sequences[<span class="dv">2</span>]))</span>
+<span id="cb2-4"><a></a><span class="co"># ... 497 more lines</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<blockquote>
+<p>Copy-paste is a smell. Computers are good at repeating things. 🔁</p>
+</blockquote>
+<aside class="notes">
+<p>10–25 min. Reference last week’s exercise where they wrote lengths by hand.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -230,46 +249,29 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="bash-vs-python" class="slide level2 smaller">
-<h2>Bash vs Python 🐍</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Bash is great for</strong></p>
-<ul>
-<li>Moving and filtering files</li>
-<li>Gluing tools together</li>
-<li>One-liners</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><strong>Python is great for</strong></p>
-<ul>
-<li>Logic and calculations</li>
-<li>Reusable analysis</li>
-<li>Anything longer than 2 lines 🙂</li>
-</ul>
-</div></div>
-<aside class="notes">
-<p>10–25 min: new material (this slide → “Labels, not boxes”). Keep it brisk. Do not oppose them — biologists use both, daily.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="two-ways-to-run-python" class="slide level2 smaller">
-<h2>Two ways to run Python</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">python3</span>                 <span class="co"># interactive — try things out (exit())</span></span>
-<span id="cb1-2"><a></a><span class="ex">python3</span> my_script.py    <span class="co"># run a saved script</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="the-for-loop" class="slide level2">
+<h2>The <code>for</code> loop</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>sequences <span class="op">=</span> [<span class="st">"ATGC"</span>, <span class="st">"GGCATT"</span>, <span class="st">"TTA"</span>]</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a><span class="cf">for</span> seq <span class="kw">in</span> sequences:</span>
+<span id="cb3-4"><a></a>    <span class="bu">print</span>(seq, <span class="bu">len</span>(seq))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>We use <strong>scripts</strong>, because a script can be committed, shared and re-run. 💾</p>
+<p>Read it as: <strong>for each</strong> <code>seq</code> <strong>in</strong> <code>sequences</code>, do this.</p>
+<p><code>seq</code> is just a name — you choose it.</p>
+</div>
+</section>
+<section id="looping-over-a-string-too" class="slide level2">
+<h2>Looping over a string too 🧬</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="cf">for</span> base <span class="kw">in</span> <span class="st">"ATGC"</span>:</span>
+<span id="cb4-2"><a></a>    <span class="bu">print</span>(base)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-2"><a></a><span class="cf">for</span> base <span class="kw">in</span> <span class="st">"ATGCGC"</span>:</span>
+<span id="cb5-3"><a></a>    <span class="cf">if</span> base <span class="op">==</span> <span class="st">"G"</span>:</span>
+<span id="cb5-4"><a></a>        count <span class="op">=</span> count <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb5-5"><a></a><span class="bu">print</span>(count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
-<p>Check that everyone actually has python3. Windows users may need <code>python</code> instead.</p>
+<p>The accumulator pattern (start at 0, add inside the loop) is the single most important pattern this week.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -283,39 +285,44 @@ Klaudia Brzezińska
       }</style></aside>
 </div>
 </section>
-<section id="your-first-script" class="slide level2">
-<h2>Your first script</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># hello.py</span></span>
-<span id="cb2-2"><a></a><span class="bu">print</span>(<span class="st">"Hello, bioinformatics!"</span>)</span>
-<span id="cb2-3"><a></a><span class="bu">print</span>(<span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">python3</span> hello.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="collecting-results" class="slide level2">
+<h2>Collecting results 📋</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>lengths <span class="op">=</span> []                    <span class="co"># start empty</span></span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a><span class="cf">for</span> seq <span class="kw">in</span> sequences:</span>
+<span id="cb6-4"><a></a>    lengths.append(<span class="bu">len</span>(seq))    <span class="co"># add one result per sequence</span></span>
+<span id="cb6-5"><a></a></span>
+<span id="cb6-6"><a></a><span class="bu">print</span>(lengths)</span>
+<span id="cb6-7"><a></a><span class="bu">print</span>(<span class="bu">sum</span>(lengths) <span class="op">/</span> <span class="bu">len</span>(lengths))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p><code>#</code> starts a <strong>comment</strong> — Python ignores it, humans read it.</p>
+<p><strong>Empty list → loop → append.</strong> You will write this a hundred times.</p>
 </div>
 </section>
-<section id="variables" class="slide level2">
-<h2>Variables 📦</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>organism <span class="op">=</span> <span class="st">"Homo sapiens"</span></span>
-<span id="cb4-2"><a></a>gene_length <span class="op">=</span> <span class="dv">1520</span></span>
-<span id="cb4-3"><a></a>gc_content <span class="op">=</span> <span class="fl">0.42</span></span>
-<span id="cb4-4"><a></a>is_coding <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="bu">print</span>(organism, gene_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="range-and-while" class="slide level2 smaller">
+<h2><code>range()</code> and <code>while</code></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):        <span class="co"># 0,1,2,3,4</span></span>
+<span id="cb7-2"><a></a>    <span class="bu">print</span>(i)</span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">3</span>):  <span class="co"># 0,3,6 — codon positions!</span></span>
+<span id="cb7-5"><a></a>    <span class="bu">print</span>(seq[i:i<span class="op">+</span><span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p>A variable is a <strong>label on a value</strong>, not a box you must declare.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="cf">while</span> <span class="bu">len</span>(seq) <span class="op">&gt;</span> <span class="dv">3</span>:       <span class="co"># repeat while the condition holds</span></span>
+<span id="cb8-2"><a></a>    seq <span class="op">=</span> seq[<span class="dv">1</span>:]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</section>
-<section id="labels-not-boxes" class="slide level2 smaller">
-<h2>Labels, not boxes 🏷️</h2>
-<p>Predict in the chat — what does this print?</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>x <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb5-2"><a></a>y <span class="op">=</span> x</span>
-<span id="cb5-3"><a></a>x <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb5-4"><a></a><span class="bu">print</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><code>5</code> — <code>y = x</code> sticks a second label on the <strong>value</strong> <code>5</code>. <code>x = 10</code> moves only the <code>x</code> label to a new value.</p>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Forget to change the condition → infinite loop. <strong>Ctrl+C</strong> stops it. 🛑</p>
+</div>
+</div>
+</div>
 <aside class="notes">
-<p>~2 min. Show it in Python Tutor (pythontutor.com) — the arrows from names to values make the “label” idea visible. Do NOT go into copying/mutability yet: with int and str nothing surprising happens. Come back to this picture in the lists week: “remember the labels? now watch what happens with a list.”</p>
+<p>Teach Ctrl+C explicitly — online, a student with a runaway loop will panic silently.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -328,66 +335,19 @@ Klaudia Brzezińska
           display:block!important;
       }</style></aside>
 </div>
-</section>
-<section id="four-basic-types" class="slide level2 smaller">
-<h2>Four basic types</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Type</th>
-<th>Example</th>
-<th>Used for</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>str</code></td>
-<td><code>"ATGC"</code></td>
-<td>text, sequences</td>
-</tr>
-<tr class="even">
-<td><code>int</code></td>
-<td><code>1520</code></td>
-<td>counts, positions</td>
-</tr>
-<tr class="odd">
-<td><code>float</code></td>
-<td><code>0.42</code></td>
-<td>ratios, p-values</td>
-</tr>
-<tr class="even">
-<td><code>bool</code></td>
-<td><code>True</code> / <code>False</code></td>
-<td>yes/no answers</td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">type</span>(<span class="fl">0.42</span>)   <span class="co"># &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
-<p>Ask: what would type(“0.42”) be? Keep the TypeError demo for AFTER Exercise 1 — don’t spoil it.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="exercise-1-predict-then-run" class="slide level2 smaller">
 <h2>Exercise 1: Predict, then run 🔮</h2>
-<p>⏱️ 10 min · answer in the chat <strong>before</strong> running</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb7-2"><a></a>b <span class="op">=</span> <span class="st">"5"</span></span>
-<span id="cb7-3"><a></a><span class="bu">print</span>(a <span class="op">+</span> a)</span>
-<span id="cb7-4"><a></a><span class="bu">print</span>(b <span class="op">+</span> b)</span>
-<span id="cb7-5"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>💡 Which line fails? What exactly does the error say?</p>
+<p>⏱️ 10 min · chat first</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-2"><a></a><span class="cf">for</span> n <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]:</span>
+<span id="cb9-3"><a></a>    total <span class="op">=</span> total <span class="op">+</span> n</span>
+<span id="cb9-4"><a></a><span class="bu">print</span>(total)</span>
+<span id="cb9-5"><a></a></span>
+<span id="cb9-6"><a></a><span class="cf">for</span> base <span class="kw">in</span> <span class="st">"ATG"</span>:</span>
+<span id="cb9-7"><a></a>    <span class="bu">print</span>(base <span class="op">*</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
-<p>25–35 min. Run it in the interactive python3 (or as a script — then ask: what if the failing line were first?). Afterwards: read the TypeError together, slowly. Then show “ATG” + 5 as a second example. This is the single most useful habit: read the error, don’t panic.</p>
+<p>25–35 min. If they get the accumulator, the rest of the semester is much easier.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -400,71 +360,21 @@ Klaudia Brzezińska
           display:block!important;
       }</style></aside>
 </section>
-<section id="input-and-conversion" class="slide level2 smaller">
-<h2>Input and conversion</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>length <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Sequence length: "</span>)   <span class="co"># always a STRING</span></span>
-<span id="cb8-2"><a></a><span class="bu">print</span>(length <span class="op">*</span> <span class="dv">3</span>)                     <span class="co"># predict! (type 100)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><code>"100100100"</code> 😱 — same as <code>b + b</code>: text gets <strong>repeated</strong>, not multiplied.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>length <span class="op">=</span> <span class="bu">int</span>(length)                  <span class="co"># convert to number</span></span>
-<span id="cb9-2"><a></a><span class="bu">print</span>(length <span class="op">*</span> <span class="dv">3</span>)                     <span class="co"># 300</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>int()</code> · <code>float()</code> · <code>str()</code> convert between types.</p>
-<aside class="notes">
-<p>35–40 min. Quick predict, links straight back to Exercise 1. input() comes back as a bonus in Exercise 2.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="asking-a-sequence-questions" class="slide level2 smaller">
-<h2>Asking a sequence questions 🔍</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCAT"</span></span>
-<span id="cb10-2"><a></a><span class="bu">len</span>(seq)            <span class="co"># 8    → a function:  len( thing )</span></span>
-<span id="cb10-3"><a></a>seq.count(<span class="st">"A"</span>)      <span class="co"># 2    → a method:    thing.count( ... )</span></span>
-<span id="cb10-4"><a></a><span class="dv">2</span> <span class="op">/</span> <span class="dv">8</span> <span class="op">*</span> <span class="dv">100</span>         <span class="co"># 25.0 → / always gives a float</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><strong>AT content</strong> = (A + T) / length × 100</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>at <span class="op">=</span> seq.count(<span class="st">"A"</span>) <span class="op">+</span> seq.count(<span class="st">"T"</span>)</span>
-<span id="cb11-2"><a></a><span class="bu">print</span>(at <span class="op">/</span> <span class="bu">len</span>(seq) <span class="op">*</span> <span class="dv">100</span>)   <span class="co"># 50.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Your turn: <strong>GC content</strong> 🧬</p>
-<aside class="notes">
-<p>40–45 min. Live-code this, don’t just show it. Function vs method: just name the two shapes, no theory yet.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="exercise-2-your-first-analysis" class="slide level2 smaller">
-<h2>Exercise 2: Your first analysis 🧬</h2>
+<section id="exercise-2-analyse-them-all" class="slide level2 smaller">
+<h2>Exercise 2: Analyse them all 🧬</h2>
 <p>⏱️ 25 min · breakout rooms · switch after 10 min</p>
-<p>Create <code>scripts/dna_info.py</code>:</p>
+<p>Create <code>scripts/analyse_all.py</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>sequences <span class="op">=</span> [<span class="st">"ATGCGC"</span>, <span class="st">"GGCATTAGC"</span>, <span class="st">"TTA"</span>, <span class="st">"ATGGGCCCTA"</span>, <span class="st">"ATGNNNCGC"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
-<li>Store a DNA sequence in a variable (at least 20 letters)</li>
-<li>Print its length using <code>len(sequence)</code></li>
-<li>Count the G letters: <code>sequence.count("G")</code></li>
-<li>Count the C letters</li>
-<li>Calculate and print the <strong>GC content</strong> as a percentage — e.g.&nbsp;<code>print("GC:", gc, "%")</code></li>
-<li><code>git add</code> → <code>commit</code> → <code>push</code></li>
+<li>Print each sequence with its length</li>
+<li>Build a list of lengths, then print the average</li>
+<li>Count how many sequences start with <code>ATG</code></li>
+<li>Print only the sequences longer than 5 bases</li>
+<li>For each sequence print its GC content (loop inside a loop!)</li>
 </ol>
-<p>💡 <strong>Bonus:</strong> round the result with <code>round(value, 2)</code> · ask the user for the sequence with <code>input()</code></p>
+<p>💡 <strong>Bonus:</strong> print the codons of the longest sequence, one per line</p>
 <aside class="notes">
-<p>45–70 min. Paste results in the chat. Common bug: integer division confusion — remind them <code>/</code> gives a float. If someone finds f-strings online — fine, but not required yet.</p>
+<p>35–70 min. Point 5 is the hard one — a loop over sequences containing a loop over bases. Hint to give if a room is stuck: solve it for ONE sequence first, then wrap it in the outer loop.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -479,16 +389,18 @@ Klaudia Brzezińska
 </section>
 <section id="wrap-up" class="slide level2 smaller">
 <h2>Wrap-up ✅</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>results <span class="op">=</span> []</span>
+<span id="cb11-2"><a></a><span class="cf">for</span> item <span class="kw">in</span> things:</span>
+<span id="cb11-3"><a></a>    <span class="cf">if</span> condition:</span>
+<span id="cb11-4"><a></a>        results.append(something)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>A script is a file you can re-run and commit 💾</li>
-<li>Variables are <strong>labels</strong> on values; values have <strong>types</strong></li>
-<li><code>len()</code> <code>count()</code> already do real biology work</li>
+<li><code>for x in y:</code> repeats for each element</li>
+<li>Empty list → loop → <code>append</code> 📋</li>
+<li><code>range()</code> for numbers · <code>while</code> for “until”</li>
 </ul>
-<p><strong>Homework</strong> 🏠 Commit <code>dna_info.py</code> with a comment at the top explaining what it does.</p>
-<div class="fragment">
-<p>Next block: <strong>strings</strong> — sequences are just text 🧬</p>
+<p><strong>Homework</strong> 🏠 Commit <code>analyse_all.py</code>.</p>
 <aside class="notes">
-<p>70–80 min. Two students share their GC result — compare numbers, discuss why they differ.</p>
+<p>70–80 min. Exit ticket: name one thing from their own studies they would now loop over.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -502,12 +414,11 @@ Klaudia Brzezińska
       }</style></aside>
 
 
-</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Programming and Computing Basics · Week 3</p>
+<p>Programming and Computing Basics · Week 5</p>
 </div>
 </div></div>
 
