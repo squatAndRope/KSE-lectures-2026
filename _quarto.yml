@@ -4,3 +4,7 @@ project:
 
 website:
   title: "Programming and Computing Basics"
+
+format:
+  html:
+    theme: darkly
