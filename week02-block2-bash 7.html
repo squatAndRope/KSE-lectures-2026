@@ -245,7 +245,7 @@ ATG...</code></pre>
 <li>Sequence lines are the DNA itself — <strong>one sequence can span many lines</strong></li>
 </ul>
 <div class="fragment">
-<p><strong>Download <code>sequences.fasta</code> into your <code>data/</code> folder</strong> — data in the chat 🔗</p>
+<p><strong>Download <code>sequences.fasta</code> into your <code>data/</code> folder</strong> — link in the chat 🔗</p>
 <aside class="notes">
 <p>10–15 min. Put the raw GitHub link in the chat. Alternative: <code>curl -O &lt;link&gt;</code> — nice, but only if their network cooperates. Toy file: 12 sequences, 5 species, 30 sequence lines (sequences wrapped at 60 characters).</p>
 <style type="text/css">
@@ -437,7 +437,7 @@ ATG...</code></pre>
 <span id="cb13-6"><a></a><span class="bu">echo</span> <span class="st">"</span><span class="va">$file</span><span class="st"> contains </span><span class="va">$n</span><span class="st"> sequences"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="fu">bash</span> scripts/count_seqs.sh data/sequences.fasta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>data/sequences.fasta contains 6 sequences</code></pre>
+<pre><code>data/sequences.fasta contains 12 sequences</code></pre>
 <aside class="notes">
 <p>52–57 min. Line 1 = shebang: which program should run this file. No spaces around <code>=</code> in variables! <code>file = $1</code> is an error — everyone makes it once. Quotes around “$file” protect against file names with spaces (remember Bandit?).</p>
 <style type="text/css">
@@ -456,7 +456,7 @@ ATG...</code></pre>
 <section id="making-it-executable" class="slide level2 smaller">
 <h2>Making it executable 🔑</h2>
 <div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a></a><span class="fu">ls</span> <span class="at">-l</span> scripts/count_seqs.sh</span>
-<span id="cb16-2"><a></a><span class="ex">-rw-r--r--</span>  1 anna  staff  180 Oct  7 10:12 scripts/count_seqs.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-2"><a></a><span class="ex">-rw-r--r--</span>  1 anna  staff  180 Oct  7 10:12 count_seqs.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>r</code> = read · <code>w</code> = write · <code>x</code> = execute — for <strong>owner · group · others</strong></p>
 <div class="fragment">
 <div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a></a><span class="fu">chmod</span> +x scripts/count_seqs.sh      <span class="co"># add x = allowed to run</span></span>
@@ -464,7 +464,7 @@ ATG...</code></pre>
 </div>
 <div class="fragment">
 <p><strong>Loop</strong> — the same thing for every file:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a></a><span class="cf">for</span> f <span class="kw">in</span> data/<span class="pp">*</span>fasta<span class="kw">;</span> <span class="cf">do</span></span>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a></a><span class="cf">for</span> f <span class="kw">in</span> data/<span class="pp">*</span><span class="kw">;</span> <span class="cf">do</span></span>
 <span id="cb18-2"><a></a>  <span class="fu">bash</span> scripts/count_seqs.sh <span class="st">"</span><span class="va">$f</span><span class="st">"</span></span>
 <span id="cb18-3"><a></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
@@ -596,8 +596,8 @@ ATG...</code></pre>
       }</style></aside>
 </div>
 </section>
-<section id="exercise" class="slide level2 smaller">
-<h2>Exercise 🎯</h2>
+<section id="homework" class="slide level2 smaller">
+<h2>Homework 🏠</h2>
 <ol type="1">
 <li>Add <code>.gitignore</code> to your repo, commit and push</li>
 <li><strong>SSH key for GitHub</strong> — no more typing passwords/tokens:</li>
