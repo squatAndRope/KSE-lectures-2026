@@ -784,6 +784,13 @@
     "text": "Labels, not boxes 🏷️\nPredict in the chat — what does this print?\nx = 5\ny = x\nx = 10\nprint(y)\n\n5 — y = x sticks a second label on the value 5. x = 10 moves only the x label to a new value.\n\n~2 min. Show it in Python Tutor (pythontutor.com) — the arrows from names to values make the “label” idea visible. Do NOT go into copying/mutability yet: with int and str nothing surprising happens. Come back to this picture in the lists week: “remember the labels? now watch what happens with a list.”"
   },
   {
+    "objectID": "week03-block1-python-intro.html#what-happens-inside",
+    "href": "week03-block1-python-intro.html#what-happens-inside",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "What happens inside 👀",
+    "text": "What happens inside 👀\n\n\n\nx = 5x5\n\n\n\ny = xxy5\n\n\n\nx = 10xy105\n\n\n\nNames point to values. Moving one label never moves the others.\n\nClick through step by step. On step 3 ask: “Did the 5 change?” No — only x’s arrow moved. Keep this picture for the lists week: there, two labels on ONE list → changing the list through x is visible through y."
+  },
+  {
     "objectID": "week03-block1-python-intro.html#four-basic-types",
     "href": "week03-block1-python-intro.html#four-basic-types",
     "title": "Week 3 · Block 1 — Hello, Python",

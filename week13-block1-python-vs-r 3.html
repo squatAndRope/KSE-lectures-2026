@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.33">
 
   <meta name="author" content="Klaudia Brzezińska">
-  <title>Programming and Computing Basics – Week 3 · Block 1 — Hello, Python</title>
+  <title>Programming and Computing Basics – Week 13 · Block 1 — Python vs R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,7 +193,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 3 · Block 1 — Hello, Python</h1>
+  <h1 class="title">Week 13 · Block 1 — Python vs R</h1>
   <p class="subtitle">Programming and Computing Basics · KSE 2026</p>
 
 <div class="quarto-title-authors">
@@ -207,16 +207,16 @@ Klaudia Brzezińska
 </section>
 <section id="warm-up" class="slide level2 smaller">
 <h2>Warm-up 🔥</h2>
-<p>⏱️ 10 min · in the chat</p>
-<p>In your repo, using <strong>one line</strong> each:</p>
+<p>⏱️ 10 min</p>
+<p>In R:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>lengths <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">120</span>, <span class="dv">85</span>, <span class="dv">300</span>, <span class="dv">42</span>, <span class="dv">210</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol type="1">
-<li>How many sequences are in <code>data/sequences.fasta</code>?</li>
-<li>Save the headers into <code>results/headers.txt</code></li>
+<li>Mean and max</li>
+<li>Only values above 100</li>
+<li>A histogram 📊</li>
 </ol>
-<div class="fragment">
-<p>Stuck? Ask your partner first, then the chat 💬</p>
 <aside class="notes">
-<p>0–10 min. Recall last week. If many struggle, redo the grep pipeline live — it is the base for everything later.</p>
+<p>0–10 min. Fast recall before comparing languages.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -228,28 +228,33 @@ Klaudia Brzezińska
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</div>
 </section>
-<section id="bash-vs-python" class="slide level2 smaller">
-<h2>Bash vs Python 🐍</h2>
+<section id="same-task-two-languages" class="slide level2 smaller">
+<h2>Same task, two languages</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Bash is great for</strong></p>
-<ul>
-<li>Moving and filtering files</li>
-<li>Gluing tools together</li>
-<li>One-liners</li>
-</ul>
+<p><strong>Python</strong> 🐍</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>lengths <span class="op">=</span> [<span class="dv">120</span>, <span class="dv">85</span>, <span class="dv">300</span>]</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>total <span class="op">=</span> <span class="bu">sum</span>(lengths)</span>
+<span id="cb2-4"><a></a>avg <span class="op">=</span> total <span class="op">/</span> <span class="bu">len</span>(lengths)</span>
+<span id="cb2-5"><a></a></span>
+<span id="cb2-6"><a></a><span class="bu">long</span> <span class="op">=</span> []</span>
+<span id="cb2-7"><a></a><span class="cf">for</span> x <span class="kw">in</span> lengths:</span>
+<span id="cb2-8"><a></a>    <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">100</span>:</span>
+<span id="cb2-9"><a></a>        <span class="bu">long</span>.append(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<p><strong>Python is great for</strong></p>
-<ul>
-<li>Logic and calculations</li>
-<li>Reusable analysis</li>
-<li>Anything longer than 2 lines 🙂</li>
-</ul>
+<p><strong>R</strong> 🇷</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>lengths <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">120</span>, <span class="dv">85</span>, <span class="dv">300</span>)</span>
+<span id="cb3-2"><a></a></span>
+<span id="cb3-3"><a></a>avg <span class="ot">&lt;-</span> <span class="fu">mean</span>(lengths)</span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a>long <span class="ot">&lt;-</span> lengths[lengths <span class="sc">&gt;</span> <span class="dv">100</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 <aside class="notes">
-<p>10–25 min: new material (this slide → “Labels, not boxes”). Keep it brisk. Do not oppose them — biologists use both, daily.</p>
+<p>10–25 min. Let them see it, don’t over-explain. R wins on tables, Python wins elsewhere.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -262,266 +267,122 @@ Klaudia Brzezińska
           display:block!important;
       }</style></aside>
 </section>
-<section id="two-ways-to-run-python" class="slide level2 smaller">
-<h2>Two ways to run Python</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">python3</span>                 <span class="co"># interactive — try things out (exit())</span></span>
-<span id="cb1-2"><a></a><span class="ex">python3</span> my_script.py    <span class="co"># run a saved script</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>We use <strong>scripts</strong>, because a script can be committed, shared and re-run. 💾</p>
-<aside class="notes">
-<p>Check that everyone actually has python3. Windows users may need <code>python</code> instead.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="your-first-script" class="slide level2">
-<h2>Your first script</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># hello.py</span></span>
-<span id="cb2-2"><a></a><span class="bu">print</span>(<span class="st">"Hello, bioinformatics!"</span>)</span>
-<span id="cb2-3"><a></a><span class="bu">print</span>(<span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">python3</span> hello.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><code>#</code> starts a <strong>comment</strong> — Python ignores it, humans read it.</p>
-</div>
-</section>
-<section id="variables" class="slide level2">
-<h2>Variables 📦</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>organism <span class="op">=</span> <span class="st">"Homo sapiens"</span></span>
-<span id="cb4-2"><a></a>gene_length <span class="op">=</span> <span class="dv">1520</span></span>
-<span id="cb4-3"><a></a>gc_content <span class="op">=</span> <span class="fl">0.42</span></span>
-<span id="cb4-4"><a></a>is_coding <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="bu">print</span>(organism, gene_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p>A variable is a <strong>label on a value</strong>, not a box you must declare.</p>
-</div>
-</section>
-<section id="labels-not-boxes" class="slide level2 smaller">
-<h2>Labels, not boxes 🏷️</h2>
-<p>Predict in the chat — what does this print?</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>x <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb5-2"><a></a>y <span class="op">=</span> x</span>
-<span id="cb5-3"><a></a>x <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb5-4"><a></a><span class="bu">print</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><code>5</code> — <code>y = x</code> sticks a second label on the <strong>value</strong> <code>5</code>. <code>x = 10</code> moves only the <code>x</code> label to a new value.</p>
-<aside class="notes">
-<p>~2 min. Show it in Python Tutor (pythontutor.com) — the arrows from names to values make the “label” idea visible. Do NOT go into copying/mutability yet: with int and str nothing surprising happens. Come back to this picture in the lists week: “remember the labels? now watch what happens with a list.”</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="what-happens-inside" class="slide level2 smaller">
-<h2>What happens inside 👀</h2>
-<div class="columns">
-<div class="column" style="width:33%;">
-<svg viewbox="0 0 300 270" width="100%" xmlns="http://www.w3.org/2000/svg">
-<defs><marker id="ah" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b392f0"></path></marker></defs><text x="150" y="258" fill="#e1e4e8" font-size="22" font-family="monospace" text-anchor="middle">x = 5</text><path d="M20,122 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"></path><circle cx="30" cy="140" r="3.5" fill="#b392f0"></circle><text x="58" y="148" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">x</text><line x1="96" y1="140" x2="190" y2="140" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"></line><rect x="196" y="114" width="68" height="52" rx="10" fill="#79b8ff" fill-opacity="0.15" stroke="#79b8ff" stroke-width="2.5"></rect><text x="230" y="149" fill="#e1e4e8" font-size="26" font-family="monospace" text-anchor="middle">5</text>
-</svg>
-</div><div class="column fragment" style="width:33%;">
-<svg viewbox="0 0 300 270" width="100%" xmlns="http://www.w3.org/2000/svg">
-<defs><marker id="ah" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b392f0"></path></marker></defs><text x="150" y="258" fill="#e1e4e8" font-size="22" font-family="monospace" text-anchor="middle">y = x</text><path d="M20,72 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"></path><circle cx="30" cy="90" r="3.5" fill="#b392f0"></circle><text x="58" y="98" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">x</text><path d="M20,172 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"></path><circle cx="30" cy="190" r="3.5" fill="#b392f0"></circle><text x="58" y="198" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">y</text><line x1="96" y1="90" x2="193" y2="128" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"></line><line x1="96" y1="190" x2="193" y2="152" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"></line><rect x="196" y="114" width="68" height="52" rx="10" fill="#79b8ff" fill-opacity="0.15" stroke="#79b8ff" stroke-width="2.5"></rect><text x="230" y="149" fill="#e1e4e8" font-size="26" font-family="monospace" text-anchor="middle">5</text>
-</svg>
-</div><div class="column fragment" style="width:33%;">
-<svg viewbox="0 0 300 270" width="100%" xmlns="http://www.w3.org/2000/svg">
-<defs><marker id="ah" viewbox="0 0 10 10" refx="9" refy="5" markerwidth="7" markerheight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b392f0"></path></marker></defs><text x="150" y="258" fill="#e1e4e8" font-size="22" font-family="monospace" text-anchor="middle">x = 10</text><path d="M20,32 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"></path><circle cx="30" cy="50" r="3.5" fill="#b392f0"></circle><text x="58" y="58" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">x</text><path d="M20,172 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"></path><circle cx="30" cy="190" r="3.5" fill="#b392f0"></circle><text x="58" y="198" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">y</text><line x1="96" y1="50" x2="190" y2="50" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"></line><line x1="96" y1="62" x2="193" y2="128" stroke="#b392f0" stroke-width="2.5" stroke-dasharray="6 6" opacity="0.45"></line><line x1="96" y1="190" x2="193" y2="152" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"></line><rect x="196" y="24" width="68" height="52" rx="10" fill="#79b8ff" fill-opacity="0.15" stroke="#79b8ff" stroke-width="2.5"></rect><text x="230" y="59" fill="#e1e4e8" font-size="26" font-family="monospace" text-anchor="middle">10</text><rect x="196" y="114" width="68" height="52" rx="10" fill="#79b8ff" fill-opacity="0.15" stroke="#79b8ff" stroke-width="2.5"></rect><text x="230" y="149" fill="#e1e4e8" font-size="26" font-family="monospace" text-anchor="middle">5</text>
-</svg>
-</div></div>
-<div class="fragment">
-<p>Names point <strong>to</strong> values. Moving one label never moves the others.</p>
-<aside class="notes">
-<p>Click through step by step. On step 3 ask: “Did the 5 change?” No — only x’s arrow moved. Keep this picture for the lists week: there, two labels on ONE list → changing the list through x is visible through y.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="four-basic-types" class="slide level2 smaller">
-<h2>Four basic types</h2>
+<section id="where-each-one-shines" class="slide level2 smaller">
+<h2>Where each one shines ✨</h2>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Type</th>
-<th>Example</th>
-<th>Used for</th>
+<th>Task</th>
+<th>Better fit</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>str</code></td>
-<td><code>"ATGC"</code></td>
-<td>text, sequences</td>
+<td>Parsing FASTA, automating files</td>
+<td>Python 🐍</td>
 </tr>
 <tr class="even">
-<td><code>int</code></td>
-<td><code>1520</code></td>
-<td>counts, positions</td>
+<td>Statistics, models, tests</td>
+<td>R 🇷</td>
 </tr>
 <tr class="odd">
-<td><code>float</code></td>
-<td><code>0.42</code></td>
-<td>ratios, p-values</td>
+<td>Publication-quality figures</td>
+<td>R (ggplot2) 📊</td>
 </tr>
 <tr class="even">
-<td><code>bool</code></td>
-<td><code>True</code> / <code>False</code></td>
-<td>yes/no answers</td>
+<td>Pipelines, servers, big workflows</td>
+<td>Python ⚙️</td>
+</tr>
+<tr class="odd">
+<td>RNA-seq, microarrays (Bioconductor)</td>
+<td>R 🧬</td>
+</tr>
+<tr class="even">
+<td>Machine learning</td>
+<td>Python 🤖</td>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="bu">type</span>(<span class="fl">0.42</span>)   <span class="co"># &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
-<p>Ask: what would type(“0.42”) be? Keep the TypeError demo for AFTER Exercise 1 — don’t spoil it.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="exercise-1-predict-then-run" class="slide level2 smaller">
-<h2>Exercise 1: Predict, then run 🔮</h2>
-<p>⏱️ 10 min · answer in the chat <strong>before</strong> running</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb7-2"><a></a>b <span class="op">=</span> <span class="st">"5"</span></span>
-<span id="cb7-3"><a></a><span class="bu">print</span>(a <span class="op">+</span> a)</span>
-<span id="cb7-4"><a></a><span class="bu">print</span>(b <span class="op">+</span> b)</span>
-<span id="cb7-5"><a></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>💡 Which line fails? What exactly does the error say?</p>
-<aside class="notes">
-<p>25–35 min. Run it in the interactive python3 (or as a script — then ask: what if the failing line were first?). Afterwards: read the TypeError together, slowly. Then show “ATG” + 5 as a second example. This is the single most useful habit: read the error, don’t panic.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="input-and-conversion" class="slide level2 smaller">
-<h2>Input and conversion</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>length <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Sequence length: "</span>)   <span class="co"># always a STRING</span></span>
-<span id="cb8-2"><a></a><span class="bu">print</span>(length <span class="op">*</span> <span class="dv">3</span>)                     <span class="co"># predict! (type 100)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
-<p><code>"100100100"</code> 😱 — same as <code>b + b</code>: text gets <strong>repeated</strong>, not multiplied.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>length <span class="op">=</span> <span class="bu">int</span>(length)                  <span class="co"># convert to number</span></span>
-<span id="cb9-2"><a></a><span class="bu">print</span>(length <span class="op">*</span> <span class="dv">3</span>)                     <span class="co"># 300</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>int()</code> · <code>float()</code> · <code>str()</code> convert between types.</p>
-<aside class="notes">
-<p>35–40 min. Quick predict, links straight back to Exercise 1. input() comes back as a bonus in Exercise 2.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p>Most bioinformaticians use <strong>both</strong>, and that is normal. 💛</p>
 </div>
 </section>
-<section id="asking-a-sequence-questions" class="slide level2 smaller">
-<h2>Asking a sequence questions 🔍</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>seq <span class="op">=</span> <span class="st">"ATGCGCAT"</span></span>
-<span id="cb10-2"><a></a><span class="bu">len</span>(seq)            <span class="co"># 8    → a function:  len( thing )</span></span>
-<span id="cb10-3"><a></a>seq.count(<span class="st">"A"</span>)      <span class="co"># 2    → a method:    thing.count( ... )</span></span>
-<span id="cb10-4"><a></a><span class="dv">2</span> <span class="op">/</span> <span class="dv">8</span> <span class="op">*</span> <span class="dv">100</span>         <span class="co"># 25.0 → / always gives a float</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<p><strong>AT content</strong> = (A + T) / length × 100</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>at <span class="op">=</span> seq.count(<span class="st">"A"</span>) <span class="op">+</span> seq.count(<span class="st">"T"</span>)</span>
-<span id="cb11-2"><a></a><span class="bu">print</span>(at <span class="op">/</span> <span class="bu">len</span>(seq) <span class="op">*</span> <span class="dv">100</span>)   <span class="co"># 50.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Your turn: <strong>GC content</strong> 🧬</p>
-<aside class="notes">
-<p>40–45 min. Live-code this, don’t just show it. Function vs method: just name the two shapes, no theory yet.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</div>
-</section>
-<section id="exercise-2-your-first-analysis" class="slide level2 smaller">
-<h2>Exercise 2: Your first analysis 🧬</h2>
-<p>⏱️ 25 min · breakout rooms · switch after 10 min</p>
-<p>Create <code>scripts/dna_info.py</code>:</p>
-<ol type="1">
-<li>Store a DNA sequence in a variable (at least 20 letters)</li>
-<li>Print its length using <code>len(sequence)</code></li>
-<li>Count the G letters: <code>sequence.count("G")</code></li>
-<li>Count the C letters</li>
-<li>Calculate and print the <strong>GC content</strong> as a percentage — e.g.&nbsp;<code>print("GC:", gc, "%")</code></li>
-<li><code>git add</code> → <code>commit</code> → <code>push</code></li>
-</ol>
-<p>💡 <strong>Bonus:</strong> round the result with <code>round(value, 2)</code> · ask the user for the sequence with <code>input()</code></p>
-<aside class="notes">
-<p>45–70 min. Paste results in the chat. Common bug: integer division confusion — remind them <code>/</code> gives a float. If someone finds f-strings online — fine, but not required yet.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="wrap-up" class="slide level2 smaller">
-<h2>Wrap-up ✅</h2>
+<section id="the-real-skill" class="slide level2 smaller">
+<h2>The real skill 🧠</h2>
+<p>What transfers between every language:</p>
 <ul>
-<li>A script is a file you can re-run and commit 💾</li>
-<li>Variables are <strong>labels</strong> on values; values have <strong>types</strong></li>
-<li><code>len()</code> <code>count()</code> already do real biology work</li>
+<li>Breaking a problem into steps 🧩</li>
+<li>Variables, loops, conditions, functions</li>
+<li>Reading error messages 🔍</li>
+<li>Version control 💾</li>
+<li>Asking: <em>does this result make sense?</em> 🤨</li>
 </ul>
-<p><strong>Homework</strong> 🏠 Commit <code>dna_info.py</code> with a comment at the top explaining what it does.</p>
 <div class="fragment">
-<p>Next block: <strong>strings</strong> — sequences are just text 🧬</p>
+<blockquote>
+<p>You did not learn Python. You learned to program — in Python. 🎓</p>
+</blockquote>
 <aside class="notes">
-<p>70–80 min. Two students share their GC result — compare numbers, discuss why they differ.</p>
+<p>25–35 min. This is the closing message of the whole course. Say it warmly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="exercise-translate-it" class="slide level2 smaller">
+<h2>Exercise: Translate it 🔄</h2>
+<p>⏱️ 30 min · breakout rooms</p>
+<p>Take one of your <strong>own</strong> Python scripts from weeks 3–7 and rewrite a piece of it in R:</p>
+<ol type="1">
+<li>Pick something small — GC content, filtering, counting</li>
+<li>Write the R version in <code>scripts/translated.R</code></li>
+<li>Run both — do they give the same answer? ✅</li>
+<li>In the chat: which version was shorter? Which was clearer? 🤔</li>
+</ol>
+<p>💡 <strong>Bonus:</strong> which part was hardest to translate, and why?</p>
+<aside class="notes">
+<p>35–70 min. The comparison of their own code is far more convincing than my slides. Common trap: indexing from 1, and strsplit() returning a list.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="where-to-go-next" class="slide level2 smaller">
+<h2>Where to go next 🌱</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Python</strong> 🐍</p>
+<ul>
+<li>Biopython 🧬</li>
+<li>pandas (tables)</li>
+<li>Rosalind.info (puzzles) 🧩</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>R</strong> 🇷</p>
+<ul>
+<li>ggplot2 📊</li>
+<li>Bioconductor</li>
+<li>R for Data Science (free book) 📖</li>
+</ul>
+</div></div>
+<div class="fragment">
+<p>And: The Carpentries lessons, free and biology-focused 🎓</p>
+<aside class="notes">
+<p>70–80 min. Put the actual links in the chat.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -540,7 +401,7 @@ Klaudia Brzezińska
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>Programming and Computing Basics · Week 3</p>
+<p>Programming and Computing Basics · Week 13</p>
 </div>
 </div></div>
 
