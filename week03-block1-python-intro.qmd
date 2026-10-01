@@ -120,6 +120,29 @@ Do NOT go into copying/mutability yet: with int and str nothing surprising happe
 Come back to this picture in the lists week: "remember the labels? now watch what happens with a list."
 :::
 
+## What happens inside 👀 {.smaller}
+
+:::: {.columns}
+::: {.column width="33%"}
+<svg viewBox="0 0 300 270" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b392f0"/></marker></defs><text x="150" y="258" fill="#e1e4e8" font-size="22" font-family="monospace" text-anchor="middle">x = 5</text><path d="M20,122 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"/><circle cx="30" cy="140" r="3.5" fill="#b392f0"/><text x="58" y="148" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">x</text><line x1="96" y1="140" x2="190" y2="140" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"/><rect x="196" y="114" width="68" height="52" rx="10" fill="#79b8ff" fill-opacity="0.15" stroke="#79b8ff" stroke-width="2.5"/><text x="230" y="149" fill="#e1e4e8" font-size="26" font-family="monospace" text-anchor="middle">5</text></svg>
+:::
+::: {.column width="33%" .fragment}
+<svg viewBox="0 0 300 270" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b392f0"/></marker></defs><text x="150" y="258" fill="#e1e4e8" font-size="22" font-family="monospace" text-anchor="middle">y = x</text><path d="M20,72 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"/><circle cx="30" cy="90" r="3.5" fill="#b392f0"/><text x="58" y="98" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">x</text><path d="M20,172 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"/><circle cx="30" cy="190" r="3.5" fill="#b392f0"/><text x="58" y="198" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">y</text><line x1="96" y1="90" x2="193" y2="128" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"/><line x1="96" y1="190" x2="193" y2="152" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"/><rect x="196" y="114" width="68" height="52" rx="10" fill="#79b8ff" fill-opacity="0.15" stroke="#79b8ff" stroke-width="2.5"/><text x="230" y="149" fill="#e1e4e8" font-size="26" font-family="monospace" text-anchor="middle">5</text></svg>
+:::
+::: {.column width="33%" .fragment}
+<svg viewBox="0 0 300 270" width="100%" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b392f0"/></marker></defs><text x="150" y="258" fill="#e1e4e8" font-size="22" font-family="monospace" text-anchor="middle">x = 10</text><path d="M20,32 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"/><circle cx="30" cy="50" r="3.5" fill="#b392f0"/><text x="58" y="58" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">x</text><path d="M20,172 h56 l18,18 l-18,18 h-56 z" fill="none" stroke="#b392f0" stroke-width="2.5"/><circle cx="30" cy="190" r="3.5" fill="#b392f0"/><text x="58" y="198" fill="#b392f0" font-size="24" font-family="monospace" text-anchor="middle">y</text><line x1="96" y1="50" x2="190" y2="50" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"/><line x1="96" y1="62" x2="193" y2="128" stroke="#b392f0" stroke-width="2.5" stroke-dasharray="6 6" opacity="0.45"/><line x1="96" y1="190" x2="193" y2="152" stroke="#b392f0" stroke-width="2.5" marker-end="url(#ah)"/><rect x="196" y="24" width="68" height="52" rx="10" fill="#79b8ff" fill-opacity="0.15" stroke="#79b8ff" stroke-width="2.5"/><text x="230" y="59" fill="#e1e4e8" font-size="26" font-family="monospace" text-anchor="middle">10</text><rect x="196" y="114" width="68" height="52" rx="10" fill="#79b8ff" fill-opacity="0.15" stroke="#79b8ff" stroke-width="2.5"/><text x="230" y="149" fill="#e1e4e8" font-size="26" font-family="monospace" text-anchor="middle">5</text></svg>
+:::
+::::
+
+. . .
+
+Names point **to** values. Moving one label never moves the others.
+
+::: notes
+Click through step by step. On step 3 ask: "Did the 5 change?" No — only x's arrow moved.
+Keep this picture for the lists week: there, two labels on ONE list → changing the list through x is visible through y.
+:::
+
 ## Four basic types {.smaller}
 
 | Type | Example | Used for |
