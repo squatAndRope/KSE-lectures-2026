@@ -35,8 +35,17 @@ What will each line print? Chat first, run second 💬
 seq = "ATGCGC"
 seq[0]    # 'A'  — the FIRST letter
 seq[1]    # 'T'
-seq[-1]   # 'C'  — the last one
 ```
+. . .
+
+❓ 
+
+```python
+seq[-1]   
+```
+. . .
+
+ 'C'  — the last one
 
 . . .
 
@@ -48,19 +57,34 @@ Biologists count bases from 1, Python counts from 0. This causes real bugs in re
 10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF).
 :::
 
-## Slicing ✂️
+## Slicing ✂️ {.smaller}
 
 ```python
 seq = "ATGCGCTAGC"
-seq[0:3]    # 'ATG'  — from 0 up to (not including) 3
-seq[3:]     # from 3 to the end
-seq[:3]     # from the start to 3
-seq[::-1]   # reversed!
+#      A  T  G  C  G  C  T  A  G  C
+#      0  1  2  3  4  5  6  7  8  9      ← Python counts from 0!
+
+# seq[start:stop:step]
+seq[0:3]     # 'ATG'         — positions 0, 1, 2 (stop not included)
+seq[3:]      # 'CGCTAGC'     — from 3 to the end
+seq[:3]      # 'ATG'         — same as [0:3]
+seq[-3:]     # 'AGC'         — the last 3 letters
+seq[::-1]    # 'CGATCGCGTA'  — reversed!
 ```
 
 . . .
 
-`seq[start:stop]` — **stop is not included** 🙂
+`seq[start:stop]` — **stop is not included** 🙂 · length = `stop − start`
+
+. . .
+
+🔮 **Predict:** there is a stop codon `TAG` hidden in `seq`. Which slice gives it?
+
+::: notes
+Answer: seq[6:9]. Let them count on the position ruler.
+Why "stop not included"? So that seq[0:3] + seq[3:] glues back to the whole sequence — no overlap, no gap.
+Don't show seq[0:3:-1] (returns '' silently) — just: to reverse, use [::-1].
+:::
 
 ## Useful string methods {.smaller}
 
@@ -160,7 +184,7 @@ Create `scripts/seq_tools.py`. For a DNA sequence of your choice, print:
 | Methods | `.upper()` `.replace()` `.find()` |
 | f-string | `f"GC = {gc}%"` |
 
-**Homework** 🏠 Commit `seq_tools.py` and write in the README what it does.
+**Task** 🔒 Commit `seq_tools.py` and write in the README what it does.
 
 . . .
 

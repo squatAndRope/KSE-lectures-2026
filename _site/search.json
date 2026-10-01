@@ -473,14 +473,14 @@
     "href": "week03-block2-strings.html#indexing-counting-from-0",
     "title": "Week 3 · Block 2 — Strings are sequences",
     "section": "Indexing: counting from 0 🔢",
-    "text": "Indexing: counting from 0 🔢\nseq = \"ATGCGC\"\nseq[0]    # 'A'  — the FIRST letter\nseq[1]    # 'T'\nseq[-1]   # 'C'  — the last one\n\n\n\n\n\n\n\nNote\n\n\nBiologists count bases from 1, Python counts from 0. This causes real bugs in real papers. 🐛\n\n\n\n\n10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF)."
+    "text": "Indexing: counting from 0 🔢\nseq = \"ATGCGC\"\nseq[0]    # 'A'  — the FIRST letter\nseq[1]    # 'T'\n\n❓\nseq[-1]   \n\n\n‘C’ — the last one\n\n\n\n\n\n\n\n\nNote\n\n\nBiologists count bases from 1, Python counts from 0. This causes real bugs in real papers. 🐛\n\n\n\n\n10–25 min. Mention the classic off-by-one error in genomic coordinates (BED vs GFF)."
   },
   {
     "objectID": "week03-block2-strings.html#slicing",
     "href": "week03-block2-strings.html#slicing",
     "title": "Week 3 · Block 2 — Strings are sequences",
     "section": "Slicing ✂️",
-    "text": "Slicing ✂️\nseq = \"ATGCGCTAGC\"\nseq[0:3]    # 'ATG'  — from 0 up to (not including) 3\nseq[3:]     # from 3 to the end\nseq[:3]     # from the start to 3\nseq[::-1]   # reversed!\n\nseq[start:stop] — stop is not included 🙂"
+    "text": "Slicing ✂️\nseq = \"ATGCGCTAGC\"\n#      A  T  G  C  G  C  T  A  G  C\n#      0  1  2  3  4  5  6  7  8  9      ← Python counts from 0!\n\n# seq[start:stop:step]\nseq[0:3]     # 'ATG'         — positions 0, 1, 2 (stop not included)\nseq[3:]      # 'CGCTAGC'     — from 3 to the end\nseq[:3]      # 'ATG'         — same as [0:3]\nseq[-3:]     # 'AGC'         — the last 3 letters\nseq[::-1]    # 'CGATCGCGTA'  — reversed!\n\nseq[start:stop] — stop is not included 🙂 · length = stop − start\n\n\n🔮 Predict: there is a stop codon TAG hidden in seq. Which slice gives it?\n\nAnswer: seq[6:9]. Let them count on the position ruler. Why “stop not included”? So that seq[0:3] + seq[3:] glues back to the whole sequence — no overlap, no gap. Don’t show seq[0:3:-1] (returns ’’ silently) — just: to reverse, use [::-1]."
   },
   {
     "objectID": "week03-block2-strings.html#useful-string-methods",
@@ -522,7 +522,7 @@
     "href": "week03-block2-strings.html#wrap-up",
     "title": "Week 3 · Block 2 — Strings are sequences",
     "section": "Wrap-up ✅",
-    "text": "Wrap-up ✅\n\n\n\nTool\nExample\n\n\n\n\nIndex\nseq[0] seq[-1]\n\n\nSlice\nseq[0:3] seq[::-1]\n\n\nMethods\n.upper() .replace() .find()\n\n\nf-string\nf\"GC = {gc}%\"\n\n\n\nHomework 🏠 Commit seq_tools.py and write in the README what it does.\n\nNext week: lists — many sequences at once 📋\n\n70–80 min. Exit ticket: “Python counts from ___” in the chat."
+    "text": "Wrap-up ✅\n\n\n\nTool\nExample\n\n\n\n\nIndex\nseq[0] seq[-1]\n\n\nSlice\nseq[0:3] seq[::-1]\n\n\nMethods\n.upper() .replace() .find()\n\n\nf-string\nf\"GC = {gc}%\"\n\n\n\nTask 🔒 Commit seq_tools.py and write in the README what it does.\n\nNext week: lists — many sequences at once 📋\n\n70–80 min. Exit ticket: “Python counts from ___” in the chat."
   },
   {
     "objectID": "week09-block2-cli.html#warm-up",
@@ -782,6 +782,13 @@
     "title": "Week 3 · Block 1 — Hello, Python",
     "section": "Labels, not boxes 🏷️",
     "text": "Labels, not boxes 🏷️\nPredict in the chat — what does this print?\nx = 5\ny = x\nx = 10\nprint(y)\n\n5 — y = x sticks a second label on the value 5. x = 10 moves only the x label to a new value.\n\n~2 min. Show it in Python Tutor (pythontutor.com) — the arrows from names to values make the “label” idea visible. Do NOT go into copying/mutability yet: with int and str nothing surprising happens. Come back to this picture in the lists week: “remember the labels? now watch what happens with a list.”"
+  },
+  {
+    "objectID": "week03-block1-python-intro.html#what-happens-inside",
+    "href": "week03-block1-python-intro.html#what-happens-inside",
+    "title": "Week 3 · Block 1 — Hello, Python",
+    "section": "What happens inside 👀",
+    "text": "What happens inside 👀\n\n\n\nx = 5x5\n\n\n\ny = xxy5\n\n\n\nx = 10xy105\n\n\n\nNames point to values. Moving one label never moves the others.\n\nClick through step by step. On step 3 ask: “Did the 5 change?” No — only x’s arrow moved. Keep this picture for the lists week: there, two labels on ONE list → changing the list through x is visible through y."
   },
   {
     "objectID": "week03-block1-python-intro.html#four-basic-types",
