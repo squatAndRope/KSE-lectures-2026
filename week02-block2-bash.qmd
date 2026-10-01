@@ -54,7 +54,7 @@ ATG...
 
 . . .
 
-**Download `sequences.fasta` into your `data/` folder** — link in the chat 🔗
+**Download `sequences.fasta` into your `data/` folder** — data in the chat 🔗
 
 ::: notes
 10–15 min. Put the raw GitHub link in the chat.
