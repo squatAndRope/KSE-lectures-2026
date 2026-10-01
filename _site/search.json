@@ -963,14 +963,14 @@
     "href": "week02-block2-bash.html#scripts-save-your-commands",
     "title": "Week 2 · Block 2 — Bash on real data",
     "section": "Scripts: save your commands 📜",
-    "text": "Scripts: save your commands 📜\nA script = commands in a file, run with one word. Your analysis becomes repeatable.\n#!/bin/bash\n# count_seqs.sh — how many sequences are in a FASTA file?\n\nfile=$1                          # $1 = the first thing after the script name\nn=$(grep -c \"&gt;\" \"$file\")         # $( ) = save the output of a command\necho \"$file contains $n sequences\"\n\nbash scripts/count_seqs.sh data/sequences.fasta\ndata/sequences.fasta contains 12 sequences\n\n52–57 min. Line 1 = shebang: which program should run this file. No spaces around = in variables! file = $1 is an error — everyone makes it once. Quotes around “$file” protect against file names with spaces (remember Bandit?)."
+    "text": "Scripts: save your commands 📜\nA script = commands in a file, run with one word. Your analysis becomes repeatable.\n#!/bin/bash\n# count_seqs.sh — how many sequences are in a FASTA file?\n\nfile=$1                          # $1 = the first thing after the script name\nn=$(grep -c \"&gt;\" \"$file\")         # $( ) = save the output of a command\necho \"$file contains $n sequences\"\n\nbash scripts/count_seqs.sh data/sequences.fasta\ndata/sequences.fasta contains 6 sequences\n\n52–57 min. Line 1 = shebang: which program should run this file. No spaces around = in variables! file = $1 is an error — everyone makes it once. Quotes around “$file” protect against file names with spaces (remember Bandit?)."
   },
   {
     "objectID": "week02-block2-bash.html#making-it-executable",
     "href": "week02-block2-bash.html#making-it-executable",
     "title": "Week 2 · Block 2 — Bash on real data",
     "section": "Making it executable 🔑",
-    "text": "Making it executable 🔑\nls -l scripts/count_seqs.sh\n-rw-r--r--  1 anna  staff  180 Oct  7 10:12 count_seqs.sh\nr = read · w = write · x = execute — for owner · group · others\n\nchmod +x scripts/count_seqs.sh      # add x = allowed to run\n./scripts/count_seqs.sh data/sequences.fasta\n\n\nLoop — the same thing for every file:\nfor f in data/*; do\n  bash scripts/count_seqs.sh \"$f\"\ndone\n\n57–60 min. Windows / Git Bash: permissions behave differently — bash script.sh always works, that’s enough. The loop is where the terminal beats clicking: 3 files or 3000 files, same line."
+    "text": "Making it executable 🔑\nls -l scripts/count_seqs.sh\n-rw-r--r--  1 anna  staff  180 Oct  7 10:12 scripts/count_seqs.sh\nr = read · w = write · x = execute — for owner · group · others\n\nchmod +x scripts/count_seqs.sh      # add x = allowed to run\n./scripts/count_seqs.sh data/sequences.fasta\n\n\nLoop — the same thing for every file:\nfor f in data/*fasta; do\n  bash scripts/count_seqs.sh \"$f\"\ndone\n\n57–60 min. Windows / Git Bash: permissions behave differently — bash script.sh always works, that’s enough. The loop is where the terminal beats clicking: 3 files or 3000 files, same line."
   },
   {
     "objectID": "week02-block2-bash.html#exercise-your-first-script",
@@ -994,11 +994,11 @@
     "text": "Wrap-up ✅\n\n\n\n\n\n\n\nCommand\nWhat it does\n\n\n\n\ngrep \"x\" file · -c -i -v\nFind lines · count · ignore case · invert\n\n\ncmd1 \\| cmd2\nPipe: output → input\n\n\ncut sort uniq -c\nColumns · order · count\n\n\nsed 's/a/b/g'\nFind & replace\n\n\n&gt; file &gt;&gt; file\nSave · append\n\n\nbash script.sh · $1 · for\nScripts, arguments, loops\n\n\n\n\nNext week: Python 🐍 — and we’ll solve the ATG problem properly\n\n76–80 min. Exit ticket in the chat: one command they will actually use again."
   },
   {
-    "objectID": "week02-block2-bash.html#homework",
-    "href": "week02-block2-bash.html#homework",
+    "objectID": "week02-block2-bash.html#exercise",
+    "href": "week02-block2-bash.html#exercise",
     "title": "Week 2 · Block 2 — Bash on real data",
-    "section": "Homework 🏠",
-    "text": "Homework 🏠\n\nAdd .gitignore to your repo, commit and push\nSSH key for GitHub — no more typing passwords/tokens:\n\nssh-keygen -t ed25519 -C \"your_email@example.com\"   # press Enter 3×\ncat ~/.ssh/id_ed25519.pub     # the PUBLIC key → copy it\nGitHub → Settings → SSH and GPG keys → New SSH key → paste\nssh -T git@github.com         # \"Hi &lt;name&gt;! You've successfully authenticated\"\n🔒 id_ed25519.pub = public, share freely · id_ed25519 = private, never share\n\nOptional: Bandit levels up to 5 🏴‍☠️\n\n\nKey pair analogy: public key = a padlock you give to servers; private key = the only key that opens it. To switch an existing repo to SSH: git remote set-url origin git@github.com:&lt;user&gt;/&lt;repo&gt;.git (check with git remote -v). Copying files to/from a server (for the curious): scp -P 2220 bandit0@bandit.labs.overthewire.org:readme . — note capital -P in scp!"
+    "section": "Exercise 🎯",
+    "text": "Exercise 🎯\n\nAdd .gitignore to your repo, commit and push\nSSH key for GitHub — no more typing passwords/tokens:\n\nssh-keygen -t ed25519 -C \"your_email@example.com\"   # press Enter 3×\ncat ~/.ssh/id_ed25519.pub     # the PUBLIC key → copy it\nGitHub → Settings → SSH and GPG keys → New SSH key → paste\nssh -T git@github.com         # \"Hi &lt;name&gt;! You've successfully authenticated\"\n🔒 id_ed25519.pub = public, share freely · id_ed25519 = private, never share\n\nOptional: Bandit levels up to 5 🏴‍☠️\n\n\nKey pair analogy: public key = a padlock you give to servers; private key = the only key that opens it. To switch an existing repo to SSH: git remote set-url origin git@github.com:&lt;user&gt;/&lt;repo&gt;.git (check with git remote -v). Copying files to/from a server (for the curious): scp -P 2220 bandit0@bandit.labs.overthewire.org:readme . — note capital -P in scp!"
   },
   {
     "objectID": "week12-block1-r-intro.html#why-another-language",
